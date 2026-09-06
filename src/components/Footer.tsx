@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
               <div className="h-8 w-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
                 <Sparkles className="w-4 h-4" />
               </div>
-              <span className="font-extrabold text-lg text-slate-900 dark:text-white">AI TIMES MN</span>
+              <span className="font-extrabold text-lg text-slate-900 dark:text-white">AIMEDEE.MN</span>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md leading-relaxed mb-4">
               Дэлхийн хиймэл оюуны шинэ дэвшил, судалгаа, бүтээгдэхүүн, бодит кейсүүдийг монгол хэлээр давхардалгүй, бодит цаг хугацаанд хүргэдэг нэгдсэн портал.
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="mt-12 pt-6 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} AI Times MN. Бүх эрх хуулиар хамгаалагдсан.</p>
+          <p>© {new Date().getFullYear()} AImedee.mn. Бүх эрх хуулиар хамгаалагдсан.</p>
           <div className="flex items-center gap-6">
             <a href="https://aitimes.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-500 transition-colors">
               aitimes.com

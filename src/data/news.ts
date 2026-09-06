@@ -268,7 +268,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'
     },
     sources: [
-      { name: 'AI Times MN Exclusive', url: 'https://aitimes.mn' }
+      { name: 'AImedee Exclusive', url: 'https://aimedee.vercel.app' }
     ],
     tags: ['Interview', 'Enterprise AI', 'FinTech', 'Automation'],
     summary: 'Компаниуд хэрхэн хиймэл оюуны агентуудыг бодит бизнесийн урсгалдаа нэвтрүүлж, зардал болон алдааг бууруулж байгаа тухай эксклюзив ярилцлага.',

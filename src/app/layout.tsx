@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'AI TIMES MN — Хиймэл Оюуны Нэгдсэн Портал',
+  title: 'AImedee.mn — Хиймэл Оюуны Нэгдсэн Портал',
   description: 'Дэлхийн хиймэл оюуны хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, багаж хэрэгслүүдийг нэг дороос.',
-  keywords: ['AI', 'Artificial Intelligence', 'Хиймэл оюун', 'GPT-6', 'aitimes', 'Монгол технологийн мэдээ'],
+  keywords: ['AI', 'AImedee', 'Хиймэл оюун', 'GPT-6', 'aitimes', 'Монгол технологийн мэдээ'],
   openGraph: {
-    title: 'AI TIMES MN — Хиймэл Оюуны Нэгдсэн Портал',
+    title: 'AImedee.mn — Хиймэл Оюуны Нэгдсэн Портал',
     description: 'Дэлхийн хиймэл оюуны хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, багаж хэрэгслүүдийг нэг дороос.',
     type: 'website',
     locale: 'mn_MN',

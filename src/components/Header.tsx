@@ -56,8 +56,8 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">AI TIMES</span>
-                  <span className="bg-brand-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">MN</span>
+                  <span className="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">AIMEDEE</span>
+                  <span className="bg-brand-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">.MN</span>
                 </div>
                 <p className="text-[10px] text-slate-500 dark:text-slate-400 -mt-0.5 tracking-wider font-medium uppercase">
                   Хиймэл оюуны нэгдсэн портал
