@@ -1,149 +1,195 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Header } from '@/components/Header';
-import { Ticker } from '@/components/Ticker';
-import { HeroSection } from '@/components/HeroSection';
-import { NewsCard } from '@/components/NewsCard';
-import { ArticleModal } from '@/components/ArticleModal';
-import { Footer } from '@/components/Footer';
-import { NEWS_ITEMS, NewsItem, CATEGORIES } from '@/data/news';
-import { Sparkles, Layers, SlidersHorizontal, RefreshCw } from 'lucide-react';
+import { NewspaperHeader } from '@/components/NewspaperHeader';
+import { NewspaperLead } from '@/components/NewspaperLead';
+import { SectionBlock } from '@/components/SectionBlock';
+import { LiveWire } from '@/components/LiveWire';
+import { ArticleViewModal } from '@/components/ArticleViewModal';
+import { NewspaperFooter } from '@/components/NewspaperFooter';
+import { ARTICLES, NewsArticle, NAV_SECTIONS } from '@/data/news';
+import { Clock, Eye } from 'lucide-react';
 
 export default function HomePage() {
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [activeSection, setActiveSection] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedArticle, setSelectedArticle] = useState<NewsItem | null>(null);
-  const [isDark, setIsDark] = useState<boolean>(true);
+  const [selectedArticle, setSelectedArticle] = useState<NewsArticle | null>(null);
 
-  // Toggle dark/light theme on html element
-  const toggleDark = () => {
-    setIsDark(!isDark);
-    if (typeof document !== 'undefined') {
-      if (isDark) {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
-    }
-  };
-
-  // Filter items based on category and search query
-  const filteredItems = useMemo(() => {
-    return NEWS_ITEMS.filter((item) => {
+  // Filter articles based on activeSection and searchQuery
+  const filteredArticles = useMemo(() => {
+    return ARTICLES.filter((art) => {
       const matchesCategory =
-        activeCategory === 'all' || item.category === activeCategory;
+        activeSection === 'all' || art.category === activeSection;
       const query = searchQuery.toLowerCase().trim();
       const matchesSearch =
         !query ||
-        item.title.toLowerCase().includes(query) ||
-        item.summary.toLowerCase().includes(query) ||
-        item.tags.some((t) => t.toLowerCase().includes(query));
+        art.title.toLowerCase().includes(query) ||
+        art.summary.toLowerCase().includes(query) ||
+        art.author.toLowerCase().includes(query);
 
       return matchesCategory && matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeSection, searchQuery]);
 
-  // Featured and trending items
-  const featuredItem = useMemo(() => {
-    return NEWS_ITEMS.find((n) => n.featured) || NEWS_ITEMS[0];
+  // Lead stories
+  const mainLead = useMemo(() => {
+    return ARTICLES.find((a) => a.isMainLead) || ARTICLES[0];
   }, []);
 
-  const secondaryItems = useMemo(() => {
-    return NEWS_ITEMS.filter((n) => n.id !== featuredItem.id && n.trending);
-  }, [featuredItem]);
+  const subLeads = useMemo(() => {
+    return ARTICLES.filter((a) => a.id !== mainLead.id && !a.isHot);
+  }, [mainLead]);
+
+  const hotArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.isHot && a.id !== mainLead.id);
+  }, [mainLead]);
+
+  const mostRead = useMemo(() => {
+    return [...ARTICLES].sort((a, b) => b.readCount - a.readCount);
+  }, []);
+
+  // Section specific slices
+  const techArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'tech');
+  }, []);
+
+  const industryArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'industry' || a.category === 'companies');
+  }, []);
+
+  const interviewArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'interview' || a.category === 'opinion');
+  }, []);
 
   return (
-    <div className="flex-1 flex flex-col">
-      {/* Header */}
-      <Header
-        activeCategory={activeCategory}
-        onSelectCategory={(cat) => {
-          setActiveCategory(cat);
+    <div className="min-h-screen flex flex-col bg-white">
+      {/* 1. Authentic Newspaper Header */}
+      <NewspaperHeader
+        activeSection={activeSection}
+        onSelectSection={(sec) => {
+          setActiveSection(sec);
           setSearchQuery('');
         }}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        isDark={isDark}
-        onToggleDark={toggleDark}
       />
 
-      {/* Breaking news ticker */}
-      <Ticker
-        items={NEWS_ITEMS.filter((n) => n.category === 'breaking')}
-        onSelect={setSelectedArticle}
-      />
-
-      {/* Main Content Area */}
       <main className="flex-1">
-        {/* Only show Hero section on home (all category and no search) */}
-        {activeCategory === 'all' && !searchQuery && (
-          <HeroSection
-            featuredItem={featuredItem}
-            secondaryItems={secondaryItems}
-            onSelect={setSelectedArticle}
-          />
-        )}
-
-        {/* Section title & Filters info */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 mb-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
-            <div className="flex items-center gap-2">
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-                {activeCategory === 'all' && !searchQuery
-                  ? 'Сүүлийн үеийн бүх мэдээ'
-                  : searchQuery
-                  ? `Хайлтын үр дүн: "${searchQuery}"`
-                  : CATEGORIES.find((c) => c.id === activeCategory)?.label}
-              </h2>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                {filteredItems.length}
-              </span>
+        {/* If user is searching or viewing a specific sub-category */}
+        {activeSection !== 'all' || searchQuery ? (
+          <div className="max-w-6xl mx-auto px-4 py-8">
+            <div className="pb-3 mb-6 border-b-2 border-[#172956] flex items-center justify-between">
+              <h1 className="text-xl font-bold text-slate-900">
+                {searchQuery
+                  ? `Хайлтын үр дүн: "${searchQuery}" (${filteredArticles.length})`
+                  : NAV_SECTIONS.find((s) => s.id === activeSection)?.name}
+              </h1>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="text-xs text-red-600 hover:underline font-semibold"
+                >
+                  Хайлтыг цэвэрлэх
+                </button>
+              )}
             </div>
 
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline"
-              >
-                Хайлтыг цуцлах
-              </button>
+            {filteredArticles.length > 0 ? (
+              <div className="divide-y divide-slate-200">
+                {filteredArticles.map((art) => (
+                  <article
+                    key={art.id}
+                    onClick={() => setSelectedArticle(art)}
+                    className="py-5 cursor-pointer group flex flex-col sm:flex-row gap-5 items-start"
+                  >
+                    <div className="w-full sm:w-56 h-36 shrink-0 overflow-hidden bg-slate-100">
+                      <img
+                        src={art.coverImage}
+                        alt={art.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[10px] text-red-600 font-bold block mb-1">
+                        [{art.categoryName}]
+                      </span>
+                      <h2 className="font-serif text-base sm:text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors leading-snug mb-2">
+                        {art.title}
+                      </h2>
+                      <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                        {art.summary}
+                      </p>
+                      <div className="flex items-center gap-3 text-xs text-slate-400">
+                        <span>{art.author}</span>
+                        <span>•</span>
+                        <span>{art.publishedAt} {art.publishedTime}</span>
+                        <span>•</span>
+                        <span className="flex items-center gap-1">
+                          <Eye className="w-3.5 h-3.5" />
+                          {art.readCount.toLocaleString()}
+                        </span>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div className="py-16 text-center text-slate-500 text-sm">
+                Мэдээлэл олдсонгүй. Хайлтын үгээ өөрчилж үзнэ үү.
+              </div>
             )}
           </div>
-        </div>
+        ) : (
+          /* Default Newspaper Home Front Page */
+          <>
+            {/* 3-Column Lead Story Area */}
+            <NewspaperLead
+              mainLead={mainLead}
+              subLeads={subLeads}
+              hotArticles={hotArticles}
+              mostRead={mostRead}
+              onSelect={setSelectedArticle}
+            />
 
-        {/* Grid of news items */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item) => (
-                <NewsCard
-                  key={item.id}
-                  item={item}
-                  onSelect={setSelectedArticle}
-                />
-              ))}
+            {/* Content Container */}
+            <div className="max-w-6xl mx-auto px-4 pt-6">
+              {/* Live 24H News Wire */}
+              <LiveWire />
+
+              {/* Section 1: AI Технологи & Моделиуд */}
+              <SectionBlock
+                title="AI Технологи & Инноваци"
+                articles={techArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('tech')}
+              />
+
+              {/* Section 2: AI Салбар ба Компаниуд */}
+              <SectionBlock
+                title="AI Салбар ба Компаниуд"
+                articles={industryArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('industry')}
+              />
+
+              {/* Section 3: Экспертийн ярилцлага & Нийтлэл */}
+              <SectionBlock
+                title="Салбарын ярилцлага & Нийтлэл"
+                articles={interviewArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('interview')}
+              />
             </div>
-          ) : (
-            <div className="text-center py-16 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-              <Sparkles className="w-8 h-8 mx-auto text-slate-400 mb-3" />
-              <h3 className="text-base font-bold text-slate-800 dark:text-slate-200 mb-1">
-                Мэдээлэл олдсонгүй
-              </h3>
-              <p className="text-xs text-slate-500 max-w-sm mx-auto">
-                Та хайлтын үгээ өөрчлөх эсвэл ангиллаа сольж үзнэ үү.
-              </p>
-            </div>
-          )}
-        </div>
+          </>
+        )}
       </main>
 
-      {/* Footer */}
-      <Footer />
+      {/* Authentic Newspaper Footer */}
+      <NewspaperFooter />
 
-      {/* Full article reader modal */}
-      <ArticleModal
-        item={selectedArticle}
+      {/* Modal Article Reader */}
+      <ArticleViewModal
+        article={selectedArticle}
         onClose={() => setSelectedArticle(null)}
       />
     </div>
