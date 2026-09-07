@@ -96,7 +96,12 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
                   {article.primarySource}
                 </span>
               </div>
-              <div className="flex items-center gap-3 text-neutral-500 text-[11px]">
+              <div className="flex flex-wrap items-center gap-3 text-neutral-500 text-[11px]">
+                {article.readTime && (
+                  <span className="bg-black text-[#00FF66] font-bold px-1.5 py-0.5">
+                    ⏱ {article.readTime}
+                  </span>
+                )}
                 <span>{article.publishedAt} {article.publishedTime}</span>
                 <span>•</span>
                 <span>{article.readCount.toLocaleString()} УНШСАН</span>
@@ -111,6 +116,21 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
                 </a>
               </div>
             </div>
+
+            {/* Tags if available */}
+            {article.tags && article.tags.length > 0 && (
+              <div className="flex items-center gap-1.5 flex-wrap pt-3 font-mono text-[11px]">
+                <span className="font-bold text-neutral-400">// СЭДВҮҮД:</span>
+                {article.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 bg-neutral-100 border border-neutral-300 text-black font-semibold"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Photo & Caption */}
@@ -134,10 +154,11 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
             {article.summary}
           </div>
 
-          {/* Full content */}
-          <div className="text-base sm:text-lg text-neutral-900 leading-relaxed space-y-4 font-sans font-normal">
-            <div dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br/>') }} />
-          </div>
+          {/* Full content (Clean HTML) */}
+          <div
+            className="text-base sm:text-lg text-neutral-900 leading-relaxed font-sans"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
 
           {/* Verified Sources & References Section */}
           <div className="pt-6 border-t-2 border-black font-mono text-xs">
