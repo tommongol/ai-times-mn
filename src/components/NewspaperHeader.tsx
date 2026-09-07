@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Mail, X, TrendingUp } from 'lucide-react';
+import { Search, Mail, X, TrendingUp, ShieldCheck } from 'lucide-react';
 import { NAV_SECTIONS } from '@/data/news';
 
 interface Props {
@@ -46,135 +46,148 @@ export const NewspaperHeader: React.FC<Props> = ({
   };
 
   return (
-    <header className="w-full bg-white border-b border-slate-300 text-slate-900">
-      {/* 1. Top micro bar */}
-      <div className="border-b border-slate-200 bg-slate-50 text-[11px] text-slate-600 py-1.5 px-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="font-medium text-slate-800">
-              {new Date().getFullYear()} оны 9-р сарын 7 (Даваа) | Улаанбаатар
+    <header className="w-full bg-white border-b-2 border-black text-black">
+      {/* 1. WIRED Micro Status Bar */}
+      <div className="border-b border-neutral-200 bg-neutral-900 text-[11px] text-neutral-300 py-1.5 px-4 font-mono">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center gap-1.5 text-[#00FF66] font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
+              LIVE INTEL
             </span>
-            <span className="text-slate-300">|</span>
-            <span className="text-red-600 font-semibold flex items-center gap-1">
-              ● ШУУРХАЙ МЭДЭЭ
-            </span>
-            <span className="hidden md:inline text-slate-500">
-              Хиймэл оюун ухааны бодит цагийн мэдээллийн сүлжээ
+            <span className="text-neutral-500">|</span>
+            <span>{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
+            <span className="hidden md:inline text-neutral-500">|</span>
+            <span className="hidden md:inline text-neutral-400">
+              ХИЙМЭЛ ОЮУН УХААНЫ ДЭЛХИЙН БОДИТ ЦАГИЙН СЭТГҮҮЛ ЗҮЙ
             </span>
           </div>
-          <div className="flex items-center gap-4">
+
+          <div className="flex items-center gap-3 text-[10px]">
+            <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-neutral-800 px-2 py-0.5 rounded-xs border border-neutral-700">
+              <ShieldCheck className="w-3 h-3 text-[#00FF66]" />
+              100% БОДИТ ЭХ СУРВАЛЖ
+            </span>
+            <span className="text-neutral-500">|</span>
             <button
-              onClick={() => alert('Товхимол бүртгэл амжилттай!')}
-              className="hover:text-red-600 flex items-center gap-1 transition-colors"
+              onClick={() => alert('Өдөр тутмын AI товхимолд бүртгэлээ!')}
+              className="hover:text-[#00FF66] flex items-center gap-1 transition-colors uppercase tracking-wider cursor-pointer"
             >
               <Mail className="w-3 h-3" />
-              <span>И-мэйл товхимол</span>
+              <span>ТОБХИМОЛ</span>
             </button>
-            <span className="text-slate-300">|</span>
-            <span className="font-semibold text-slate-700">MN / EN</span>
           </div>
         </div>
       </div>
 
-      {/* 2. Main Newspaper Masthead & Search Box */}
-      <div className="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-5">
-        <div className="text-center md:text-left">
-          <button
-            onClick={() => {
-              setLocalInput('');
-              onSearchChange('');
-              onSelectSection('all');
-            }}
-            className="group flex flex-col items-center md:items-start text-left"
-          >
-            <div className="flex items-baseline gap-2">
-              <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#172956] group-hover:text-red-600 transition-colors">
-                AIMEDEE
-              </span>
-              <span className="text-red-600 font-bold text-lg sm:text-xl font-sans tracking-wide">
-                .MN
-              </span>
-            </div>
-            <p className="text-[11px] sm:text-xs text-slate-500 font-medium tracking-wide mt-1">
-              ХИЙМЭЛ ОЮУН УХААНЫ МЭРГЭШСЭН СОНИН, МЭДЭЭЛЛИЙН ПОРТАЛ
-            </p>
-          </button>
-        </div>
-
-        {/* Real Newspaper Search Form */}
-        <div className="w-full md:w-auto flex flex-col items-center md:items-end gap-1.5">
-          <form
-            onSubmit={handleSubmit}
-            className="flex items-center w-full max-w-md sm:w-96 border-2 border-[#172956] bg-white"
-          >
-            <input
-              type="text"
-              value={localInput}
-              onChange={(e) => setLocalInput(e.target.value)}
-              placeholder="Хайх үгээ оруулна уу (жишээ нь: Nvidia, OpenAI...)"
-              className="flex-1 px-3 py-1.5 text-xs bg-transparent focus:outline-none text-slate-900 placeholder-slate-400"
-            />
-            {localInput && (
-              <button
-                type="button"
-                onClick={handleClear}
-                className="p-1 text-slate-400 hover:text-slate-700"
-                title="Арилгах"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            )}
+      {/* 2. Main WIRED Masthead */}
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-6 pb-6 border-b border-neutral-200">
+          {/* Logo & Subtitle */}
+          <div className="text-center lg:text-left">
             <button
-              type="submit"
-              className="bg-[#172956] hover:bg-red-600 text-white px-3.5 py-2 text-xs font-bold flex items-center gap-1.5 transition-colors"
+              onClick={() => {
+                setLocalInput('');
+                onSearchChange('');
+                onSelectSection('all');
+              }}
+              className="group inline-flex flex-col items-center lg:items-start text-left cursor-pointer"
             >
-              <Search className="w-3.5 h-3.5" />
-              <span>Хайх</span>
+              <div className="flex items-baseline tracking-tighter">
+                <span className="font-black text-4xl sm:text-5xl lg:text-6xl text-black uppercase tracking-tight group-hover:text-neutral-800 transition-colors">
+                  AIMEDEE
+                </span>
+                <span className="text-[#00FF66] bg-black px-2 py-0.5 ml-2 font-black text-xl sm:text-2xl font-mono">
+                  .MN
+                </span>
+              </div>
+              <div className="flex items-center gap-2 mt-1.5 font-mono text-xs text-neutral-600 uppercase tracking-widest">
+                <span className="font-bold text-black">// THE AI FRONTIER</span>
+                <span>•</span>
+                <span>aitimes.com солонгос & дэлхийн AI шинжилгээ</span>
+              </div>
             </button>
-          </form>
+          </div>
 
-          {/* Popular Search Terms */}
-          <div className="flex items-center gap-1.5 text-[11px] text-slate-500 overflow-x-auto max-w-full">
-            <span className="text-red-600 font-bold flex items-center gap-0.5 shrink-0">
-              <TrendingUp className="w-3 h-3" />
-              Трэнд:
-            </span>
-            <div className="flex items-center gap-1.5 flex-wrap">
-              {POPULAR_SEARCHES.map((term) => (
+          {/* Search Box with WIRED Terminal Look */}
+          <div className="w-full lg:w-auto flex flex-col items-center lg:items-end gap-2">
+            <form
+              onSubmit={handleSubmit}
+              className="flex items-center w-full max-w-md lg:w-[420px] border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] focus-within:shadow-[4px_4px_0px_0px_rgba(0,255,102,1)] transition-all"
+            >
+              <div className="pl-3 text-neutral-400 font-mono text-xs font-bold">
+                $
+              </div>
+              <input
+                type="text"
+                value={localInput}
+                onChange={(e) => setLocalInput(e.target.value)}
+                placeholder="Хайх үг... (Nvidia, OpenAI, Deepfake...)"
+                className="flex-1 px-2.5 py-2 text-xs font-mono bg-transparent focus:outline-none text-black placeholder-neutral-400"
+              />
+              {localInput && (
                 <button
-                  key={term}
                   type="button"
-                  onClick={() => handleTagClick(term)}
-                  className="hover:text-red-600 hover:underline cursor-pointer transition-colors"
+                  onClick={handleClear}
+                  className="p-1 text-neutral-400 hover:text-black cursor-pointer"
+                  title="Арилгах"
                 >
-                  {term}
+                  <X className="w-4 h-4" />
                 </button>
-              ))}
+              )}
+              <button
+                type="submit"
+                className="bg-black text-white hover:bg-[#00FF66] hover:text-black px-4 py-2 text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                <Search className="w-3.5 h-3.5" />
+                <span>SEARCH</span>
+              </button>
+            </form>
+
+            {/* Trending tags in monospace */}
+            <div className="flex items-center gap-1.5 text-[11px] font-mono text-neutral-500 overflow-x-auto max-w-full">
+              <span className="font-bold text-black uppercase tracking-wider flex items-center gap-1 shrink-0">
+                <TrendingUp className="w-3 h-3 text-red-600" />
+                TRENDS:
+              </span>
+              <div className="flex items-center gap-1.5 flex-wrap">
+                {POPULAR_SEARCHES.map((term) => (
+                  <button
+                    key={term}
+                    type="button"
+                    onClick={() => handleTagClick(term)}
+                    className="px-1.5 py-0.5 bg-neutral-100 hover:bg-black hover:text-[#00FF66] text-neutral-800 transition-colors cursor-pointer text-[10px] font-bold"
+                  >
+                    #{term}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 3. Navy Navigation Bar (exact aitimes.com style #172956) */}
-      <nav className="bg-[#172956] text-white">
-        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
-          <ul className="flex items-center overflow-x-auto no-scrollbar font-medium text-xs sm:text-sm">
-            {NAV_SECTIONS.map((sec) => {
+      {/* 3. WIRED High-Contrast Navigation Grid */}
+      <nav className="bg-black text-white border-t border-black">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+          <ul className="flex items-center overflow-x-auto no-scrollbar font-mono text-xs uppercase tracking-wider divide-x divide-neutral-800">
+            {NAV_SECTIONS.map((sec, idx) => {
               const isActive = activeSection === sec.id && !searchQuery;
               return (
-                <li key={sec.id}>
+                <li key={sec.id} className="shrink-0">
                   <button
                     onClick={() => {
                       setLocalInput('');
                       onSearchChange('');
                       onSelectSection(sec.id);
                     }}
-                    className={`px-4 py-3 whitespace-nowrap transition-colors border-b-2 flex items-center gap-1 ${
+                    className={`px-4 py-3 font-bold transition-all flex items-center gap-2 cursor-pointer ${
                       isActive
-                        ? 'bg-red-600 text-white font-bold border-red-600'
-                        : 'border-transparent text-slate-200 hover:text-white hover:bg-[#1f3670]'
+                        ? 'bg-[#00FF66] text-black font-black'
+                        : 'text-neutral-300 hover:text-[#00FF66] hover:bg-neutral-900'
                     }`}
                   >
+                    <span className="text-[10px] opacity-60">0{idx + 1}</span>
                     <span>{sec.name}</span>
                   </button>
                 </li>
@@ -182,8 +195,13 @@ export const NewspaperHeader: React.FC<Props> = ({
             })}
           </ul>
 
-          <div className="hidden lg:flex items-center text-xs text-slate-300 font-normal pl-4">
-            <span>Эх сурвалж: aitimes.com • Telegram • Google News</span>
+          <div className="hidden xl:flex items-center gap-3 text-[11px] font-mono text-neutral-400 pl-4 py-2 shrink-0">
+            <span className="text-neutral-500">// SYNDICATION:</span>
+            <span className="text-neutral-300">aitimes.com</span>
+            <span>•</span>
+            <span className="text-neutral-300">Reuters</span>
+            <span>•</span>
+            <span className="text-neutral-300">OpenAI</span>
           </div>
         </div>
       </nav>

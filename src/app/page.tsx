@@ -8,7 +8,7 @@ import { LiveWire } from '@/components/LiveWire';
 import { ArticleViewModal } from '@/components/ArticleViewModal';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { ARTICLES, NewsArticle, NAV_SECTIONS } from '@/data/news';
-import { Clock, Eye, Search, ArrowUpDown, XCircle, Sparkles } from 'lucide-react';
+import { Eye, Search, ArrowUpDown, XCircle, ShieldCheck } from 'lucide-react';
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState<string>('all');
@@ -31,7 +31,7 @@ export default function HomePage() {
         (art.subtitle && art.subtitle.toLowerCase().includes(query)) ||
         art.summary.toLowerCase().includes(query) ||
         art.content.toLowerCase().includes(query) ||
-        art.author.toLowerCase().includes(query) ||
+        art.primarySource.toLowerCase().includes(query) ||
         art.categoryName.toLowerCase().includes(query) ||
         art.sources.some((s) => s.name.toLowerCase().includes(query));
 
@@ -86,8 +86,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      {/* 1. Newspaper Header with Search Bar */}
+    <div className="min-h-screen flex flex-col bg-white text-black font-sans selection:bg-[#00FF66] selection:text-black">
+      {/* 1. WIRED Newspaper Header with Search Bar */}
       <NewspaperHeader
         activeSection={activeSection}
         onSelectSection={setActiveSection}
@@ -98,37 +98,39 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Search Results View OR Specific Category Archive View */}
         {searchQuery || activeSection !== 'all' ? (
-          <div className="max-w-6xl mx-auto px-4 py-8">
+          <div className="max-w-7xl mx-auto px-4 py-8">
             {/* Header banner for search/section */}
-            <div className="pb-3 mb-6 border-b-2 border-[#172956] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <Search className="w-5 h-5 text-red-600" />
-                <h1 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <div className="pb-4 mb-6 border-b-2 border-black flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <span className="w-3 h-3 bg-[#00FF66] inline-block border border-black"></span>
+                <h1 className="font-mono text-lg sm:text-xl font-black text-black uppercase tracking-tight">
                   {searchQuery ? (
                     <span>
-                      &ldquo;<span className="text-red-600">{searchQuery}</span>&rdquo; хайлтын үр дүн
+                      // SEARCH RESULTS FOR: &ldquo;{searchQuery}&rdquo;
                     </span>
                   ) : (
-                    NAV_SECTIONS.find((s) => s.id === activeSection)?.name
+                    <span>
+                      /// {NAV_SECTIONS.find((s) => s.id === activeSection)?.name}
+                    </span>
                   )}
                 </h1>
-                <span className="text-xs font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-300">
-                  {filteredArticles.length} мэдээ
+                <span className="font-mono text-xs font-bold px-2 py-0.5 bg-black text-[#00FF66]">
+                  {filteredArticles.length} FOUND
                 </span>
               </div>
 
               {/* Search Controls: Sort & Clear */}
-              <div className="flex items-center gap-3 text-xs">
-                <div className="flex items-center gap-1.5 text-slate-600">
-                  <ArrowUpDown className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Эрэмбэлэх:</span>
+              <div className="flex items-center gap-3 font-mono text-xs">
+                <div className="flex items-center gap-2 text-neutral-600">
+                  <ArrowUpDown className="w-3.5 h-3.5 text-black" />
+                  <span className="font-bold text-black uppercase">SORT:</span>
                   <select
                     value={searchSort}
                     onChange={(e) => setSearchSort(e.target.value as 'latest' | 'views')}
-                    className="border border-slate-300 bg-white px-2 py-1 text-xs text-slate-800 focus:outline-none"
+                    className="border border-black bg-white px-2 py-1 text-xs text-black font-mono focus:outline-none"
                   >
-                    <option value="latest">Сүүлийн үеийнхээр</option>
-                    <option value="views">Хамгийн их уншсанаар</option>
+                    <option value="latest">Сүүлийн үеийнхээр (LATEST)</option>
+                    <option value="views">Хамгийн их уншсанаар (MOST READ)</option>
                   </select>
                 </div>
 
@@ -138,10 +140,10 @@ export default function HomePage() {
                       setSearchQuery('');
                       setActiveSection('all');
                     }}
-                    className="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold border border-red-200 px-2.5 py-1 bg-red-50 hover:bg-red-100 transition-colors"
+                    className="flex items-center gap-1 bg-black text-white hover:bg-[#00FF66] hover:text-black font-bold px-3 py-1 transition-colors cursor-pointer"
                   >
                     <XCircle className="w-3.5 h-3.5" />
-                    <span>Хайлтыг цэвэрлэх</span>
+                    <span>RESET</span>
                   </button>
                 )}
               </div>
@@ -149,14 +151,14 @@ export default function HomePage() {
 
             {/* List of search/category results */}
             {filteredArticles.length > 0 ? (
-              <div className="divide-y divide-slate-200">
+              <div className="divide-y divide-neutral-200">
                 {filteredArticles.map((art) => (
                   <article
                     key={art.id}
                     onClick={() => setSelectedArticle(art)}
-                    className="py-5 cursor-pointer group flex flex-col sm:flex-row gap-5 items-start hover:bg-slate-50/70 p-2 transition-colors"
+                    className="py-6 cursor-pointer group flex flex-col sm:flex-row gap-6 items-start hover:bg-neutral-50 p-3 transition-colors border-l-2 border-transparent hover:border-black"
                   >
-                    <div className="w-full sm:w-56 h-36 shrink-0 overflow-hidden bg-slate-100">
+                    <div className="w-full sm:w-64 h-40 shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300">
                       <img
                         src={art.coverImage}
                         alt={art.title}
@@ -164,26 +166,29 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-[10px] text-red-600 font-bold">
-                          [{art.categoryName}]
+                      <div className="flex items-center gap-3 mb-2 font-mono text-[11px]">
+                        <span className="bg-black text-[#00FF66] font-bold px-1.5 py-0.5 uppercase">
+                          {art.categoryName}
                         </span>
-                        <span className="text-[11px] text-slate-400">
+                        <span className="text-neutral-500">
                           {art.publishedAt} {art.publishedTime}
                         </span>
                       </div>
-                      <h2 className="font-serif text-base sm:text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors leading-snug mb-2">
+                      <h2 className="font-black text-lg sm:text-xl text-black group-hover:text-emerald-600 transition-colors leading-snug mb-2">
                         {art.title}
                       </h2>
-                      <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                      <p className="text-xs sm:text-sm text-neutral-700 line-clamp-2 leading-relaxed mb-3">
                         {art.summary}
                       </p>
-                      <div className="flex items-center gap-3 text-xs text-slate-400">
-                        <span className="text-slate-600 font-medium">{art.author}</span>
+                      <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-neutral-500">
+                        <span className="text-black font-semibold uppercase flex items-center gap-1">
+                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                          SOURCE: {art.primarySource}
+                        </span>
                         <span>•</span>
                         <span className="flex items-center gap-1">
                           <Eye className="w-3.5 h-3.5" />
-                          {art.readCount.toLocaleString()} уншсан
+                          {art.readCount.toLocaleString()} reads
                         </span>
                       </div>
                     </div>
@@ -192,20 +197,20 @@ export default function HomePage() {
               </div>
             ) : (
               /* No Search Results Fallback */
-              <div className="py-16 text-center bg-slate-50 border border-slate-200 p-8 my-6">
-                <Search className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-                <h3 className="text-base font-bold text-slate-800 mb-1">
-                  &ldquo;{searchQuery}&rdquo; түлхүүр үгээр илэрц олдсонгүй.
+              <div className="py-16 text-center bg-neutral-50 border-2 border-black p-8 my-6">
+                <Search className="w-10 h-10 text-neutral-400 mx-auto mb-3" />
+                <h3 className="font-mono text-base font-black text-black mb-2 uppercase">
+                  [!] &ldquo;{searchQuery}&rdquo; ТҮЛХҮҮР ҮГЭЭР ИЛЭРЦ ОЛДСОНГҮЙ
                 </h3>
-                <p className="text-xs text-slate-500 max-w-md mx-auto mb-5">
-                  Үгийн зөв бичгийг шалгах эсвэл дараах нийтлэг хайлтын сэдвүүдээс сонгоно уу.
+                <p className="text-xs text-neutral-600 max-w-md mx-auto mb-6 font-mono">
+                  Үгийн зөв бичгийг шалгах эсвэл дараах нийтлэг сэдвүүдээс сонгож хайна уу.
                 </p>
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="flex flex-wrap justify-center gap-2 font-mono text-xs">
                   {['Nvidia', 'OpenAI', 'Deepfake', 'Atlas 3D', 'Vibe-coding', 'Lyria', 'FinTech'].map((kw) => (
                     <button
                       key={kw}
                       onClick={() => setSearchQuery(kw)}
-                      className="px-3 py-1.5 text-xs font-semibold bg-white border border-slate-300 hover:border-red-600 hover:text-red-600 transition-colors shadow-2xs"
+                      className="px-3 py-1.5 font-bold bg-white border border-black hover:bg-black hover:text-[#00FF66] transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
                     >
                       #{kw}
                     </button>
@@ -215,7 +220,7 @@ export default function HomePage() {
             )}
           </div>
         ) : (
-          /* Default Newspaper Home Front Page */
+          /* Default WIRED Magazine Home Front Page */
           <>
             {/* 3-Column Lead Story Area */}
             <NewspaperLead
@@ -227,11 +232,11 @@ export default function HomePage() {
             />
 
             {/* Content Container */}
-            <div className="max-w-6xl mx-auto px-4 pt-6">
-              {/* Live 24H News Wire */}
+            <div className="max-w-7xl mx-auto px-4 pt-8">
+              {/* Live 24H Realtime News Wire */}
               <LiveWire />
 
-              {/* Section 1: AI Технологи & Моделиуд */}
+              {/* Section 1: AI Технологи & Инноваци */}
               <SectionBlock
                 title="AI Технологи & Инноваци"
                 articles={techArticles}
@@ -249,7 +254,7 @@ export default function HomePage() {
 
               {/* Section 3: Экспертийн ярилцлага & Нийтлэл */}
               <SectionBlock
-                title="Салбарын ярилцлага & Нийтлэл"
+                title="Салбарын ярилцлага & Шинжилгээ"
                 articles={interviewArticles}
                 onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('interview')}
@@ -259,7 +264,7 @@ export default function HomePage() {
         )}
       </main>
 
-      {/* Authentic Newspaper Footer */}
+      {/* WIRED Footer with 100% Real Attribution */}
       <NewspaperFooter />
 
       {/* Modal Article Reader */}
