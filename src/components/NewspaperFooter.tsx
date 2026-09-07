@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { NAV_SECTIONS } from '@/data/news';
-import { ShieldCheck, Terminal, ExternalLink } from 'lucide-react';
+import { ShieldCheck, Mail, ArrowUpRight } from 'lucide-react';
 
 export const NewspaperFooter: React.FC = () => {
   return (
@@ -20,9 +20,8 @@ export const NewspaperFooter: React.FC = () => {
               </span>
             ))}
           </div>
-          <div className="text-neutral-400 text-[11px] flex items-center gap-2">
-            <span className="text-[#00FF66]">●</span>
-            <span>SYNDICATED FROM: aitimes.com • Telegram @How2AI • @aiaiai</span>
+          <div className="text-neutral-500 text-[11px]">
+            THE AI & DEEP TECH JOURNAL // 24/7 EDITION
           </div>
         </div>
       </div>
@@ -44,59 +43,61 @@ export const NewspaperFooter: React.FC = () => {
               </span>
             </div>
 
-            {/* Verified Policy Badge */}
-            <div className="p-3.5 bg-neutral-900 border border-neutral-800 text-neutral-300 space-y-2 text-[11px] leading-relaxed">
+            {/* Editorial Charter Badge */}
+            <div className="p-4 bg-neutral-900 border border-neutral-800 text-neutral-300 space-y-2 text-[11px] leading-relaxed">
               <div className="flex items-center gap-2 text-[#00FF66] font-bold text-xs uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4 text-[#00FF66]" />
-                <span>РЕДАКЦИЙН ЧАНАРЫН СТАНДАРТ: ЗӨВХӨН БОДИТ ЭХ СУРВАЛЖ</span>
+                <span>РЕДАКЦИЙН СТАНДАРТ</span>
               </div>
               <p>
-                AImedee.mn нь хиймэл оюуны салбарын хуурамч, зохиомол сэтгүүлчдийн нэрс болон баталгаагүй цуурхлыг бүрэн халж, зөвхөн олон улсын нэр хүндтэй хэвлэл (AI Times Korea, Reuters, Bloomberg), албан ёсны технологийн лабораториуд (OpenAI, Google DeepMind, Nvidia, World Labs) болон Telegram-ийн шалгагдсан сувгуудын бодит өгөгдлийг монгол хэл дээр хүргэдэг мэргэшсэн сонин юм.
+                AImedee.mn нь хиймэл оюун ухаан, дэвшилтэт технологийн салбарын мэдээлэл, техникийн шинжилгээ, зах зээлийн судалгааг олон нийтэд хүргэдэг мэргэшсэн цахим сэтгүүл юм. Манай редакц зөвхөн баталгаажсан өгөгдөл, албан ёсны судалгааны тайлангуудад тулгуурлан мэдээллийг нийтэлдэг.
               </p>
             </div>
 
             <div className="text-[11px] text-neutral-400 space-y-1">
               <p>
-                <strong>Мэдээллийн сүлжээ:</strong> AImedee Tech Media • <strong>Холбоо барих:</strong> contact@aimedee.mn
+                <strong>Мэдээллийн сүлжээ:</strong> AImedee Media • <strong>Холбоо барих:</strong> contact@aimedee.mn
               </p>
               <p>
                 <strong>Хаяг:</strong> Улаанбаатар хот, Сүхбаатар дүүрэг, Мэдээлэл технологийн үндэсний төв
               </p>
-              <p className="text-neutral-500 pt-1">
-                © {new Date().getFullYear()} AImedee.mn. Зохиогчийн эрх хуулиар хамгаалагдсан. Эх сурвалжийг тодорхой дурдан хуваалцаж болно.
+              <p className="text-neutral-500 pt-2">
+                © {new Date().getFullYear()} AImedee.mn. Бүх эрх хуулиар хамгаалагдсан. Нийтлэлийг иш татан ашиглахдаа холбоосыг заавал дурдана уу.
               </p>
             </div>
           </div>
 
-          {/* Right: Partner Feeds & Verification Channels */}
+          {/* Right: Quick Links & Contact */}
           <div className="md:col-span-4 flex flex-col justify-between border-t md:border-t-0 md:border-l border-neutral-800 md:pl-8 pt-6 md:pt-0 text-[11px]">
-            <div>
-              <div className="text-white font-bold mb-3 uppercase tracking-wider text-xs flex items-center gap-1.5">
-                <Terminal className="w-3.5 h-3.5 text-[#00FF66]" />
-                <span>ЭХ СУРВАЛЖИЙН СҮЛЖЭЭ</span>
+            <div className="space-y-4">
+              <div>
+                <div className="text-white font-bold mb-3 uppercase tracking-wider text-xs flex items-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5 text-[#00FF66]" />
+                  <span>РЕДАКЦТАЙ ХОЛБОГДОХ</span>
+                </div>
+                <ul className="space-y-2 text-neutral-400">
+                  <li className="hover:text-white transition-colors cursor-pointer">
+                    • Мэдээ, нийтлэл санал болгох: editorial@aimedee.mn
+                  </li>
+                  <li className="hover:text-white transition-colors cursor-pointer">
+                    • Хамтран ажиллах & Зар сурталчилгаа: ads@aimedee.mn
+                  </li>
+                  <li className="hover:text-white transition-colors cursor-pointer">
+                    • Техникийн дэмжлэг: dev@aimedee.mn
+                  </li>
+                </ul>
               </div>
-              <ul className="space-y-2 text-neutral-400">
-                <li className="flex items-center justify-between hover:text-white transition-colors">
-                  <span>• AI타임스 (aitimes.com) Солонгос</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
-                </li>
-                <li className="flex items-center justify-between hover:text-white transition-colors">
-                  <span>• Telegram @How2AI суваг</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
-                </li>
-                <li className="flex items-center justify-between hover:text-white transition-colors">
-                  <span>• Telegram @aiaiai суваг</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
-                </li>
-                <li className="flex items-center justify-between hover:text-white transition-colors">
-                  <span>• Reuters & Bloomberg Tech</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
-                </li>
-                <li className="flex items-center justify-between hover:text-white transition-colors">
-                  <span>• OpenAI & Nvidia Research</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
-                </li>
-              </ul>
+
+              <div className="pt-2 border-t border-neutral-800">
+                <div className="text-neutral-300 font-bold mb-2 uppercase tracking-wider text-[11px]">
+                  ХУУЛЬ ЗҮЙН МЭДЭЭЛЭЛ
+                </div>
+                <div className="flex flex-wrap gap-4 text-neutral-400 text-[10px]">
+                  <span className="hover:text-[#00FF66] cursor-pointer">ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</span>
+                  <span className="hover:text-[#00FF66] cursor-pointer">НУУЦЛАЛЫН БОДЛОГО</span>
+                  <span className="hover:text-[#00FF66] cursor-pointer">ЗОХИОГЧИЙН ЭРХ</span>
+                </div>
+              </div>
             </div>
 
             <div className="pt-6 text-[10px] text-neutral-500 font-mono">
