@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Mail, Globe, Menu, X, Clock, ChevronRight } from 'lucide-react';
+import { Search, Mail, X, TrendingUp } from 'lucide-react';
 import { NAV_SECTIONS } from '@/data/news';
 
 interface Props {
@@ -11,13 +11,39 @@ interface Props {
   onSearchChange: (q: string) => void;
 }
 
+const POPULAR_SEARCHES = [
+  'Nvidia',
+  'OpenAI',
+  'Deepfake',
+  'Atlas 3D',
+  'Vibe-coding',
+  'Lyria',
+  'FinTech',
+  'Робот',
+];
+
 export const NewspaperHeader: React.FC<Props> = ({
   activeSection,
   onSelectSection,
   searchQuery,
   onSearchChange,
 }) => {
-  const [showSearch, setShowSearch] = useState(false);
+  const [localInput, setLocalInput] = useState(searchQuery);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSearchChange(localInput.trim());
+  };
+
+  const handleClear = () => {
+    setLocalInput('');
+    onSearchChange('');
+  };
+
+  const handleTagClick = (tag: string) => {
+    setLocalInput(tag);
+    onSearchChange(tag);
+  };
 
   return (
     <header className="w-full bg-white border-b border-slate-300 text-slate-900">
@@ -26,19 +52,19 @@ export const NewspaperHeader: React.FC<Props> = ({
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <span className="font-medium text-slate-800">
-              {new Date().getFullYear()} оны 9-р сарын 6 (Ням) | Улаанбаатар 18:30
+              {new Date().getFullYear()} оны 9-р сарын 7 (Даваа) | Улаанбаатар
             </span>
             <span className="text-slate-300">|</span>
             <span className="text-red-600 font-semibold flex items-center gap-1">
-              ● ШУУРХАЙ
+              ● ШУУРХАЙ МЭДЭЭ
             </span>
             <span className="hidden md:inline text-slate-500">
-              Хиймэл оюуны бодит цагийн мэдээллийн сүлжээ
+              Хиймэл оюун ухааны бодит цагийн мэдээллийн сүлжээ
             </span>
           </div>
           <div className="flex items-center gap-4">
             <button
-              onClick={() => alert('Товхимол бүртгэл нээгдлээ!')}
+              onClick={() => alert('Товхимол бүртгэл амжилттай!')}
               className="hover:text-red-600 flex items-center gap-1 transition-colors"
             >
               <Mail className="w-3 h-3" />
@@ -50,11 +76,15 @@ export const NewspaperHeader: React.FC<Props> = ({
         </div>
       </div>
 
-      {/* 2. Main Newspaper Masthead */}
-      <div className="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+      {/* 2. Main Newspaper Masthead & Search Box */}
+      <div className="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-5">
         <div className="text-center md:text-left">
           <button
-            onClick={() => onSelectSection('all')}
+            onClick={() => {
+              setLocalInput('');
+              onSearchChange('');
+              onSelectSection('all');
+            }}
             className="group flex flex-col items-center md:items-start text-left"
           >
             <div className="flex items-baseline gap-2">
@@ -71,17 +101,56 @@ export const NewspaperHeader: React.FC<Props> = ({
           </button>
         </div>
 
-        {/* Search & Top banner spot */}
-        <div className="flex items-center gap-3">
-          <div className="relative">
+        {/* Real Newspaper Search Form */}
+        <div className="w-full md:w-auto flex flex-col items-center md:items-end gap-1.5">
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center w-full max-w-md sm:w-96 border-2 border-[#172956] bg-white"
+          >
             <input
               type="text"
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Нийтлэл, сэдвийн хайлт..."
-              className="w-64 sm:w-80 px-3.5 py-1.5 text-xs bg-slate-100 border border-slate-300 focus:bg-white focus:outline-none focus:border-[#172956] text-slate-900 placeholder-slate-400"
+              value={localInput}
+              onChange={(e) => setLocalInput(e.target.value)}
+              placeholder="Хайх үгээ оруулна уу (жишээ нь: Nvidia, OpenAI...)"
+              className="flex-1 px-3 py-1.5 text-xs bg-transparent focus:outline-none text-slate-900 placeholder-slate-400"
             />
-            <Search className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            {localInput && (
+              <button
+                type="button"
+                onClick={handleClear}
+                className="p-1 text-slate-400 hover:text-slate-700"
+                title="Арилгах"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+            <button
+              type="submit"
+              className="bg-[#172956] hover:bg-red-600 text-white px-3.5 py-2 text-xs font-bold flex items-center gap-1.5 transition-colors"
+            >
+              <Search className="w-3.5 h-3.5" />
+              <span>Хайх</span>
+            </button>
+          </form>
+
+          {/* Popular Search Terms */}
+          <div className="flex items-center gap-1.5 text-[11px] text-slate-500 overflow-x-auto max-w-full">
+            <span className="text-red-600 font-bold flex items-center gap-0.5 shrink-0">
+              <TrendingUp className="w-3 h-3" />
+              Трэнд:
+            </span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {POPULAR_SEARCHES.map((term) => (
+                <button
+                  key={term}
+                  type="button"
+                  onClick={() => handleTagClick(term)}
+                  className="hover:text-red-600 hover:underline cursor-pointer transition-colors"
+                >
+                  {term}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -91,11 +160,15 @@ export const NewspaperHeader: React.FC<Props> = ({
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <ul className="flex items-center overflow-x-auto no-scrollbar font-medium text-xs sm:text-sm">
             {NAV_SECTIONS.map((sec) => {
-              const isActive = activeSection === sec.id;
+              const isActive = activeSection === sec.id && !searchQuery;
               return (
                 <li key={sec.id}>
                   <button
-                    onClick={() => onSelectSection(sec.id)}
+                    onClick={() => {
+                      setLocalInput('');
+                      onSearchChange('');
+                      onSelectSection(sec.id);
+                    }}
                     className={`px-4 py-3 whitespace-nowrap transition-colors border-b-2 flex items-center gap-1 ${
                       isActive
                         ? 'bg-red-600 text-white font-bold border-red-600'
