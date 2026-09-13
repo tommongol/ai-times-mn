@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync-news": "python3 scripts/fetch_daily_news.py"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",

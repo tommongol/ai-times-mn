@@ -1,0 +1,42 @@
+name: Autonomous Daily AI News Pipeline
+
+on:
+  schedule:
+    # Runs automatically every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+    # Equivalent to 08:00, 14:00, 20:00, 02:00 Ulaanbaatar time
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+
+concurrency:
+  group: news-sync
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync-news:
+    name: Aggregate AI News from Wired, TechRadar & Google News
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch, Translate & Sync AI News
+        run: |
+          python3 scripts/fetch_daily_news.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(news): autonomous daily AI news update"
+          file_pattern: "src/data/articles.json src/data/live_wire.json"
+          commit_user_name: "AImedee Bot"
+          commit_user_email: "actions@github.com"
