@@ -338,8 +338,11 @@ def run_pipeline():
     # 5. Merge articles
     if new_articles:
         print(f"Prepending {len(new_articles)} new articles...", flush=True)
-        updated_articles = new_articles + articles
-        updated_articles = updated_articles[:50]
+        # Preserve all foundational articles permanently
+        foundational = [a for a in articles if a.get('isFoundational') or a['id'].startswith('art-aitimes-')]
+        regular = [a for a in articles if not (a.get('isFoundational') or a['id'].startswith('art-aitimes-'))]
+        merged_regular = (new_articles + regular)[:45]
+        updated_articles = merged_regular + foundational
 
         for idx, a in enumerate(updated_articles):
             a['isMainLead'] = (idx == 0)
@@ -347,7 +350,7 @@ def run_pipeline():
 
         with open(ARTICLES_FILE, 'w', encoding='utf-8') as f:
             json.dump(updated_articles, f, ensure_ascii=False, indent=2)
-        print(f"Saved {len(updated_articles)} articles to {ARTICLES_FILE}.", flush=True)
+        print(f"Saved {len(updated_articles)} articles ({len(foundational)} foundational) to {ARTICLES_FILE}.", flush=True)
     else:
         print("All priority articles already up to date.", flush=True)
 

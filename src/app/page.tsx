@@ -80,9 +80,15 @@ export default function HomePage() {
   }, []);
 
   const interviewArticles = useMemo(() => {
-    return ARTICLES.filter(
-      (a) => a.category === 'interview' || a.category === 'opinion'
-    );
+    return ARTICLES.filter((a) => a.category === 'interview');
+  }, []);
+
+  const societyArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'society');
+  }, []);
+
+  const opinionArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'opinion');
   }, []);
 
   return (
@@ -252,12 +258,28 @@ export default function HomePage() {
                 onViewAll={() => setActiveSection('industry')}
               />
 
-              {/* Section 3: Экспертийн ярилцлага & Нийтлэл */}
+              {/* Section 3: Намтар, Хөрөг & Ярилцлага */}
               <SectionBlock
-                title="Салбарын ярилцлага & Шинжилгээ"
+                title="Намтар, Хөрөг & Ярилцлага"
                 articles={interviewArticles}
                 onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('interview')}
+              />
+
+              {/* Section 4: Бодлого, Хууль & Зохиогчийн эрх */}
+              <SectionBlock
+                title="Бодлого, Хууль & Зохиогчийн эрх"
+                articles={societyArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('society')}
+              />
+
+              {/* Section 5: Эрэн сурвалжлах тойм & Түүхэн шинжилгээ */}
+              <SectionBlock
+                title="Эрэн сурвалжлах тойм & Түүхэн шинжилгээ"
+                articles={opinionArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('opinion')}
               />
             </div>
           </>

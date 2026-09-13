@@ -37,8 +37,8 @@ export const NAV_SECTIONS = [
   { id: 'companies', name: 'КОМПАНИУД' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
   { id: 'society', name: 'БОДЛОГО & ХУУЛЬ' },
-  { id: 'interview', name: 'ЯРИЛЦЛАГА' },
-  { id: 'opinion', name: 'ШИНЖИЛГЭЭ' },
+  { id: 'interview', name: 'НАМТАР & ЯРИЛЦЛАГА' },
+  { id: 'opinion', name: 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ' },
 ] as const;
 
 export const ARTICLES: NewsArticle[] = rawArticles as NewsArticle[];
