@@ -73,18 +73,24 @@ export default function HomePage() {
     return ARTICLES.filter((a) => a.category === 'tech');
   }, []);
 
+  const policyArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'policy');
+  }, []);
+
+  const lawArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'law');
+  }, []);
+
   const industryArticles = useMemo(() => {
-    return ARTICLES.filter(
-      (a) => a.category === 'industry' || a.category === 'companies'
-    );
+    return ARTICLES.filter((a) => a.category === 'industry');
+  }, []);
+
+  const companiesArticles = useMemo(() => {
+    return ARTICLES.filter((a) => a.category === 'companies');
   }, []);
 
   const interviewArticles = useMemo(() => {
     return ARTICLES.filter((a) => a.category === 'interview');
-  }, []);
-
-  const societyArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'society');
   }, []);
 
   const opinionArticles = useMemo(() => {
@@ -250,15 +256,31 @@ export default function HomePage() {
                 onViewAll={() => setActiveSection('tech')}
               />
 
-              {/* Section 2: AI Салбар ба Компаниуд */}
+              {/* Section 2: Бодлого & Стратеги */}
               <SectionBlock
-                title="AI Салбар ба Компаниуд"
-                articles={industryArticles}
+                title="Бодлого & Стратеги"
+                articles={policyArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('policy')}
+              />
+
+              {/* Section 3: Хууль, Шүүх & Зохиогчийн эрх */}
+              <SectionBlock
+                title="Хууль, Шүүх & Зохиогчийн эрх"
+                articles={lawArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('law')}
+              />
+
+              {/* Section 4: Салбар ба Компаниуд */}
+              <SectionBlock
+                title="Салбар ба Компаниуд"
+                articles={[...companiesArticles, ...industryArticles]}
                 onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('industry')}
               />
 
-              {/* Section 3: Намтар, Хөрөг & Ярилцлага */}
+              {/* Section 5: Намтар, Хөрөг & Ярилцлага */}
               <SectionBlock
                 title="Намтар, Хөрөг & Ярилцлага"
                 articles={interviewArticles}
@@ -266,15 +288,7 @@ export default function HomePage() {
                 onViewAll={() => setActiveSection('interview')}
               />
 
-              {/* Section 4: Бодлого, Хууль & Зохиогчийн эрх */}
-              <SectionBlock
-                title="Бодлого, Хууль & Зохиогчийн эрх"
-                articles={societyArticles}
-                onSelect={setSelectedArticle}
-                onViewAll={() => setActiveSection('society')}
-              />
-
-              {/* Section 5: Эрэн сурвалжлах тойм & Түүхэн шинжилгээ */}
+              {/* Section 6: Эрэн сурвалжлах тойм & Түүхэн шинжилгээ */}
               <SectionBlock
                 title="Эрэн сурвалжлах тойм & Түүхэн шинжилгээ"
                 articles={opinionArticles}

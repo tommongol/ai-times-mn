@@ -103,16 +103,20 @@ def create_slug(title):
 
 def determine_category(title, summary=""):
     combined = (title + " " + summary).lower()
-    if any(k in combined for k in ['chip', 'semiconductor', 'model', 'architecture', 'hbm', 'reasoning', 'benchmark', 'code', 'agent', 'gpu', 'llm', 'power', 'thirsty']):
+    if any(k in combined for k in ['lawsuit', 'sue', 'sued', 'court', 'copyright', 'judge', 'antitrust', 'illegal', 'legal', 'law', 'шүүх', 'зарга', 'нэхэмжлэл']):
+        return 'law', 'ХУУЛЬ & ШҮҮХ'
+    elif any(k in combined for k in ['policy', 'regulation', 'ban', 'government', 'bill', 'act', 'sovereign', 'military', 'defense', 'pentagon', 'white house', 'бодлого', 'төрийн']):
+        return 'policy', 'БОДЛОГО'
+    elif any(k in combined for k in ['chip', 'semiconductor', 'model', 'architecture', 'hbm', 'reasoning', 'benchmark', 'code', 'agent', 'gpu', 'llm', 'transistor']):
         return 'tech', 'AI ТЕХНОЛОГИ'
-    elif any(k in combined for k in ['openai', 'nvidia', 'google', 'meta', 'anthropic', 'apple', 'microsoft', 'amazon', 'startup', 'ipo', 'stock', 'invest']):
+    elif any(k in combined for k in ['openai', 'nvidia', 'google', 'meta', 'anthropic', 'apple', 'microsoft', 'amazon', 'startup', 'ipo', 'stock', 'invest', 'valuation', 'capex']):
         return 'companies', 'КОМПАНИУД'
-    elif any(k in combined for k in ['law', 'sue', 'court', 'copyright', 'ban', 'government', 'bill', 'policy', 'regulation', 'security', 'hack', 'defense', 'military', 'bioweapon']):
-        return 'society', 'БОДЛОГО & ХУУЛЬ'
-    elif any(k in combined for k in ['health', 'doctor', 'hospital', 'movie', 'film', 'cinema', 'car', 'auto', 'energy', 'business', 'enterprise', 'robot']):
+    elif any(k in combined for k in ['health', 'doctor', 'hospital', 'movie', 'film', 'cinema', 'car', 'auto', 'energy', 'business', 'enterprise', 'robot', 'spacex', 'factory']):
         return 'industry', 'САЛБАР & БИЗНЕС'
-    elif any(k in combined for k in ['warn', 'danger', 'future', 'risk', 'opinion', 'slowdown', 'catastrophe']):
-        return 'opinion', 'ШИНЖИЛГЭЭ'
+    elif any(k in combined for k in ['interview', 'profile', 'biography', 'ярилцлага', 'хөрөг']):
+        return 'interview', 'НАМТАР & ХӨРӨГ'
+    elif any(k in combined for k in ['investigation', 'history', 'warn', 'danger', 'future', 'risk', 'crisis', 'түүх', 'эрэн сурвалжлах']):
+        return 'opinion', 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ'
     return 'tech', 'AI ТЕХНОЛОГИ'
 
 def fetch_feed_items():

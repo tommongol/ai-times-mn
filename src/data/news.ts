@@ -6,7 +6,7 @@ export interface NewsArticle {
   slug: string;
   title: string;
   subtitle?: string;
-  category: 'all' | 'industry' | 'companies' | 'tech' | 'society' | 'interview' | 'opinion';
+  category: 'all' | 'industry' | 'companies' | 'tech' | 'policy' | 'law' | 'society' | 'interview' | 'opinion';
   categoryName: string;
   primarySource: string;
   primarySourceUrl: string;
@@ -34,10 +34,11 @@ export interface LiveWireItem {
 export const NAV_SECTIONS = [
   { id: 'all', name: 'БҮХ МЭДЭЭ' },
   { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
+  { id: 'policy', name: 'БОДЛОГО' },
+  { id: 'law', name: 'ХУУЛЬ & ШҮҮХ' },
   { id: 'companies', name: 'КОМПАНИУД' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
-  { id: 'society', name: 'БОДЛОГО & ХУУЛЬ' },
-  { id: 'interview', name: 'НАМТАР & ЯРИЛЦЛАГА' },
+  { id: 'interview', name: 'НАМТАР & ХӨРӨГ' },
   { id: 'opinion', name: 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ' },
 ] as const;
 
