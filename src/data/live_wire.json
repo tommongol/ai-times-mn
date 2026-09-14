@@ -1,62 +1,42 @@
 [
   {
-    "time": "13:23",
-    "title": "\"Google RSI (Өөрөө өөрийгөө сайжруулдаг супер оюун)-д хүрсэн үү?\": Нэг мөр жиргээнээс үүссэн шуугиан",
-    "source": "AI Times Korea"
+    "time": "10:16",
+    "title": "OpenAI CEO Sam Altman on AI: We may lose control",
+    "source": "finance.yahoo.com"
   },
   {
-    "time": "12:21",
-    "title": "Дональд Трамп: \"AI-аас айгчид сөрөг хандлагатай байна, Хятадыг ялах нь Америкийн нэн тэргүүний зорилт\"",
-    "source": "AI Times Korea"
+    "time": "09:36",
+    "title": "China says AI CEOs' call for a slowdown is 'fear mongering'",
+    "source": "CNBC"
   },
   {
-    "time": "12:11",
-    "title": "Google болон Microsoft: \"AI хөгжүүлэлтийн хурдыг зохицуулахыг дэмжиж байна\", Аюулгүй байдлын фронтод 5 их компани нэгдэв",
-    "source": "AI Times Korea"
+    "time": "09:02",
+    "title": "Is A.I. Raising the Chances of Biological Warfare?",
+    "source": "The New York Times"
   },
   {
-    "time": "11:36",
-    "title": "Anthropic, OpenAI, Google нар бие даасан \"Дэлхийн AI Аюулгүй байдлын стандартын байгууллага\" байгуулахаар нууц хэлэлцээ хийж байна",
-    "source": "AI Times Korea"
+    "time": "09:00",
+    "title": "‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
+    "source": "wired.com"
   },
   {
-    "time": "11:31",
-    "title": "AI хөгжүүлэлтийг сааруулах уриалгаас болж хувьцааны зах зээлд \"Хар Даваа гараг\" болох уу? Шинжээчдийн дүн шинжилгээ",
-    "source": "AI Times Korea"
+    "time": "04:10",
+    "title": "Trump resists AI slowdown as the political tide turns",
+    "source": "The Washington Post"
   },
   {
-    "time": "11:16",
-    "title": "Эрүүл мэндийн AI-ийн аюулгүй байдлыг шалгасан \"Red Team Challenge\": Дэлхийн 12 том LLM загварын эмнэлзүйн алдааг илрүүлэв",
-    "source": "AI Times Korea"
-  },
-  {
-    "time": "10:45",
-    "title": "АНУ-ын Эрчим хүчний яам сансрын нарны эрчим хүчээр AI дата төвийг тэжээх судалгааны төсөлд $12 сая олгохоор шийдвэрлэв",
-    "source": "AI Times Korea"
-  },
-  {
-    "time": "10:00",
-    "title": "DeepSeek-R1 нээлттэй reasoning загвар AIME олимпиадын шалгалтад 79.8% үр дүн үзүүлж o1-ийн түвшинд хүрэв",
-    "source": "WIRED"
-  },
-  {
-    "time": "09:15",
-    "title": "SK Hynix ба Samsung HBM4 2048-бит санах ойгоо 2026 оны 4-р улиралд масс үйлдвэрлэлд оруулахаа батлав",
-    "source": "AI Times Korea"
-  },
-  {
-    "time": "08:30",
-    "title": "Европын Холбооны 'AI Act' ерөнхий зориулалтын загваруудын дүрэм бүрэн хэрэгжиж эхэллээ",
-    "source": "Reuters"
-  },
-  {
-    "time": "07:45",
-    "title": "SpaceX тойрог замд нарны эрчим хүчээр ажиллах AI дата төвүүдийн анхны томоохон гэрээг баталгаажуулав",
-    "source": "AI Times Korea"
-  },
-  {
-    "time": "06:30",
-    "title": "Apple эрүүл мэндийн шинэ үеийн AI туслахын клиникийн туршилтуудыг албан ёсоор эхлүүлэв",
+    "time": "22:05",
+    "title": "Pentagon wanted an OpenAI system with fewer refusals",
     "source": "TechRadar"
+  },
+  {
+    "time": "22:00",
+    "title": "Call me boring, but the iPhone 18 Pro's big battery boost is easily its most tempting upgrade — forget the fancy new camera, extra-special version of Siri, and ridiculous processing power",
+    "source": "TechRadar"
+  },
+  {
+    "time": "20:23",
+    "title": "King Charles Will Convene A.I. Leaders Amid Calls to Slow Development",
+    "source": "The New York Times"
   }
 ]

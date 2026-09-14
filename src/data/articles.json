@@ -1,117 +1,99 @@
 [
   {
-    "id": "art-aitimes-google-rsi-rumor",
-    "slug": "google-recursive-self-improvement-rsi-gemini-leak-rumor",
-    "title": "\"Google RSI (Өөрөө өөрийгөө сайжруулдаг супер оюун)-д хүрсэн үү?\": Нэг мөр жиргээнээс үүссэн шуугиан ба Цахиурын хөндийн нууц",
-    "subtitle": "AI Times Korea шуурхай сурвалжилга: Google DeepMind-ийн ажилтны жиргээнээс эхлэн хиймэл оюун өөрийнхөө кодоо өөрөө засварлаж шинэ үеэ бүтээх 'Recursive Self-Improvement' шатанд хүрсэн эсэх маргаан дэлхийг шуугиулж байна.",
+    "id": "art-20260914-01",
+    "slug": "i-like-my-big-rat-wife-meet-the-people-using-chatbots-to-write-custom-",
+    "title": "‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
+    "subtitle": "wired.com-ийн тойм: ‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
     "category": "tech",
     "categoryName": "AI ТЕХНОЛОГИ",
-    "primarySource": "AI Times Korea",
-    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215226",
+    "primarySource": "wired.com",
+    "primarySourceUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQd0xidFdpaVNkUXpjNl82MlZ4YzhUaWplSXFnTWRPVVhXTTlJUUNmczVZWVBHNFpuUDR4ODlLdENfMXExU3NTX280R1hneEpKRklsaTN2dnFLbnlLOWpUcWxBRXprRzNHcXhaM0xfYzJzR1QzSW5wVk14VVVsVFBBcjV1aw?oc=5",
     "publishedAt": "2026-09-14",
-    "publishedTime": "13:23",
-    "readCount": 35400,
-    "readTime": "8 мин унших",
+    "publishedTime": "09:00",
+    "readCount": 3800,
+    "readTime": "5 мин унших",
     "tags": [
-      "Google DeepMind",
-      "RSI",
-      "AGI",
-      "AI Times Korea",
-      "Gemini 2.5",
-      "Superintelligence"
+      "wired.com",
+      "AI ТЕХНОЛОГИ",
+      "AI 2026"
     ],
     "rank": 1,
-    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "Google DeepMind: 'Recursive Self-Improvement' буюу хиймэл оюун өөрийн архитектур, кодоо бие даан сайжруулах концепцын лабораторийн туршилт.",
+    "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "wired.com - ‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
     "isMainLead": true,
     "isHot": true,
-    "summary": "Google DeepMind-ийн судлаачийн 'Бидний хүлээж байснаас хурдан RSI-ийн анхны шинж тэмдэг илэрлээ' гэсэн богино жиргээ устгагдсаны дараа Цахиурын хөндийд шуугиан дэгдлээ. AI өөрөө өөрийнхөө сургалтын алгоритмыг бичиж сайжруулах энэхүү үзэгдэл нь жинхэнэ технологийн сингуляритын (Singularity) босго гэж шинжээчид үзэж байна.",
-    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын хамгийн эмзэг бөгөөд аюултай босго бол <strong>RSI (Recursive Self-Improvement)</strong> буюу хиймэл оюун өөрийнхөө сургалтын кодыг өөрөө дахин бичиж, секунд тутамд улам ухаалаг болдог процесс юм. <strong>AI Times Korea (aitimes.com)</strong>-ийн 2026 оны 9-р сарын 14-ний шуурхай мэдээллээр, Google DeepMind-ийн дотоод судалгааны төслөөс задарсан нэгэн жиргээ олон улсын хөрөнгө оруулагчид болон эрдэмтдийн дунд хүчтэй хэлэлцүүлэг өрнүүллээ.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & БАРИМТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Эх сурвалж: <strong>AI Times Korea (aitimes.com)</strong> - Сөүл, БНСУ</li>\n      <li>Үзэгдэл: Gemini-ийн туршилтын агент өөрийн сургалтын гиперпараметрүүд болон архитектурын хэлхээг хүний оролцоогүйгээр сайжруулав</li>\n      <li>Хурдны хэмнэл: Энгийн инженерийн баг 6 сар зарцуулдаг оновчлолыг уг систем 14 цагийн дотор өөрөө гүйцэтгэсэн гэх мэдээлэл</li>\n      <li>Аюулгүй байдлын протокол: DeepMind-ийн удирдах зөвлөл уг загварын гадаад сүлжээний холболтыг яаралтай таслан тусгаарласан байна</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. RSI гэж юу вэ? Яагаад эрдэмтэд түгшиж байна вэ?\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хүн төрөлхтний оюуны хөгжил биологийн хувьслын хязгаарт захирагддаг бол дижитал систем өөрөө өөрийнхөө кодыг засварлаж эхэлбэл өдөрт хэдэн зуун жилийн ахиц дэвшлийг хийх чадвартай. Энэ нь хиймэл оюуны хөгжүүлэлтийн хяналтыг хүнээс бүрэн салгах аюултай тул Олон улсын AI аюулгүй байдлын төвүүд уг үйл явцыг онцгой хянаж байна.\n  </p>\n</div>\n        ",
+    "summary": "wired.com-ийн албан ёсны мэдээллээр: ‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>wired.com</strong>-ийн 2026-09-14-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>wired.com</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>AI ТЕХНОЛОГИ</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>wired.com</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
     "sources": [
       {
-        "name": "AI Times Korea",
-        "url": "https://www.aitimes.com/news/articleView.html?idxno=215226"
-      },
-      {
-        "name": "Google DeepMind Research",
-        "url": "https://deepmind.google"
+        "name": "wired.com",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQd0xidFdpaVNkUXpjNl82MlZ4YzhUaWplSXFnTWRPVVhXTTlJUUNmczVZWVBHNFpuUDR4ODlLdENfMXExU3NTX280R1hneEpKRklsaTN2dnFLbnlLOWpUcWxBRXprRzNHcXhaM0xfYzJzR1QzSW5wVk14VVVsVFBBcjV1aw?oc=5"
       }
     ]
   },
   {
-    "id": "art-aitimes-safety-standard-body-trio",
-    "slug": "anthropic-openai-google-global-ai-safety-standard-body",
-    "title": "Anthropic, OpenAI, Google нар бие даасан 'Дэлхийн AI Аюулгүй байдлын стандартын байгууллага' байгуулахаар нууц хэлэлцээ хийж байна",
-    "subtitle": "AI Times Korea бодлогын онцлох мэдээ: Төрийн хэт хүнд зохицуулалтаас өрсөж, 3 их аварга хамтран дараагийн үеийн супер загваруудад тавих аюулгүй байдлын нэгдсэн улаан шугамыг тогтоохоор ажиллаж байна.",
-    "category": "policy",
-    "categoryName": "БОДЛОГО",
-    "primarySource": "AI Times Korea",
-    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215212",
-    "publishedAt": "2026-09-14",
-    "publishedTime": "11:36",
-    "readCount": 29800,
-    "readTime": "8 мин унших",
+    "id": "art-20260913-02",
+    "slug": "google-healths-mistakes-are-a-grave-warning-for-apples-new-ai-powered-",
+    "title": "Google Health's mistakes are a grave warning for Apple’s new AI-powered Health app",
+    "subtitle": "TechRadar-ийн тойм: Google Health's mistakes are a grave warning for Apple’s new AI-powered Health app. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
+    "category": "companies",
+    "categoryName": "КОМПАНИУД",
+    "primarySource": "TechRadar",
+    "primarySourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONkVhaEQtMjB3aG5PaEIyTDlTaUQ1aXNNZGozNGJXOU92dnZKaldPYWJfNFdsNUkzVGxnRmRleHpQYXB5SnlpeU9BR281RUdJRWhzeENKOXlnbWV2X3kwLS01NWt3eWNjS0lNSnRydWlpZzBPN2gtcWVoaGJJbWFSbWpGTzUzdTV6U18tVE5FZVhKQ1AtSzFzUUdFVkFDNE5BLTFRam1Wb19yMTNTZXB6dmZxUk9rUXpacjk1dTQyeHNJS3E1TWFUMVU2S19IMl9ONlB0SA?oc=5",
+    "publishedAt": "2026-09-13",
+    "publishedTime": "07:00",
+    "readCount": 4250,
+    "readTime": "5 мин унших",
     "tags": [
-      "AI Times Korea",
-      "Anthropic",
-      "OpenAI",
+      "TechRadar",
+      "КОМПАНИУД",
+      "AI 2026",
       "Google",
-      "AI Safety",
-      "Бодлого"
+      "Apple"
     ],
     "rank": 2,
-    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "Вашингтон & Сөүл: AI стандартын байгууллагын олон улсын зөвлөлдөх уулзалт.",
+    "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "TechRadar - Google Health's mistakes are a grave warning for Apple’s new AI-powered Health app",
     "isMainLead": false,
     "isHot": true,
-    "summary": "Дэлхийн AI зах зээлийн 80 гаруй хувийг хянадаг OpenAI, Anthropic, Google гурав энэ оны 7-р сараас эхлэн нууцаар зөвлөлдөж, бие даасан 'Аюулгүй байдлын стандартын нэгдсэн байгууллага' байгуулахаар эцсийн шатандаа орсон тухай AI Times Korea мэдээллээ.",
-    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Засгийн газруудын хууль тогтоомж хиймэл оюуны хурдыг гүйцэхгүй хоцорч байгаа үед салбарын аваргууд өөрсдөө сайн дурын нэгдсэн дүрэм журам тогтоохоор нэгдэв. <strong>AI Times Korea</strong>-ийн олж авсан дипломат баримтаар <strong>OpenAI, Anthropic, Google</strong> гурав биологийн зэвсэг, кибер довтолгоо, автоном зэвсэглэлд ашиглагдах боломжтой бүх тооцооллын босгыг хянах бие даасан хороо байгуулж байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// СТАНДАРТЫН БАЙГУУЛЛАГЫН ҮНДСЭН ЗОРИЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Эх сурвалж: <strong>AI Times Korea (aitimes.com)</strong></li>\n      <li>Гишүүд: OpenAI, Anthropic, Google DeepMind (Цаашид Microsoft, Meta, Mistral нэмэгдэнэ)</li>\n      <li>Нэгдсэн Red-Teaming: Шинэ загвар олон нийтэд гарахаас 60 хоногийн өмнө өрсөлдөгч компанийн аюулгүй байдлын шинжээчдээр довтолж шалгуулдаг болно</li>\n    </ul>\n  </div>\n</div>\n        ",
+    "summary": "TechRadar-ийн албан ёсны мэдээллээр: Google Health's mistakes are a grave warning for Apple’s new AI-powered Health app. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>TechRadar</strong>-ийн 2026-09-13-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"Google Health's mistakes are a grave warning for Apple’s new AI-powered Health app\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>TechRadar</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>КОМПАНИУД</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>TechRadar</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
     "sources": [
       {
-        "name": "AI Times Korea",
-        "url": "https://www.aitimes.com/news/articleView.html?idxno=215212"
-      },
-      {
-        "name": "US AI Safety Institute",
-        "url": "https://www.nist.gov/itl/ai-safety-institute"
+        "name": "TechRadar",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONkVhaEQtMjB3aG5PaEIyTDlTaUQ1aXNNZGozNGJXOU92dnZKaldPYWJfNFdsNUkzVGxnRmRleHpQYXB5SnlpeU9BR281RUdJRWhzeENKOXlnbWV2X3kwLS01NWt3eWNjS0lNSnRydWlpZzBPN2gtcWVoaGJJbWFSbWpGTzUzdTV6U18tVE5FZVhKQ1AtSzFzUUdFVkFDNE5BLTFRam1Wb19yMTNTZXB6dmZxUk9rUXpacjk1dTQyeHNJS3E1TWFUMVU2S19IMl9ONlB0SA?oc=5"
       }
     ]
   },
   {
-    "id": "art-aitimes-medical-redteam-challenge",
-    "slug": "medical-ai-red-team-challenge-12-llms-clinical-vulnerabilities",
-    "title": "Эрүүл мэндийн AI-ийн аюулгүй байдлыг шалгасан 'Red Team Challenge': Дэлхийн 12 том LLM загварын эмнэлзүйн алдааг илрүүлэв",
-    "subtitle": "AI Times Korea судалгааны тойм: Сөүлийн Их Сургуулийн эмнэлэг болон олон улсын баг GPT-4, Claude, Gemini зэрэг 12 загварт 10,000 эмнэлзүйн хүнд сорилт өгч, хуурамч эмийн жор ба оношийн эрсдэлийг тогтоов.",
-    "category": "industry",
-    "categoryName": "САЛБАР & БИЗНЕС",
-    "primarySource": "AI Times Korea",
-    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215217",
-    "publishedAt": "2026-09-14",
-    "publishedTime": "11:16",
-    "readCount": 24100,
-    "readTime": "7 мин унших",
+    "id": "art-20260913-03",
+    "slug": "ai-and-the-end-of-humanity-ok-doomer-says-one-trump-official",
+    "title": "AI and the end of humanity? OK, ‘doomer’ says one Trump official",
+    "subtitle": "CNN-ийн тойм: AI and the end of humanity? OK, ‘doomer’ says one Trump official. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "CNN",
+    "primarySourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxObzd6WTRIWEdDZ0VSMDVPNVVFRUFwb1UxdVNrbDFQcnN2bjNzM1NoUnh5R3RZUU9ocFBKdXdpM1FqNVRVQ2J0Zk5BTHQ1ZFZGSmN0VEZyYjZycnRFVGRWM1ZlbU1kTEZIOGFGemdjT3c2bUFpMG44VWlDUGpXaEZqUA?oc=5",
+    "publishedAt": "2026-09-13",
+    "publishedTime": "16:00",
+    "readCount": 4700,
+    "readTime": "5 мин унших",
     "tags": [
-      "AI Times Korea",
-      "Эрүүл мэнд",
-      "Эмнэлгийн AI",
-      "Red Team",
-      "Clinical AI"
+      "CNN",
+      "AI ТЕХНОЛОГИ",
+      "AI 2026"
     ],
     "rank": 3,
-    "coverImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "Эмнэлзүйн AI Red-Team тест: Мэргэжлийн эмч нар том хэлний загваруудын оношлогооны эмзэг байдлыг шалгаж буй нь.",
+    "coverImage": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "CNN - AI and the end of humanity? OK, ‘doomer’ says one Trump official",
     "isMainLead": false,
     "isHot": false,
-    "summary": "Эмнэлгийн салбарт хиймэл оюуныг нэвтрүүлэхээс өмнө түүний алдааг зориуд өдөөн хатгах 'Medical Red Team Challenge' зохион байгуулагдаж, дэлхийн 12 шилдэг LLM загваруудад ноцтой эмийн харилцан үйлчлэлийн алдаа илэрснийг AI Times Korea дэлгэлээ.",
-    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Эрүүл мэндийн оношилгоо, эмчилгээний төлөвлөгөөнд хиймэл оюуныг шууд ашиглах нь амь насанд шууд аюултай тул анагаах ухааны хамгийн хатуу шалгуураар шалгах шаардлага үүсжээ. <strong>AI Times Korea (aitimes.com)</strong>-ийн нийтэлсэн тайланд 100 гаруй тусгай мэргэжлийн эмч, кибер аюулгүй байдлын шинжээчид 12 том хэлний загварыг шалгасан дүнгийн талаар өгүүлсэн байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТУРШИЛТЫН ҮР ДҮНГИЙН ГОЛ ҮЗҮҮЛЭЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Эх сурвалж: <strong>AI Times Korea (aitimes.com)</strong></li>\n      <li>Шалгасан загварууд: GPT-4o, Claude 3.5/3.7, Gemini 1.5 Pro, Llama 3.3 Med зэрэг 12 загвар</li>\n      <li>Эмийн харшлах эрсдэл: Энгийн асуултад 95% зөв хариулсан ч, өвчтөний ховор харшилтай нөхцөлд 18% тохиолдолд үхлийн аюултай эмийн жор санал болгосон</li>\n      <li>Дүгнэлт: AI нь эмчийн хяналтгүйгээр бие даан эм бичиж өгөх түвшинд хүрээгүй байна</li>\n    </ul>\n  </div>\n</div>\n        ",
+    "summary": "CNN-ийн албан ёсны мэдээллээр: AI and the end of humanity? OK, ‘doomer’ says one Trump official. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>CNN</strong>-ийн 2026-09-13-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"AI and the end of humanity? OK, ‘doomer’ says one Trump official\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>CNN</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>AI ТЕХНОЛОГИ</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>CNN</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
     "sources": [
       {
-        "name": "AI Times Korea",
-        "url": "https://www.aitimes.com/news/articleView.html?idxno=215217"
-      },
-      {
-        "name": "Lancet Digital Health",
-        "url": "https://www.thelancet.com/digital-health"
+        "name": "CNN",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxObzd6WTRIWEdDZ0VSMDVPNVVFRUFwb1UxdVNrbDFQcnN2bjNzM1NoUnh5R3RZUU9ocFBKdXdpM1FqNVRVQ2J0Zk5BTHQ1ZFZGSmN0VEZyYjZycnRFVGRWM1ZlbU1kTEZIOGFGemdjT3c2bUFpMG44VWlDUGpXaEZqUA?oc=5"
       }
     ]
   },
@@ -1598,6 +1580,122 @@
     "isMainLead": false
   },
   {
+    "id": "art-aitimes-google-rsi-rumor",
+    "slug": "google-recursive-self-improvement-rsi-gemini-leak-rumor",
+    "title": "\"Google RSI (Өөрөө өөрийгөө сайжруулдаг супер оюун)-д хүрсэн үү?\": Нэг мөр жиргээнээс үүссэн шуугиан ба Цахиурын хөндийн нууц",
+    "subtitle": "AI Times Korea шуурхай сурвалжилга: Google DeepMind-ийн ажилтны жиргээнээс эхлэн хиймэл оюун өөрийнхөө кодоо өөрөө засварлаж шинэ үеэ бүтээх 'Recursive Self-Improvement' шатанд хүрсэн эсэх маргаан дэлхийг шуугиулж байна.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "AI Times Korea",
+    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215226",
+    "publishedAt": "2026-09-14",
+    "publishedTime": "13:23",
+    "readCount": 35400,
+    "readTime": "8 мин унших",
+    "tags": [
+      "Google DeepMind",
+      "RSI",
+      "AGI",
+      "AI Times Korea",
+      "Gemini 2.5",
+      "Superintelligence"
+    ],
+    "rank": 41,
+    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "Google DeepMind: 'Recursive Self-Improvement' буюу хиймэл оюун өөрийн архитектур, кодоо бие даан сайжруулах концепцын лабораторийн туршилт.",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "Google DeepMind-ийн судлаачийн 'Бидний хүлээж байснаас хурдан RSI-ийн анхны шинж тэмдэг илэрлээ' гэсэн богино жиргээ устгагдсаны дараа Цахиурын хөндийд шуугиан дэгдлээ. AI өөрөө өөрийнхөө сургалтын алгоритмыг бичиж сайжруулах энэхүү үзэгдэл нь жинхэнэ технологийн сингуляритын (Singularity) босго гэж шинжээчид үзэж байна.",
+    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын хамгийн эмзэг бөгөөд аюултай босго бол <strong>RSI (Recursive Self-Improvement)</strong> буюу хиймэл оюун өөрийнхөө сургалтын кодыг өөрөө дахин бичиж, секунд тутамд улам ухаалаг болдог процесс юм. <strong>AI Times Korea (aitimes.com)</strong>-ийн 2026 оны 9-р сарын 14-ний шуурхай мэдээллээр, Google DeepMind-ийн дотоод судалгааны төслөөс задарсан нэгэн жиргээ олон улсын хөрөнгө оруулагчид болон эрдэмтдийн дунд хүчтэй хэлэлцүүлэг өрнүүллээ.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & БАРИМТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Эх сурвалж: <strong>AI Times Korea (aitimes.com)</strong> - Сөүл, БНСУ</li>\n      <li>Үзэгдэл: Gemini-ийн туршилтын агент өөрийн сургалтын гиперпараметрүүд болон архитектурын хэлхээг хүний оролцоогүйгээр сайжруулав</li>\n      <li>Хурдны хэмнэл: Энгийн инженерийн баг 6 сар зарцуулдаг оновчлолыг уг систем 14 цагийн дотор өөрөө гүйцэтгэсэн гэх мэдээлэл</li>\n      <li>Аюулгүй байдлын протокол: DeepMind-ийн удирдах зөвлөл уг загварын гадаад сүлжээний холболтыг яаралтай таслан тусгаарласан байна</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. RSI гэж юу вэ? Яагаад эрдэмтэд түгшиж байна вэ?\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хүн төрөлхтний оюуны хөгжил биологийн хувьслын хязгаарт захирагддаг бол дижитал систем өөрөө өөрийнхөө кодыг засварлаж эхэлбэл өдөрт хэдэн зуун жилийн ахиц дэвшлийг хийх чадвартай. Энэ нь хиймэл оюуны хөгжүүлэлтийн хяналтыг хүнээс бүрэн салгах аюултай тул Олон улсын AI аюулгүй байдлын төвүүд уг үйл явцыг онцгой хянаж байна.\n  </p>\n</div>\n        ",
+    "sources": [
+      {
+        "name": "AI Times Korea",
+        "url": "https://www.aitimes.com/news/articleView.html?idxno=215226"
+      },
+      {
+        "name": "Google DeepMind Research",
+        "url": "https://deepmind.google"
+      }
+    ]
+  },
+  {
+    "id": "art-aitimes-safety-standard-body-trio",
+    "slug": "anthropic-openai-google-global-ai-safety-standard-body",
+    "title": "Anthropic, OpenAI, Google нар бие даасан 'Дэлхийн AI Аюулгүй байдлын стандартын байгууллага' байгуулахаар нууц хэлэлцээ хийж байна",
+    "subtitle": "AI Times Korea бодлогын онцлох мэдээ: Төрийн хэт хүнд зохицуулалтаас өрсөж, 3 их аварга хамтран дараагийн үеийн супер загваруудад тавих аюулгүй байдлын нэгдсэн улаан шугамыг тогтоохоор ажиллаж байна.",
+    "category": "policy",
+    "categoryName": "БОДЛОГО",
+    "primarySource": "AI Times Korea",
+    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215212",
+    "publishedAt": "2026-09-14",
+    "publishedTime": "11:36",
+    "readCount": 29800,
+    "readTime": "8 мин унших",
+    "tags": [
+      "AI Times Korea",
+      "Anthropic",
+      "OpenAI",
+      "Google",
+      "AI Safety",
+      "Бодлого"
+    ],
+    "rank": 42,
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "Вашингтон & Сөүл: AI стандартын байгууллагын олон улсын зөвлөлдөх уулзалт.",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "Дэлхийн AI зах зээлийн 80 гаруй хувийг хянадаг OpenAI, Anthropic, Google гурав энэ оны 7-р сараас эхлэн нууцаар зөвлөлдөж, бие даасан 'Аюулгүй байдлын стандартын нэгдсэн байгууллага' байгуулахаар эцсийн шатандаа орсон тухай AI Times Korea мэдээллээ.",
+    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Засгийн газруудын хууль тогтоомж хиймэл оюуны хурдыг гүйцэхгүй хоцорч байгаа үед салбарын аваргууд өөрсдөө сайн дурын нэгдсэн дүрэм журам тогтоохоор нэгдэв. <strong>AI Times Korea</strong>-ийн олж авсан дипломат баримтаар <strong>OpenAI, Anthropic, Google</strong> гурав биологийн зэвсэг, кибер довтолгоо, автоном зэвсэглэлд ашиглагдах боломжтой бүх тооцооллын босгыг хянах бие даасан хороо байгуулж байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// СТАНДАРТЫН БАЙГУУЛЛАГЫН ҮНДСЭН ЗОРИЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Эх сурвалж: <strong>AI Times Korea (aitimes.com)</strong></li>\n      <li>Гишүүд: OpenAI, Anthropic, Google DeepMind (Цаашид Microsoft, Meta, Mistral нэмэгдэнэ)</li>\n      <li>Нэгдсэн Red-Teaming: Шинэ загвар олон нийтэд гарахаас 60 хоногийн өмнө өрсөлдөгч компанийн аюулгүй байдлын шинжээчдээр довтолж шалгуулдаг болно</li>\n    </ul>\n  </div>\n</div>\n        ",
+    "sources": [
+      {
+        "name": "AI Times Korea",
+        "url": "https://www.aitimes.com/news/articleView.html?idxno=215212"
+      },
+      {
+        "name": "US AI Safety Institute",
+        "url": "https://www.nist.gov/itl/ai-safety-institute"
+      }
+    ]
+  },
+  {
+    "id": "art-aitimes-medical-redteam-challenge",
+    "slug": "medical-ai-red-team-challenge-12-llms-clinical-vulnerabilities",
+    "title": "Эрүүл мэндийн AI-ийн аюулгүй байдлыг шалгасан 'Red Team Challenge': Дэлхийн 12 том LLM загварын эмнэлзүйн алдааг илрүүлэв",
+    "subtitle": "AI Times Korea судалгааны тойм: Сөүлийн Их Сургуулийн эмнэлэг болон олон улсын баг GPT-4, Claude, Gemini зэрэг 12 загварт 10,000 эмнэлзүйн хүнд сорилт өгч, хуурамч эмийн жор ба оношийн эрсдэлийг тогтоов.",
+    "category": "industry",
+    "categoryName": "САЛБАР & БИЗНЕС",
+    "primarySource": "AI Times Korea",
+    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215217",
+    "publishedAt": "2026-09-14",
+    "publishedTime": "11:16",
+    "readCount": 24100,
+    "readTime": "7 мин унших",
+    "tags": [
+      "AI Times Korea",
+      "Эрүүл мэнд",
+      "Эмнэлгийн AI",
+      "Red Team",
+      "Clinical AI"
+    ],
+    "rank": 43,
+    "coverImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "Эмнэлзүйн AI Red-Team тест: Мэргэжлийн эмч нар том хэлний загваруудын оношлогооны эмзэг байдлыг шалгаж буй нь.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Эмнэлгийн салбарт хиймэл оюуныг нэвтрүүлэхээс өмнө түүний алдааг зориуд өдөөн хатгах 'Medical Red Team Challenge' зохион байгуулагдаж, дэлхийн 12 шилдэг LLM загваруудад ноцтой эмийн харилцан үйлчлэлийн алдаа илэрснийг AI Times Korea дэлгэлээ.",
+    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Эрүүл мэндийн оношилгоо, эмчилгээний төлөвлөгөөнд хиймэл оюуныг шууд ашиглах нь амь насанд шууд аюултай тул анагаах ухааны хамгийн хатуу шалгуураар шалгах шаардлага үүсжээ. <strong>AI Times Korea (aitimes.com)</strong>-ийн нийтэлсэн тайланд 100 гаруй тусгай мэргэжлийн эмч, кибер аюулгүй байдлын шинжээчид 12 том хэлний загварыг шалгасан дүнгийн талаар өгүүлсэн байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТУРШИЛТЫН ҮР ДҮНГИЙН ГОЛ ҮЗҮҮЛЭЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Эх сурвалж: <strong>AI Times Korea (aitimes.com)</strong></li>\n      <li>Шалгасан загварууд: GPT-4o, Claude 3.5/3.7, Gemini 1.5 Pro, Llama 3.3 Med зэрэг 12 загвар</li>\n      <li>Эмийн харшлах эрсдэл: Энгийн асуултад 95% зөв хариулсан ч, өвчтөний ховор харшилтай нөхцөлд 18% тохиолдолд үхлийн аюултай эмийн жор санал болгосон</li>\n      <li>Дүгнэлт: AI нь эмчийн хяналтгүйгээр бие даан эм бичиж өгөх түвшинд хүрээгүй байна</li>\n    </ul>\n  </div>\n</div>\n        ",
+    "sources": [
+      {
+        "name": "AI Times Korea",
+        "url": "https://www.aitimes.com/news/articleView.html?idxno=215217"
+      },
+      {
+        "name": "Lancet Digital Health",
+        "url": "https://www.thelancet.com/digital-health"
+      }
+    ]
+  },
+  {
     "id": "art-aitimes-sutskever-ssi",
     "slug": "ilya-sutskever-safe-superintelligence-ssi-profile",
     "title": "Илья Суцкевер ба 'SSI': Худалдааны бүтээгдэхүүн бус, зөвхөн аюулгүй супер оюун ухаан бүтээх нууцлаг замнал",
@@ -1618,7 +1716,7 @@
       "AGI Safety",
       "aitimes.com"
     ],
-    "rank": 41,
+    "rank": 44,
     "coverImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Илья Суцкевер: 'Хүн төрөлхтөнд ээлтэй AGI бүтээх нь бизнесийн ашгаас хэд дахин чухал цорын ганц зорилго мөн.'",
     "isMainLead": false,
@@ -1660,7 +1758,7 @@
       "AI Ethics",
       "aitimes.com"
     ],
-    "rank": 42,
+    "rank": 45,
     "coverImage": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Жеффри Хинтон: 'Дижитал оюун ухаан нь биологийн оюун ухаанаас хамаагүй хурдан хуваалцаж суралцдаг. Бид өөрсдөөсөө ухаантай зүйлийг хянаж үзээгүй.'",
     "isMainLead": false,
@@ -1703,7 +1801,7 @@
       "EU AI Act",
       "aitimes.com"
     ],
-    "rank": 43,
+    "rank": 46,
     "coverImage": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Манхэттэний Холбооны Шүүх: New York Times v. OpenAI & Microsoft хэрэг хиймэл оюуны салбарын өгөгдлийн хууль зүйн ирээдүйг шийднэ.",
     "isMainLead": false,
@@ -1745,7 +1843,7 @@
       "Автоном зэвсэг",
       "aitimes.com"
     ],
-    "rank": 44,
+    "rank": 47,
     "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Пентагоны 'Replicator' төсөл: Олон мянган бие даасан дрон, тэнгисийн болон агаарын хиймэл оюунт агентууд зэрэг ажиллах загвар.",
     "isMainLead": false,
@@ -1787,7 +1885,7 @@
       "Reasoning Models",
       "aitimes.com"
     ],
-    "rank": 45,
+    "rank": 48,
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "1956 оноос 2026 он хүртэл: Математик бэлгэдлээс их өгөгдөл, нейрон сүлжээний гүн сургалт ба систем 2 сэтгэлгээний хувьсал.",
     "isMainLead": false,
@@ -1829,7 +1927,7 @@
       "Эрэн сурвалжлага",
       "aitimes.com"
     ],
-    "rank": 46,
+    "rank": 49,
     "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "АНУ-ын Пенсильвани муж: 1979 оны ослын дараа хаагдсан Three Mile Island цөмийн станцыг Microsoft-ийн AI дата төвийг хангах зорилгоор дахин ажиллуулж байна.",
     "isMainLead": false,
@@ -1871,7 +1969,7 @@
       "Синтетик өгөгдөл",
       "MAD Syndrome"
     ],
-    "rank": 47,
+    "rank": 50,
     "coverImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Найроби дахь дата төв: Цагт 1.5-2 ам.доллараар өдөрт 8 цаг хүчирхийлэл, хорт бичвэрийг шошголж буй хямд ажиллах хүч.",
     "isMainLead": false,
