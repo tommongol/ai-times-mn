@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { NewsProvider } from '@/context/NewsContext';
+
 export default function RootLayout({
   children,
 }: {
@@ -21,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="mn">
       <body className="min-h-screen flex flex-col bg-white text-slate-900">
-        {children}
+        <NewsProvider>
+          {children}
+        </NewsProvider>
       </body>
     </html>
   );

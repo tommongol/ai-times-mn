@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Mail, X, TrendingUp, ShieldCheck } from 'lucide-react';
+import Link from 'next/link';
+import { Search, Mail, X, TrendingUp, ShieldCheck, SlidersHorizontal } from 'lucide-react';
 import { NAV_SECTIONS } from '@/data/news';
 
 interface Props {
@@ -64,6 +65,15 @@ export const NewspaperHeader: React.FC<Props> = ({
           </div>
 
           <div className="flex items-center gap-3 text-[10px]">
+            <Link
+              href="/admin"
+              className="inline-flex items-center gap-1.5 text-white bg-neutral-800 hover:bg-[#00FF66] hover:text-black px-2 py-0.5 border border-neutral-700 font-bold transition-colors cursor-pointer uppercase tracking-wider"
+              title="Мэдээ нийтлэл засах редакцын удирдлага"
+            >
+              <SlidersHorizontal className="w-3 h-3 text-[#00FF66] group-hover:text-black" />
+              <span>РЕДАКЦ / DASHBOARD</span>
+            </Link>
+            <span className="text-neutral-500">|</span>
             <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-neutral-800 px-2 py-0.5 rounded-xs border border-neutral-700">
               <ShieldCheck className="w-3 h-3 text-[#00FF66]" />
               100% БОДИТ ЭХ СУРВАЛЖ

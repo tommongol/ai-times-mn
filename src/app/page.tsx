@@ -7,10 +7,12 @@ import { SectionBlock } from '@/components/SectionBlock';
 import { LiveWire } from '@/components/LiveWire';
 import { ArticleViewModal } from '@/components/ArticleViewModal';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
-import { ARTICLES, NewsArticle, NAV_SECTIONS } from '@/data/news';
+import { useNews } from '@/context/NewsContext';
+import { NewsArticle, NAV_SECTIONS } from '@/data/news';
 import { Eye, Search, ArrowUpDown, XCircle, ShieldCheck } from 'lucide-react';
 
 export default function HomePage() {
+  const { articles } = useNews();
   const [activeSection, setActiveSection] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [searchSort, setSearchSort] = useState<'latest' | 'views'>('latest');
@@ -20,7 +22,7 @@ export default function HomePage() {
   const filteredArticles = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
 
-    const matched = ARTICLES.filter((art) => {
+    const matched = articles.filter((art) => {
       const matchesCategory =
         activeSection === 'all' || art.category === activeSection;
 
@@ -49,53 +51,53 @@ export default function HomePage() {
         new Date(`${a.publishedAt}T${a.publishedTime}`).getTime()
       );
     });
-  }, [activeSection, searchQuery, searchSort]);
+  }, [articles, activeSection, searchQuery, searchSort]);
 
   // Lead stories for main newspaper view
   const mainLead = useMemo(() => {
-    return ARTICLES.find((a) => a.isMainLead) || ARTICLES[0];
-  }, []);
+    return articles.find((a) => a.isMainLead) || articles[0];
+  }, [articles]);
 
   const subLeads = useMemo(() => {
-    return ARTICLES.filter((a) => a.id !== mainLead.id && !a.isHot);
-  }, [mainLead]);
+    return articles.filter((a) => a.id !== mainLead?.id && !a.isHot);
+  }, [articles, mainLead]);
 
   const hotArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.isHot && a.id !== mainLead.id);
-  }, [mainLead]);
+    return articles.filter((a) => a.isHot && a.id !== mainLead?.id);
+  }, [articles, mainLead]);
 
   const mostRead = useMemo(() => {
-    return [...ARTICLES].sort((a, b) => b.readCount - a.readCount);
-  }, []);
+    return [...articles].sort((a, b) => b.readCount - a.readCount);
+  }, [articles]);
 
   // Section specific slices
   const techArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'tech');
-  }, []);
+    return articles.filter((a) => a.category === 'tech');
+  }, [articles]);
 
   const policyArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'policy');
-  }, []);
+    return articles.filter((a) => a.category === 'policy');
+  }, [articles]);
 
   const lawArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'law');
-  }, []);
+    return articles.filter((a) => a.category === 'law');
+  }, [articles]);
 
   const industryArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'industry');
-  }, []);
+    return articles.filter((a) => a.category === 'industry');
+  }, [articles]);
 
   const companiesArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'companies');
-  }, []);
+    return articles.filter((a) => a.category === 'companies');
+  }, [articles]);
 
   const interviewArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'interview');
-  }, []);
+    return articles.filter((a) => a.category === 'interview');
+  }, [articles]);
 
   const opinionArticles = useMemo(() => {
-    return ARTICLES.filter((a) => a.category === 'opinion');
-  }, []);
+    return articles.filter((a) => a.category === 'opinion');
+  }, [articles]);
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-black font-sans selection:bg-[#00FF66] selection:text-black">

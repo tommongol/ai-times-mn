@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { LIVE_WIRE } from '@/data/news';
+import { useNews } from '@/context/NewsContext';
 import { Terminal, Radio } from 'lucide-react';
 
 export const LiveWire: React.FC = () => {
+  const { liveWire } = useNews();
   return (
     <div className="bg-black text-white p-4 mb-8 border-2 border-black">
       <div className="flex items-center justify-between pb-2.5 mb-3 border-b border-neutral-800">
@@ -20,7 +21,7 @@ export const LiveWire: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-        {LIVE_WIRE.map((item, idx) => (
+        {liveWire.map((item, idx) => (
           <div
             key={idx}
             className="flex items-start gap-2.5 text-xs font-mono group p-1.5 hover:bg-neutral-900 transition-colors"
