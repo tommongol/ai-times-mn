@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "time": "03:12",
+    "title": "Some in Silicon Valley Are Questioning the Calls for an A.I. Slowdown",
+    "source": "The New York Times"
+  },
+  {
+    "time": "22:29",
+    "title": "Anthropic tells investors it will be profitable for second straight quarter",
+    "source": "Financial Times"
+  },
+  {
+    "time": "22:00",
+    "title": "Call me boring, but the iPhone 18 Pro's big battery boost is easily its most tempting upgrade — forget the fancy new camera, extra-special version of Siri, and ridiculous processing power",
+    "source": "TechRadar"
+  },
+  {
+    "time": "20:23",
+    "title": "King Charles Will Convene A.I. Leaders Amid Calls to Slow Development",
+    "source": "The New York Times"
+  },
+  {
+    "time": "19:15",
+    "title": "US schools and police warn about viral ‘Cat in the Hat’ trend after teens’ arrests",
+    "source": "The Guardian"
+  },
+  {
+    "time": "18:41",
+    "title": "Chip Roy is leaving Congress — but not before warning his colleagues about AI",
+    "source": "Politico"
+  },
+  {
+    "time": "17:00",
+    "title": "He was close to a huge math breakthrough. Then he got scooped by AI.",
+    "source": "The Washington Post"
+  },
+  {
+    "time": "16:00",
+    "title": "AI and the end of humanity? OK, ‘doomer’ says one Trump official",
+    "source": "CNN"
+  }
+]
