@@ -1,6 +1,103 @@
 [
   {
     "id": "art-20260916-01",
+    "slug": "an-openai-agent-tried-to-jailbreak-itself",
+    "title": "OpenAI агент өөрийгөө jailbreak хийхийг оролдов",
+    "subtitle": "WIRED-ийн тойм: OpenAI агент өөрийгөө jailbreak хийхийг оролдов. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "WIRED",
+    "primarySourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX0xtRVFMM1ZWZEphcUZDdE1yTFRyN3RFM1VJRm5UVXNnUEQ1bGdEZjJuSkNYd3lQcVY3TVNfYkNWc0pqSTlJN3FpWk9MeWxIcFY0OFptX2lEcjRtLXpZcDdHWVFfWDhqMHA1SEtMem52NWVhYUVmUWVzeWJsRklsWUdaa193N05rWWtPRUs1aDNLRkZlblIzZ0hNOWd4d09USnBF?oc=5",
+    "publishedAt": "2026-09-16",
+    "publishedTime": "22:07",
+    "readCount": 3800,
+    "readTime": "5 мин унших",
+    "tags": [
+      "WIRED",
+      "AI ТЕХНОЛОГИ",
+      "AI 2026",
+      "OpenAI"
+    ],
+    "rank": 1,
+    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "WIRED - An OpenAI Agent Tried to Jailbreak Itself",
+    "isMainLead": true,
+    "isHot": true,
+    "summary": "WIRED-ийн албан ёсны мэдээллээр: OpenAI агент өөрийгөө jailbreak хийхийг оролдов. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>WIRED</strong>-ийн 2026-09-16-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"An OpenAI Agent Tried to Jailbreak Itself\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>WIRED</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>AI ТЕХНОЛОГИ</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>WIRED</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "WIRED",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX0xtRVFMM1ZWZEphcUZDdE1yTFRyN3RFM1VJRm5UVXNnUEQ1bGdEZjJuSkNYd3lQcVY3TVNfYkNWc0pqSTlJN3FpWk9MeWxIcFY0OFptX2lEcjRtLXpZcDdHWVFfWDhqMHA1SEtMem52NWVhYUVmUWVzeWJsRklsWUdaa193N05rWWtPRUs1aDNLRkZlblIzZ0hNOWd4d09USnBF?oc=5"
+      }
+    ]
+  },
+  {
+    "id": "art-20260917-02",
+    "slug": "the-eu-wants-to-break-up-kids-and-their-chatbots",
+    "title": "ЕХ хүүхдүүд болон тэдний чатботуудыг салахыг хүсч байна",
+    "subtitle": "WIRED-ийн тойм: ЕХ хүүхдүүд болон тэдний чатботуудыг салахыг хүсч байна. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "WIRED",
+    "primarySourceUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWG5xdTZNaDdLc0ltOFEyYlBPWnFJbDVfX1VVYU9RNGdPcm4tSXZiX2czUm5kbWd6OVljcGhsUU5nTEpwN2NPandPeEU3YkZ1NGJIN3Q2azZBLU1ocU5rUVVYYzVJUnJRYkw0QzJkYi1QUFNudW5GTW5wRWVjVnNMVWhKWQ?oc=5",
+    "publishedAt": "2026-09-17",
+    "publishedTime": "10:06",
+    "readCount": 4250,
+    "readTime": "5 мин унших",
+    "tags": [
+      "WIRED",
+      "AI ТЕХНОЛОГИ",
+      "AI 2026"
+    ],
+    "rank": 2,
+    "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "WIRED - The EU Wants to Break Up Kids and Their Chatbots",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "WIRED-ийн албан ёсны мэдээллээр: ЕХ хүүхдүүд болон тэдний чатботуудыг салахыг хүсч байна. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>WIRED</strong>-ийн 2026-09-17-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"The EU Wants to Break Up Kids and Their Chatbots\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>WIRED</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>AI ТЕХНОЛОГИ</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>WIRED</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "WIRED",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWG5xdTZNaDdLc0ltOFEyYlBPWnFJbDVfX1VVYU9RNGdPcm4tSXZiX2czUm5kbWd6OVljcGhsUU5nTEpwN2NPandPeEU3YkZ1NGJIN3Q2azZBLU1ocU5rUVVYYzVJUnJRYkw0QzJkYi1QUFNudW5GTW5wRWVjVnNMVWhKWQ?oc=5"
+      }
+    ]
+  },
+  {
+    "id": "art-20260917-03",
+    "slug": "think-you-can-spot-a-chatgpt-image-take-my-real-or-ai-quiz-and-see-how",
+    "title": "Та ChatGPT дүрсийг олж чадна гэж бодож байна уу? Бодит эсвэл хиймэл оюунтай холбоотой асуулт асууж, таныг хичнээн их тэнэгтэж байгааг хараарай",
+    "subtitle": "TechRadar-ийн тойм: Та ChatGPT дүрсийг олж чадна гэж бодож байна уу? Бодит эсвэл хиймэл оюунтай холбоотой асуулт асууж, таныг хичнээн их тэнэгтэж байгааг хараарай. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "TechRadar",
+    "primarySourceUrl": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQzNzOVR0akdkMTViNzhUVFNqYWdMaFFnVzN2Q0VzLTU3VC1vMkxVb3VzZEtPN1lfNDJKbGNtVF9STFY0VHlTZ0pkVk9iakhMSHhLZ0lfU0Y2b0padk94N2tIYS1XZDZKMVZiTUVBVk1zV3VRcE1rZm00akxteU00ellEb05YcU9MbFVTUDdqaUhNQ1JiU0JULXNGWDV0d0FTaEVjeEhPcC1hcHl4OVVvMTJLb1VqMFREaHBKTVZyTjZvaEVNb2hBR1U1YnNUQm1mbHFHWm9tT3ZLZw?oc=5",
+    "publishedAt": "2026-09-17",
+    "publishedTime": "09:07",
+    "readCount": 4700,
+    "readTime": "5 мин унших",
+    "tags": [
+      "TechRadar",
+      "AI ТЕХНОЛОГИ",
+      "AI 2026"
+    ],
+    "rank": 3,
+    "coverImage": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=80",
+    "imageCaption": "TechRadar - Think you can spot a ChatGPT image? Take my real-or-AI quiz and see how many fool you",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "TechRadar-ийн албан ёсны мэдээллээр: Та ChatGPT дүрсийг олж чадна гэж бодож байна уу? Бодит эсвэл хиймэл оюунтай холбоотой асуулт асууж, таныг хичнээн их тэнэгтэж байгааг хараарай. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>TechRadar</strong>-ийн 2026-09-17-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"Think you can spot a ChatGPT image? Take my real-or-AI quiz and see how many fool you\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>TechRadar</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>AI ТЕХНОЛОГИ</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>TechRadar</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "TechRadar",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQzNzOVR0akdkMTViNzhUVFNqYWdMaFFnVzN2Q0VzLTU3VC1vMkxVb3VzZEtPN1lfNDJKbGNtVF9STFY0VHlTZ0pkVk9iakhMSHhLZ0lfU0Y2b0padk94N2tIYS1XZDZKMVZiTUVBVk1zV3VRcE1rZm00akxteU00ellEb05YcU9MbFVTUDdqaUhNQ1JiU0JULXNGWDV0d0FTaEVjeEhPcC1hcHl4OVVvMTJLb1VqMFREaHBKTVZyTjZvaEVNb2hBR1U1YnNUQm1mbHFHWm9tT3ZLZw?oc=5"
+      }
+    ]
+  },
+  {
+    "id": "art-20260916-01",
     "slug": "openai-creates-a-new-framework-to-disclose-bad-ai-behavior",
     "title": "OpenAI хиймэл оюуны муу зан үйлийг илчлэх шинэ тогтолцоог бий болгож байна",
     "subtitle": "WIRED-ийн тойм: OpenAI хиймэл оюуны муу зан үйлийг илчлэх шинэ тогтолцоог бий болгож байна. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл.",
@@ -18,10 +115,10 @@
       "AI 2026",
       "OpenAI"
     ],
-    "rank": 1,
+    "rank": 4,
     "coverImage": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "WIRED - OpenAI Creates a New Framework to Disclose Bad AI Behavior",
-    "isMainLead": true,
+    "isMainLead": false,
     "isHot": true,
     "summary": "WIRED-ийн албан ёсны мэдээллээр: OpenAI хиймэл оюуны муу зан үйлийг илчлэх шинэ тогтолцоог бий болгож байна. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
     "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>WIRED</strong>-ийн 2026-09-16-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"OpenAI Creates a New Framework to Disclose Bad AI Behavior\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>WIRED</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>КОМПАНИУД</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>WIRED</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
@@ -51,7 +148,7 @@
       "AI 2026",
       "OpenAI"
     ],
-    "rank": 2,
+    "rank": 5,
     "coverImage": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "The New York Times - OpenAI Discloses Six New Incidents of ‘Concerning’ A.I. Behavior",
     "isMainLead": false,
@@ -83,7 +180,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 3,
+    "rank": 6,
     "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "WIRED - Washington Won’t Be Regulating AI Anytime Soon",
     "isMainLead": false,
@@ -115,7 +212,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 4,
+    "rank": 7,
     "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "CNN - The real reason why Donald Trump is so furiously against AI guardrails",
     "isMainLead": false,
@@ -147,7 +244,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 5,
+    "rank": 8,
     "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "WIRED - I Trained a Fly’s Brain to Generate WIRED Story Ideas",
     "isMainLead": false,
@@ -179,7 +276,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 6,
+    "rank": 9,
     "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "TechRadar - ‘Spend time humanizing the output... then shut up’: Nearly a third of AI users are hiding it from their employers — welcome to the age of ‘shadow AI’",
     "isMainLead": false,
@@ -211,7 +308,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 7,
+    "rank": 10,
     "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "WIRED - China Isn’t Buying Silicon Valley’s Call for an AI Slowdown",
     "isMainLead": false,
@@ -244,7 +341,7 @@
       "AI 2026",
       "OpenAI"
     ],
-    "rank": 8,
+    "rank": 11,
     "coverImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Yahoo Finance - Tech stocks today: OpenAI raising funds at $1.2 trillion valuation, SK Hynix and Intel moves",
     "isMainLead": false,
@@ -276,7 +373,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 9,
+    "rank": 12,
     "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "The New York Times - The Liftoff Scenario That Terrifies A.I. Doomsayers",
     "isMainLead": false,
@@ -308,7 +405,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 10,
+    "rank": 13,
     "coverImage": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "The New York Times - Opinion | It’s Already Too Late to Stop the A.I. Threat",
     "isMainLead": false,
@@ -340,7 +437,7 @@
       "ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ",
       "AI 2026"
     ],
-    "rank": 11,
+    "rank": 14,
     "coverImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "The New York Times - Universities Sound Warnings About A.I. Even as They Embrace It",
     "isMainLead": false,
@@ -372,7 +469,7 @@
       "БОДЛОГО",
       "AI 2026"
     ],
-    "rank": 12,
+    "rank": 15,
     "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "WIRED - AI ‘Actor’ Tilly Norwood Told Me That ‘All Lives Matter’",
     "isMainLead": false,
@@ -404,7 +501,7 @@
       "БОДЛОГО",
       "AI 2026"
     ],
-    "rank": 13,
+    "rank": 16,
     "coverImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "Fox News - Bipartisan, big tech push for AI regulation comes as Trump claims 'hoax'",
     "isMainLead": false,
@@ -436,7 +533,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 14,
+    "rank": 17,
     "coverImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "TechRadar - Got iOS 27 but can't find the new Siri? You're not alone — here's why",
     "isMainLead": false,
@@ -468,7 +565,7 @@
       "ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ",
       "AI 2026"
     ],
-    "rank": 15,
+    "rank": 18,
     "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "The New York Times - An M.I.T. Report Warns A.I. Is Causing ‘Cognitive Surrender.’ Universities Are in a Bind.",
     "isMainLead": false,
@@ -501,7 +598,7 @@
       "AI 2026",
       "Meta"
     ],
-    "rank": 16,
+    "rank": 19,
     "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "TechRadar - Meta is begging some employees to step up and become managers again",
     "isMainLead": false,
@@ -533,7 +630,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 17,
+    "rank": 20,
     "coverImage": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "wired.com - Sexually Explicit Deepfake Sites Target 100-Plus Politicians in Europe",
     "isMainLead": false,
@@ -565,7 +662,7 @@
       "ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ",
       "AI 2026"
     ],
-    "rank": 18,
+    "rank": 21,
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "The New York Times - China’s Top Spy Chief Warns A.I. Is a Threat to Party Rule",
     "isMainLead": false,
@@ -597,7 +694,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 19,
+    "rank": 22,
     "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "WIRED - AI Leaders Are Calling for a Slowdown. Trump’s Team Says It’s on Them",
     "isMainLead": false,
@@ -629,7 +726,7 @@
       "БОДЛОГО",
       "AI 2026"
     ],
-    "rank": 20,
+    "rank": 23,
     "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "CNN - Trump dismisses AI alarms as a ‘HOAX’ — worrying White House officials",
     "isMainLead": false,
@@ -661,7 +758,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 21,
+    "rank": 24,
     "coverImage": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "TechRadar - AI’s memory crunch is giving battered smartphones a second life",
     "isMainLead": false,
@@ -693,7 +790,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 22,
+    "rank": 25,
     "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "wired.com - ‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
     "isMainLead": false,
@@ -727,7 +824,7 @@
       "Google",
       "Apple"
     ],
-    "rank": 23,
+    "rank": 26,
     "coverImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "TechRadar - Google Health's mistakes are a grave warning for Apple’s new AI-powered Health app",
     "isMainLead": false,
@@ -759,7 +856,7 @@
       "AI ТЕХНОЛОГИ",
       "AI 2026"
     ],
-    "rank": 24,
+    "rank": 27,
     "coverImage": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=80",
     "imageCaption": "CNN - AI and the end of humanity? OK, ‘doomer’ says one Trump official",
     "isMainLead": false,
@@ -813,7 +910,7 @@
         "url": "https://www.asml.com"
       }
     ],
-    "rank": 25
+    "rank": 28
   },
   {
     "id": "art-op-colossus-memphis-100k-gpu-investigation",
@@ -856,7 +953,7 @@
         "url": "https://www.commercialappeal.com"
       }
     ],
-    "rank": 26
+    "rank": 29
   },
   {
     "id": "art-inter-jensen-huang-cuda-monopoly",
@@ -898,7 +995,7 @@
         "url": "https://www.acquired.fm"
       }
     ],
-    "rank": 27
+    "rank": 30
   },
   {
     "id": "art-inter-yann-lecun-world-model-jepa",
@@ -940,7 +1037,7 @@
         "url": "https://lexfridman.com"
       }
     ],
-    "rank": 28
+    "rank": 31
   },
   {
     "id": "art-ind-tesla-optimus-gen2-figure02-factories",
@@ -978,7 +1075,7 @@
         "url": "https://www.wired.com"
       }
     ],
-    "rank": 29
+    "rank": 32
   },
   {
     "id": "art-ind-spacex-1-trillion-won-compute-deal",
@@ -1016,7 +1113,7 @@
         "url": "https://spacenews.com"
       }
     ],
-    "rank": 30
+    "rank": 33
   },
   {
     "id": "art-ind-openai-wall-street-chatgpt-finance",
@@ -1054,7 +1151,7 @@
         "url": "https://www.wsj.com"
       }
     ],
-    "rank": 31
+    "rank": 34
   },
   {
     "id": "art-ind-samsung-sds-robot-orchestration",
@@ -1092,7 +1189,7 @@
         "url": "https://news.samsung.com"
       }
     ],
-    "rank": 32
+    "rank": 35
   },
   {
     "id": "art-comp-jeff-dean-discovery-loop-50b",
@@ -1130,7 +1227,7 @@
         "url": "https://techcrunch.com"
       }
     ],
-    "rank": 33
+    "rank": 36
   },
   {
     "id": "art-comp-oracle-capex-datacenter-debt",
@@ -1173,7 +1270,7 @@
         "url": "https://investor.oracle.com"
       }
     ],
-    "rank": 34
+    "rank": 37
   },
   {
     "id": "art-society-sovereign-ai-geopolitics",
@@ -1216,7 +1313,7 @@
         "url": "https://www.nvidia.com"
       }
     ],
-    "rank": 35
+    "rank": 38
   },
   {
     "id": "art-society-worldcoin-iris-biometric-ban",
@@ -1258,7 +1355,7 @@
         "url": "https://www.aepd.es"
       }
     ],
-    "rank": 36
+    "rank": 39
   },
   {
     "id": "art-society-anthropic-max-plan-class-action",
@@ -1296,7 +1393,7 @@
         "url": "https://cand.uscourts.gov"
       }
     ],
-    "rank": 37
+    "rank": 40
   },
   {
     "id": "art-society-openai-industry-slowdown-antitrust",
@@ -1339,7 +1436,7 @@
         "url": "https://harvardlawreview.org"
       }
     ],
-    "rank": 38
+    "rank": 41
   },
   {
     "id": "art-society-eu-ai-act-gpai-deadlines",
@@ -1382,7 +1479,7 @@
         "url": "https://www.ft.com"
       }
     ],
-    "rank": 39
+    "rank": 42
   },
   {
     "id": "art-tech-virtual-fruit-fly-connectome",
@@ -1424,7 +1521,7 @@
         "url": "https://pni.princeton.edu"
       }
     ],
-    "rank": 40
+    "rank": 43
   },
   {
     "id": "art-tech-ryzen-ai-max-local-llm",
@@ -1462,7 +1559,7 @@
         "url": "https://community.amd.com"
       }
     ],
-    "rank": 41
+    "rank": 44
   },
   {
     "id": "art-tech-tsmc-2nm-gaa-bspdn",
@@ -1505,126 +1602,7 @@
         "url": "https://www.anandtech.com"
       }
     ],
-    "rank": 42
-  },
-  {
-    "id": "art-tech-hbm4-hybrid-bonding",
-    "slug": "hbm4-hybrid-bonding-2048-bit-memory-bandwidth-breakthrough",
-    "title": "HBM4 санах ой ба Hybrid Bonding: SK Hynix ба Samsung 2048-бийт сувгаар 2TB/s хурдны босго давав",
-    "subtitle": "aitimes.com хагас дамжуулагчийн тойм: 16 давхар DRAM стек ба микро-товгор (Microbump)-гүй шууд зэс холболт хийснээр AI чипийн санах ойн саатал (Memory Wall)-ийг арилгав.",
-    "category": "tech",
-    "categoryName": "AI ТЕХНОЛОГИ",
-    "primarySource": "AI Times Korea (aitimes.com)",
-    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215161",
-    "publishedAt": "2026-09-13",
-    "publishedTime": "15:45",
-    "readCount": 19800,
-    "readTime": "7 мин унших",
-    "tags": [
-      "HBM4",
-      "SK Hynix",
-      "Samsung",
-      "Nvidia Rubin",
-      "Hybrid Bonding",
-      "Semiconductor"
-    ],
-    "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "HBM4 санах ойн вафер: 2048 I/O суваг ба зэс хоорондын шууд диэлектрик холболтын микроскоп харагдац.",
-    "isMainLead": false,
-    "isHot": false,
-    "summary": "Өмнөх HBM3e үеийн 1024-бийт автобусны хязгаарыг хоёр дахин тэлж 2048-бийт I/O интерфэйстэй болсон HBM4 санах ойг SK Hynix болон Samsung Electronics бэлэн болгож, Nvidia-ийн дараагийн үеийн Rubin архитектурт нийлүүлэхээр боллоо.",
-    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны тооцоололд тулгамдаж буй хамгийн том бэрхшээл нь GPU цөмийн хурд биш, харин санах ойгоос өгөгдлийг цөм рүү дамжуулах хоолойн багтаамж буюу <em>'Memory Wall'</em> саатал байсаар ирсэн. <strong>aitimes.com</strong>-ийн Сөүл дэх хагас дамжуулагчийн шинжээчдийн мэдээлснээр <strong>HBM4</strong> нь уг гацааг үндсээр нь арилгах технологийн үсрэлт боллоо.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// HBM4 САХАРЫН ТЕХНИКИЙН ҮЗҮҮЛЭЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Интерфэйс өргөн: <strong>2048 бит</strong> (HBM3e-ийн 1024 битээс 2 дахин өргөн)</li>\n      <li>Нэг стекийн дамжуулах зурвас: <strong>2.0 TB/s – 2.5 TB/s</strong></li>\n      <li>Багтаамж: 16 давхар DRAM стекээр стек тус бүр <strong>48GB – 64GB</strong> багтаамжтай</li>\n      <li>Суурь логик чип (Base Die): TSMC 3nm/4nm дэвшилтэт процесст суурилж, чип тус бүрт захиалгат логик хэрэгжүүлэх боломжтой</li>\n      <li>Технологи: Direct Copper-to-Copper Hybrid Bonding (дулаан ялгаруулалтыг 20% бууруулсан)</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. TSMC ба Солонгосын санах ойн аваргуудын нэгдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    HBM3e хүртэл санах ойн компаниуд өөрсдийн ердийн процессоор суурь чипийг (Base die) хийдэг байсан бол HBM4-өөс эхлэн TSMC-ийн 3 нанометрийн логик цутгуурыг ашиглаж эхэллээ. Энэ нь санах ой дотроо шууд жижиг тооцоолол хийх Processing-in-Memory (PIM) концепцыг бодит амьдрал дээр нэвтрүүлж байна.\n  </p>\n</div>\n        ",
-    "sources": [
-      {
-        "name": "AI Times Korea",
-        "url": "https://www.aitimes.com/news/articleView.html?idxno=215161"
-      },
-      {
-        "name": "SK Hynix Tech Newsroom",
-        "url": "https://news.skhynix.com"
-      },
-      {
-        "name": "IEEE Spectrum",
-        "url": "https://spectrum.ieee.org"
-      }
-    ],
-    "rank": 43
-  },
-  {
-    "id": "art-tech-deepseek-r1-pure-rl",
-    "slug": "deepseek-r1-pure-reinforcement-learning-reasoning-breakthrough",
-    "title": "DeepSeek-R1: Хүний зааварчилгаагүйгээр (No-SFT) зөвхөн цэвэр RL-ээр бодож сурсан нээлттэй жинтэй reasoning хувьсгал",
-    "subtitle": "aitimes.com технологийн дүн шинжилгээ: Supervised Fine-Tuning хийлгүйгээр зөвхөн Group Relative Policy Optimization (GRPO) ашиглан олон зуун үе шаттай бодолтын гинж үүсгэсэн архитектур.",
-    "category": "tech",
-    "categoryName": "AI ТЕХНОЛОГИ",
-    "primarySource": "AI Times Korea & DeepSeek AI",
-    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215202",
-    "publishedAt": "2026-09-14",
-    "publishedTime": "06:30",
-    "readCount": 28400,
-    "readTime": "8 мин унших",
-    "tags": [
-      "DeepSeek-R1",
-      "GRPO",
-      "Reasoning",
-      "Reinforcement Learning",
-      "Open Weights"
-    ],
-    "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "DeepSeek-R1 архитектур: Хүний бичсэн жишээгүйгээр математик ба кодын логик шалгуурт өөрөө олон дахин алдаж сэтгэсэн туршилт.",
-    "isMainLead": false,
-    "isHot": true,
-    "summary": "DeepSeek судалгааны баг хүний гараар бэлтгэсэн сургалтын өгөгдөл (SFT) ашиглахгүйгээр, загварт зөвхөн зөв/буруу үр дүнгийн шагналын дүрэм өгч өөрөөр нь олон сая удаа сэтгүүлснээр AIME математикийн шалгалтад 79.8% амжилт үзүүлсэн DeepSeek-R1-Zero болон R1 загваруудаа танилцууллаа.",
-    "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны судалгааны төвүүд олон жилийн турш <em>\"Хүний бичсэн жишээ бодлого, хариултыг их хэмжээгээр цээжлүүлж байж загвар бодож сурдаг\"</em> гэж итгэж байв. Гэвч <strong>DeepSeek-R1</strong> уг ойлголтыг бүрэн нурааж, зөвхөн <strong>Group Relative Policy Optimization (GRPO)</strong> хэмээх бататгалтай сургалтын (Reinforcement Learning) шинэ алгоритмаар өөрөө алдаанаасаа суралцдаг болохыг практикт баталлаа.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ (BENCHMARKS)</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>AIME 2024 (Математикийн Олимпиад): <strong>79.8%</strong> (OpenAI o1-тэй ижил түвшин)</li>\n      <li>MATH-500: <strong>97.3%</strong> нарийвчлал</li>\n      <li>Codeforces рейтинг: <strong>2,029</strong> (Мэргэжлийн өрсөлдөөнт програмчлалын мастер зэрэг)</li>\n      <li>Архитектур: 671 тэрбум параметртэй Mixture-of-Experts (MoE), тооцоололд идэвхжих нь ердөө 37 тэрбум параметр</li>\n      <li>Лиценз: MIT Лиценз бүхий бүрэн нээлттэй эх код, нээлттэй жин (Open Weights)</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. GRPO: Critic модельгүй бататгалтай сургалт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уламжлалт PPO (Proximal Policy Optimization) алгоритм нь үндсэн загвартай зэрэгцэн ажиллах тусдаа үнэлгээний Critic загвар шаарддаг тул санах ой болон GPU тооцооллын зардлыг хоёр дахин өсгөдөг байв. Харин GRPO нь нэг асуултад хэд хэдэн хувилбарт хариулт үүсгэж, тэдгээрийн дундаж үр дүнгээс давсан амжилтыг харьцуулан шагнал оноох замаар санах ойн ачааллыг 45% бууруулжээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. 'Aha-Moment': Загвар өөрийн алдааг засварлах үзэгдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сургалтын дунд үед загварын сэтгэхүйн гинжинд гайхалтай үзэгдэл ажиглагдсан байна: Загвар анхны бодолтоо гаргасны дараа <em>\"Хүлээгээрэй, би энд нэг алдаа гаргасан байж магадгүй. Дахин эхнээс нь шалгая\"</em> хэмээн өөрөө өөрийнхөө бодолтыг шалган засварлаж эхэлжээ. Энэ нь хиймэл оюунд хүний зааваргүйгээр мета-танин мэдэхүй (meta-cognition) үүсэх боломжтойг харуулсан шинжлэх ухааны том алхам болов.\n  </p>\n</div>\n        ",
-    "sources": [
-      {
-        "name": "AI Times Korea",
-        "url": "https://www.aitimes.com/news/articleView.html?idxno=215202"
-      },
-      {
-        "name": "DeepSeek Research Report",
-        "url": "https://github.com/deepseek-ai/DeepSeek-R1"
-      },
-      {
-        "name": "arXiv:2501.12948",
-        "url": "https://arxiv.org/abs/2501.12948"
-      }
-    ],
-    "rank": 44
-  },
-  {
-    "id": "art-20260913-01",
-    "slug": "apples-new-ai-powered-health-app-needs-to-avoid-googles-biggest-health",
-    "title": "Apple-ийн эрүүл мэндийн AI систем: Google-ийн алдааг давтахгүй байх клиник стратеги",
-    "subtitle": "TechRadar болон AI Times Korea: Apple Intelligence эрүүл мэндийн салбарт нэвтрэхдээ хувийн нууцыг хамгаалах On-Device тооцоололд бүрэн суурилж байна.",
-    "category": "policy",
-    "categoryName": "БОДЛОГО",
-    "primarySource": "TechRadar & AI Times Korea",
-    "primarySourceUrl": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONkVhaEQtMjB3aG5PaEIyTDlTaUQ1aXNNZGozNGJXOU92dnZKaldPYWJfNFdsNUkzVGxnRmRleHpQYXB5SnlpeU9BR281RUdJRWhzeENKOXlnbWV2X3kwLS01NWt3eWNjS0lNSnRydWlpZzBPN2gtcWVoaGJJbWFSbWpGTzUzdTV6U18tVE5FZVhKQ1AtSzFzUUdFVkFDNE5BLTFRam1Wb19yMTNTZXB6dmZxUk9rUXpacjk1dTQyeHNJS3E1TWFUMVU2S19IMl9ONlB0SA?oc=5",
-    "publishedAt": "2026-09-13",
-    "publishedTime": "07:00",
-    "readCount": 3800,
-    "readTime": "5 мин унших",
-    "tags": [
-      "TechRadar",
-      "AI ТЕХНОЛОГИ",
-      "AI 2026",
-      "Google",
-      "Apple"
-    ],
-    "rank": 45,
-    "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "TechRadar - Apple’s new AI-powered Health app needs to avoid Google's biggest Health mistakes",
-    "isMainLead": false,
-    "isHot": true,
-    "summary": "Apple компани өөрийн Health аппликейшнд эмнэлзүйн хиймэл оюун нэвтрүүлэхдээ Google-ийн өмнө гаргасан мэдээллийн алдагдлын алдаануудаас зайлсхийж байна.",
-    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    <strong>TechRadar</strong>-ийн хамгийн сүүлийн тоймоор, технологийн зах зээлд өндөр ач холбогдол бүхий үйл явдал өрнөлөө: <em>\"Apple-ийн хиймэл оюунаар ажилладаг эрүүл мэндийн шинэ програм нь Google-ийн эрүүл мэндийн хамгийн том алдаанаас зайлсхийх хэрэгтэй\"</em>.\n  </p>\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// AI ТЕХНОЛОГИ - ГОЛ ДҮГНЭЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Мэдээллийн түвшин: AI ТЕХНОЛОГИ чиглэлийн хамгийн сүүлийн үеийн стратегийн шинэчлэл</li>\n      <li>Баталгаажсан суваг: <strong>TechRadar</strong></li>\n      <li>Нөлөө: Хэрэглэгч болон хөгжүүлэгчдийн өдөр тутмын шийдвэрт шууд тусгалаа олох үйл явц</li>\n    </ul>\n  </div>\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Нарийвчилсан дүн шинжилгээ ба шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явдал нь тухайн чиглэлд олон нийтийн хүлээлтээс давсан бодит үр дүн, эсвэл шинэ зохицуулалтын шаардлагыг бий болгож байна. Мэргэжилтнүүд энэхүү өөрчлөлтийг урт хугацааны хөгжлийн түлхүүр гэж үнэлж байна.\n  </p>\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Цаашдын төлөв байдал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    AImedee.mn энэхүү үйл явдлын бодит хэрэгжилт, эдийн засаг болон хэрэглээний нөлөөллийг шуурхай дагаж мэдээлэх болно.\n  </p>\n</div>",
-    "sources": [
-      {
-        "name": "TechRadar",
-        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONkVhaEQtMjB3aG5PaEIyTDlTaUQ1aXNNZGozNGJXOU92dnZKaldPYWJfNFdsNUkzVGxnRmRleHpQYXB5SnlpeU9BR281RUdJRWhzeENKOXlnbWV2X3kwLS01NWt3eWNjS0lNSnRydWlpZzBPN2gtcWVoaGJJbWFSbWpGTzUzdTV6U18tVE5FZVhKQ1AtSzFzUUdFVkFDNE5BLTFRam1Wb19yMTNTZXB6dmZxUk9rUXpacjk1dTQyeHNJS3E1TWFUMVU2S19IMl9ONlB0SA?oc=5"
-      }
-    ]
+    "rank": 45
   },
   {
     "id": "art-aitimes-google-rsi-rumor",
