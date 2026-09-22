@@ -1,42 +1,42 @@
 [
   {
+    "time": "01:30",
+    "title": "Jamie Dimon says hyperscaler AI spending could hit $1 trillion next year",
+    "source": "CNBC"
+  },
+  {
     "time": "18:33",
-    "title": "AI, тариф, ховор ашигт малтмал: Ши Жиньпинтэй удахгүй болох Трампын дээд хэмжээний уулзалтаас юу хүлээх вэ",
+    "title": "AI, Tariffs, Rare Minerals: What to Expect From Trump’s Upcoming Summit With Xi Jinping",
     "source": "WIRED"
   },
   {
     "time": "18:28",
-    "title": "Мета-ийн Muse AI агент татан авалт нэмэгдэж байна. Үүнийг ChatGPT, Grok, Claude нартай харьцуулж үзье",
+    "title": "Meta's Muse AI agent downloads are surging. Here's how it compares to ChatGPT, Grok and Claude",
     "source": "CNBC"
   },
   {
     "time": "17:32",
-    "title": "Математик ба хиймэл оюуны зөвлөх групп",
-    "source": "openai.com"
+    "title": "Advisory Group on Mathematics and Artificial Intelligence",
+    "source": "OpenAI"
   },
   {
     "time": "17:00",
-    "title": "AI Загвар өмсөгчдийг дэндүү хүн гэж төөрөгдүүлж байна уу?",
+    "title": "Are A.I. Models Being Misled to Act Too Human?",
     "source": "The New York Times"
   },
   {
     "time": "16:50",
-    "title": "Nvidia-ийн Женсен Хуан хиймэл оюуны мөхлийн айдсаас татгалзаж байна: \"2030 он бол дэлхийн төгсгөл биш\"",
+    "title": "Nvidia's Jensen Huang rejects AI doomsday fears: '2030 is not going to be the end of the world'",
     "source": "Fox Business"
   },
   {
     "time": "16:07",
-    "title": "Трамп хэлэхдээ \"Хэрэв бид шаардлагатай бол ЭМГ хиймэл оюуныг хазаарлана\"",
+    "title": "Trump says DOJ will rein in AI 'if we have to'",
     "source": "CNBC"
   },
   {
     "time": "16:00",
-    "title": "Дэлхий ингэж төгсдөг гэж үү? Устах хувилбарууд хиймэл оюуны маргааныг авч байна.",
+    "title": "Is this how the world ends? Extinction scenarios are taking over the AI debate.",
     "source": "The Washington Post"
-  },
-  {
-    "time": "13:00",
-    "title": "M5 Ultra Mac Studio тойм: Орон нутгийн AI агентуудад зориулсан Мөрөөдлийн Mac",
-    "source": "MacStories"
   }
 ]
