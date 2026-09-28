@@ -1,42 +1,42 @@
 [
   {
-    "time": "13:12",
-    "title": "Nvidia Adds Record $150 Billion to Stock Buyback",
-    "source": "WSJ"
+    "time": "22:27",
+    "title": "Аюулгүй байдлын асуудал хурцдаж байгаа тул OpenAI удахгүй гарах загвараа гаргахаар төлөвлөж байгаагаас татгалзав",
+    "source": "cnbc.com"
   },
   {
-    "time": "11:41",
-    "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own?",
+    "time": "20:43",
+    "title": "Майкл Берри хиймэл оюуны бөмбөлөг анх итгэж байснаасаа хурдан хагарч магадгүй гэж үзэж байна",
+    "source": "cnbc.com"
+  },
+  {
+    "time": "20:10",
+    "title": "AMD нь Fei-Fei Li's World Labs AI компанийг 8.2 тэрбум долларын үнээр худалдан авчээ.",
+    "source": "cnbc.com"
+  },
+  {
+    "time": "18:41",
+    "title": "Эсэргүүцэгчид DC үдэшлэг рүү дайрч, Трампын хиймэл оюуныг түлхэж байхад \"АНУ!\"",
+    "source": "foxnews.com"
+  },
+  {
+    "time": "18:01",
+    "title": "Nvidia нь 150 тэрбум долларыг их хэмжээгээр эргүүлэн худалдаж авсан нь түүхэн дэх хамгийн том хувьцаа юм",
     "source": "The New York Times"
   },
   {
-    "time": "11:32",
-    "title": "OpenAI Pauses Training Its Most Powerful Models After Rogue Agents Target Government",
-    "source": "WIRED"
+    "time": "14:06",
+    "title": "Би Muse-д хувийн мэдээлэлдээ хандах эрхийг өгсөн бөгөөд одоо яагаад хувийн агентууд дэлхийг өөрчлөх гэж байгааг мэдэж байна",
+    "source": "TechRadar"
   },
   {
-    "time": "11:00",
-    "title": "AI agents promise to do everything for you. There may be a big wrinkle in that plan",
-    "source": "CNN"
+    "time": "14:01",
+    "title": "Би ChatGPT Voice-ийг залгаасуудаар туршиж үзсэн бөгөөд одоо энэ нь ChatGPT-н бусадтай холбогдсон мэт санагдаж байна.",
+    "source": "TechRadar"
   },
   {
-    "time": "11:00",
-    "title": "EXCLUSIVE: Google bets $15B on Finland as nation's president explains why",
-    "source": "Fox Business"
-  },
-  {
-    "time": "10:00",
-    "title": "AI Agents Are About to Flood the Workforce. No One’s Ready for It",
-    "source": "WIRED"
-  },
-  {
-    "time": "09:30",
-    "title": "Solving Math’s Greatest Problems Was an Art Form. Then Came AI",
-    "source": "WIRED"
-  },
-  {
-    "time": "09:00",
-    "title": "Nvidia releases software platform to stop AI agents from misbehaving",
-    "source": "CNBC"
+    "time": "13:55",
+    "title": "Женсен Хуанг хиймэл оюуны нэрэлтийг \"өрсөлдөөн\" гэж хэлсэн. Скотт Бессент үүнийг \"хулгай\" гэж нэрлэсэн.",
+    "source": "cnbc.com"
   }
 ]
