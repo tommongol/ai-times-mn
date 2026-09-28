@@ -1,42 +1,42 @@
 [
   {
-    "time": "01:26",
-    "title": "Хятадууд А.И-д эргэлзэж буй гайхмаар шалтгаанууд. Аюулгүй байдлын дуудлага",
+    "time": "13:12",
+    "title": "Nvidia Adds Record $150 Billion to Stock Buyback",
+    "source": "WSJ"
+  },
+  {
+    "time": "11:41",
+    "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own?",
     "source": "The New York Times"
   },
   {
-    "time": "22:00",
-    "title": "Домогт компьютерийн эрдэмтэн Жеффри Хинтон: \"Хэрэв бид үүнийг хэрхэн аюулгүй болгохоо олж мэдэхгүй бол энэ нь биднийг сүйрүүлэх бодит боломж байна\" гэсэн энэ өдрийн эшлэл нь хиймэл оюуны оршин тогтнох эрсдэлийн тухай хурц дохио юм.",
-    "source": "TechRadar"
+    "time": "11:32",
+    "title": "OpenAI Pauses Training Its Most Powerful Models After Rogue Agents Target Government",
+    "source": "WIRED"
   },
   {
-    "time": "21:06",
-    "title": "Билл Гейтс хиймэл оюун нь хяналт тавихгүй бол \"тэрбум хүний ​​аминд хүрэх\" хангалттай хүчтэй гэдгийг анхаарууллаа.",
-    "source": "Fox News"
+    "time": "11:00",
+    "title": "AI agents promise to do everything for you. There may be a big wrinkle in that plan",
+    "source": "CNN"
   },
   {
-    "time": "20:57",
-    "title": "Anthropic-ийн A.I. Үнэхээр бие даан шинжлэх ухааны нээлт хийх үү?",
-    "source": "The New York Times"
+    "time": "11:00",
+    "title": "EXCLUSIVE: Google bets $15B on Finland as nation's president explains why",
+    "source": "Fox Business"
   },
   {
-    "time": "19:20",
-    "title": "Asus ширээний компьютерийг маш гайхалтай бүтээсэн нь бараг л тийм юм шиг санагддаггүй",
-    "source": "TechRadar"
+    "time": "10:00",
+    "title": "AI Agents Are About to Flood the Workforce. No One’s Ready for It",
+    "source": "WIRED"
   },
   {
-    "time": "17:55",
-    "title": "AI холболтыг тасалдаг \"SNL\" солилцоо",
-    "source": "The Atlantic"
+    "time": "09:30",
+    "title": "Solving Math’s Greatest Problems Was an Art Form. Then Came AI",
+    "source": "WIRED"
   },
   {
-    "time": "17:05",
-    "title": "\"Би ямар нэг зүйлийг эвдсэн\": Клод Кодын хиймэл оюуны ажилтан 100 секундын дотор 48,000 файл устгасан бөгөөд дараа нь уучлалт гуйсан.",
-    "source": "TechRadar"
-  },
-  {
-    "time": "14:33",
-    "title": "Meta's Muse агент нь эдийн засгийн хамгийн ашигтай сул цэгүүдийн нэг рүү дайрч байна",
+    "time": "09:00",
+    "title": "Nvidia releases software platform to stop AI agents from misbehaving",
     "source": "CNBC"
   }
 ]
