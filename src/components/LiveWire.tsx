@@ -12,7 +12,7 @@ export const LiveWire: React.FC = () => {
         <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider font-bold">
           <Terminal className="w-4 h-4 text-[#00FF66]" />
           <span className="text-white">WIRED 24H REALTIME DISPATCH //</span>
-          <span className="text-[#00FF66] hidden sm:inline">ШУУРХАЙ СҮЛЖЭЭ</span>
+          <span className="text-[#00FF66] hidden sm:inline">REALTIME WIRE</span>
         </div>
         <span className="font-mono text-[10px] text-[#00FF66] font-bold flex items-center gap-1.5 bg-neutral-900 px-2 py-0.5 border border-neutral-800">
           <span className="w-2 h-2 rounded-full bg-[#00FF66] animate-ping"></span>

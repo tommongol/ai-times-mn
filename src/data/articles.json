@@ -39,6 +39,352 @@
     ]
   },
   {
+    "id": "art-model-apple-afm",
+    "slug": "apple-foundation-models-afm-private-cloud-compute-apple-silicon",
+    "title": "Apple Foundation Models (AFM): Төхөөрөмж дээрх 3B загвар ба Private Cloud Compute криптограф хамгаалалттай серверийн нууц",
+    "subtitle": "Apple-ийн инженерүүд хэрэглэгчийн өгөгдлийг хэзээ ч серверт хадгалахгүйгээр нүдээр шалгаж болох криптограф баталгаатай хиймэл оюуны архитектурыг танилцууллаа.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Apple Machine Learning Research",
+    "primarySourceUrl": "https://machinelearning.apple.com",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "10:30",
+    "readCount": 2740,
+    "readTime": "5 мин унших",
+    "tags": [
+      "AI загвар",
+      "Apple Intelligence",
+      "AFM",
+      "Private Cloud Compute",
+      "Apple Silicon",
+      "Privacy"
+    ],
+    "rank": 8,
+    "coverImage": "/images/models/apple_afm.svg",
+    "imageCaption": "Apple Foundation Models (AFM) — Төхөөрөмж дээр хөнгөн ажиллах 3B хэмжээтэй тусгай өндөр оновчлолтой загвар",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Apple компани өөрийн бүтээсэн Apple Foundation Models (AFM) архитектурынхаа техникийн дэлгэрэнгүй судалгааг танилцууллаа. iPhone, Mac төхөөрөмж дээр ажиллах 3B хэмжээтэй нарийн квантчилсан загвар болон үүлэн тооцоололд зориулсан Private Cloud Compute загварууд аюулгүй байдлын цоо шинэ түвшнийг тогтоов.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Apple компани хиймэл оюуны салбарт өөрийн гол давуу тал болох <strong>нууцлал ба аюулгүй байдлыг</strong> урдаа барьж, <strong>Apple Foundation Models (AFM)</strong> системийг бүтээжээ. Энэ нь төхөөрөмж дээрх (on-device) 3 тэрбум параметртэй авсаархан загвар болон том хэмжээний серверийн загварыг уялдуулан ажиллуулдаг.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНИКИЙН ОЛОЛТУУД</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>On-device AFM: <strong>~3B параметр</strong>, нэг параметрт дунджаар 3.5 битээр шахсан (Grouped-Query Attention)</li>\n      <li>Apple Silicon Neural Engine дээрх хурд: Секундэд <strong>30+ жетон</strong>, санах ойн маш бага зарцуулалт</li>\n      <li>Private Cloud Compute (PCC): Гуравдагч бие даасан судлаачид серверийн кодыг криптографаар шалгах боломжтой анхны архитектур</li>\n      <li>Тэг лог (Zero Data Retention): Хэрэглэгчийн дата сервер дээр хэзээ ч хадгалагдахгүй, Apple өөрөө ч харах боломжгүй</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Квантчилалын дэвшил (3.5-bit Quantization)\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Ухаалаг утасны батерей болон шуурхай санах ойн (RAM) хязгаарыг даван туулахын тулд Apple-ийн инженерүүд жингийн чухлыг ангилан хуваарилж, хамгийн их нөлөөтэй давхаргуудыг өндөр нарийвчлалтай, бага нөлөөтэйг нь 2-3 битээр шахах хосолмол квантчилалын аргыг ашиглажээ. Энэ нь 3B загварыг хэмжээгээрээ ердөө 1.5GB хүрэхгүй болгон жижгэрүүлсэн байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Apple Machine Learning Research",
+        "url": "https://machinelearning.apple.com"
+      },
+      {
+        "name": "Apple Security Blog",
+        "url": "https://security.apple.com"
+      },
+      {
+        "name": "Wired",
+        "url": "https://www.wired.com"
+      }
+    ]
+  },
+  {
+    "id": "art-model-seedance-kling",
+    "slug": "seedance-2-kling-1-5-generative-video-physics-cinematic-diffusion",
+    "title": "Seedance 2.0 & Kling 1.5: Бодит физик хуулийг дагаж мөрддөг, 60fps кинематик видео үүсгэгч дараагийн үеийн диффуз загварууд",
+    "subtitle": "Кино үйлдвэрлэл, зар сурталчилгааг өөрчилж буй олон дараалсан камерийн чиглүүлэгч, уруулын хөдөлгөөн (lip-sync), болон динамик гэрэлтүүлгийн уян загвар.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Seedance / Kling AI & ArXiv",
+    "primarySourceUrl": "https://klingai.com",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "11:00",
+    "readCount": 2980,
+    "readTime": "5 мин унших",
+    "tags": [
+      "AI загвар",
+      "Seedance 2.0",
+      "Kling 1.5",
+      "Video AI",
+      "Generative Video",
+      "Diffusion"
+    ],
+    "rank": 7,
+    "coverImage": "/images/models/kling_seedance.svg",
+    "imageCaption": "Seedance 2.0 & Kling 1.5 — Биетүүдийн мөргөлдөөн, гэрэл сүүдрийн хугарлыг 1080p 60fps-ээр бодитоор дүрслэгч видео AI загварууд",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Хиймэл оюуны дүрс бичлэг үүсгэх салбарт том үсрэлт гарлаа. Seedance 2.0 болон Kling 1.5 загварууд өмнөх үеийн хөдөлгөөний замхралт, хийсвэр алдааг засч, физикийн хатуу хуулиудыг дагадаг кино зургийн чанартай 60fps бичлэгийг урт хугацаанд тогтвортой гаргадаг болжээ.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны видео үүсгэлт зөвхөн богино хөдөлгөөнт зураг байхаа больж, бүрэн хэмжээний кино, зар сурталчилгааны бүтээл болж хувирлаа. <strong>Seedance 2.0</strong> болон <strong>Kling 1.5</strong> загваруудын хамгийн сүүлийн шинэчлэл нь биетүүдийн хүндийн жин, мөргөлдөөн, шингэний урсац, гэрлийн хугарлыг өндөр нарийвчлалтай тооцоолдог болсон байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ВИДЕО ЗАГВАРЫН ТҮЛХҮҮР ХҮЧИН ЧАДАЛ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Дүрслэлийн чанар: <strong>1080p Full HD / 60 FPS</strong> жигд хөдөлгөөн</li>\n      <li>Физикийн загварчлал: Шингэний динамик, даавууны долгион, нүүрний хувирал бодитой</li>\n      <li>Камерын удирдлага (Camera Trajectory): Pan, Tilt, Dolly, Zoom командыг метрийн нарийвчлалтай биелүүлнэ</li>\n      <li>Lip-Sync & Dialogue: Олон хэл дээр дуу хоолойтойгоо 100% нийцэх уруулын хөдөлгөөн</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. 3D Spatio-Temporal Attention архитектур\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Эдгээр загварууд нь Diffusion Transformer (DiT) суурь дээр орон зай болон цаг хугацааны тэнхлэгийг нэгэн зэрэг тооцоолдог анхаарлын механизмаар ажилладаг. Ингэснээр өмнөх үеийн Sora эсвэл Runway Gen-2 загварууд дээр гардаг байсан биетүүд гэнэт уусах, хуруу нэмэгдэх зэрэг алдаанууд бараг бүрэн арилсан байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Kling AI",
+        "url": "https://klingai.com"
+      },
+      {
+        "name": "Seedance Tech Report",
+        "url": "https://seedance.ai"
+      },
+      {
+        "name": "ArXiv Computer Vision",
+        "url": "https://arxiv.org"
+      }
+    ]
+  },
+  {
+    "id": "art-model-mistral-large-2",
+    "slug": "mistral-large-2-codestral-2501-european-sovereign-ai-powerhouse",
+    "title": "Mistral Large 2 & Codestral 2501: Европын тусгаар хиймэл оюун 123B параметр ба кодын бага хугацааны хурдаар тэргүүлэв",
+    "subtitle": "Парист төвтэй Mistral AI 80 гаруй хэлийг уугуул дэмждэг, 128k контексттэй, тушаал гүйцэтгэх (function calling) чадвараар дэлхийд шилдэг болсноо нотлов.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Mistral AI Research & TechCrunch",
+    "primarySourceUrl": "https://mistral.ai/news/",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "12:00",
+    "readCount": 3180,
+    "readTime": "5 мин унших",
+    "tags": [
+      "AI загвар",
+      "Mistral AI",
+      "Mistral Large 2",
+      "Codestral",
+      "European AI",
+      "Open Weights"
+    ],
+    "rank": 6,
+    "coverImage": "/images/models/mistral_large.svg",
+    "imageCaption": "Mistral Large 2 & Codestral 2501 — Европын Холбооны зохицуулалтад нийцсэн хамгийн хүчирхэг нээлттэй загвар",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Европын тэргүүлэгч хиймэл оюуны стартап Mistral AI өөрийн тэргүүн загвар болох Mistral Large 2 (123B) болон программистуудад зориулсан Codestral 2501 шинэ хувилбаруудыг танилцууллаа. 80 гаруй хэл болон хэдэн арван програмчлалын хэл дээр өндөр хурдтай ажиллах чадварыг үзүүлжээ.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Парис хотод төвтэй, Google DeepMind болон Meta-ийн шилдэг судлаачдын үүсгэн байгуулсан <strong>Mistral AI</strong> өөрийн тэргүүлэх <strong>Mistral Large 2</strong> загвараа дэлгэлээ. 123 тэрбум параметртэй уг загвар нь тушаал гүйцэтгэх (Function Calling) болон програмчлалын хэлүүд дээр өндөр нарийвчлалыг үзүүлж байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// MISTRAL LARGE 2 ҮЗҮҮЛЭЛТҮҮД</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Параметрийн багтаамж: <strong>123B</strong></li>\n      <li>Контекст цонх: <strong>128k жетон</strong></li>\n      <li>Хэлний дэмжлэг: Франц, Герман, Испани, Хятад, Япон, Орос, Араб зэрэг <strong>80+ хэл</strong></li>\n      <li>Алдаа гаргах магадлал (Hallucination rate): Өмнөх үеэс 34% буурсан</li>\n      <li>Хамтран ажиллагч шинэ хөдөлгүүр: <strong>Codestral 2501</strong> (Секундэд 150 жетон боловсруулах кодын хурдасгуур)</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Европын AI Акт ба Мэдээллийн тусгаар байдал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Mistral Large 2 загвар нь Европын Холбооны (EU AI Act) хатуу дүрэм журамд 100% нийцсэн бөгөөд серверүүд нь Европын нутаг дэвсгэрт байрлах тул олон улсын банк, даатгал, эмнэлгийн байгууллагууд АНУ-ын компаниудын үүлэн дэд бүтцээс хараат бус байх боломжийг олгож буйгаараа стратегийн чухал ач холбогдолтой юм.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Mistral AI Blog",
+        "url": "https://mistral.ai"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com"
+      },
+      {
+        "name": "VentureBeat",
+        "url": "https://venturebeat.com"
+      }
+    ]
+  },
+  {
+    "id": "art-model-alibaba-qwq-32b",
+    "slug": "alibaba-qwq-32b-qwen-2-5-max-open-reasoning-champion",
+    "title": "Alibaba QwQ-32B & Qwen 2.5-Max: 32 тэрбум параметрээр OpenAI o1-preview-ийн бодолтын түвшинд хүрсэн нээлттэй ололт",
+    "subtitle": "Alibaba Cloud багийн бүтээсэн нээлттэй reasoning загвар нь олимпиад түвшний математик (MATH 92.5%) болон алгоритмын асуудлыг хямд техник дээр шийдэж байна.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Alibaba Cloud & Qwen Team",
+    "primarySourceUrl": "https://qwenlm.github.io",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "13:30",
+    "readCount": 3520,
+    "readTime": "6 мин унших",
+    "tags": [
+      "AI загвар",
+      "Qwen",
+      "QwQ-32B",
+      "Alibaba Cloud",
+      "Open Reasoning",
+      "Math Olympiad"
+    ],
+    "rank": 5,
+    "coverImage": "/images/models/qwq_32b.svg",
+    "imageCaption": "Alibaba QwQ-32B — Дунд оврын нээлттэй эхийн загваруудаас хамгийн хүчтэй математик ба алгоритмын бодолт үзүүлэгч",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Хятадын технологийн гигант Alibaba Cloud-ийн Qwen баг өөрсдийн QwQ-32B нэртэй бодолтын загвараа танилцууллаа. Ердөө 32B параметртэй уг загвар нь AIME болон MATH олон улсын олимпиадын даалгавруудад OpenAI-ийн анхны o1-preview загварыг гүйцэж түрүүлжээ.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны бодолтын (Reasoning) салбарт жижиг, дунд оврын загваруудын чадвар үсрэнгүй хөгжиж байна. <strong>Alibaba Cloud</strong>-ийн Qwen төслийн хамт олон <strong>QwQ-32B-Preview</strong> загвараа нээлттэй эхээр зарласан нь глобал хөгжүүлэгчдийн дунд өндөр хүлээлт үүсгэлээ.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// БЕНЧМАРК ҮР ДҮН (QWQ-32B)</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>AIME (Америкийн Математикийн Урилгат Шалгалт): <strong>80.0%</strong></li>\n      <li>MATH 500 Шалгуур: <strong>92.5%</strong></li>\n      <li>LiveCodeBench: <strong>50.0%</strong></li>\n      <li>Параметрийн хэмжээ: <strong>32.5 тэрбум</strong> (Нэг ширхэг 24GB VRAM GPU дээр 4-bit квантчилалаар ажиллана)</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Хэрэглэгчийн компьютер дээр ажиллах боломж\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    DeepSeek-R1-ийн 671B бүрэн хувилбарыг ажиллуулахад 16-аас дээш өндөр үнэтэй карт шаардагддаг бол QwQ-32B нь хөгжүүлэгчдийн өдөр тутмын ширээний компьютер (RTX 4090, Apple Mac Studio M2/M3/M4) дээр Ollama, vLLM ашиглан маш хурдан ажиллах боломжтойгоороо асар том давуу талтай.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Цаашдын чиглэл: Qwen 2.5-Max\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Үүнтэй зэрэгцэн гаргасан <strong>Qwen 2.5-Max</strong> загвар нь олон сая долларын дата төвүүдэд зориулагдсан хүнд жингийн хувилбар бөгөөд хүний харилцан яриа, бизнесийн гэрээ, олон хэл дээрх найруулга дээр дэлхийн шилдэг хаалттай системүүдтэй өрсөлдөж байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Qwen Team Blog",
+        "url": "https://qwenlm.github.io"
+      },
+      {
+        "name": "Alibaba Cloud",
+        "url": "https://www.alibabacloud.com"
+      },
+      {
+        "name": "GitHub QwenLM",
+        "url": "https://github.com/QwenLM/Qwen"
+      }
+    ]
+  },
+  {
+    "id": "art-model-meta-llama-33",
+    "slug": "meta-llama-3-3-70b-open-source-powerhouse-llama-4-preview",
+    "title": "Meta Llama 3.3 70B & Llama 4 төлөвлөгөө: 405B загварын чадлыг 70B нээлттэй жинд шингээсэн Цукербергийн цохилт",
+    "subtitle": "Нэг сервер дээр хямд ажиллах боломжтой 70 тэрбум параметртэй нээлттэй эх, болон 150,000 H100 дээр бэлтгэгдэж буй Llama 4-ийн анхны үзүүлэлтүүд.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Meta AI & The Verge",
+    "primarySourceUrl": "https://ai.meta.com/llama/",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "14:15",
+    "readCount": 3890,
+    "readTime": "6 мин унших",
+    "tags": [
+      "AI загвар",
+      "Llama 3.3",
+      "Meta",
+      "Mark Zuckerberg",
+      "Open Weights",
+      "Llama 4"
+    ],
+    "rank": 4,
+    "coverImage": "/images/models/llama_33.svg",
+    "imageCaption": "Meta Llama 3.3 70B — Нээлттэй жинтэй загваруудын дундах хамгийн зардал хэмнэсэн хүчирхэг шийдэл",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Марк Цукербергийн удирддаг Meta AI баг Llama 3.3 70B загвараа нээлттэй жинтэйгээр түгээлээ. Өмнөх 405 тэрбум параметртэй аварга загварын чадварыг мэдлэг шингээх (Knowledge Distillation) аргаар 70B хэмжээнд багтааснаар байгууллагууд өөрийн сервер дээрээ хаалттай загваруудтай эн тэнцүү чадлыг авч байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Нээлттэй эхийн хиймэл оюуны манлайлагч <strong>Meta</strong> компани <strong>Llama 3.3 70B</strong> загвараа дэлхий нийтэд үнэ төлбөргүй татан авч ашиглах эрхтэйгээр нээлээ. Энэхүү загварын хамгийн том ололт нь 405B аварга загварын онолын түвшний гүйцэтгэлийг ердөө 70B параметрт багтаасанд байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ГОЛ ҮЗҮҮЛЭЛТ БА ХЭМЖЭЭ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Параметрийн тоо: <strong>70 тэрбум (70 Billion)</strong></li>\n      <li>Контекст урт: <strong>128,000 жетон</strong></li>\n      <li>MMLU-Pro оноо: <strong>71.2%</strong> (Өмнөх 405B-тэй бараг тэнцүү)</li>\n      <li>Серверийн шаардлага: Нэг ширхэг 8x H100 эсвэл 8x A100 серверт бүрэн багтаж секундийн дотор 100+ жетон гаргана</li>\n      <li>Тусгай дэвшил: Мэдлэг шингээлт (Knowledge distillation from 405B)</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Байгууллагын зардлыг 10 дахин бууруулсан ололт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    405B хэмжээтэй загварыг ажиллуулахад дор хаяж 16-24 ширхэг өндөр хүчин чадалтай GPU шаардлагатай байсан бол Llama 3.3 70B нь ердөө 2 ширхэг RTX 6000 Ada эсвэл квантчилсан хэлбэрээр (FP8/4-bit) нэг ширхэг хэрэглэгчийн серверт багтах боломжтой болсон нь банк, төрийн байгууллага, эрүүл мэндийн байгууллагуудад датагаа гадагш алдалгүй дотооддоо өндөр түвшний AI ажиллуулах үүдийг нээж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Llama 4 загварын урьдчилсан мэдээлэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Цукерберг хөрөнгө оруулагчидтай хийсэн уулзалтаараа Llama 4 загварыг 150,000 гаруй H100 GPU кластер дээр сургаж эхэлснийг баталсан бөгөөд уг загвар нь MoE (Mixture of Experts) бүтцээр ажиллаж, олон зуун сая хэрэглэгчид шууд бие даан үйлчлэх агентийн систем байх болно.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Meta AI",
+        "url": "https://ai.meta.com/llama/"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com"
+      },
+      {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/meta-llama"
+      }
+    ]
+  },
+  {
+    "id": "art-model-xai-grok-3",
+    "slug": "xai-grok-3-colossus-100k-h100-supercluster-deepsearch-think-mode",
+    "title": "xAI Grok 3: Илон Маскийн 100,000 H100 GPU бүхий \"Colossus\" суперкластер дээр сургагдсан шинэ аварга",
+    "subtitle": "Мемфис хотын 100k liquid-cooled дата төвөөс гарсан Grok 3 нь DeepSearch болон Think Mode горимоор бодит цагийн мэдээлэл дээр бүх өрсөлдөгчдөө шахав.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "xAI Research & Bloomberg",
+    "primarySourceUrl": "https://x.ai",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "15:10",
+    "readCount": 4210,
+    "readTime": "6 мин унших",
+    "tags": [
+      "AI загвар",
+      "Grok 3",
+      "xAI",
+      "Elon Musk",
+      "Colossus",
+      "H100",
+      "DeepSearch"
+    ],
+    "rank": 3,
+    "coverImage": "/images/models/grok_3.svg",
+    "imageCaption": "xAI Grok 3 — Дэлхийн хамгийн том 100,000 GPU-тэй Colossus суперкомпьютер дээр сургагдсан анхны загвар",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "Илон Маскийн үүсгэн байгуулсан xAI компани хамгийн сүүлийн үеийн Grok 3 загвараа албан ёсоор дэлгэлээ. 122 хоногийн дотор баригдсан 100,000 H100 GPU-тэй Colossus кластер дээр бэлтгэгдсэн тус загвар нь бодит цагийн мэдээлэл болон логик бодолтын шинэ хэмжүүрүүдийг тогтоолоо.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Илон Маск болон түүний <strong>xAI</strong> баг хиймэл оюуны тооцоолох дэд бүтцийн дээд амжилтыг тогтоож, <strong>Grok 3</strong> загвараа дэлхийд танилцууллаа. Мемфис хотноо байгуулсан 100,000 ширхэг Nvidia H100 GPU-тэй <em>\"Colossus\"</em> суперкомпьютер дээр сургагдсан энэхүү загвар нь чадварын хувьд одоогийн тэргүүн загваруудтай эн зэрэгцлээ.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// СУРГАЛТЫН ДЭД БҮТЭЦ & ҮЗҮҮЛЭЛТ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Сургалтын кластер: <strong>100,000 Liquid-Cooled Nvidia H100/H200</strong> (Colossus)</li>\n      <li>Шинэ горимууд: <strong>Think Mode</strong> (Урт хугацааны бодолт), <strong>DeepSearch</strong> (Гүн судалгаа)</li>\n      <li>Дата эх сурвалж: X (хуучнаар Twitter) тавцангийн бодит цагийн шууд пост, олон улсын судалгааны эхүүд</li>\n      <li>Математик & Код: AIME болон HumanEval шалгуурт GPT-4o-оос өндөр оноо</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Дэд бүтцийн гайхамшиг: 122 хоногийн дотор боссон Colossus\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Jensen Huang (Nvidia гүйцэтгэх захирал) онцлохдоо: <em>\"Ихэвчлэн 100,000 GPU-тэй дата төвийг байгуулахад 3-4 жил зарцуулдаг. Харин Илон Маскийн баг үүнийг ердөө 122 хоногт хийж дуусгасан нь инженерийн гайхамшиг юм\"</em> гэж мэдэгдсэн. Энэхүү хурдны ачаар Grok 3 маш богино хугацаанд сургалтаа дуусгаж чаджээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. DeepSearch ба Think Mode-ийн давуу тал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Grok 3 нь өөрийн бодолтын горим болох Think Mode-ийг ажиллуулах үедээ X тавцан дээр секунд тутамд нийтлэгдэж буй дэлхийн үйл явдлууд, шинжээчдийн сэтгэгдлийг шүүн тунгааж, үйл явдлыг 360 градусын өнцгөөс тайлбарладаг. Энэ нь бусад зөвхөн хуучин сургалтын дата дээр түшиглэсэн загваруудаас давуу чанарыг олгож байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "xAI Official",
+        "url": "https://x.ai"
+      },
+      {
+        "name": "Bloomberg Technology",
+        "url": "https://www.bloomberg.com/technology"
+      },
+      {
+        "name": "Nvidia Newsroom",
+        "url": "https://nvidianews.nvidia.com"
+      }
+    ]
+  },
+  {
+    "id": "art-model-gemini-2-flash-thinking",
+    "slug": "google-deepmind-gemini-2-flash-thinking-multimodal-reasoning-agents",
+    "title": "Google Gemini 2.0 Flash Thinking & Gemini 2.5: Бодит цагийн мультимодал бодолт ба 1 сая жетоны гүн судалгааны агент",
+    "subtitle": "Google DeepMind-ийн бүтээсэн дуу, дүрс, видеоны шууд урсгалыг бодит цагт задлан шинжлэх ба бодолтын урсгалаа өөрөө залруулдаг шинэ архитектур.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Google DeepMind & AI Times Korea",
+    "primarySourceUrl": "https://deepmind.google/technologies/gemini/",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "16:20",
+    "readCount": 4730,
+    "readTime": "7 мин унших",
+    "tags": [
+      "AI загвар",
+      "Google DeepMind",
+      "Gemini 2.0 Flash",
+      "Multimodal",
+      "Thinking",
+      "Argon"
+    ],
+    "rank": 2,
+    "coverImage": "/images/models/gemini_2_flash.svg",
+    "imageCaption": "Gemini 2.0 Flash Thinking загварын бүтэц — Текст, аудио, видеог нэгэн зэрэг тунгаан бодох уугуул мультимодал загвар",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "Google DeepMind-ийн бүтээсэн Gemini 2.0 Flash Thinking Experimental загвар нь зөвхөн текст биш, харин дуу хоолой, шууд камерын бичлэг, зураг дээр зэрэг бодолтын процесс (Chain-of-thought) өрнүүлж чаддаг анхны жинхэнэ мультимодал reasoning систем боллоо.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Google DeepMind баг хиймэл оюуны загварын шинэ хил хязгаарыг дахин тэллээ. <strong>Gemini 2.0 Flash Thinking</strong> загвар нь өмнөх үеийн текстэд баригдсан загваруудаас ялгаатай нь дуу хоолой, видео болон програмын кодын урсгалыг бодит цагт мультимодал хэлбэрээр бодож шийддэг.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНИКИЙН ГОЛ ҮЗҮҮЛЭЛТҮҮД</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Уугуул мультимодал бодолт (Native Multimodal CoT): Зураг, дуу, видео, текст нэг зэрэг</li>\n      <li>Контекстийн багтаамж: <strong>1,000,000+ жетон</strong> (Бүхэл бүтэн номын сан, 1 цагийн видео)</li>\n      <li>Дуу хоолойн хариу үйлдэл (Voice Latency): <strong>250-300 миллисекунд</strong> (Бодит хүний харилцан яриа)</li>\n      <li>Deep Research чадвар: 50+ интернэт хуудсыг автономит судалж нэгтгэн реферат гаргах систем</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Хараа болон сонсголын логик бодолт (Visual & Audio Reasoning)\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уламжлалт загварууд зургийг эхлээд текстийн тайлбар болгож хувиргаад, дараа нь текст дээрээ боддог байсан. Харин Gemini 2.0 Flash Thinking нь зургийн пикселүүдийн хамаарал, орон зайн байршлыг бодолтын жетонтой шууд холбож тунгаадаг. Жишээ нь, физикийн диаграмм, хэлхээний схем, роботын камерын бичлэг дээрх хөдөлгөөний вектор алдааг шууд илрүүлдэг.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Deep Research: Агентийн бүрэн автономит шинжилгээ\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Google-ийн нэвтрүүлсэн шинэ горим болох Deep Research нь хэрэглэгчийн ганцхан даалгавраар эрдэм шинжилгээний 50-100 баримт бичгийг секундийн дотор уншиж, зөрчилтэй мэдээллийг хөндлөн шалгаж, ишлэл бүхий 20 хуудас тайланг 5 минутын дотор гаргаж чаддаг болсон нь сургалт, аналитик багуудад хувьсгал хийж байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google"
+      },
+      {
+        "name": "Google Developers",
+        "url": "https://ai.google.dev"
+      },
+      {
+        "name": "AI Times Korea",
+        "url": "https://www.aitimes.com"
+      }
+    ]
+  },
+  {
+    "id": "art-model-openai-o3-o3mini",
+    "slug": "openai-o3-o3-mini-reasoning-codeforces-grandmaster-phd-benchmarks",
+    "title": "OpenAI o3 & o3-mini: Програмчлалын их мастер түвшин (2727 Elo) ба PhD шинжлэх ухааны бодлогыг задлагч шинэ reasoning загвар",
+    "subtitle": "Сэм Алтман болон OpenAI багийн бүтээсэн o3 загвар Codeforces тэмцээнд дэлхийн шилдэг 0.1%-ийг гүйцэж, GPQA Diamond дээр 87.3% үр дүн үзүүллээ.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "OpenAI Research & Wired",
+    "primarySourceUrl": "https://openai.com/index/o3-mini-system-card/",
+    "publishedAt": "2026-10-02",
+    "publishedTime": "17:40",
+    "readCount": 5840,
+    "readTime": "8 мин унших",
+    "tags": [
+      "AI загвар",
+      "OpenAI o3",
+      "o3-mini",
+      "Codeforces",
+      "Reasoning",
+      "GPQA Diamond",
+      "STEM"
+    ],
+    "rank": 1,
+    "coverImage": "/images/models/openai_o3.svg",
+    "imageCaption": "OpenAI o3 & o3-mini системийн карт — Бодолтын төсөв (low/med/high) тохируулагчтай шинэ үеийн загвар",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "OpenAI компани o1 загварынхаа дараагийн үе болох o3 болон o3-mini загваруудынхаа хэмжилтийг зарлалаа. Код бичих олон улсын Codeforces тавцан дээр 2727 Elo оноо авч Grandmaster түвшинд хүрсэн нь хүн төрөлхтний хамгийн шилдэг програмчдын түвшин юм.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны сэтгэх чадвар шинэ түвшинд гарлаа. <strong>OpenAI</strong> компанийн албан ёсоор дэлгэсэн <strong>o3</strong> болон <strong>o3-mini</strong> загварууд нь математик, кодчиллын олимпиад болон докторын түвшний шинжлэх ухааны шалгууруудад өмнөх бүх рекордуудыг эвдлээ.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// БЕНЧМАРКИЙН ТҮЛХҮҮР ҮЗҮҮЛЭЛТҮҮД (BENCHMARK DATA)</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Codeforces Elo оноо: <strong>2,727 Elo</strong> (Хүн төрөлхтний 99.9%-иас дээгүүр, International Grandmaster)</li>\n      <li>GPQA Diamond (Докторын түвшний физик, биологи, химийн асуултууд): <strong>87.3%</strong></li>\n      <li>AIME 2024 (АНУ-ын Математикийн Олимпиад): <strong>96.7%</strong> (Consensus горимд)</li>\n      <li>SWE-bench Verified: <strong>65.8%</strong></li>\n      <li>Бодолтын түвшний сонголт (Reasoning Effort): <code>low</code>, <code>medium</code>, <code>high</code></li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Бодолтын процессын шинэ архитектур (Test-Time Compute Scaling)\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    o3 загварын суурь зарчим нь хариулт өгөхөөсөө өмнө \"Test-time compute\" буюу хэдэн зуун бодолтын алхам хийж, алдаагаа өөрөө шүүн тунгаадагт оршино. Хэрэглэгч асуулт асуух үед загвар бодлын хэлхээ (chain-of-thought)-дээ хэд хэдэн хувилбарыг зэрэг үүсгэж, Python орчинд кодоо шалгаж, логикийн хувьд зөрчилгүйг нь сонгодог.\n  </p>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Шинэ <code>o3-mini</code> хувилбар нь өмнөх o1-mini-тэй харьцуулахад хурд нь 2 дахин өндөр боловч бодолтын гүн нь анхны o1 загвараас давсан нь загварын жижиг хэмжээг алгоритмын шинэ оновчлолоор нөхөж болдгийг баталлаа.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Хөгжүүлэгчдэд зориулсан шинэ боломжууд: Web Search & Sandbox Python\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    o3-mini нь бодолтын явцдаа бодит цагийн интернэтээс мэдээлэл хайх (Search in Reasoning) болон Python код ажиллуулах тусгаарлагдсан орчинг (Sandbox execution) дэмждэг болсон. Энэ нь бодолтын дундуур тоон хэмжилт болон график байгуулах алхмуудыг 100% алдаагүй тооцоолох давуу талыг өгч байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Үнэ өртөг ба зах зээлийн өрсөлдөөн\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    DeepSeek-R1 гарч ирсний дараа OpenAI үнийн бодлогоо эрс шинэчилж, o3-mini загварын сая оролтын жетоны үнийг $1.10, гаралтын жетоны үнийг $4.40 болгон бууруулсан нь дэлхий даяар үйлдвэрлэлийн системд нэвтрүүлэх боломжийг эрс нэмэгдүүллээ.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "OpenAI Research",
+        "url": "https://openai.com/index/o3-mini-system-card/"
+      },
+      {
+        "name": "Wired",
+        "url": "https://www.wired.com"
+      },
+      {
+        "name": "Codeforces",
+        "url": "https://codeforces.com"
+      }
+    ]
+  },
+  {
     "id": "art-aitimes-rsi-20-scientists-joint-warning",
     "slug": "20-top-ai-scientists-joint-warning-recursive-self-improvement-rsi-regulation",
     "title": "Дэлхийн шилдэг 20 AI эрдэмтний хамтарсан тунхаг: 'RSI-ийн хяналтыг алдахаас өмнө олон улсын хатуу зохицуулалт батлах ёстой'",
@@ -2949,8 +3295,8 @@
     "slug": "deepseek-r1-pure-reinforcement-learning-reasoning-breakthrough",
     "title": "DeepSeek-R1: Хүний зааварчилгаагүйгээр (No-SFT) зөвхөн цэвэр RL-ээр бодож сурсан нээлттэй жинтэй reasoning хувьсгал",
     "subtitle": "aitimes.com технологийн дүн шинжилгээ: Supervised Fine-Tuning хийлгүйгээр зөвхөн Group Relative Policy Optimization (GRPO) ашиглан олон зуун үе шаттай бодолтын гинж үүсгэсэн архитектур.",
-    "category": "tech",
-    "categoryName": "AI ТЕХНОЛОГИ",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
     "primarySource": "AI Times Korea & DeepSeek AI",
     "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=215202",
     "publishedAt": "2026-09-14",
@@ -2958,14 +3304,15 @@
     "readCount": 28400,
     "readTime": "8 мин унших",
     "tags": [
+      "AI загвар",
       "DeepSeek-R1",
-      "GRPO",
-      "Reasoning",
-      "Reinforcement Learning",
+      "DeepSeek",
+      "Pure RL",
+      "MLA",
       "Open Weights"
     ],
-    "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "DeepSeek-R1 архитектур: Хүний бичсэн жишээгүйгээр математик ба кодын логик шалгуурт өөрөө олон дахин алдаж сэтгэсэн туршилт.",
+    "coverImage": "/images/models/deepseek_r1.svg",
+    "imageCaption": "DeepSeek-R1 & V3 — Хүний зааварчилгаагүйгээр цэвэр RL-ээр бодож сурсан 671B MoE нээлттэй жинтэй загвар",
     "isMainLead": false,
     "isHot": true,
     "summary": "DeepSeek судалгааны баг хүний гараар бэлтгэсэн сургалтын өгөгдөл (SFT) ашиглахгүйгээр, загварт зөвхөн зөв/буруу үр дүнгийн шагналын дүрэм өгч өөрөөр нь олон сая удаа сэтгүүлснээр AIME математикийн шалгалтад 79.8% амжилт үзүүлсэн DeepSeek-R1-Zero болон R1 загваруудаа танилцууллаа.",
@@ -3188,8 +3535,8 @@
     "slug": "anthropic-claude-37-sonnet-hybrid-reasoning",
     "title": "Anthropic \"Claude 3.7 Sonnet\": Гибрид бодолт ба програмчлалын шинэ стандартыг дэлгэв",
     "subtitle": "Шуурхай хариу болон гүнзгий бодолтын (Thinking Tokens) хугацааг хэрэглэгч өөрөө удирддаг анхны хосолмол архитектур.",
-    "category": "tech",
-    "categoryName": "AI ТЕХНОЛОГИ",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
     "primarySource": "Anthropic Research & MIT Technology Review",
     "primarySourceUrl": "https://www.anthropic.com",
     "publishedAt": "2026-09-06",
@@ -3197,16 +3544,17 @@
     "readCount": 16890,
     "readTime": "9 мин унших",
     "tags": [
-      "Anthropic",
+      "AI загвар",
       "Claude 3.7 Sonnet",
+      "Anthropic",
       "Hybrid Reasoning",
       "SWE-bench",
-      "Coding AI"
+      "Claude Code"
     ],
     "rank": 36,
     "isHot": true,
-    "coverImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    "imageCaption": "Claude 3.7 Sonnet-ийн стандарт горим ба уртасгасан бодолтын (extended thinking) хугацааны тохируулгын архитектур.",
+    "coverImage": "/images/models/claude_37.svg",
+    "imageCaption": "Anthropic Claude 3.7 Sonnet — Гибрид бодолт ба бодит програмчлалын (SWE-bench 70.3%) шинэ стандарт",
     "summary": "Anthropic компани хиймэл оюуны салбарын анхны эрлийз архитектуртай Claude 3.7 Sonnet загварыг танилцууллаа. Энэхүү загвар нь хялбар асуултад шууд хариулдаг бол нарийн төвөгтэй математик, кодын рефактор дээр бодох хугацааг миллисекундээс эхлээд минутаар тохируулах боломж олгожээ.",
     "content": "\n<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны загварууд нэг бол шуурхай боловч гүехэн хариулдаг (standard LLMs), эсвэл хэт их хугацаа зарцуулан боддог (o1, o3-mini) гэсэн хоёр туйл хуваагдаад байсан билээ. <strong>Anthropic</strong> компани энэхүү заагийг арилгасан <strong>Claude 3.7 Sonnet</strong> загварыг дэлхий нийтэд зарлан гаргалаа.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// БЕНЧМАРК АМЖИЛТУУД</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>SWE-bench Verified (Бодит кодын санг засах): <strong>70.3%</strong> (Тэргүүн байр)</li>\n      <li>AIME 2024 (Математикийн олимпиад): <strong>84.2%</strong> (Thinking горимд)</li>\n      <li>TAU-bench (Хэрэглэгчийн үйлчилгээний автономит агент): <strong>81.2%</strong></li>\n      <li>Хамгийн их бодох жетон (Max Thinking Tokens): <strong>128,000 tokens</strong></li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. \"Hybrid Reasoning\" буюу Гибрид бодолтын мөн чанар\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Claude 3.7 Sonnet-ийн гол онцлог нь нэг л загвар дотор хоёр өөр горимыг хослуулсанд оршино. Инженерүүд API дуудлага хийхдээ <code>thinking_budget</code> буюу хэчнээн жетоны турш загвар бодолтоо үргэлжлүүлэхийг өөрсдөө 1-ээс 128,000 жетоны хооронд нарийн зааж өгч чадна.\n  </p>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хэрэв цаг хугацаа шаардсан харилцагчийн чатбот бол бодолтыг унтрааж миллисекундийн дотор хурдан хариу авна. Харин 100,000 мөр кодтой аварга төслийг бүхэлд нь шинжилж, архитектурын алдааг хайх үед бодолтын төсвийг дээд цэгт нь тавьж, алдаагүй найдвартай код гаргаж авдаг.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Бодит програмчлал (SWE-bench) дээрх ялалт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    MIT Technology Review-ийн технологийн шинжээчдийн хийсэн бие даасан туршилтаар, Claude 3.7 Sonnet нь бодит GitHub төслүүд дээр OpenAI o3-mini болон Google Gemini 2.0 Flash Thinking загваруудаас илүү оновчтой, цэвэр рефакторинг хийж байгаа нь батлагдсан байна.\n  </p>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Ялангуяа front-end интерфэйс, Next.js, Tailwind CSS болон TypeScript дээр код бичихэд бүтцийн уялдаа холбоог алдагдуулахгүй бүрэн модулиар нь гаргадаг чадвар нь программистуудын талархлыг хүлээж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Аюулгүй байдал ба \"Alignment\" шалгуур\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Anthropic-ийн өөрсдийн боловсруулсан Constitutional AI зарчмын дагуу загвар нь өөрийн бодолтын урсгалыг (Thinking Process) гадны хортой заавраар өөрчлөхөөс сэргийлсэн 3 давхар хамгаалалттай гарчээ. Хакерууд загварын бодолтын процесс дундуур хуурамч заавар (Jailbreak) оруулах оролдлогыг 99.4% амжилттай няцаасан байна.\n  </p>\n</div>\n    ",
     "sources": [

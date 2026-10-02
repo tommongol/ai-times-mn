@@ -109,15 +109,15 @@ export const NewspaperLead: React.FC<Props> = ({
           </div>
         </div>
 
-        {/* Col 2: WIRED Hot Topics (3 cols / 25%) */}
+        {/* Col 2: DISPATCH Column (3 cols / 25%) */}
         <div className="lg:col-span-3 lg:border-r border-black lg:pr-6">
           <div className="flex items-center justify-between pb-2 mb-4 border-b-2 border-black">
             <h2 className="font-mono text-xs font-black uppercase tracking-widest text-black flex items-center gap-1.5">
               <Flame className="w-3.5 h-3.5 text-red-600" />
-              <span>THE WIRE // ШУУРХАЙ</span>
+              <span>DISPATCH</span>
             </h2>
             <span className="font-mono text-[10px] bg-red-600 text-white font-bold px-1.5 py-0.2">
-              DISPATCH
+              REAL-TIME
             </span>
           </div>
 

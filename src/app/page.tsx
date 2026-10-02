@@ -71,6 +71,10 @@ export default function HomePage() {
   }, [articles]);
 
   // Section specific slices
+  const modelArticles = useMemo(() => {
+    return articles.filter((a) => a.category === 'models');
+  }, [articles]);
+
   const techArticles = useMemo(() => {
     return articles.filter((a) => a.category === 'tech');
   }, [articles]);
@@ -252,6 +256,14 @@ export default function HomePage() {
             <div className="max-w-7xl mx-auto px-4 pt-8">
               {/* Live 24H Realtime News Wire */}
               <LiveWire />
+
+              {/* Section 0: ШИНЭ AI ЗАГВАРУУД (FRONTIER MODELS & BENCHMARKS) */}
+              <SectionBlock
+                title="Шинэ AI Загварууд (Frontier Models & Benchmarks)"
+                articles={modelArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('models')}
+              />
 
               {/* Section 1: AI Технологи & Инноваци */}
               <SectionBlock
