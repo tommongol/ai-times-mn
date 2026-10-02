@@ -135,11 +135,11 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
 
           {/* Photo & Caption */}
           <div className="space-y-2">
-            <div className="w-full bg-neutral-100 border border-black overflow-hidden">
+            <div className="w-full bg-neutral-100 border border-black overflow-hidden flex items-center justify-center p-2 sm:p-4">
               <img
                 src={article.coverImage}
                 alt={article.title}
-                className="w-full h-auto object-cover max-h-[500px]"
+                className="max-h-[520px] max-w-full w-auto h-auto object-contain mx-auto shadow-xs"
               />
             </div>
             {article.imageCaption && (

@@ -166,17 +166,19 @@ export default function HomePage() {
             {/* List of search/category results */}
             {filteredArticles.length > 0 ? (
               <div className="divide-y divide-neutral-200">
-                {filteredArticles.map((art) => (
+                {filteredArticles.map((art) => {
+                  const isPortrait = art.category === 'interview' || (Boolean(art.coverImage) && art.coverImage.includes('/images/people/'));
+                  return (
                   <article
                     key={art.id}
                     onClick={() => setSelectedArticle(art)}
                     className="py-6 cursor-pointer group flex flex-col sm:flex-row gap-6 items-start hover:bg-neutral-50 p-3 transition-colors border-l-2 border-transparent hover:border-black"
                   >
-                    <div className="w-full sm:w-64 h-40 shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300">
+                    <div className={`w-full ${isPortrait ? 'sm:w-48 h-56 sm:h-64' : 'sm:w-64 h-40'} shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300 relative`}>
                       <img
                         src={art.coverImage}
                         alt={art.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -207,7 +209,8 @@ export default function HomePage() {
                       </div>
                     </div>
                   </article>
-                ))}
+                  );
+                })}
               </div>
             ) : (
               /* No Search Results Fallback */

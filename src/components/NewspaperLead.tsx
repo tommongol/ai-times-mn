@@ -59,7 +59,7 @@ export const NewspaperLead: React.FC<Props> = ({
               <img
                 src={mainLead.coverImage}
                 alt={mainLead.title}
-                className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
               <span className="absolute bottom-2 left-2 bg-black/85 backdrop-blur-xs text-white font-mono text-[10px] px-2 py-0.5 uppercase tracking-wider">
                 ORIGINAL PHOTO // {mainLead.primarySource.split(' ')[0]}
@@ -74,17 +74,19 @@ export const NewspaperLead: React.FC<Props> = ({
 
           {/* 2 sub-leads side-by-side below main lead */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-neutral-300">
-            {subLeads.slice(0, 2).map((art) => (
+            {subLeads.slice(0, 2).map((art) => {
+              const isPortrait = art.category === 'interview' || (Boolean(art.coverImage) && art.coverImage.includes('/images/people/'));
+              return (
               <div
                 key={art.id}
                 onClick={() => onSelect(art)}
                 className="group cursor-pointer flex flex-col justify-between"
               >
-                <div className="h-32 w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300">
+                <div className={`w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 ${isPortrait ? 'h-48 sm:h-52' : 'h-32'}`}>
                   <img
                     src={art.coverImage}
                     alt={art.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div>
@@ -102,7 +104,8 @@ export const NewspaperLead: React.FC<Props> = ({
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
