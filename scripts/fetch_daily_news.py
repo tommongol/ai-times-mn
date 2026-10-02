@@ -27,6 +27,26 @@ LIVE_WIRE_FILE = os.path.join(PROJECT_DIR, 'src', 'data', 'live_wire.json')
 
 FEEDS = [
     {
+        'name': 'AI Times Korea',
+        'url': 'https://news.google.com/rss/search?q=site:aitimes.com&hl=ko&gl=KR&ceid=KR:ko',
+        'default_category': 'tech'
+    },
+    {
+        'name': 'The Korea Times',
+        'url': 'https://news.google.com/rss/search?q=site:koreatimes.co.kr+(%22AI%22+OR+%22artificial+intelligence%22)&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'policy'
+    },
+    {
+        'name': 'Google News AI Interviews',
+        'url': 'https://news.google.com/rss/search?q=%22AI%22+interview+(Yann+LeCun+OR+Jensen+Huang+OR+Bill+Gates+OR+Dario+Amodei+OR+Sam+Altman)+2026&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'interview'
+    },
+    {
+        'name': 'Google News AI',
+        'url': 'https://news.google.com/rss/topics/CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB?hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'companies'
+    },
+    {
         'name': 'WIRED',
         'url': 'https://news.google.com/rss/search?q=site:wired.com+AI&hl=en-US&gl=US&ceid=US:en',
         'default_category': 'tech'
@@ -35,11 +55,6 @@ FEEDS = [
         'name': 'TechRadar',
         'url': 'https://news.google.com/rss/search?q=site:techradar.com+AI&hl=en-US&gl=US&ceid=US:en',
         'default_category': 'tech'
-    },
-    {
-        'name': 'Google News AI',
-        'url': 'https://news.google.com/rss/topics/CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB?hl=en-US&gl=US&ceid=US:en',
-        'default_category': 'companies'
     }
 ]
 
@@ -75,7 +90,7 @@ def translate_to_mongolian(text):
     if text in TRANSLATION_CACHE:
         return TRANSLATION_CACHE[text]
     try:
-        url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=mn&dt=t&q={urllib.parse.quote(text)}"
+        url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=mn&dt=t&q={urllib.parse.quote(text)}"
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'})
         with urllib.request.urlopen(req, timeout=6) as resp:
             data = json.loads(resp.read().decode('utf-8'))
