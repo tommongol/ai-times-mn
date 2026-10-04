@@ -20,8 +20,8 @@ interface NewsContextType {
 
 const NewsContext = createContext<NewsContextType | undefined>(undefined);
 
-const STORAGE_ARTICLES_KEY = 'aimedee_articles_custom_v1';
-const STORAGE_LIVEWIRE_KEY = 'aimedee_livewire_custom_v1';
+const STORAGE_ARTICLES_KEY = 'aimedee_articles_custom_v2';
+const STORAGE_LIVEWIRE_KEY = 'aimedee_livewire_custom_v2';
 
 export const NewsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [articles, setArticles] = useState<NewsArticle[]>(DEFAULT_ARTICLES);

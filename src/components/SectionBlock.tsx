@@ -48,7 +48,7 @@ export const SectionBlock: React.FC<Props> = ({
             <article
               key={art.id}
               onClick={() => onSelect(art)}
-              className="group cursor-pointer flex flex-col justify-between"
+              className="group cursor-pointer flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-3.5 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <div>
                 <div className={`w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 relative ${isPortrait ? 'h-56 sm:h-64' : 'h-40'}`}>
@@ -62,26 +62,26 @@ export const SectionBlock: React.FC<Props> = ({
                   </span>
                 </div>
 
-              <span className="font-mono text-[10px] font-bold text-neutral-500 uppercase tracking-wider block mb-1">
-                // {art.categoryName}
-              </span>
+                <span className="font-mono text-[10px] font-bold text-neutral-500 uppercase tracking-wider block mb-1">
+                  // {art.categoryName}
+                </span>
 
-              <h3 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
-                {art.title}
-              </h3>
+                <h3 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
+                  {art.title}
+                </h3>
 
-              <p className="text-[11px] text-neutral-600 line-clamp-2 leading-relaxed font-normal">
-                {art.summary}
-              </p>
-            </div>
+                <p className="text-[11px] text-neutral-600 line-clamp-2 leading-relaxed font-normal">
+                  {art.summary}
+                </p>
+              </div>
 
-            <div className="flex items-center justify-between font-mono text-[10px] text-neutral-500 pt-3 mt-3 border-t border-neutral-200">
-              <span className="text-black font-semibold uppercase">
-                {art.primarySource.split(' ')[0]}
-              </span>
-              <span>{art.publishedTime}</span>
-            </div>
-          </article>
+              <div className="flex items-center justify-between font-mono text-[10px] text-neutral-500 pt-3 mt-3 border-t border-neutral-200">
+                <span className="text-black font-semibold uppercase">
+                  {art.primarySource.split(' ')[0]}
+                </span>
+                <span>{art.publishedTime}</span>
+              </div>
+            </article>
           );
         })}
       </div>

@@ -103,8 +103,6 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
                   </span>
                 )}
                 <span>{article.publishedAt} {article.publishedTime}</span>
-                <span>•</span>
-                <span>{article.readCount.toLocaleString()} УНШСАН</span>
                 <a
                   href={article.primarySourceUrl}
                   target="_blank"

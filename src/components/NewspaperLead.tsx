@@ -50,8 +50,6 @@ export const NewspaperLead: React.FC<Props> = ({
               </span>
               <span className="text-neutral-400">•</span>
               <span>{mainLead.publishedAt} {mainLead.publishedTime}</span>
-              <span className="text-neutral-400">•</span>
-              <span>{mainLead.readCount.toLocaleString()} READS</span>
             </div>
 
             {/* Sharp Image */}
@@ -185,7 +183,7 @@ export const NewspaperLead: React.FC<Props> = ({
                   </h4>
                   <div className="font-mono text-[10px] text-neutral-500 flex items-center justify-between">
                     <span className="text-neutral-700">{art.primarySource.split(' ')[0]}</span>
-                    <span>{art.readCount.toLocaleString()} reads</span>
+                    <span>{art.publishedTime}</span>
                   </div>
                 </div>
               </div>

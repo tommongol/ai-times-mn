@@ -9,7 +9,7 @@ import { ArticleViewModal } from '@/components/ArticleViewModal';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { useNews } from '@/context/NewsContext';
 import { NewsArticle, NAV_SECTIONS } from '@/data/news';
-import { Eye, Search, ArrowUpDown, XCircle, ShieldCheck } from 'lucide-react';
+import { Search, ArrowUpDown, XCircle, ShieldCheck } from 'lucide-react';
 
 export default function HomePage() {
   const { articles } = useNews();
@@ -104,7 +104,7 @@ export default function HomePage() {
   }, [articles]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black font-sans selection:bg-[#00FF66] selection:text-black">
+    <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-black font-sans selection:bg-[#00FF66] selection:text-black">
       {/* 1. WIRED Newspaper Header with Search Bar */}
       <NewspaperHeader
         activeSection={activeSection}
@@ -204,11 +204,6 @@ export default function HomePage() {
                         <span className="text-black font-semibold uppercase flex items-center gap-1">
                           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                           SOURCE: {art.primarySource}
-                        </span>
-                        <span>•</span>
-                        <span className="flex items-center gap-1">
-                          <Eye className="w-3.5 h-3.5" />
-                          {art.readCount.toLocaleString()} reads
                         </span>
                       </div>
                     </div>

@@ -113,8 +113,6 @@ export const NewspaperHeader: React.FC<Props> = ({
               </div>
               <div className="flex items-center gap-2 mt-1.5 font-mono text-xs text-neutral-600 uppercase tracking-widest">
                 <span className="font-bold text-black">// THE AI FRONTIER</span>
-                <span>•</span>
-                <span>aitimes.com солонгос & дэлхийн AI шинжилгээ</span>
               </div>
             </button>
           </div>
@@ -204,15 +202,6 @@ export const NewspaperHeader: React.FC<Props> = ({
               );
             })}
           </ul>
-
-          <div className="hidden xl:flex items-center gap-3 text-[11px] font-mono text-neutral-400 pl-4 py-2 shrink-0">
-            <span className="text-neutral-500">// SYNDICATION:</span>
-            <span className="text-neutral-300">aitimes.com</span>
-            <span>•</span>
-            <span className="text-neutral-300">Reuters</span>
-            <span>•</span>
-            <span className="text-neutral-300">OpenAI</span>
-          </div>
         </div>
       </nav>
     </header>
