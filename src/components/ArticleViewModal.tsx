@@ -96,9 +96,9 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
                   {article.primarySource}
                 </span>
               </div>
-              <div className="flex flex-wrap items-center gap-3 text-neutral-500 text-[11px]">
+              <div className="flex flex-wrap items-center gap-3 text-neutral-600 text-xs sm:text-sm">
                 {article.readTime && (
-                  <span className="bg-black text-[#00FF66] font-bold px-1.5 py-0.5">
+                  <span className="bg-black text-[#00FF66] font-bold px-2 py-0.5">
                     ⏱ {article.readTime}
                   </span>
                 )}
@@ -107,22 +107,22 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
                   href={article.primarySourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 bg-black text-[#00FF66] hover:bg-neutral-800 px-2 py-1 font-bold transition-colors"
+                  className="inline-flex items-center gap-1.5 bg-black text-[#00FF66] hover:bg-neutral-800 px-2.5 py-1 font-bold transition-colors"
                 >
                   <span>ЭХ СУРВАЛЖ ҮЗЭХ</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
 
             {/* Tags if available */}
             {article.tags && article.tags.length > 0 && (
-              <div className="flex items-center gap-1.5 flex-wrap pt-3 font-mono text-[11px]">
-                <span className="font-bold text-neutral-400">// СЭДВҮҮД:</span>
+              <div className="flex items-center gap-2 flex-wrap pt-3 font-mono text-xs">
+                <span className="font-bold text-neutral-500">// СЭДВҮҮД:</span>
                 {article.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-0.5 bg-neutral-100 border border-neutral-300 text-black font-semibold"
+                    className="px-2.5 py-1 bg-neutral-100 border border-neutral-300 text-black font-semibold"
                   >
                     #{tag}
                   </span>

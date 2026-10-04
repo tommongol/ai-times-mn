@@ -186,23 +186,23 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2 font-mono text-[11px]">
-                        <span className="bg-black text-[#00FF66] font-bold px-1.5 py-0.5 uppercase">
+                      <div className="flex items-center gap-3 mb-2 font-mono text-xs sm:text-sm">
+                        <span className="bg-black text-[#00FF66] font-bold px-2 py-0.5 uppercase">
                           {art.categoryName}
                         </span>
                         <span className="text-neutral-500">
                           {art.publishedAt} {art.publishedTime}
                         </span>
                       </div>
-                      <h2 className="font-black text-lg sm:text-xl text-black group-hover:text-emerald-600 transition-colors leading-snug mb-2">
+                      <h2 className="font-black text-lg sm:text-xl lg:text-2xl text-black group-hover:text-emerald-600 transition-colors leading-snug mb-2">
                         {art.title}
                       </h2>
-                      <p className="text-xs sm:text-sm text-neutral-700 line-clamp-2 leading-relaxed mb-3">
+                      <p className="text-sm sm:text-base text-neutral-700 line-clamp-2 leading-relaxed mb-3">
                         {art.summary}
                       </p>
-                      <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-neutral-500">
+                      <div className="flex flex-wrap items-center gap-4 font-mono text-xs sm:text-sm text-neutral-600">
                         <span className="text-black font-semibold uppercase flex items-center gap-1">
-                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                          <ShieldCheck className="w-4 h-4 text-emerald-600" />
                           SOURCE: {art.primarySource}
                         </span>
                       </div>

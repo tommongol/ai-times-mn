@@ -49,42 +49,42 @@ export const NewspaperHeader: React.FC<Props> = ({
   return (
     <header className="w-full bg-white border-b-2 border-black text-black">
       {/* 1. WIRED Micro Status Bar */}
-      <div className="border-b border-neutral-200 bg-neutral-900 text-[11px] text-neutral-300 py-1.5 px-4 font-mono">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div className="border-b border-neutral-200 bg-neutral-900 text-xs sm:text-sm text-neutral-300 py-2 px-4 font-mono">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5 text-[#00FF66] font-bold">
               <span className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
               LIVE INTEL
             </span>
             <span className="text-neutral-500">|</span>
-            <span>{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
+            <span className="text-neutral-200">{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
             <span className="hidden md:inline text-neutral-500">|</span>
-            <span className="hidden md:inline text-neutral-400">
+            <span className="hidden md:inline text-neutral-300">
               ХИЙМЭЛ ОЮУН УХААНЫ ДЭЛХИЙН БОДИТ ЦАГИЙН СЭТГҮҮЛ ЗҮЙ
             </span>
           </div>
 
-          <div className="flex items-center gap-3 text-[10px]">
+          <div className="flex items-center gap-3 text-xs">
             <Link
               href="/admin"
-              className="inline-flex items-center gap-1.5 text-white bg-neutral-800 hover:bg-[#00FF66] hover:text-black px-2 py-0.5 border border-neutral-700 font-bold transition-colors cursor-pointer uppercase tracking-wider"
+              className="inline-flex items-center gap-1.5 text-white bg-neutral-800 hover:bg-[#00FF66] hover:text-black px-2.5 py-1 border border-neutral-700 font-bold transition-colors cursor-pointer uppercase tracking-wider"
               title="Мэдээ нийтлэл засах редакцын удирдлага"
             >
-              <SlidersHorizontal className="w-3 h-3 text-[#00FF66] group-hover:text-black" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#00FF66] group-hover:text-black" />
               <span>РЕДАКЦ / DASHBOARD</span>
             </Link>
             <span className="text-neutral-500">|</span>
-            <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-neutral-800 px-2 py-0.5 rounded-xs border border-neutral-700">
-              <ShieldCheck className="w-3 h-3 text-[#00FF66]" />
+            <span className="inline-flex items-center gap-1.5 text-emerald-400 font-semibold bg-neutral-800 px-2.5 py-1 rounded-xs border border-neutral-700">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#00FF66]" />
               100% БОДИТ ЭХ СУРВАЛЖ
             </span>
             <span className="text-neutral-500">|</span>
             <button
               onClick={() => alert('Өдөр тутмын AI товхимолд бүртгэлээ!')}
-              className="hover:text-[#00FF66] flex items-center gap-1 transition-colors uppercase tracking-wider cursor-pointer"
+              className="hover:text-[#00FF66] flex items-center gap-1 transition-colors uppercase tracking-wider cursor-pointer py-1"
             >
-              <Mail className="w-3 h-3" />
-              <span>ТОБХИМОЛ</span>
+              <Mail className="w-3.5 h-3.5" />
+              <span>ТОВХИМОЛ</span>
             </button>
           </div>
         </div>
@@ -123,7 +123,7 @@ export const NewspaperHeader: React.FC<Props> = ({
               onSubmit={handleSubmit}
               className="flex items-center w-full max-w-md lg:w-[420px] border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] focus-within:shadow-[4px_4px_0px_0px_rgba(0,255,102,1)] transition-all"
             >
-              <div className="pl-3 text-neutral-400 font-mono text-xs font-bold">
+              <div className="pl-3.5 text-neutral-400 font-mono text-sm font-bold">
                 $
               </div>
               <input
@@ -131,13 +131,13 @@ export const NewspaperHeader: React.FC<Props> = ({
                 value={localInput}
                 onChange={(e) => setLocalInput(e.target.value)}
                 placeholder="Хайх үг... (Nvidia, OpenAI, Deepfake...)"
-                className="flex-1 px-2.5 py-2 text-xs font-mono bg-transparent focus:outline-none text-black placeholder-neutral-400"
+                className="flex-1 px-3 py-2.5 text-sm font-mono bg-transparent focus:outline-none text-black placeholder-neutral-400"
               />
               {localInput && (
                 <button
                   type="button"
                   onClick={handleClear}
-                  className="p-1 text-neutral-400 hover:text-black cursor-pointer"
+                  className="p-1.5 text-neutral-400 hover:text-black cursor-pointer"
                   title="Арилгах"
                 >
                   <X className="w-4 h-4" />
@@ -145,17 +145,17 @@ export const NewspaperHeader: React.FC<Props> = ({
               )}
               <button
                 type="submit"
-                className="bg-black text-white hover:bg-[#00FF66] hover:text-black px-4 py-2 text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                className="bg-black text-white hover:bg-[#00FF66] hover:text-black px-4 py-2.5 text-xs sm:text-sm font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
               >
-                <Search className="w-3.5 h-3.5" />
+                <Search className="w-4 h-4" />
                 <span>SEARCH</span>
               </button>
             </form>
 
             {/* Trending tags in monospace */}
-            <div className="flex items-center gap-1.5 text-[11px] font-mono text-neutral-500 overflow-x-auto max-w-full">
+            <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 overflow-x-auto max-w-full py-1">
               <span className="font-bold text-black uppercase tracking-wider flex items-center gap-1 shrink-0">
-                <TrendingUp className="w-3 h-3 text-red-600" />
+                <TrendingUp className="w-3.5 h-3.5 text-red-600" />
                 TRENDS:
               </span>
               <div className="flex items-center gap-1.5 flex-wrap">
@@ -164,7 +164,7 @@ export const NewspaperHeader: React.FC<Props> = ({
                     key={term}
                     type="button"
                     onClick={() => handleTagClick(term)}
-                    className="px-1.5 py-0.5 bg-neutral-100 hover:bg-black hover:text-[#00FF66] text-neutral-800 transition-colors cursor-pointer text-[10px] font-bold"
+                    className="px-2 py-1 bg-neutral-100 hover:bg-black hover:text-[#00FF66] text-neutral-800 transition-colors cursor-pointer text-xs font-bold"
                   >
                     #{term}
                   </button>
@@ -178,7 +178,7 @@ export const NewspaperHeader: React.FC<Props> = ({
       {/* 3. WIRED High-Contrast Navigation Grid */}
       <nav className="bg-black text-white border-t border-black">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <ul className="flex items-center overflow-x-auto no-scrollbar font-mono text-xs uppercase tracking-wider divide-x divide-neutral-800">
+          <ul className="flex items-center overflow-x-auto no-scrollbar font-mono text-xs sm:text-sm uppercase tracking-wider divide-x divide-neutral-800">
             {NAV_SECTIONS.map((sec, idx) => {
               const isActive = activeSection === sec.id && !searchQuery;
               return (
@@ -189,13 +189,13 @@ export const NewspaperHeader: React.FC<Props> = ({
                       onSearchChange('');
                       onSelectSection(sec.id);
                     }}
-                    className={`px-4 py-3 font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                    className={`px-4 sm:px-5 py-3.5 font-bold transition-all flex items-center gap-2 cursor-pointer ${
                       isActive
                         ? 'bg-[#00FF66] text-black font-black'
                         : 'text-neutral-300 hover:text-[#00FF66] hover:bg-neutral-900'
                     }`}
                   >
-                    <span className="text-[10px] opacity-60">0{idx + 1}</span>
+                    <span className="text-xs opacity-60">0{idx + 1}</span>
                     <span>{sec.name}</span>
                   </button>
                 </li>

@@ -30,21 +30,21 @@ export const NewspaperLead: React.FC<Props> = ({
           >
             {/* Kicker badge */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="bg-black text-[#00FF66] font-mono text-[11px] font-bold px-2 py-0.5 uppercase tracking-widest">
+              <span className="bg-black text-[#00FF66] font-mono text-xs sm:text-sm font-bold px-2.5 py-1 uppercase tracking-widest">
                 // COVER STORY
               </span>
-              <span className="font-mono text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">
+              <span className="font-mono text-xs sm:text-sm font-semibold text-neutral-600 uppercase tracking-wider">
                 [{mainLead.categoryName}]
               </span>
             </div>
 
             {/* Giant Headline */}
-            <h1 className="font-black text-2xl sm:text-3xl lg:text-4xl leading-[1.12] text-black group-hover:text-emerald-600 transition-colors mb-3 tracking-tight">
+            <h1 className="font-black text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-[1.15] text-black group-hover:text-emerald-600 transition-colors mb-4 tracking-tight">
               {mainLead.title}
             </h1>
 
             {/* Verified Source Monospace Tag */}
-            <div className="font-mono text-[11px] text-neutral-500 uppercase tracking-wider mb-4 flex flex-wrap items-center gap-2 pb-3 border-b border-neutral-200">
+            <div className="font-mono text-xs sm:text-sm text-neutral-600 uppercase tracking-wider mb-4 flex flex-wrap items-center gap-2 pb-3 border-b border-neutral-200">
               <span className="text-black font-bold">
                 SOURCE // {mainLead.primarySource}
               </span>
@@ -59,13 +59,13 @@ export const NewspaperLead: React.FC<Props> = ({
                 alt={mainLead.title}
                 className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
-              <span className="absolute bottom-2 left-2 bg-black/85 backdrop-blur-xs text-white font-mono text-[10px] px-2 py-0.5 uppercase tracking-wider">
+              <span className="absolute bottom-2 left-2 bg-black/85 backdrop-blur-xs text-white font-mono text-xs px-2.5 py-1 uppercase tracking-wider">
                 ORIGINAL PHOTO // {mainLead.primarySource.split(' ')[0]}
               </span>
             </div>
 
             {/* Summary */}
-            <p className="text-sm sm:text-base text-neutral-800 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-neutral-800 leading-relaxed font-normal">
               {mainLead.summary}
             </p>
           </div>
@@ -80,7 +80,7 @@ export const NewspaperLead: React.FC<Props> = ({
                 onClick={() => onSelect(art)}
                 className="group cursor-pointer flex flex-col justify-between"
               >
-                <div className={`w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 ${isPortrait ? 'h-48 sm:h-52' : 'h-32'}`}>
+                <div className={`w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 ${isPortrait ? 'h-48 sm:h-52' : 'h-36 sm:h-40'}`}>
                   <img
                     src={art.coverImage}
                     alt={art.title}
@@ -88,14 +88,14 @@ export const NewspaperLead: React.FC<Props> = ({
                   />
                 </div>
                 <div>
-                  <span className="font-mono text-[10px] font-bold text-neutral-500 uppercase tracking-wider block mb-1">
+                  <span className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-wider block mb-1">
                     // {art.categoryName}
                   </span>
-                  <h3 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug">
+                  <h3 className="text-sm sm:text-base font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug">
                     {art.title}
                   </h3>
-                  <div className="font-mono text-[10px] text-neutral-500 mt-2 flex items-center justify-between border-t border-neutral-100 pt-1.5">
-                    <span className="font-medium text-black">
+                  <div className="font-mono text-xs text-neutral-600 mt-2 flex items-center justify-between border-t border-neutral-100 pt-2">
+                    <span className="font-semibold text-black">
                       {art.primarySource.split(' ')[0]}
                     </span>
                     <span>{art.publishedTime}</span>
@@ -109,12 +109,12 @@ export const NewspaperLead: React.FC<Props> = ({
 
         {/* Col 2: DISPATCH Column (3 cols / 25%) */}
         <div className="lg:col-span-3 lg:border-r border-black lg:pr-6">
-          <div className="flex items-center justify-between pb-2 mb-4 border-b-2 border-black">
-            <h2 className="font-mono text-xs font-black uppercase tracking-widest text-black flex items-center gap-1.5">
-              <Flame className="w-3.5 h-3.5 text-red-600" />
+          <div className="flex items-center justify-between pb-2.5 mb-4 border-b-2 border-black">
+            <h2 className="font-mono text-sm font-black uppercase tracking-widest text-black flex items-center gap-1.5">
+              <Flame className="w-4 h-4 text-red-600" />
               <span>DISPATCH</span>
             </h2>
-            <span className="font-mono text-[10px] bg-red-600 text-white font-bold px-1.5 py-0.2">
+            <span className="font-mono text-xs bg-red-600 text-white font-bold px-2 py-0.5">
               REAL-TIME
             </span>
           </div>
@@ -124,21 +124,21 @@ export const NewspaperLead: React.FC<Props> = ({
               <article
                 key={art.id}
                 onClick={() => onSelect(art)}
-                className="py-4 first:pt-0 cursor-pointer group"
+                className="py-4.5 first:pt-0 cursor-pointer group"
               >
-                <div className="flex items-center justify-between gap-2 mb-1.5 font-mono text-[10px] text-neutral-500">
+                <div className="flex items-center justify-between gap-2 mb-1.5 font-mono text-xs text-neutral-500">
                   <span className="font-bold text-black uppercase">
                     // 0{idx + 1} {art.categoryName}
                   </span>
                   <span>{art.publishedTime}</span>
                 </div>
-                <h3 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-1.5">
+                <h3 className="text-sm sm:text-base font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
                   {art.title}
                 </h3>
-                <p className="text-[11px] text-neutral-600 line-clamp-2 leading-relaxed mb-2 font-normal">
+                <p className="text-xs sm:text-sm text-neutral-600 line-clamp-2 leading-relaxed mb-2 font-normal">
                   {art.summary}
                 </p>
-                <div className="font-mono text-[10px] text-neutral-500">
+                <div className="font-mono text-xs text-neutral-600">
                   <span>ЭХ СУРВАЛЖ: </span>
                   <span className="text-black font-semibold">
                     {art.primarySource}
@@ -151,12 +151,12 @@ export const NewspaperLead: React.FC<Props> = ({
 
         {/* Col 3: Ranked Most Read & Terminal Briefing (3 cols / 25%) */}
         <div className="lg:col-span-3">
-          <div className="flex items-center justify-between pb-2 mb-4 border-b-2 border-black">
-            <h2 className="font-mono text-xs font-black uppercase tracking-widest text-black flex items-center gap-1.5">
-              <TrendingUp className="w-3.5 h-3.5 text-black" />
+          <div className="flex items-center justify-between pb-2.5 mb-4 border-b-2 border-black">
+            <h2 className="font-mono text-sm font-black uppercase tracking-widest text-black flex items-center gap-1.5">
+              <TrendingUp className="w-4 h-4 text-black" />
               <span>MOST READ // ТОП ЭРЭМБЭ</span>
             </h2>
-            <span className="font-mono text-[10px] text-neutral-400">01—05</span>
+            <span className="font-mono text-xs text-neutral-400 font-bold">01—05</span>
           </div>
 
           <div className="space-y-4">
@@ -169,7 +169,7 @@ export const NewspaperLead: React.FC<Props> = ({
                 <span
                   className={`font-mono text-lg font-black shrink-0 w-7 leading-none ${
                     idx === 0
-                      ? 'text-[#00FF66] bg-black px-1 py-0.5 text-center text-sm'
+                      ? 'text-[#00FF66] bg-black px-1.5 py-1 text-center text-sm'
                       : idx < 3
                       ? 'text-black'
                       : 'text-neutral-400'
@@ -178,11 +178,11 @@ export const NewspaperLead: React.FC<Props> = ({
                   0{idx + 1}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-xs font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-1">
+                  <h4 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-1">
                     {art.title}
                   </h4>
-                  <div className="font-mono text-[10px] text-neutral-500 flex items-center justify-between">
-                    <span className="text-neutral-700">{art.primarySource.split(' ')[0]}</span>
+                  <div className="font-mono text-xs text-neutral-500 flex items-center justify-between">
+                    <span className="text-neutral-700 font-medium">{art.primarySource.split(' ')[0]}</span>
                     <span>{art.publishedTime}</span>
                   </div>
                 </div>
@@ -192,13 +192,13 @@ export const NewspaperLead: React.FC<Props> = ({
 
           {/* WIRED Newsletter Briefing Terminal Box */}
           <div className="mt-8 p-5 bg-neutral-900 text-white border-2 border-black">
-            <div className="flex items-center gap-1.5 font-mono text-[11px] text-[#00FF66] font-bold mb-1">
+            <div className="flex items-center gap-1.5 font-mono text-xs text-[#00FF66] font-bold mb-1.5">
               <span>// WIRED INTELLIGENCE BRIEF</span>
             </div>
-            <h4 className="text-sm font-black text-white mb-2">
+            <h4 className="text-sm sm:text-base font-black text-white mb-2">
               Өдөр тутмын AI мэдээг и-мэйлээр шууд хүлээн авах
             </h4>
-            <p className="text-[11px] text-neutral-400 mb-3 font-mono">
+            <p className="text-xs text-neutral-300 mb-3 font-mono leading-relaxed">
               Дэлхийн технологийн салбарын гол өөрчлөлтүүд, судалгааны тайлангууд.
             </p>
             <form

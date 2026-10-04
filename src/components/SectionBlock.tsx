@@ -62,20 +62,20 @@ export const SectionBlock: React.FC<Props> = ({
                   </span>
                 </div>
 
-                <span className="font-mono text-[10px] font-bold text-neutral-500 uppercase tracking-wider block mb-1">
+                <span className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-wider block mb-1">
                   // {art.categoryName}
                 </span>
 
-                <h3 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
+                <h3 className="text-sm sm:text-base font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
                   {art.title}
                 </h3>
 
-                <p className="text-[11px] text-neutral-600 line-clamp-2 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-neutral-600 line-clamp-2 leading-relaxed font-normal">
                   {art.summary}
                 </p>
               </div>
 
-              <div className="flex items-center justify-between font-mono text-[10px] text-neutral-500 pt-3 mt-3 border-t border-neutral-200">
+              <div className="flex items-center justify-between font-mono text-xs text-neutral-500 pt-3 mt-3 border-t border-neutral-200">
                 <span className="text-black font-semibold uppercase">
                   {art.primarySource.split(' ')[0]}
                 </span>
