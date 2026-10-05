@@ -7,8 +7,8 @@ import { Terminal, Radio } from 'lucide-react';
 export const LiveWire: React.FC = () => {
   const { liveWire } = useNews();
   return (
-    <div className="bg-black text-white p-4 mb-8 border-2 border-black">
-      <div className="flex items-center justify-between pb-2.5 mb-3 border-b border-neutral-800">
+    <div className="bg-black text-white p-3.5 mb-6 border-2 border-black">
+      <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-neutral-800">
         <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider font-bold">
           <Terminal className="w-4 h-4 text-[#00FF66]" />
           <span className="text-white">WIRED 24H REALTIME DISPATCH //</span>

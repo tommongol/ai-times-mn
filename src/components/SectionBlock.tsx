@@ -43,15 +43,14 @@ export const SectionBlock: React.FC<Props> = ({
       {/* 4-Item Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {articles.slice(0, 4).map((art, idx) => {
-          const isPortrait = art.category === 'interview' || (Boolean(art.coverImage) && art.coverImage.includes('/images/people/'));
           return (
             <article
               key={art.id}
               onClick={() => onSelect(art)}
-              className="group cursor-pointer flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-3.5 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              className="group cursor-pointer flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-4 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <div>
-                <div className={`w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 relative ${isPortrait ? 'h-56 sm:h-64' : 'h-40'}`}>
+                <div className="w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 relative aspect-[16/10]">
                   <img
                     src={art.coverImage}
                     alt={art.title}
