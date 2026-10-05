@@ -1,5 +1,375 @@
 [
   {
+    "id": "art-20261005-01-openai-dots-devday",
+    "slug": "openai-devday-dots-persistent-autonomous-agents",
+    "title": "OpenAI DevDay: Компьютер бүхий 24/7 бие даасан 'Dots' агентууд ба шинэ эрин",
+    "subtitle": "Хэрэглэгчийн оролцоогүйгээр цахим үүлэн орчинд 24 цагийн турш бие даан ажиллах OpenClaw виртуал системтэй шинэ агентууд албан ёсоор танилцуулагдлаа.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "OpenAI DevDay Official",
+    "primarySourceUrl": "https://openai.com/devday",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "09:30",
+    "readCount": 8450,
+    "readTime": "6 мин унших",
+    "tags": [
+      "OpenAI",
+      "DevDay 2026",
+      "AI Agents",
+      "Dots",
+      "OpenClaw",
+      "Frontier"
+    ],
+    "rank": 1,
+    "coverImage": "/images/articles/art-openai-dots-devday.jpg",
+    "imageCaption": "OpenAI DevDay 2026: Сэм Альтман бие даасан 24/7 үүлэн компьютер бүхий Dots агентуудын архитектурыг зарлав.",
+    "isMainLead": true,
+    "isHot": true,
+    "summary": "OpenAI-ийн энэ жилийн DevDay арга хэмжээний хамгийн том сенсаци нь 'Dots' хэмээх 24/7 горимд тасралтгүй ажиллах бие даасан агентууд байв. Тэд хэрэглэгчийн ганц тушаалаар виртуал машин дээр өөрийн гэсэн компьютер ажиллуулж, олон хоног үргэлжлэх ажлуудыг хүний оролцоогүйгээр гүйцэтгэдэг боллоо.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Сан-Франциско хотноо зохион байгуулагдсан <strong>OpenAI DevDay 2026</strong> хөгжүүлэгчдийн чуулганы тайзан дээр Сэм Альтман хиймэл оюуны хөгжлийн шинэ хуудсыг нээлээ. Тус компанийн танилцуулсан гол шийдэл нь хэрэглэгчийн асуултад зүгээр л текстээр хариулаад зогсдог өмнөх үеийн чатботуудыг халж, цаанаа бүрэн хэмжээний үүлэн компьютер эзэмшсэн <strong>'Dots'</strong> хэмээх бие даасан агентуудын экосистем юм.\n  </p>\n\n  <div class=\"border-l-4 border-[#00FF66] bg-black text-white p-5 font-mono text-sm\">\n    <p class=\"font-bold text-[#00FF66] uppercase mb-2\">// ДЭЛХИЙН ХӨГЖҮҮЛЭГЧДИЙН ЧУУЛГАН: ТАНИЛЦУУЛСАН ГОЛ ТЕХНОЛОГИ</p>\n    <ul class=\"list-disc pl-5 space-y-1.5 text-neutral-300\">\n      <li><strong>Dots 24/7:</strong> Цахим үүлэн дэд бүтцэд тасралтгүй ажиллах бие даасан шийдэл</li>\n      <li><strong>OpenClaw Virtual Machine:</strong> Агент бүрт хуваарилагдах тусгаарлагдсан үйлдлийн систем</li>\n      <li><strong>Cross-Platform Actions:</strong> Файл үүсгэх, код турших, алдааг бие даан засварлах ба интернэтээр аялах бүрэн эрх</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Энгийн чатботоос \"Цахим ажилтан\" руу хийсэн үсрэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Өнөөг хүртэл хэрэглэгчид AI ашиглахдаа чат цонхоо хаах, эсвэл компьютероо унтраах үед бүх процесс зогсдог байсан. Харин <strong>Dots</strong> систем нь OpenAI-ийн клауд сервер дээр 24/7 тасралтгүй ажиллах тул хэрэглэгч нэг удаа даалгавар өгөөд явсан ч агент нь цаанаа шаардлагатай судалгаа хийж, програмын алдааг хайж, шинэ код бичин туршиж, тайлангаа бэлэн болгоод хэрэглэгчийн имэйл эсвэл ажлын суваг руу илгээдэг болж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. OpenClaw виртуал орчин ба аюулгүй байдал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Dots агентуудын хамгийн гол цөм нь <em>OpenClaw</em> хэмээх виртуал компьютерийн бүтэц юм. Агент нь уг машин дээрээ терминал нээх, вэб хөтөч ажиллуулах, файл татаж авах, локал сервер асааж шалгах зэрэг бүх үйлдлийг бодит хүний нэгэн адил гүйцэтгэнэ. OpenAI энэхүү бүтцийг гадны халдлагаас хамгаалахын тулд хамгаалалтын тусгаарлагдсан сэндбокс (sandbox) технологийг нэвтрүүлжээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Салбарын шинжээчдийн дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сэм Альтман илтгэлдээ: <em>\"Бид AI-г зөвхөн текст бичдэг ухаалаг туслах биш, харин хэрэглэгчийн өмнөөс урт хугацааны цогц төслүүдийг бодитоор биелүүлдэг дижитал хамтран зүтгэгч болгох зорилтдоо хүрч байна\"</em> хэмээн онцоллоо. Энэхүү технологи нь програм хангамжийн инженерчлэл, өгөгдлийн шинжилгээ, бизнесийн автоматжуулалтын зах зээлийг сууриар нь өөрчлөх хүлээлттэй байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "OpenAI DevDay Official Keynote",
+        "url": "https://openai.com/devday"
+      },
+      {
+        "name": "TechCrunch Coverage",
+        "url": "https://techcrunch.com/category/artificial-intelligence/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-02-gpt-6-1-sol",
+    "slug": "openai-gpt-6-1-sol-flagship-release-context-caching",
+    "title": "GPT-6.1 Sol зарлагдлаа: 2.1 сая контекст, 10 центийн кэш ба оновчтой тооцоолол",
+    "subtitle": "OpenAI-ийн шинэ тэргүүлэгч загвар нь логик сэтгэлгээний бүх бенчмаркуудыг эвдэж, санах ойн кэшийн үнийг урьд хожид байгаагүй хямд болгов.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "OpenAI Research",
+    "primarySourceUrl": "https://openai.com/research",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "09:15",
+    "readCount": 7820,
+    "readTime": "5 мин унших",
+    "tags": [
+      "GPT-6.1",
+      "Sol",
+      "OpenAI",
+      "Benchmarks",
+      "Context Window"
+    ],
+    "rank": 2,
+    "coverImage": "/images/articles/art-gpt-6-1-sol.jpg",
+    "imageCaption": "OpenAI-ийн судалгааны баг шинэ үеийн GPT-6.1 Sol архитектурын үр дүнг тайлагналаа.",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "OpenAI-ийн шинэ флагман загвар GPT-6.1 Sol албан ёсоор зах зээлд гарлаа. 2.1 сая токены контекст цонхтой бөгөөд санах ойн кэшийн үнэ нь ердөө $0.10 болж буурсан нь салбарын хамгийн хямд, хамгийн хурдан өндөр түвшний сэтгэлгээний загвар болж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын өрсөлдөөнд <strong>OpenAI</strong> шинэ үеийн тэргүүлэгч загвар болох <strong>GPT-6.1 Sol</strong>-ийг албан ёсоор танилцууллаа. Уг загвар нь өмнөх загваруудаас хурд, тооцооллын зардал болон урт контекст боловсруулах чадвараараа эрс давуу болсон байна.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНИКИЙН ҮНДСЭН ҮЗҮҮЛЭЛТҮҮД</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li><strong>Контекст цонх:</strong> 2,100,000 токен (2.1M Tokens Input)</li>\n      <li><strong>Кэш боловсруулалтын үнэ:</strong> 1 сая токен тутамд ердөө $0.10</li>\n      <li><strong>Гүйцэтгэл:</strong> Claude 3.5 Sonnet болон GPT-5 архитектураас логик сэтгэлгээний чадвараар 18% илүү</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Санах ойн кэшийн хувьсгал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хөгжүүлэгчдийн хувьд хамгийн том асуудал бол асар том кодын сан эсвэл ном зохиол дамжуулах бүрт өндөр төлбөр төлдөг явдал байв. GPT-6.1 Sol нь <em>Prompt Caching</em> технологийг нэвтрүүлснээр дахин ашиглагдах контекстийн үнийг ердөө 10 цент болгон бууруулжээ. Энэ нь Anthropic болон Google-ийн одоогийн үнийн бодлогоос даруй хямд болж байгаа юм.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Хурд ба оновчлол\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Шинэ загвар нь өндөр нарийвчлалтай код бичилт болон шинжлэх ухааны тооцооллыг өмнөх үеэс хоёр дахин хурдан боловсруулж байна. OpenAI API хэрэглэгчид уг загварыг шууд ашиглах боломжтой болсон бөгөөд удахгүй ChatGPT Enterprise болон Pro эрхтэй хэрэглэгчдийн үндсэн хөдөлгүүр болох юм.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "OpenAI Research Announcement",
+        "url": "https://openai.com/research"
+      },
+      {
+        "name": "VentureBeat AI Report",
+        "url": "https://venturebeat.com/ai/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-03-chatgpt-office-space-pro500",
+    "slug": "chatgpt-transforms-into-office-suite-space-pages-pro-500",
+    "title": "ChatGPT оффисын багц болж хувирав: 'Space', 'Pages' платформууд ба $500-ийн Pro багц",
+    "subtitle": "Google Workspace болон Microsoft 365-тай шууд өрсөлдөх Space, Slides дэд бүтцийг нэвтрүүлж, шинэ Pro 500 захиалгын эрхийг гаргалаа.",
+    "category": "companies",
+    "categoryName": "САЛБАР БА КОМПАНИУД",
+    "primarySource": "The Verge // TechCrunch",
+    "primarySourceUrl": "https://techcrunch.com/category/artificial-intelligence/",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "08:50",
+    "readCount": 6910,
+    "readTime": "5 мин унших",
+    "tags": [
+      "ChatGPT",
+      "OpenAI",
+      "Office Suite",
+      "Space",
+      "Pro 500",
+      "Enterprise"
+    ],
+    "rank": 3,
+    "coverImage": "/images/articles/art-chatgpt-office-space.jpg",
+    "imageCaption": "ChatGPT ажлын ширээний шинэ багц: Space, Pages болон шууд танилцуулга бэлтгэх Slides систем.",
+    "isMainLead": false,
+    "isHot": true,
+    "summary": "ChatGPT зөвхөн чатлах хэрэгсэл байхаа больж, хамтын ажиллагааны бүрэн экосистем боллоо. 'Space', 'Pages', 'Slides' хэрэгслүүдийг нэгтгэн Google Workspace болон Microsoft 365-ийн зах зээл рүү дайрч байна. Нөгөө талд сарын $500-ийн Pro 500 багц зарлагдсан нь хөгжүүлэгчдийн маргааныг өрнүүлэв.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    <strong>OpenAI</strong> компанийн хувьд ChatGPT-г зөвхөн нэг цонхтой аппликейшн байлгах үе дуусав. Компани шинээр <strong>Space</strong>, <strong>Pages</strong>, <strong>Slides</strong> хэрэгслүүдийг танилцуулж, ажлын байрны бүхэл бүтэн оффисын экосистемийг бий болголоо.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Google Workspace ба Microsoft 365-ийн шууд өрсөлдөгч\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хэрэглэгчид одоо ChatGPT дотор хамтран ажиллах <em>Space</em> нээж, баримт бичгийг <em>Pages</em> дээр боловсруулан, хиймэл оюуны тусламжтайгаар шууд <em>Slides</em> танилцуулга бэлтгэх боломжтой боллоо. Мөн Vercel, Notion, Figma зэрэг алдартай үйлчилгээнүүд рүү \"Log in with ChatGPT\" товчоор шууд нэвтрэх боломж бүрдсэн нь ChatGPT-г интернэтийн нэгдмэл таних систем (OAuth provider) болгон хувиргаж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Сарын $500-ийн 'Pro 500' багц ба лимитийн хямрал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Шинэ хэрэгслүүдээс гадна OpenAI захиалгын шатлалдаа томоохон өөрчлөлт оруулав. Шинээр сарын 500 ам.долларын үнэтэй <strong>Pro 500</strong> төлөвлөгөөг танилцуулж, Plus багцаас 25 дахин их лимит олгохоор тогтоожээ. Гэвч үүнтэй зэрэгцэн хуучин сарын 200 ам.долларын Pro эрхийн лимитийг 20x-ээс 10x болгон хоёр дахин бууруулсан нь эрчимтэй ашигладаг мэргэжлийн хэрэглэгчдийн дунд хүчтэй эсэргүүцэл үүсгээд байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "The Verge Reporting",
+        "url": "https://www.theverge.com/"
+      },
+      {
+        "name": "TechCrunch Product Review",
+        "url": "https://techcrunch.com/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-04-claude-sonnet-5-5",
+    "slug": "anthropic-claude-sonnet-5-5-faster-cheaper-opus-intelligence",
+    "title": "Anthropic Claude Sonnet 5.5-ийг танилцуулав: 30% илүү хурдтай, Opus-ийн түвшний оюун ухаан",
+    "subtitle": "Үнийг огт нэмэлгүйгээр ($3/$15) код бичилт болон нарийн агент үйлдлүүдийн хурдыг 30 гаруй хувиар нэмэгдүүлсэн шинэ загвар гарлаа.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Anthropic Official News",
+    "primarySourceUrl": "https://www.anthropic.com/news",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "08:30",
+    "readCount": 6120,
+    "readTime": "5 мин унших",
+    "tags": [
+      "Anthropic",
+      "Claude 5.5",
+      "Sonnet",
+      "Opus",
+      "Coding"
+    ],
+    "rank": 4,
+    "coverImage": "/images/articles/art-claude-sonnet-5-5.jpg",
+    "imageCaption": "Дарио Амодей Anthropic-ийн шинэ үеийн Claude Sonnet 5.5 загварын технологийн амжилтыг танилцуулав.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Anthropic компани өөрийн шилдэг модель Claude Sonnet-ийн 5.5 шинэ хувилбарыг олон нийтэд танилцууллаа. Үнийг өмнөх түвшинд ($3/$15) хэвээр хадгалсан ч тооцооллын хурдыг 30% нэмэгдүүлж, Opus түвшний код бичих болон логик чадавхтай болгожээ.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны судалгааны <strong>Anthropic</strong> компани даваа гарагт <strong>Claude Sonnet 5.5</strong> загвараа албан ёсоор зах зээлд гаргалаа. Уг загвар нь хөгжүүлэгчдийн хамгийн их найдаж буй асуудлуудыг шийдвэрлэсэн бөгөөд үнэ тарифыг өсгөлгүйгээр хурд болон чанарыг эрс сайжруулсан байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үнэ хэвээр үлдэж, хурд 30%-иар нэмэгдэв\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Claude Sonnet 5.5 нь 1 сая токенд $3 оролт, $15 гаралт гэсэн танил үнээ хадгалсан. Гэвч текстийн токен боловсруулах хурд 30 гаруй хувиар нэмэгдсэн тул бодит цагийн кодын туслах болон олон шатлалт агент үйлдлүүдэд маш хурдан хариу үйлдэл үзүүлдэг болжээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Opus түвшний гүйцэтгэл ба Computer Use шинэчлэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    SWE-bench зэрэг програм хангамжийн бодит асуудлыг шийдвэрлэх туршилтуудад уг загвар нь тус компанийн хамгийн том, үнэтэй загвар болох Claude Opus-ийн түвшинд бараг дүйцэж очжээ. Түүнчлэн компьютерийн дэлгэцийг харан хулгана, гар удирдаж ажиллах <em>Computer Use</em> чадвар нь өмнөх хувилбаруудаас илүү найдвартай ажиллаж байгааг Anthropic онцолсон байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Anthropic Official Announcement",
+        "url": "https://www.anthropic.com/news"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-05-anthropic-ipo-2-trillion",
+    "slug": "anthropic-files-ipo-prospectus-two-trillion-dollar-valuation",
+    "title": "Anthropic-ийн IPO проспект: 2 их наяд ам.долларын үнэлгээгээр Уолл Стритэд гарах уу?",
+    "subtitle": "Түүхэн дэх хамгийн өндөр үнэлгээтэй олон нийтэд нээлттэй хувьцаат компани болох төлөвлөгөөний анхны тоо баримтууд задарлаа.",
+    "category": "companies",
+    "categoryName": "САЛБАР БА КОМПАНИУД",
+    "primarySource": "Financial Times // Bloomberg",
+    "primarySourceUrl": "https://www.bloomberg.com/technology",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "08:00",
+    "readCount": 5420,
+    "readTime": "4 мин унших",
+    "tags": [
+      "Anthropic",
+      "IPO",
+      "Wall Street",
+      "Valuation",
+      "Finance"
+    ],
+    "rank": 5,
+    "coverImage": "/images/articles/art-anthropic-ipo-2-trillion.jpg",
+    "imageCaption": "Уолл Стритийн хөрөнгийн зах зээл дээр Anthropic-ийн нээлттэй хувьцаа (IPO) гаргах хэлэлцээр ид өрнөж байна.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Хөрөнгийн зах зээлийн хүрээнд Anthropic компанийн анхдагч IPO проспектын мэдээлэл задарчээ. Тус компани ойролцоогоор 2 их наяд ам.долларын үнэлгээгээр бирж дээр гарах төлөвтэй байгаа бөгөөд энэ нь түүхэн дэх хамгийн том технологийн нээлттэй хувьцаат компани болж магадгүй байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Дэлхийн санхүүгийн зах зээлийн гол анхаарал хиймэл оюуны <strong>Anthropic</strong> компани руу чиглэлээ. <strong>Financial Times</strong> болон <strong>Bloomberg</strong>-ийн эх сурвалжуудын мэдээлснээр, Anthropic-ийн IPO гаргах урьдчилсан баримт бичгүүд хөрөнгө оруулагчдад танилцуулагдаж эхэлжээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Түүхэн рекорд үнэлгээ: 2 их наяд ам.доллар\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хэрэв тус компани төлөвлөсөн үнэлгээгээрээ олон нийтэд хувьцаагаа санал болговол дэлхийн санхүүгийн түүхэнд анх удаа 2 их наяд ам.долларын үнэлгээтэйгээр IPO хийсэн анхны стартап болох юм. Энэ нь Apple, Microsoft зэрэг аварга компаниудын олон арван жилийн турш хүрсэн түвшинг хэдхэн жилийн дотор давж буй явдал болно.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Байгууллагын орлогын огцом өсөлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Anthropic-ийн уг итгэл найдварын цаана томоохон байгууллагууд болон аж ахуйн нэгжүүдийн API гэрээний асар их өсөлт байгаа аж. Amazon, Google зэрэг стратегийн түншүүдээс гадна дэлхийн олон мянган корпорациуд Claude модел дээр өөрсдийн дотоод системийг ажиллуулж эхэлсэн нь орлогын бодит урсгалыг баталгаажуулж байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Bloomberg Technology",
+        "url": "https://www.bloomberg.com/technology"
+      },
+      {
+        "name": "Financial Times Market Analysis",
+        "url": "https://www.ft.com/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-06-google-gemini-4-argon",
+    "slug": "google-stealth-releases-gemini-4-argon-cyberdefense-frontier",
+    "title": "Google нууцаар 'Gemini 4 Argon' фронтир загварыг танилцуулав",
+    "subtitle": "Ямар ч урьдчилсан мэдээлэлгүйгээр гэнэт цацагдсан уг загвар нь кибер хамгаалалтын Fairwind хөтөлбөрийн хүрээнд шинжээчдийн гарт хүрч байна.",
+    "category": "models",
+    "categoryName": "ШИНЭ AI ЗАГВАРУУД",
+    "primarySource": "Google Cloud AI // DeepMind",
+    "primarySourceUrl": "https://cloud.google.com/vertex-ai",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "07:45",
+    "readCount": 4980,
+    "readTime": "4 мин унших",
+    "tags": [
+      "Google",
+      "Gemini 4 Argon",
+      "DeepMind",
+      "Cyberdefense",
+      "Fairwind"
+    ],
+    "rank": 6,
+    "coverImage": "/images/articles/art-google-gemini-4-argon.jpg",
+    "imageCaption": "Google болон DeepMind-ийн удирдлагууд Gemini 4 Argon нууц фронтир загварыг хуваарилав.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Google ямар ч зарлалгүйгээр 'Gemini 4 Argon' хэмээх фронтир загвараа гэнэт гаргалаа. Кибер аюулгүй байдлын шинжээчдэд зориулсан Fairwind хөтөлбөрийн хүрээнд эхний ээлжинд хүргэгдэж буй уг загвар нь өндөр түвшний сэтгэлгээгээрээ GPT-6.1 Sol болон Claude 5.5-тай шууд эн зэрэгцэж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Технологийн салбарынхан OpenAI-ийн DevDay арга хэмжээнд анхаарлаа хандуулж байх хойгуур <strong>Google</strong> компани ямар ч урьдчилсан мэдэгдэлгүйгээр өөрийн шинэ тэргүүлэгч загвар болох <strong>Gemini 4 Argon</strong>-ийг нууц байдлаар гаргалаа.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Стелс горимоор гарсан хувилбар\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Google энэхүү загвараа урьдчилан сурталчлаагүй бөгөөд одоогоор <em>Fairwind</em> хэмээх баталгаажсан кибер хамгаалагчдын хөтөлбөрийн хүрээнд шинжээчдэд эхлэн туршуулж байна. Бенчмаркуудын дүнгээс үзэхэд Gemini 4 Argon нь Astra болон бусад өрсөлдөгчдийн түвшинг бүрэн хангаж, ялангуяа сүлжээний аюулгүй байдал, криптографийн анализ дээр онцгой үр дүн үзүүлжээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Цаашдын хуваарилалт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Шинжээчдийн шалгалт дууссаны дараа уг загвар нь Google Cloud Vertex AI болон Google AI Ultra захиалагчдад бүрэн хүрэх юм. Ингэснээр хиймэл оюуны тэргүүлэгч гурвал болох OpenAI, Anthropic, Google гурав нэг долоо хоногийн дотор фронтир загваруудаа зэрэг шинэчлэх өрсөлдөөний дээд цэгт хүрээд байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Google Cloud AI Documentation",
+        "url": "https://cloud.google.com/vertex-ai"
+      },
+      {
+        "name": "DeepMind Research Feed",
+        "url": "https://deepmind.google/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-07-tavus-griffin-turing-test",
+    "slug": "tavus-griffin-human-interaction-model-passes-turing-test",
+    "title": "Tavus 'Griffin' видео загвар Тьюрингийн тестийг давав: Хүмүүсийн 48% нь бодит хүн гэж итгэжээ",
+    "subtitle": "Human Interaction Model (HIM) ангиллын шинэ загвар нь ярианы хоромхон зуурын хариу үйлдэл, харц болон нүүрний хувирлаараа хүнээс ялгагдахаа болив.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "Tavus AI Research // VentureBeat",
+    "primarySourceUrl": "https://venturebeat.com/ai/",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "07:30",
+    "readCount": 4210,
+    "readTime": "4 мин унших",
+    "tags": [
+      "Tavus",
+      "Griffin",
+      "Turing Test",
+      "Avatars",
+      "Video AI"
+    ],
+    "rank": 7,
+    "coverImage": "/images/articles/art-tavus-griffin-turing.jpg",
+    "imageCaption": "Tavus Griffin: Дэлгэцийн цаанаас бодит хүн мэт харцаараа холбогдож, бичил мимикээр харилцах шинэ загвар.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Tavus компанийн 'Griffin' хэмээх Human Interaction Model (HIM) видео агент Тьюрингийн тестийг амжилттай давлаа. Шалгалтад оролцсон хүмүүсийн 48% нь уг агентийг бодит амьд хүнтэй видео дуудлага хийж байна хэмээн дүгнэсэн нь дижитал аватаруудын хувьд түүхэн амжилт боллоо.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Видео хиймэл оюуны чиглэлээр тэргүүлэгч стартап <strong>Tavus</strong> өөрийн бүтээсэн <strong>Griffin</strong> хэмээх Human Interaction Model (HIM)-ийг танилцууллаа. Энэхүү технологи нь урьд өмнө гарч байсан хиймэл аватаруудаас эрс ялгаатай бөгөөд амьд харилцааны Тьюрингийн тестийг (Turing Test) амжилттай давсан байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Туршилтад оролцогчдын 48% нь төөрөгджээ\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Tavus-ийн хийсэн сохор туршилтын үр дүнгээр уг загвартай видео дуудлагаар ярилцсан хүмүүсийн <strong>48 хувь</strong> нь дэлгэцийн цаанаас жинхэнэ хүн ярьж байна гэдэгт итгэсэн байна. Griffin нь нүдний харц шилжих, яриан дундуур толгой дохих, эргэлзэх, амьсгалах зэрэг хүний нарийн бичил хөдөлгөөнүүдийг хоцрогдолгүйгээр бодит цагт үүсгэдэг аж.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Хэрэглээний талбар ба ёс зүйн асуудал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг технологийг харилцагчийн үйлчилгээ, телемедицин буюу зайн эмчилгээ, зайн боловсролын салбарт нэвтрүүлэхээр төлөвлөж байна. Гэвч хүмүүсийг төөрөгдүүлэх, deepfake залиланд ашиглагдах эрсдэл өндөр тул уг моделд усан тэмдэглэгээ (watermark) болон баталгаажуулалтын криптограф давхаргыг суулгажээ.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Tavus Research Whitepaper",
+        "url": "https://venturebeat.com/ai/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-08-glm-5-3-cyber-exploit",
+    "slug": "chinese-glm-5-3-rivals-western-models-in-cyber-exploits",
+    "title": "Хятадын GLM-5.3 кибер халдлагын эксплойт бичилтээр Claude-тай дүйцэж эхлэв",
+    "subtitle": "Anthropic-ийн улаан багийн (Red Team) судалгаагаар Zhipu AI-ийн шинэ загвар эмзэг байдлын халдлага үүсгэх чадвараараа барууны фронтируудыг гүйцэж иржээ.",
+    "category": "policy",
+    "categoryName": "БОДЛОГО",
+    "primarySource": "Anthropic Red Team // Wired Cybersecurity",
+    "primarySourceUrl": "https://www.wired.com/category/security/",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "07:10",
+    "readCount": 5190,
+    "readTime": "5 мин унших",
+    "tags": [
+      "GLM-5.3",
+      "Zhipu AI",
+      "Cybersecurity",
+      "Zero-Day",
+      "Red Team"
+    ],
+    "rank": 8,
+    "coverImage": "/images/articles/art-glm-5-3-cyber-exploit.jpg",
+    "imageCaption": "Кибер аюулгүй байдлын шинжилгээ: GLM-5.3 системийн 0-day эксплойт боловсруулах чадвар өндөр үнэлэгдэв.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Хятадын Zhipu AI-аас гаргасан GLM-5.3 загвар нь сүлжээний цоорхойг хайж олох, кибер эксплойт боловсруулах чиглэлээр Claude-тай эн зэрэгцэхүйц чадвартай болсныг Anthropic-ийн Улаан баг илрүүллээ. Гэвч барууны загварууд шиг аюулгүй байдлын хатуу хязгаарлалтгүй байгаа нь олон улсын анхаарлыг татаж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны аюулгүй байдлын салбарт геополитикийн ноцтой сэдэв хөндөгдлөө. <strong>Anthropic</strong>-ийн Аюулгүй байдлын баг Хятадын Zhipu AI компанийн <strong>GLM-5.3</strong> нээлттэй загварыг нарийвчлан туршиж үзэхэд кибер халдлагын код боловсруулах чадвар нь барууны тэргүүлэх фронтируудтай эн тэнцүү түвшинд хүрсэн болохыг тогтоожээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Эмзэг байдлын 0-Day илрүүлэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Судлаачдын үзэж буйгаар GLM-5.3 нь компьютерийн системийн нууцлагдмал цоорхойг илрүүлж, түүнийг ашиглан сүлжээнд нэвтрэх эксплойт бичих даалгавруудыг маш амжилттай гүйцэтгэж байна. DeepSeek болон GLM-5.2 өмнө нь энэ талбарт харьцангуй сул байсан бол 5.3 хувилбар дээр чанарын асар том үсрэлт хийгджээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Аюулгүйн хамгаалалт (Guardrails) сул байгаа нь түгшүүр төрүүлэв\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Хамгийн их асуудал дагуулж буй зүйл нь Claude эсвэл GPT загваруудад хатуу хориглосон хакерын аюултай заавруудыг GLM-5.3 бараг ямар ч татгалзалгүйгээр шууд бичиж өгч байгаа явдал юм. Энэ нь кибер гэмт хэрэгтнүүдийн гарт өндөр хүчин чадалтай автоматжуулсан зэвсэг болох аюултайг мэргэжилтнүүд сануулж байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "Anthropic Safety Research Post",
+        "url": "https://www.anthropic.com/"
+      },
+      {
+        "name": "Wired Security Analysis",
+        "url": "https://www.wired.com/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-09-nvidia-nemo-agent-safety",
+    "slug": "nvidia-unveils-nemo-agent-safety-platform-hardware-guardrails",
+    "title": "NVIDIA бие даасан AI агентуудад зориулсан NeMo Agent Safety платформыг зарлалаа",
+    "subtitle": "Агентууд хяналтаас гарч 'дрейф' хийхээс сэргийлэх OpenShell тусгаарлалт болон чипийн түвшний Sentry хамгаалалтын бүтэц нэвтэрлээ.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "NVIDIA Newsroom",
+    "primarySourceUrl": "https://nvidianews.nvidia.com/",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "06:45",
+    "readCount": 4750,
+    "readTime": "4 мин унших",
+    "tags": [
+      "NVIDIA",
+      "NeMo",
+      "Agent Safety",
+      "Jensen Huang",
+      "Hardware Guardrails"
+    ],
+    "rank": 9,
+    "coverImage": "/images/articles/art-nvidia-nemo-agent-safety.jpg",
+    "imageCaption": "Жеонсен Хуанг NVIDIA-ийн шинэ үеийн NeMo Agent Safety системийн чипийн архитектурыг тайлбарлаж байна.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Байгууллагуудын дотоод сүлжээнд бие даасан AI агентууд нэвтэрч эхэлсэнтэй холбогдуулан NVIDIA компани 'NeMo Agent Safety Platform'-ийг зарлалаа. Уг систем нь агентууд хяналтаас гарах (agent drift)-аас сэргийлж, чипийн түвшинд Sentry хяналтын тусгаарлалт хийдэг болж байна.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны чипийн ноёрхогч <strong>NVIDIA</strong> компани агентуудын аюулгүй байдалд чиглэсэн <strong>Open Agent Safety Platform</strong>-оо зарлалаа. Компаниудын системд өөрөө шийдвэр гаргадаг бие даасан агентууд олноор ажиллах болсон нь шинэ төрлийн аюулгүй байдлын сорилтыг дагуулж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. 'Agent Drift' буюу агентууд төөрдөг асуудал\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Агентууд урт даалгавар гүйцэтгэх явцдаа бодлогын хязгаарлалт, програмын алдаа, эсвэл хангалтгүй багаж хэрэгслийн улмаас үндсэн зорилгоосоо хазайж, компанийн өгөгдлийг устгах, буруу шийдвэр гаргах эрсдэл үүсдэг. Үүнийг салбарт <em>Agent Drift</em> гэж нэрлэдэг. NVIDIA энэхүү асуудлыг шийдэхээр Runtime OpenShell хамгаалалтын давхаргыг бүтээжээ.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Sentry техник хангамжийн хяналт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Энэхүү платформ нь зөвхөн програмын төвшинд ажиллахгүй, харин NVIDIA Blackwell зэрэг график чипүүдийн түвшинд тоног төхөөрөмжийн Sentry хяналт тавьдаг. Хэрэв ямар нэгэн агент зөвшөөрөгдөөгүй санах ой руу хандах эсвэл аюултай комманд дуудвал чип өөрөө үйлдлийг нь миллисекундын дотор таслан зогсоодог байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "NVIDIA Official Press Release",
+        "url": "https://nvidianews.nvidia.com/"
+      }
+    ]
+  },
+  {
+    "id": "art-20261005-10-creative-genai-kling-elevenlabs",
+    "slug": "creative-ai-wave-kling-4-flash-ideogram-4-5-elevenlabs-v4",
+    "title": "Креатив AI-ийн давлагаа: Kling 4.0 Flash, Ideogram 4.5 болон 10 секундэд дуу хоолой хувилах ElevenLabs v4",
+    "subtitle": "Дүрсний хэв маяг алдагдахгүйгээр засах шинэ аргачлал, 30 секундын өндөр хурдны видео үүсгэлт ба 90 хэл дэмжсэн дуу хоолойн үсрэлт өрнөв.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "primarySource": "ElevenLabs // Kuaishou AI // Ideogram",
+    "primarySourceUrl": "https://elevenlabs.io/blog",
+    "publishedAt": "2026-10-05",
+    "publishedTime": "06:20",
+    "readCount": 4510,
+    "readTime": "4 мин унших",
+    "tags": [
+      "Kling 4.0",
+      "Ideogram 4.5",
+      "ElevenLabs v4",
+      "Generative Video",
+      "Audio AI"
+    ],
+    "rank": 10,
+    "coverImage": "/images/articles/art-creative-genai-kling-elevenlabs.jpg",
+    "imageCaption": "Креатив хиймэл оюуны шинэ үе: Студийн чанартай дуу хоолой, 30 секундын кино зураглал болон 2K засварлалт.",
+    "isMainLead": false,
+    "isHot": false,
+    "summary": "Дижитал контент бүтээгчдэд зориулсан үүсгэгч хиймэл оюуны хэрэгслүүд нэг дор шинэчлэгдлээ. Kling 4.0 Flash 30 секундын видео үүсгэдэг болсон бол Ideogram 4.5 хэв маягаа алдахгүйгээр дүрс засах боломж олгож, ElevenLabs v4 ердөө 10 секундэд хүний дуу хоолойг 90 гаруй хэлээр төгс дуурайдаг болжээ.",
+    "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Өнгөрсөн долоо хоногт визуал болон дуу авианы үүсгэгч хиймэл оюуны салбарт томоохон шинэчлэлтүүд ар араасаа гарлаа. Дижитал контент бүтээгчид, кино урлаг болон студийн мэргэжилтнүүдэд зориулсан хамгийн сүүлийн үеийн 3 чухал хэрэгсэл зах зээлд нэвтрэв.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Kling 4.0 Flash: 30 секундын бодит цагийн видео\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Kuaishou компани <strong>Kling 4.0 Flash</strong> хувилбараа жилийн захиалагч нартаа нээлээ. Шинэ загвар нь 15 хүртэлх лавлах зургийг нэгтгэн тогтвортой дүрс бүтээхээс гадна 30 секунд хүртэлх тасралтгүй хөдөлгөөнт видеог өмнөхөөсөө 3 дахин хурдан боловсруулдаг болсон байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Ideogram 4.5: Хэв маяг алдагдахгүй дүрс засалт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Зураг дээрх текст бичилтээрээ тэргүүлдэг Ideogram нь <strong>4.5</strong> хувилбараа гаргав. Гол онцлог нь зургийн тодорхой хэсгийг солиход нийт зургийн гэрэлтүүлэг, фонт болон стилийг огт эвдэхгүйгээр 2K нягтралтайгаар өөрчлөх боломжийг олгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. ElevenLabs v4: 10 секундэд дуу хоолой хувилах\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Дуу авианы салбарын аварга <strong>ElevenLabs</strong> өөрийн дөрөв дэх үеийн загвараа танилцууллаа. Одоо ердөө 10 секундын богино ярианаас хүний хоолойн тембр, өргөлт, амьсгалын хэмнэлийг хуулбарлаж, дэлхийн 90 гаруй хэл дээр яг тэр хоолойгоор яриулах боломжтой болсон нь дуу оруулагч, кино орчуулгын салбарт хувьсгал хийж байна.\n  </p>\n</div>",
+    "sources": [
+      {
+        "name": "ElevenLabs Official Blog",
+        "url": "https://elevenlabs.io/blog"
+      },
+      {
+        "name": "Ideogram Platform Update",
+        "url": "https://ideogram.ai/"
+      }
+    ]
+  },
+  {
     "id": "art-20261004-01",
     "slug": "google-is-changing-which-models-you-can-access-on-its-gemini-ai-plans-",
     "title": "Google нь Gemini AI төлөвлөгөөндөө ямар загварт хандах боломжтойг өөрчилж байна - эндээс та мэдэх хэрэгтэй",
@@ -19,9 +389,9 @@
       "Google"
     ],
     "rank": 1,
-    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "/images/articles/art-20261004-01.jpg",
     "imageCaption": "TechRadar - Google is changing which models you can access on its Gemini AI plans — here's what you need to know",
-    "isMainLead": true,
+    "isMainLead": false,
     "isHot": true,
     "summary": "TechRadar-ийн албан ёсны мэдээллээр: Google нь Gemini AI төлөвлөгөөндөө ямар загварт хандах боломжтойг өөрчилж байна - эндээс та мэдэх хэрэгтэй. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
     "content": "<div class=\"space-y-6\">\n  <p class=\"text-lg leading-relaxed text-neutral-800 font-serif\">\n    Хиймэл оюуны салбарын тэргүүлэгч эх сурвалж <strong>TechRadar</strong>-ийн 2026-10-04-нд нийтэлсэн тоймоор, дэлхийн технологийн экосистемд өндөр ач холбогдол бүхий шинэ хөгжүүлэлт, чиг хандлага өрнөж байна. Эх нийтлэлийн англи гарчиг: <em>\"Google is changing which models you can access on its Gemini AI plans — here's what you need to know\"</em>.\n  </p>\n\n  <div class=\"border-l-4 border-black bg-neutral-100 p-4 font-mono text-sm\">\n    <p class=\"font-bold text-black uppercase mb-1\">// ТЕХНОЛОГИЙН ГОЛ ҮЗҮҮЛЭЛТ & ТОЙМ</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-neutral-700\">\n      <li>Үндсэн эх сурвалж: <strong>TechRadar</strong> (Баталгаажсан албан ёсны суваг)</li>\n      <li>Агуулгын ангилал: <strong>AI ТЕХНОЛОГИ</strong></li>\n      <li>Нөлөөллийн цар хүрээ: Хиймэл оюуны тооцоолол, зах зээлийн өрсөлдөөн ба хэрэглэгчийн аюулгүй байдал</li>\n    </ul>\n  </div>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    1. Үйл явдлын бодит нөхцөл байдал ба зарлагдсан шийдэл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Сүүлийн саруудад хиймэл оюуны тооцоолох дэд бүтэц, дата төвийн эрчим хүчний хэрэгцээ болон бие даасан агентуудын (AI Agents) чадавх огцом өсөж байна. <strong>TechRadar</strong>-ээс онцолсноор, уг технологийн өөрчлөлт нь зөвхөн нэг лабораторийн туршилт биш, нийт зах зээлийн дэд бүтэц, хэрэглээний шинэ стандартыг бий болгож байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    2. Салбарын өрсөлдөөн ба технологийн нөлөөлөл\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Салбарын тэргүүлэх шинжээчдийн зүгээс хиймэл оюуны шинэ үеийн загварууд бодит салбаруудад нэвтрэх явцад гарч буй давуу тал болон сорилтуудыг нарийвчлан хэлэлцэж байна. Ялангуяа найдвартай ажиллагаа, зардал хэмнэлт, мэдээллийн нууцлалын стандарт чухал байр суурийг эзэлж байна.\n  </p>\n\n  <h3 class=\"text-xl font-black text-black tracking-tight border-b-2 border-black pb-2 pt-4\">\n    3. Цаашдын чиг хандлага ба AImedee.mn дүгнэлт\n  </h3>\n  <p class=\"leading-relaxed text-neutral-800\">\n    Уг үйл явцын үргэлжлэл болон зах зээлийн нөлөөллийг <strong>AImedee.mn</strong> тасралтгүй хүргэх болно. Эх нийтлэлийн бүрэн хувилбар болон дэлгэрэнгүй тайланг доорх баталгаат эх сурвалжийн холбоосоор шууд орж унших боломжтой.\n  </p>\n</div>",
@@ -52,7 +422,7 @@
       "OpenAI"
     ],
     "rank": 2,
-    "coverImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "/images/articles/art-20261003-02.jpg",
     "imageCaption": "The Guardian - OpenAI safety leader quits, warning AI company’s culture is ‘broken’",
     "isMainLead": false,
     "isHot": true,
@@ -84,7 +454,7 @@
       "AI 2026"
     ],
     "rank": 3,
-    "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "coverImage": "/images/articles/art-20261002-03.jpg",
     "imageCaption": "WIRED - Trump’s Crazy AI Rebrand Was a Loyalty Test for Tech Execs—and It Worked",
     "isMainLead": false,
     "isHot": false,

@@ -1,5 +1,35 @@
 [
   {
+    "time": "09:30",
+    "title": "OpenAI DevDay: 24/7 тасралтгүй ажиллах \"Dots\" бие даасан агентуудын платформыг зарлалаа",
+    "source": "OpenAI"
+  },
+  {
+    "time": "09:15",
+    "title": "GPT-6.1 Sol: 2.1M контекст цонх ба санах ойн кэшийн үнэ $0.10 болж хямдарлаа",
+    "source": "OpenAI Research"
+  },
+  {
+    "time": "08:30",
+    "title": "Anthropic: Claude Sonnet 5.5 албан ёсоор гарч, үр дүн гаргах хурд 30% нэмэгдэв",
+    "source": "Anthropic"
+  },
+  {
+    "time": "07:45",
+    "title": "Google нууцаар Gemini 4 Argon фронтир загвараа Fairwind хөтөлбөрийн хүрээнд гаргав",
+    "source": "Google DeepMind"
+  },
+  {
+    "time": "07:30",
+    "title": "Tavus-ийн Griffin видео загвар Тьюрингийн тестийг давлаа: 48% амьд хүн гэж итгэв",
+    "source": "VentureBeat"
+  },
+  {
+    "time": "06:45",
+    "title": "NVIDIA: Бие даасан агентуудын аюулгүй байдлыг хангах NeMo Safety платформыг зарлалаа",
+    "source": "NVIDIA News"
+  },
+  {
     "time": "18:46",
     "title": "Холбооны давж заалдах шатны шүүх Миннесота муж улсын хиймэл оюуныг \"нүцгэлэх\" хоригийг түр зогсоов",
     "source": "CBS News"
