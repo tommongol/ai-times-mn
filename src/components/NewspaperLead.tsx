@@ -2,31 +2,26 @@
 
 import React from 'react';
 import { NewsArticle } from '@/data/news';
-import { TrendingUp, ArrowUpRight, Flame, ShieldAlert } from 'lucide-react';
 
 interface Props {
   mainLead: NewsArticle;
   subLeads: NewsArticle[];
-  hotArticles: NewsArticle[];
-  mostRead: NewsArticle[];
   onSelect: (art: NewsArticle) => void;
 }
 
 export const NewspaperLead: React.FC<Props> = ({
   mainLead,
   subLeads,
-  hotArticles,
-  mostRead,
   onSelect,
 }) => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-8 border-b-2 border-black">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* Col 1: WIRED Cover Story (6 cols / 50%) */}
-        <div className="lg:col-span-6 lg:border-r border-black lg:pr-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Main Cover Story (8 cols / ~67%) */}
+        <div className="lg:col-span-7 xl:col-span-8 lg:border-r border-black lg:pr-8">
           <div
             onClick={() => onSelect(mainLead)}
-            className="group cursor-pointer mb-8"
+            className="group cursor-pointer mb-6"
           >
             {/* Kicker badge */}
             <div className="flex items-center gap-2 mb-3">
@@ -52,7 +47,7 @@ export const NewspaperLead: React.FC<Props> = ({
               <span>{mainLead.publishedAt} {mainLead.publishedTime}</span>
             </div>
 
-            {/* Sharp Image */}
+            {/* Sharp Cover Image */}
             <div className="relative overflow-hidden bg-neutral-100 mb-4 border border-black aspect-[16/10]">
               <img
                 src={mainLead.coverImage}
@@ -69,158 +64,58 @@ export const NewspaperLead: React.FC<Props> = ({
               {mainLead.summary}
             </p>
           </div>
-
-          {/* 2 sub-leads side-by-side below main lead */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-neutral-300">
-            {subLeads.slice(0, 2).map((art) => {
-              const isPortrait = art.category === 'interview' || (Boolean(art.coverImage) && art.coverImage.includes('/images/people/'));
-              return (
-              <div
-                key={art.id}
-                onClick={() => onSelect(art)}
-                className="group cursor-pointer flex flex-col justify-between"
-              >
-                <div className={`w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 ${isPortrait ? 'h-48 sm:h-52' : 'h-36 sm:h-40'}`}>
-                  <img
-                    src={art.coverImage}
-                    alt={art.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div>
-                  <span className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-wider block mb-1">
-                    // {art.categoryName}
-                  </span>
-                  <h3 className="text-sm sm:text-base font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug">
-                    {art.title}
-                  </h3>
-                  <div className="font-mono text-xs text-neutral-600 mt-2 flex items-center justify-between border-t border-neutral-100 pt-2">
-                    <span className="font-semibold text-black">
-                      {art.primarySource.split(' ')[0]}
-                    </span>
-                    <span>{art.publishedTime}</span>
-                  </div>
-                </div>
-              </div>
-              );
-            })}
-          </div>
         </div>
 
-        {/* Col 2: DISPATCH Column (3 cols / 25%) */}
-        <div className="lg:col-span-3 lg:border-r border-black lg:pr-6">
-          <div className="flex items-center justify-between pb-2.5 mb-4 border-b-2 border-black">
+        {/* Featured Sub-leads Column (4-5 cols / ~33%) */}
+        <div className="lg:col-span-5 xl:col-span-4 flex flex-col gap-6">
+          <div className="flex items-center justify-between pb-2.5 border-b-2 border-black">
             <h2 className="font-mono text-sm font-black uppercase tracking-widest text-black flex items-center gap-1.5">
-              <Flame className="w-4 h-4 text-red-600" />
-              <span>DISPATCH</span>
+              <span className="w-2.5 h-2.5 bg-[#00FF66] inline-block border border-black"></span>
+              <span>ОНЦЛОХ НИЙТЛЭЛҮҮД</span>
             </h2>
-            <span className="font-mono text-xs bg-red-600 text-white font-bold px-2 py-0.5">
-              REAL-TIME
-            </span>
+            <span className="font-mono text-xs text-neutral-400 font-bold">FEATURED</span>
           </div>
 
           <div className="divide-y divide-neutral-200">
-            {hotArticles.slice(0, 4).map((art, idx) => (
-              <article
-                key={art.id}
-                onClick={() => onSelect(art)}
-                className="py-4.5 first:pt-0 cursor-pointer group"
-              >
-                <div className="flex items-center justify-between gap-2 mb-1.5 font-mono text-xs text-neutral-500">
-                  <span className="font-bold text-black uppercase">
-                    // 0{idx + 1} {art.categoryName}
-                  </span>
-                  <span>{art.publishedTime}</span>
-                </div>
-                <h3 className="text-sm sm:text-base font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
-                  {art.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 line-clamp-2 leading-relaxed mb-2 font-normal">
-                  {art.summary}
-                </p>
-                <div className="font-mono text-xs text-neutral-600">
-                  <span>ЭХ СУРВАЛЖ: </span>
-                  <span className="text-black font-semibold">
-                    {art.primarySource}
-                  </span>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* Col 3: Ranked Most Read & Terminal Briefing (3 cols / 25%) */}
-        <div className="lg:col-span-3">
-          <div className="flex items-center justify-between pb-2.5 mb-4 border-b-2 border-black">
-            <h2 className="font-mono text-sm font-black uppercase tracking-widest text-black flex items-center gap-1.5">
-              <TrendingUp className="w-4 h-4 text-black" />
-              <span>MOST READ // ТОП ЭРЭМБЭ</span>
-            </h2>
-            <span className="font-mono text-xs text-neutral-400 font-bold">01—05</span>
-          </div>
-
-          <div className="space-y-4">
-            {mostRead.slice(0, 5).map((art, idx) => (
-              <div
-                key={art.id}
-                onClick={() => onSelect(art)}
-                className="group cursor-pointer flex items-start gap-3 pb-3 border-b border-neutral-100 last:border-0"
-              >
-                <span
-                  className={`font-mono text-lg font-black shrink-0 w-7 leading-none ${
-                    idx === 0
-                      ? 'text-[#00FF66] bg-black px-1.5 py-1 text-center text-sm'
-                      : idx < 3
-                      ? 'text-black'
-                      : 'text-neutral-400'
-                  }`}
+            {subLeads.slice(0, 3).map((art, idx) => {
+              const isPortrait = art.category === 'interview' || (Boolean(art.coverImage) && art.coverImage.includes('/images/people/'));
+              return (
+                <article
+                  key={art.id}
+                  onClick={() => onSelect(art)}
+                  className="py-5 first:pt-0 last:pb-0 cursor-pointer group flex flex-col sm:flex-row lg:flex-col gap-4"
                 >
-                  0{idx + 1}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-1">
-                    {art.title}
-                  </h4>
-                  <div className="font-mono text-xs text-neutral-500 flex items-center justify-between">
-                    <span className="text-neutral-700 font-medium">{art.primarySource.split(' ')[0]}</span>
-                    <span>{art.publishedTime}</span>
+                  <div className={`w-full ${isPortrait ? 'sm:w-44 lg:w-full h-48 sm:h-52 lg:h-48' : 'sm:w-48 lg:w-full h-40 sm:h-36 lg:h-44'} shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300 relative`}>
+                    <img
+                      src={art.coverImage}
+                      alt={art.title}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <span className="absolute top-2 right-2 bg-black text-[#00FF66] font-mono text-xs font-bold px-1.5 py-0.5">
+                      0{idx + 1}
+                    </span>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          {/* WIRED Newsletter Briefing Terminal Box */}
-          <div className="mt-8 p-5 bg-neutral-900 text-white border-2 border-black">
-            <div className="flex items-center gap-1.5 font-mono text-xs text-[#00FF66] font-bold mb-1.5">
-              <span>// WIRED INTELLIGENCE BRIEF</span>
-            </div>
-            <h4 className="text-sm sm:text-base font-black text-white mb-2">
-              Өдөр тутмын AI мэдээг и-мэйлээр шууд хүлээн авах
-            </h4>
-            <p className="text-xs text-neutral-300 mb-3 font-mono leading-relaxed">
-              Дэлхийн технологийн салбарын гол өөрчлөлтүүд, судалгааны тайлангууд.
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert('Бүртгэл амжилттай! Та өдөр тутмын тоймоо авах болно.');
-              }}
-              className="space-y-2"
-            >
-              <input
-                type="email"
-                placeholder="developer@domain.com"
-                required
-                className="w-full px-3 py-2 text-xs font-mono bg-black border border-neutral-700 text-white focus:outline-none focus:border-[#00FF66]"
-              />
-              <button
-                type="submit"
-                className="w-full py-2 text-xs font-mono font-bold bg-[#00FF66] text-black hover:bg-white transition-colors cursor-pointer"
-              >
-                SUBSCRIBE TO WIRE →
-              </button>
-            </form>
+                  <div className="flex-1 min-w-0">
+                    <span className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-wider block mb-1">
+                      // {art.categoryName}
+                    </span>
+                    <h3 className="text-sm sm:text-base font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug mb-2">
+                      {art.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-neutral-600 line-clamp-2 leading-relaxed mb-3">
+                      {art.summary}
+                    </p>
+                    <div className="font-mono text-xs text-neutral-600 flex items-center justify-between border-t border-neutral-100 pt-2">
+                      <span className="font-semibold text-black uppercase">
+                        {art.primarySource.split(' ')[0]}
+                      </span>
+                      <span>{art.publishedTime}</span>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

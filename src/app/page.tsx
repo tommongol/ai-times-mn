@@ -238,12 +238,10 @@ export default function HomePage() {
         ) : (
           /* Default WIRED Magazine Home Front Page */
           <>
-            {/* 3-Column Lead Story Area */}
+            {/* Magazine Lead Story & Featured Articles Area */}
             <NewspaperLead
               mainLead={mainLead}
               subLeads={subLeads}
-              hotArticles={hotArticles}
-              mostRead={mostRead}
               onSelect={setSelectedArticle}
             />
 
