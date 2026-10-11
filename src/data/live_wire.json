@@ -1,23 +1,28 @@
 [
   {
-    "time": "23:02",
-    "title": "Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment",
-    "source": "The Guardian"
+    "time": "05:30",
+    "title": "[COVER STORY] Korea's 2-track AI strategy casts uncertainty over sovereign model project",
+    "source": "The Korea Times"
   },
   {
-    "time": "19:19",
-    "title": "Jon Davis on job titles in the age of AI – cartoon",
-    "source": "The Guardian"
+    "time": "05:19",
+    "title": "MS, 에이전트 의사결정 특화 모델 ‘디시전-1’ 공개 - AI타임스",
+    "source": "AI타임스"
   },
   {
-    "time": "18:01",
-    "title": "Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website",
-    "source": "The New York Times"
+    "time": "23:59",
+    "title": "AI is among 17 potentially ‘catastrophic threats’ that researchers say require targeted action",
+    "source": "CNN"
   },
   {
-    "time": "16:54",
-    "title": "Nicolas Cage Says He’s ‘Probably Not’ Working With Amazon Again After Refusing to Sign AI Waiver for ‘Spider-Noir,’ Teases Joining ‘True Detective’",
-    "source": "Variety"
+    "time": "17:06",
+    "title": "Nicolas Cage Says He'll 'Probably Not Work With' Amazon Again After Declining Spider-Noir AI Waiver",
+    "source": "IGN"
+  },
+  {
+    "time": "17:02",
+    "title": "Anthropic’s Claude AI submits a false tip on a Philadelphia unsolved homicide case",
+    "source": "AP News"
   },
   {
     "time": "15:20",
@@ -30,13 +35,8 @@
     "source": "TechRadar"
   },
   {
-    "time": "13:21",
-    "title": "Palantir CEO says only trade workers or those with neurodivergence will succeed in the AI era",
-    "source": "Fortune"
-  },
-  {
-    "time": "13:00",
-    "title": "One dev is recreating 7 Adobe apps in Rust for free — so I tested it out",
-    "source": "TechRadar"
+    "time": "14:28",
+    "title": "What’s Dragging Down A.I. Efficiency? The ‘Verification Tax.’",
+    "source": "The New York Times"
   }
 ]
