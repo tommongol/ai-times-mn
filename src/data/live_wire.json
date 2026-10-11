@@ -1,42 +1,42 @@
 [
   {
+    "time": "23:02",
+    "title": "Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment",
+    "source": "The Guardian"
+  },
+  {
+    "time": "19:19",
+    "title": "Jon Davis on job titles in the age of AI – cartoon",
+    "source": "The Guardian"
+  },
+  {
     "time": "18:01",
-    "title": "Антропологийн төлөөлөгчид Төрийн департаментын вэбсайт дээр визний маягт бөглөхийг оролдсон",
+    "title": "Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website",
     "source": "The New York Times"
   },
   {
+    "time": "16:54",
+    "title": "Nicolas Cage Says He’s ‘Probably Not’ Working With Amazon Again After Refusing to Sign AI Waiver for ‘Spider-Noir,’ Teases Joining ‘True Detective’",
+    "source": "Variety"
+  },
+  {
     "time": "15:20",
-    "title": "Цахиурын хөндийд хиймэл оюуны эрин үед ажилд орох шинэ зам дээр бооцоо тавьсан",
+    "title": "Inside Silicon Valley's bet on a new path to landing a job in the AI era",
     "source": "Fox Business"
   },
   {
+    "time": "14:59",
+    "title": "Does a VPN protect your privacy when using ChatGPT or Claude? What network encryption can and can’t hide from AI",
+    "source": "TechRadar"
+  },
+  {
     "time": "13:21",
-    "title": "Палантирын гүйцэтгэх захирал (CEO) хиймэл оюуны эрин үед зөвхөн худалдааны ажилчид эсвэл мэдрэлийн зөрүүтэй хүмүүс амжилтанд хүрнэ гэж хэлэв",
+    "title": "Palantir CEO says only trade workers or those with neurodivergence will succeed in the AI era",
     "source": "Fortune"
   },
   {
     "time": "13:00",
-    "title": "Нэг хөгжүүлэгчид Adobe-ийн 7 програмыг Rust-д үнэ төлбөргүй дахин бүтээж байгаа тул би үүнийг туршиж үзсэн",
+    "title": "One dev is recreating 7 Adobe apps in Rust for free — so I tested it out",
     "source": "TechRadar"
-  },
-  {
-    "time": "12:00",
-    "title": "AI нь кибер гэмт хэрэгтнүүдтэй хэрэлдэхдээ үнэхээр сайн болж байна",
-    "source": "WIRED"
-  },
-  {
-    "time": "11:00",
-    "title": "Үзэл бодол | Бидэнд AI-ийн талаар асуулт байсан. Жозеф Гордон-Левитт хариулт өгсөн.",
-    "source": "The New York Times"
-  },
-  {
-    "time": "11:00",
-    "title": "Үзэл бодол | AI Компаниуд урьдчилан таамаглах аргагүй бүтээгдэхүүндээ хариуцлага хүлээхгүй гэж хэлдэг. Тэдэнд бүү итгэ.",
-    "source": "The New York Times"
-  },
-  {
-    "time": "10:00",
-    "title": "AI эрин үеийн техник хангамжийн хэрэг улам бүр анхаарал татаж байна",
-    "source": "Yahoo Finance"
   }
 ]
