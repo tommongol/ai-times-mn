@@ -12,7 +12,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-API_URL = "https://mn-spell.vercel.app/api/spell"
+API_URL = "https://utga.guru/api/spell"
 
 
 def get_api_key():
