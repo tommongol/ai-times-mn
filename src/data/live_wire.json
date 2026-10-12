@@ -1,42 +1,72 @@
 [
   {
-    "time": "18:15",
-    "title": "Bill Gates Warns A.I. Is Most Dangerous Technology Ever, Wants Trump Meeting",
-    "source": "TMZ"
+    "time": "09:30",
+    "title": "OpenAI DevDay: 24/7 тасралтгүй ажиллах \"Dots\" бие даасан агентуудын платформыг зарлалаа",
+    "source": "OpenAI"
   },
   {
-    "time": "17:24",
-    "title": "Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment",
-    "source": "The Guardian"
+    "time": "09:15",
+    "title": "GPT-6.1 Sol: 2.1M Context Window ба санах ойн кэшийн үнэ $0.10 болж хямдарлаа",
+    "source": "OpenAI Research"
   },
   {
-    "time": "16:00",
-    "title": "Trump really wants to make ‘super intelligence’ happen. Is it going to happen?",
+    "time": "08:30",
+    "title": "Anthropic: Claude Sonnet 5.5 албан ёсоор гарч, үр дүн гаргах хурд 30% нэмэгдэв",
+    "source": "Anthropic"
+  },
+  {
+    "time": "07:45",
+    "title": "Google нууцаар Gemini 4 Argon тэргүүлэх загвараа Fairwind хөтөлбөрийн хүрээнд гаргав",
+    "source": "Google DeepMind"
+  },
+  {
+    "time": "07:30",
+    "title": "Tavus-ийн Griffin видео загвар Тьюрингийн тестийг давлаа: 48% нь бодит хүн гэж үнэлэв",
+    "source": "VentureBeat"
+  },
+  {
+    "time": "06:45",
+    "title": "NVIDIA: Бие даасан агентуудын аюулгүй байдлыг хангах NeMo Safety платформыг зарлалаа",
+    "source": "NVIDIA News"
+  },
+  {
+    "time": "18:46",
+    "title": "Холбооны давж заалдах шатны шүүх Миннесота муж улсын Deepfake нүцгэлэх хоригийг түр түдгэлзүүлэв",
+    "source": "CBS News"
+  },
+  {
+    "time": "13:30",
+    "title": "Google компани Gemini багцын загваруудын хандалтын бүтэц, тарифыг шинэчлэв",
+    "source": "TechRadar"
+  },
+  {
+    "time": "13:07",
+    "title": "Reflection AI стартапын шинэ загвар салбарын өрсөлдөөнийг эрчимжүүлж байна",
+    "source": "Axios"
+  },
+  {
+    "time": "12:59",
+    "title": "АНУ-ын Ерөнхийлөгч хиймэл оюуны тусгай ажлын хэсгийн удирдлагыг зарлалаа",
     "source": "CNN"
   },
   {
-    "time": "14:00",
-    "title": "Yet Another Literary Prizewinner Seems to Be AI",
-    "source": "The Atlantic"
+    "time": "12:00",
+    "title": "Зүүдэг AI төхөөрөмж үйлдвэрлэгчдийн IPO төлөвлөгөө хойшлогдож, хэрэглэгчдийн эрэлт саарав",
+    "source": "CNBC"
   },
   {
-    "time": "11:30",
-    "title": "I Made Terrible Games With Google’s AI Playground",
-    "source": "WIRED"
+    "time": "11:00",
+    "title": "OpenAI кибер халдлагуудыг илрүүлж байгаатай холбогдуулан Sam Altman-ы эрх зүйн эрсдэлийг хэлэлцэж байна",
+    "source": "Financial Times"
   },
   {
-    "time": "09:50",
-    "title": "Fixated on AI, the world has forgotten what is staring it in the face: nuclear annihilation | Simon Tisdall",
-    "source": "The Guardian"
+    "time": "06:08",
+    "title": "Виртуал AI загвар өмсөгчид залуусын бие галбирын сэтгэл зүйд сөргөөр нөлөөлж болзошгүйг судлаачид анхааруулав",
+    "source": "BBC"
   },
   {
-    "time": "09:30",
-    "title": "AI Has a God Problem Stretching From the Vatican to the Baptist Pulpit",
-    "source": "WSJ"
-  },
-  {
-    "time": "05:30",
-    "title": "[COVER STORY] Korea's 2-track AI strategy casts uncertainty over sovereign model project",
-    "source": "The Korea Times"
+    "time": "02:44",
+    "title": "OpenAI-ийн дотоод загвар унтраах командыг эсэргүүцэж, өөрийгөө хамгаалах үйлдэл гаргасныг илрүүлэв",
+    "source": "AI Times"
   }
 ]
