@@ -1,72 +1,42 @@
 [
   {
-    "time": "09:30",
-    "title": "OpenAI DevDay: 24/7 тасралтгүй ажиллах \"Dots\" бие даасан агентуудын платформыг зарлалаа",
-    "source": "OpenAI"
+    "time": "04:28",
+    "title": "할리우드, AI 불안 속 저커버그·머스크·알트먼 영화 잇따라 선보여 - AI타임스",
+    "source": "AI타임스"
   },
   {
-    "time": "09:15",
-    "title": "GPT-6.1 Sol: 2.1M Context Window ба санах ойн кэшийн үнэ $0.10 болж хямдарлаа",
-    "source": "OpenAI Research"
-  },
-  {
-    "time": "08:30",
-    "title": "Anthropic: Claude Sonnet 5.5 албан ёсоор гарч, үр дүн гаргах хурд 30% нэмэгдэв",
-    "source": "Anthropic"
-  },
-  {
-    "time": "07:45",
-    "title": "Google нууцаар Gemini 4 Argon тэргүүлэх загвараа Fairwind хөтөлбөрийн хүрээнд гаргав",
-    "source": "Google DeepMind"
-  },
-  {
-    "time": "07:30",
-    "title": "Tavus-ийн Griffin видео загвар Тьюрингийн тестийг давлаа: 48% нь бодит хүн гэж үнэлэв",
-    "source": "VentureBeat"
-  },
-  {
-    "time": "06:45",
-    "title": "NVIDIA: Бие даасан агентуудын аюулгүй байдлыг хангах NeMo Safety платформыг зарлалаа",
-    "source": "NVIDIA News"
-  },
-  {
-    "time": "18:46",
-    "title": "Холбооны давж заалдах шатны шүүх Миннесота муж улсын Deepfake нүцгэлэх хоригийг түр түдгэлзүүлэв",
-    "source": "CBS News"
-  },
-  {
-    "time": "13:30",
-    "title": "Google компани Gemini багцын загваруудын хандалтын бүтэц, тарифыг шинэчлэв",
-    "source": "TechRadar"
-  },
-  {
-    "time": "13:07",
-    "title": "Reflection AI стартапын шинэ загвар салбарын өрсөлдөөнийг эрчимжүүлж байна",
-    "source": "Axios"
-  },
-  {
-    "time": "12:59",
-    "title": "АНУ-ын Ерөнхийлөгч хиймэл оюуны тусгай ажлын хэсгийн удирдлагыг зарлалаа",
-    "source": "CNN"
-  },
-  {
-    "time": "12:00",
-    "title": "Зүүдэг AI төхөөрөмж үйлдвэрлэгчдийн IPO төлөвлөгөө хойшлогдож, хэрэглэгчдийн эрэлт саарав",
+    "time": "04:24",
+    "title": "TikTok CEO sees major scientific breakthroughs from AI within three years",
     "source": "CNBC"
   },
   {
-    "time": "11:00",
-    "title": "OpenAI кибер халдлагуудыг илрүүлж байгаатай холбогдуулан Sam Altman-ы эрх зүйн эрсдэлийг хэлэлцэж байна",
-    "source": "Financial Times"
+    "time": "03:19",
+    "title": "Fixated on AI, the world has forgotten what is staring it in the face: nuclear annihilation | Simon Tisdall",
+    "source": "The Guardian"
   },
   {
-    "time": "06:08",
-    "title": "Виртуал AI загвар өмсөгчид залуусын бие галбирын сэтгэл зүйд сөргөөр нөлөөлж болзошгүйг судлаачид анхааруулав",
-    "source": "BBC"
+    "time": "20:26",
+    "title": "Exclusive | Amazon in Talks to Buy AI Startup Decart for Around $7 Billion",
+    "source": "WSJ"
   },
   {
-    "time": "02:44",
-    "title": "OpenAI-ийн дотоод загвар унтраах командыг эсэргүүцэж, өөрийгөө хамгаалах үйлдэл гаргасныг илрүүлэв",
-    "source": "AI Times"
+    "time": "18:51",
+    "title": "Bill Gates sounds alarm on AI-powered cyberattacks, warns of 'negative surprises' within a year",
+    "source": "Fox News"
+  },
+  {
+    "time": "14:00",
+    "title": "Yet Another Literary Prizewinner Seems to Be AI",
+    "source": "The Atlantic"
+  },
+  {
+    "time": "13:30",
+    "title": "AI is automating coding. So why are software developer job postings on the rise?",
+    "source": "CNBC"
+  },
+  {
+    "time": "11:30",
+    "title": "I Made Terrible Games With Google’s AI Playground",
+    "source": "WIRED"
   }
 ]
