@@ -1,42 +1,42 @@
 [
   {
+    "time": "00:23",
+    "title": "KRX activates sell-side sidecar for KOSPI on sharp fall",
+    "source": "The Korea Times"
+  },
+  {
+    "time": "00:17",
+    "title": "Anthropic’s Quarterly Revenue Jumped 45% to Nearly $17 Billion",
+    "source": "WSJ"
+  },
+  {
     "time": "20:16",
-    "title": "OpenAI хулгайлсан сэжигтэн баривчлагдахаасаа өмнө гэр бүлийнхэнтэйгээ Саудын Араб руу нэг талын тийз захиалсан байна",
+    "title": "OpenAI bugging suspect booked one-way ticket to Saudi Arabia with family before arrest",
     "source": "CNBC"
   },
   {
     "time": "20:06",
-    "title": "Dell-ийн хувьцааны үнэ 11%-иар унаж, дата төвийн борлуулалтыг тэргүүлж, “байгууллагын хиймэл оюуны цаг хугацаа”-ны талаарх айдас нэмэгджээ.",
+    "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
     "source": "CNBC"
   },
   {
     "time": "19:00",
-    "title": "Үзэл бодол | Бүх манифестуудыг дуусгах тунхаг",
+    "title": "Opinion | An A.I. Manifesto to End All A.I. Manifestoes",
     "source": "The New York Times"
   },
   {
     "time": "18:15",
-    "title": "AI математикийн чиглэлээр ирсэн. Одоо бусад шинжлэх ухааныг хөөж байна",
+    "title": "AI Came for Math. Now It’s Chasing the Rest of Science",
     "source": "WIRED"
   },
   {
+    "time": "18:00",
+    "title": "‘I don't want to freak people out’",
+    "source": "Politico"
+  },
+  {
     "time": "17:35",
-    "title": "22 хүн оройн зоог барихаар цуглажээ. Тэдний AI Агентууд.",
+    "title": "22 People Got Together For a Dinner Party. So Did Their A.I. Agents.",
     "source": "The New York Times"
-  },
-  {
-    "time": "17:10",
-    "title": "Neocloud-ын хувьцаанууд унаж байгаа тул худалдаачид CoreWeave дээр \"хөөс\"-д бөөгнөрөв.",
-    "source": "CNBC"
-  },
-  {
-    "time": "16:14",
-    "title": "Трамп Их Британийн амьтны хүрээлэнд хуучин од хүүг нь зэрэмдэглэсний дараа барыг номхруулж буй дүрс бичлэгийг нийтэлжээ.",
-    "source": "New York Post"
-  },
-  {
-    "time": "15:16",
-    "title": "AI агент Шведийн телевизийн шоуны нээлт болохоос өмнө бүтэн улирлыг арчиж хаясан гэж мэдээлсэн. Хөтлөгч \"Би хиймэл оюун миний үхэл болно гэдгийг мэдэж байсан\" гэж хэлсэн.",
-    "source": "TechRadar"
   }
 ]
