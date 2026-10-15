@@ -1,13 +1,33 @@
 [
   {
+    "time": "19:16",
+    "title": "Dependence on AI makes human brains less nimble, MIT professor says",
+    "source": "Fox News"
+  },
+  {
+    "time": "17:20",
+    "title": "An update on independent evaluators",
+    "source": "Anthropic"
+  },
+  {
+    "time": "17:00",
+    "title": "Apple and Meta team up to make Muse AI model run on Mac computers",
+    "source": "CNBC"
+  },
+  {
     "time": "16:00",
     "title": "Scientists are finding AI may make us remember things that never happened",
     "source": "The Washington Post"
   },
   {
-    "time": "14:31",
-    "title": "Heavy AI use linked to cognitive atrophy, MIT professor argues",
-    "source": "Fox News"
+    "time": "15:04",
+    "title": "As AI stocks plunge, Apple is riding high",
+    "source": "Yahoo Finance"
+  },
+  {
+    "time": "12:01",
+    "title": "Amazon introduces 2 new AI products from Bee: Bee Frontier and Bee Eclipse",
+    "source": "About Amazon"
   },
   {
     "time": "11:00",
@@ -18,25 +38,5 @@
     "time": "10:00",
     "title": "Unsupervised AI agent reportedly deletes TV show’s entire edit weeks before release, erasing months of work — TV show can't air, AI agent was given access to the production server and wiped the finished season - Tom's Hardware",
     "source": "Tom's Hardware"
-  },
-  {
-    "time": "09:04",
-    "title": "Opinion | What the Frontier Labs Know That We Don’t",
-    "source": "The New York Times"
-  },
-  {
-    "time": "08:39",
-    "title": "리퀴드 AI, 플래그십 모델 'LFM2.5-24B-A2B' 공개...\"온디바이스 에이전트 겨냥\" - AI타임스",
-    "source": "AI타임스"
-  },
-  {
-    "time": "07:27",
-    "title": "[COVER STORY] Black Thursday: KOSPI plunges 7% amid AI spending fears",
-    "source": "The Korea Times"
-  },
-  {
-    "time": "02:23",
-    "title": "Recon, suicide drones spot targets, strike in Army's future warfare drill",
-    "source": "The Korea Times"
   }
 ]
