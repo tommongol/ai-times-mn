@@ -1,42 +1,42 @@
 [
   {
+    "time": "16:00",
+    "title": "Scientists are finding AI may make us remember things that never happened",
+    "source": "The Washington Post"
+  },
+  {
+    "time": "14:31",
+    "title": "Heavy AI use linked to cognitive atrophy, MIT professor argues",
+    "source": "Fox News"
+  },
+  {
+    "time": "11:00",
+    "title": "Kids’ Content Is Deeply Broken. A New Platform Wants to Fix It",
+    "source": "WIRED"
+  },
+  {
+    "time": "10:00",
+    "title": "Unsupervised AI agent reportedly deletes TV show’s entire edit weeks before release, erasing months of work — TV show can't air, AI agent was given access to the production server and wiped the finished season - Tom's Hardware",
+    "source": "Tom's Hardware"
+  },
+  {
+    "time": "09:04",
+    "title": "Opinion | What the Frontier Labs Know That We Don’t",
+    "source": "The New York Times"
+  },
+  {
+    "time": "08:39",
+    "title": "리퀴드 AI, 플래그십 모델 'LFM2.5-24B-A2B' 공개...\"온디바이스 에이전트 겨냥\" - AI타임스",
+    "source": "AI타임스"
+  },
+  {
     "time": "07:27",
-    "title": "Хар пүрэв гариг: AI-ийн зарцуулалтаас болгоомжилж байгаа энэ үед KOSPI долоон хувиар уналаа",
+    "title": "[COVER STORY] Black Thursday: KOSPI plunges 7% amid AI spending fears",
     "source": "The Korea Times"
   },
   {
     "time": "02:23",
-    "title": "Recon, амиа золиослогч нисгэгчгүй онгоцууд армийн ирээдүйн байлдааны сургуулилтад байг илрүүлж, цохилт өгчээ.",
+    "title": "Recon, suicide drones spot targets, strike in Army's future warfare drill",
     "source": "The Korea Times"
-  },
-  {
-    "time": "00:42",
-    "title": "AI-ийн хувьцааны борлуулалт гүнзгийрэх тусам Nvidia, AMD, Micron унасан",
-    "source": "CNBC"
-  },
-  {
-    "time": "00:16",
-    "title": "AI, АНУ-ын инфляцийн асуудал хэвээр байгаа тул Сөүлийн хувьцаанууд алдагдлаа нэмэгдүүлж байна",
-    "source": "The Korea Times"
-  },
-  {
-    "time": "23:25",
-    "title": "Лехайгийн их сургуулийн судлаачид хиймэл оюуны мэдээллийн төвийн дулааныг барих аргыг олжээ",
-    "source": "TechRadar"
-  },
-  {
-    "time": "22:06",
-    "title": "Anthropic хөрөнгө оруулагчдад IPO хийхээс өмнө улирлын орлого бараг 50%-иар нэмэгдэж 16.8 тэрбум долларт хүрсэн гэж мэдэгджээ.",
-    "source": "Financial Times"
-  },
-  {
-    "time": "20:16",
-    "title": "OpenAI хулгайлсан сэжигтэн баривчлагдахаасаа өмнө гэр бүлийнхэнтэйгээ Саудын Араб руу нэг талын тийз захиалсан байна",
-    "source": "CNBC"
-  },
-  {
-    "time": "20:06",
-    "title": "Dell-ийн хувьцааны үнэ 11%-иар унаж, дата төвийн борлуулалтыг тэргүүлж, “байгууллагын хиймэл оюуны цаг хугацаа”-ны талаарх айдас нэмэгджээ.",
-    "source": "CNBC"
   }
 ]
