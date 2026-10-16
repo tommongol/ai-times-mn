@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { X, Printer, Share2, ExternalLink, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { X, Printer, Share2 } from 'lucide-react';
 import { NewsArticle } from '@/data/news';
 
 interface Props {
@@ -42,9 +42,14 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
             <span className="bg-[#00FF66] text-black font-black px-2 py-0.5 uppercase tracking-wider">
               {article.categoryName}
             </span>
-            <span className="text-neutral-400 hidden sm:inline">
-              // DISPATCH REF: {article.id}
+            <span className="text-neutral-400">
+              {article.publishedAt} • {article.publishedTime}
             </span>
+            {article.readTime && (
+              <span className="hidden sm:inline bg-neutral-800 text-[#00FF66] font-bold px-2 py-0.5 border border-neutral-700">
+                ⏱ {article.readTime}
+              </span>
+            )}
           </div>
 
           <div className="flex items-center gap-2">
@@ -80,44 +85,14 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
               {article.title}
             </h1>
             {article.subtitle && (
-              <p className="text-base sm:text-lg text-neutral-700 leading-relaxed font-normal mb-5">
+              <p className="text-base sm:text-lg text-neutral-700 leading-relaxed font-normal mb-4">
                 {article.subtitle}
               </p>
             )}
 
-            {/* 100% REAL VERIFIED SOURCE BADGE */}
-            <div className="p-3.5 bg-neutral-100 border-2 border-black flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono text-xs">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span className="font-bold text-black uppercase">
-                  АНХДАГЧ БОДИТ ЭХ СУРВАЛЖ:
-                </span>
-                <span className="text-emerald-700 font-bold underline">
-                  {article.primarySource}
-                </span>
-              </div>
-              <div className="flex flex-wrap items-center gap-3 text-neutral-600 text-xs sm:text-sm">
-                {article.readTime && (
-                  <span className="bg-black text-[#00FF66] font-bold px-2 py-0.5">
-                    ⏱ {article.readTime}
-                  </span>
-                )}
-                <span>{article.publishedAt} {article.publishedTime}</span>
-                <a
-                  href={article.primarySourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-black text-[#00FF66] hover:bg-neutral-800 px-2.5 py-1 font-bold transition-colors"
-                >
-                  <span>ЭХ СУРВАЛЖ ҮЗЭХ</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-
             {/* Tags if available */}
             {article.tags && article.tags.length > 0 && (
-              <div className="flex items-center gap-2 flex-wrap pt-3 font-mono text-xs">
+              <div className="flex items-center gap-2 flex-wrap pt-2 font-mono text-xs">
                 <span className="font-bold text-neutral-500">// СЭДВҮҮД:</span>
                 {article.tags.map((tag) => (
                   <span
@@ -157,28 +132,6 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
             className="text-base sm:text-lg text-neutral-900 leading-relaxed font-sans"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
-
-          {/* Verified Sources & References Section */}
-          <div className="pt-6 border-t-2 border-black font-mono text-xs">
-            <div className="flex items-center gap-2 font-bold text-black mb-3 uppercase tracking-wider">
-              <CheckCircle2 className="w-4 h-4 text-[#00c853]" />
-              <span>БАТАЛГААЖСАН ЭХ СУРВАЛЖИЙН ХОЛБООСУУД:</span>
-            </div>
-            <div className="flex flex-wrap gap-2.5">
-              {article.sources.map((src, idx) => (
-                <a
-                  key={idx}
-                  href={src.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 border border-black hover:bg-black hover:text-[#00FF66] transition-colors font-bold text-neutral-900"
-                >
-                  <span>{src.name}</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Footer */}

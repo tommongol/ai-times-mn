@@ -41,13 +41,13 @@ export const SectionBlock: React.FC<Props> = ({
       </div>
 
       {/* 4-Item Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {articles.slice(0, 4).map((art, idx) => {
           return (
             <article
               key={art.id}
               onClick={() => onSelect(art)}
-              className="group cursor-pointer flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-4 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              className="group cursor-pointer h-full flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-4 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <div>
                 <div className="w-full overflow-hidden bg-neutral-100 mb-3 border border-neutral-300 relative aspect-[16/10]">
@@ -56,12 +56,12 @@ export const SectionBlock: React.FC<Props> = ({
                     alt={art.title}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
-                  <span className="absolute top-2 right-2 bg-black text-[#00FF66] font-mono text-[9px] font-bold px-1.5 py-0.5">
+                  <span className="absolute top-2 right-2 bg-black text-[#00FF66] font-mono text-[10px] font-bold px-1.5 py-0.5">
                     0{idx + 1}
                   </span>
                 </div>
 
-                <span className="font-mono text-xs font-bold text-neutral-500 uppercase tracking-wider block mb-1">
+                <span className="font-mono text-[11px] font-bold text-neutral-500 uppercase tracking-wider block mb-1">
                   // {art.categoryName}
                 </span>
 
@@ -74,11 +74,11 @@ export const SectionBlock: React.FC<Props> = ({
                 </p>
               </div>
 
-              <div className="flex items-center justify-between font-mono text-xs text-neutral-500 pt-3 mt-3 border-t border-neutral-200">
-                <span className="text-black font-semibold uppercase">
-                  {art.primarySource.split(' ')[0]}
+              <div className="flex items-center justify-between font-mono text-xs text-neutral-500 pt-3 mt-4 border-t border-neutral-200">
+                <span>{art.publishedAt}</span>
+                <span className="text-black group-hover:text-emerald-700 font-bold transition-colors">
+                  УНШИХ →
                 </span>
-                <span>{art.publishedTime}</span>
               </div>
             </article>
           );

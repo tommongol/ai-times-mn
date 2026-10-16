@@ -9,7 +9,7 @@ import { ArticleViewModal } from '@/components/ArticleViewModal';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { useNews } from '@/context/NewsContext';
 import { NewsArticle, NAV_SECTIONS } from '@/data/news';
-import { Search, ArrowUpDown, XCircle, ShieldCheck } from 'lucide-react';
+import { Search, ArrowUpDown, XCircle } from 'lucide-react';
 
 export default function HomePage() {
   const { articles } = useNews();
@@ -33,9 +33,7 @@ export default function HomePage() {
         (art.subtitle && art.subtitle.toLowerCase().includes(query)) ||
         art.summary.toLowerCase().includes(query) ||
         art.content.toLowerCase().includes(query) ||
-        art.primarySource.toLowerCase().includes(query) ||
-        art.categoryName.toLowerCase().includes(query) ||
-        art.sources.some((s) => s.name.toLowerCase().includes(query));
+        art.categoryName.toLowerCase().includes(query);
 
       return matchesCategory && matchesQuery;
     });
@@ -59,49 +57,46 @@ export default function HomePage() {
   }, [articles]);
 
   const subLeads = useMemo(() => {
-    return articles.filter((a) => a.id !== mainLead?.id && !a.isHot);
+    return articles.filter((a) => a.id !== mainLead?.id).slice(0, 5);
   }, [articles, mainLead]);
 
-  const hotArticles = useMemo(() => {
-    return articles.filter((a) => a.isHot && a.id !== mainLead?.id);
-  }, [articles, mainLead]);
+  const remainingArticles = useMemo(() => {
+    const leadIds = new Set([mainLead?.id, ...subLeads.map((a) => a.id)]);
+    return articles.filter((a) => !leadIds.has(a.id));
+  }, [articles, mainLead, subLeads]);
 
-  const mostRead = useMemo(() => {
-    return [...articles].sort((a, b) => b.readCount - a.readCount);
-  }, [articles]);
-
-  // Section specific slices
+  // Section specific slices (deduplicated from top lead stories)
   const modelArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'models');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'models');
+  }, [remainingArticles]);
 
   const techArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'tech');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'tech');
+  }, [remainingArticles]);
 
   const policyArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'policy');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'policy');
+  }, [remainingArticles]);
 
   const lawArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'law');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'law');
+  }, [remainingArticles]);
 
   const industryArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'industry');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'industry');
+  }, [remainingArticles]);
 
   const companiesArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'companies');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'companies');
+  }, [remainingArticles]);
 
   const interviewArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'interview');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'interview');
+  }, [remainingArticles]);
 
   const opinionArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'opinion');
-  }, [articles]);
+    return remainingArticles.filter((a) => a.category === 'opinion');
+  }, [remainingArticles]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-black font-sans selection:bg-[#00FF66] selection:text-black">
@@ -133,7 +128,7 @@ export default function HomePage() {
                   )}
                 </h1>
                 <span className="font-mono text-xs font-bold px-2 py-0.5 bg-black text-[#00FF66]">
-                  {filteredArticles.length} FOUND
+                  {filteredArticles.length} НИЙТЛЭЛ
                 </span>
               </div>
 
@@ -141,7 +136,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3 font-mono text-xs">
                 <div className="flex items-center gap-2 text-neutral-600">
                   <ArrowUpDown className="w-3.5 h-3.5 text-black" />
-                  <span className="font-bold text-black uppercase">SORT:</span>
+                  <span className="font-bold text-black uppercase">ЭРЭМБЭ:</span>
                   <select
                     value={searchSort}
                     onChange={(e) => setSearchSort(e.target.value as 'latest' | 'views')}
@@ -170,46 +165,42 @@ export default function HomePage() {
             {/* List of search/category results */}
             {filteredArticles.length > 0 ? (
               <div className="divide-y divide-neutral-200">
-                {filteredArticles.map((art) => {
-                  const isPortrait = art.category === 'interview' || (Boolean(art.coverImage) && art.coverImage.includes('/images/people/'));
-                  return (
+                {filteredArticles.map((art) => (
                   <article
                     key={art.id}
                     onClick={() => setSelectedArticle(art)}
-                    className="py-6 cursor-pointer group flex flex-col sm:flex-row gap-6 items-start hover:bg-neutral-50 p-3 transition-colors border-l-2 border-transparent hover:border-black"
+                    className="py-6 cursor-pointer group flex flex-col sm:flex-row gap-6 items-start hover:bg-white p-4 transition-colors border-l-2 border-transparent hover:border-black"
                   >
-                    <div className={`w-full ${isPortrait ? 'sm:w-48 h-56 sm:h-64' : 'sm:w-64 h-40'} shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300 relative`}>
+                    <div className="w-full sm:w-64 aspect-[16/10] shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300 relative">
                       <img
                         src={art.coverImage}
                         alt={art.title}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2 font-mono text-xs sm:text-sm">
-                        <span className="bg-black text-[#00FF66] font-bold px-2 py-0.5 uppercase">
-                          {art.categoryName}
-                        </span>
-                        <span className="text-neutral-500">
-                          {art.publishedAt} {art.publishedTime}
-                        </span>
+                    <div className="flex-1 min-w-0 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-3 mb-2 font-mono text-xs">
+                          <span className="bg-black text-[#00FF66] font-bold px-2 py-0.5 uppercase">
+                            {art.categoryName}
+                          </span>
+                          <span className="text-neutral-500">
+                            {art.publishedAt} • {art.publishedTime}
+                          </span>
+                        </div>
+                        <h2 className="font-black text-lg sm:text-xl lg:text-2xl text-black group-hover:text-emerald-600 transition-colors leading-snug mb-2">
+                          {art.title}
+                        </h2>
+                        <p className="text-sm sm:text-base text-neutral-700 line-clamp-2 leading-relaxed mb-3">
+                          {art.summary}
+                        </p>
                       </div>
-                      <h2 className="font-black text-lg sm:text-xl lg:text-2xl text-black group-hover:text-emerald-600 transition-colors leading-snug mb-2">
-                        {art.title}
-                      </h2>
-                      <p className="text-sm sm:text-base text-neutral-700 line-clamp-2 leading-relaxed mb-3">
-                        {art.summary}
-                      </p>
-                      <div className="flex flex-wrap items-center gap-4 font-mono text-xs sm:text-sm text-neutral-600">
-                        <span className="text-black font-semibold uppercase flex items-center gap-1">
-                          <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                          SOURCE: {art.primarySource}
-                        </span>
+                      <div className="font-mono text-xs text-emerald-700 font-bold group-hover:underline">
+                        ДЭЛГЭРЭНГҮЙ УНШИХ →
                       </div>
                     </div>
                   </article>
-                  );
-                })}
+                ))}
               </div>
             ) : (
               /* No Search Results Fallback */
