@@ -1,5 +1,40 @@
 [
   {
+    "time": "14:30",
+    "source": "DOUYIN GALA",
+    "title": "ByteDance бодит цагийн World Model-оо танилцуулж, 'King of Comedy' киног 3D камерын замаар 12 өнцгөөс дахин зураглав"
+  },
+  {
+    "time": "14:10",
+    "source": "KREA AI",
+    "title": "Krea 3 Beta гарлаа: 2K нягтралтай зургийн хэсэгчилсэн засварыг 8 секундэд гүйцэтгэнэ"
+  },
+  {
+    "time": "13:50",
+    "source": "THE INFORMATION",
+    "title": "OpenAI хаагдсан Sora загвараа Jeffrey Katzenberg, Bill Peebles нарын стартапт шилжүүлж хувьцаа эзэмших хэлэлцээ хийж байна"
+  },
+  {
+    "time": "13:30",
+    "source": "LIGHTRICKS",
+    "title": "LTX-2.5 нээлттэй жинтэй пост-продакшн багц гарлаа: Alpha Gen маск, 16-бит EXR HDR ба 4K/8K Refine"
+  },
+  {
+    "time": "13:10",
+    "source": "BYTEPLUS",
+    "title": "ByteDance OmniHuman 2.0 загвараа API-аар нээлээ: 5 минутын 720p видеог 40% хямд өртгөөр үүсгэнэ"
+  },
+  {
+    "time": "12:45",
+    "source": "TECHCRUNCH",
+    "title": "FBI OpenAI-ийн инженерийг удирдлагын хурлын өрөөнд нууц микрофон байрлуулсан хэргээр баривчлав"
+  },
+  {
+    "time": "12:20",
+    "source": "OYASUMI",
+    "title": "World Gacha: Веб хөтөч дээр 3D хот үүсгэж Blender рүү GLB/FBX форматаар үнэгүй экспортлох хэрэгсэл гарлаа"
+  },
+  {
     "time": "19:16",
     "title": "Dependence on AI makes human brains less nimble, MIT professor says",
     "source": "Fox News"
@@ -33,10 +68,5 @@
     "time": "11:00",
     "title": "Kids’ Content Is Deeply Broken. A New Platform Wants to Fix It",
     "source": "WIRED"
-  },
-  {
-    "time": "10:00",
-    "title": "Unsupervised AI agent reportedly deletes TV show’s entire edit weeks before release, erasing months of work — TV show can't air, AI agent was given access to the production server and wiped the finished season - Tom's Hardware",
-    "source": "Tom's Hardware"
   }
 ]

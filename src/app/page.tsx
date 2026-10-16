@@ -57,7 +57,7 @@ export default function HomePage() {
   }, [articles]);
 
   const subLeads = useMemo(() => {
-    return articles.filter((a) => a.id !== mainLead?.id).slice(0, 5);
+    return articles.filter((a) => a.id !== mainLead?.id).slice(0, 4);
   }, [articles, mainLead]);
 
   const remainingArticles = useMemo(() => {
