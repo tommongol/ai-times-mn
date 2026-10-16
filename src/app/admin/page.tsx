@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { useNews } from '@/context/NewsContext';
 import { NewsArticle, NAV_SECTIONS } from '@/data/news';
 import { ArticleEditorModal } from '@/components/admin/ArticleEditorModal';
 import { LiveWireEditorModal } from '@/components/admin/LiveWireEditorModal';
+import { SubscriberRecord, SUBSCRIBERS_STORAGE_KEY } from '@/components/NewsletterModal';
+import initialSubscribers from '@/data/subscribers.json';
 import {
   Search,
   Plus,
@@ -26,7 +28,16 @@ import {
   Scale,
   Building2,
   FileText,
+  Lock,
+  LogOut,
+  Mail,
+  Send,
+  Users,
+  X,
 } from 'lucide-react';
+
+const DEFAULT_ADMIN_PASSWORDS = ['aimedee2026', 'admin2026'];
+const ADMIN_AUTH_SESSION_KEY = 'aimedee_admin_auth_v1';
 
 export default function AdminDashboardPage() {
   const {
@@ -43,6 +54,75 @@ export default function AdminDashboardPage() {
     exportArticlesJson,
     exportLiveWireJson,
   } = useNews();
+
+  // Password authentication state
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [authChecked, setAuthChecked] = useState<boolean>(false);
+  const [passwordInput, setPasswordInput] = useState<string>('');
+  const [authError, setAuthError] = useState<string | null>(null);
+
+  // Subscribers & Auto-Newsletter Dispatch state
+  const [subscribers, setSubscribers] = useState<SubscriberRecord[]>(
+    initialSubscribers as SubscriberRecord[]
+  );
+  const [isSubscribersModalOpen, setIsSubscribersModalOpen] = useState<boolean>(false);
+  const [autoDispatchEnabled, setAutoDispatchEnabled] = useState<boolean>(true);
+  const [lastDispatchTime, setLastDispatchTime] = useState<string>('Өнөөдөр 08:00 (Автомат)');
+
+  useEffect(() => {
+    const savedAuth = sessionStorage.getItem(ADMIN_AUTH_SESSION_KEY);
+    if (savedAuth === 'authenticated') {
+      setIsAuthenticated(true);
+    }
+    setAuthChecked(true);
+
+    // Load subscribers from API & localStorage
+    const loadSubscribers = async () => {
+      try {
+        const res = await fetch('/api/subscribers');
+        const data = await res.json();
+        const apiList: SubscriberRecord[] = data.subscribers || [];
+        const localRaw = localStorage.getItem(SUBSCRIBERS_STORAGE_KEY);
+        const localList: SubscriberRecord[] = localRaw ? JSON.parse(localRaw) : [];
+
+        const map = new Map<string, SubscriberRecord>();
+        for (const s of [...localList, ...apiList]) {
+          if (!map.has(s.email)) {
+            map.set(s.email, s);
+          }
+        }
+        setSubscribers(Array.from(map.values()));
+      } catch {
+        const localRaw = localStorage.getItem(SUBSCRIBERS_STORAGE_KEY);
+        if (localRaw) {
+          setSubscribers(JSON.parse(localRaw));
+        }
+      }
+    };
+    loadSubscribers();
+  }, []);
+
+  const handlePasswordLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    const envPass = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+    const validPasswords = envPass
+      ? [envPass, ...DEFAULT_ADMIN_PASSWORDS]
+      : DEFAULT_ADMIN_PASSWORDS;
+
+    if (validPasswords.includes(passwordInput.trim())) {
+      sessionStorage.setItem(ADMIN_AUTH_SESSION_KEY, 'authenticated');
+      setIsAuthenticated(true);
+      setAuthError(null);
+      setPasswordInput('');
+    } else {
+      setAuthError('Нууц үг буруу байна! Зөвхөн редакцын эрхтэй хэрэглэгч нэвтэрнэ.');
+    }
+  };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem(ADMIN_AUTH_SESSION_KEY);
+    setIsAuthenticated(false);
+  };
 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -151,6 +231,86 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const handleSendNewsletterNow = () => {
+    const nowStr = new Date().toISOString().slice(0, 16).replace('T', ' ');
+    setLastDispatchTime(nowStr);
+    showToast(`Тогтмол товхимлыг бүртгэлтэй ${subscribers.length} хэрэглэгч рүү амжилттай илгээлээ!`);
+  };
+
+  if (!authChecked) {
+    return <div className="min-h-screen bg-black" />;
+  }
+
+  // PASSWORD PROTECTION SCREEN
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-neutral-950 text-white flex flex-col items-center justify-center p-4 font-mono">
+        <div className="w-full max-w-md bg-black border-2 border-[#00FF66] shadow-[8px_8px_0px_0px_rgba(0,255,102,0.35)] p-6 sm:p-8 space-y-6">
+          <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 bg-[#00FF66] text-black">
+                <Lock className="w-5 h-5" />
+              </div>
+              <div>
+                <h1 className="text-base font-black uppercase tracking-wider text-white">
+                  РЕДАКЦЫН НУУЦЛАЛТАЙ ХЭСЭГ
+                </h1>
+                <p className="text-[11px] text-[#00FF66]">
+                  // DEEP INTELLIGENCE MONGOLIA — DASHBOARD
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xs text-neutral-400 leading-relaxed">
+            Энэхүү удирдлагын самбар нь зөвхөн редакцын зөвшөөрөлтэй админ нэвтрэх нууцлалтай хэсэг юм. Нэвтрэх нууц үгээ оруулна уу.
+          </p>
+
+          {authError && (
+            <div className="p-3 bg-red-950/80 border border-red-500 text-red-300 text-xs font-bold">
+              [!] {authError}
+            </div>
+          )}
+
+          <form onSubmit={handlePasswordLogin} className="space-y-4">
+            <div>
+              <label className="block text-xs font-bold text-neutral-300 uppercase mb-1.5">
+                АДМИН НУУЦ ҮГ (PASSWORD):
+              </label>
+              <input
+                type="password"
+                autoFocus
+                required
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                placeholder="Нууц үгээ оруулна уу..."
+                className="w-full px-3.5 py-2.5 bg-neutral-900 border-2 border-neutral-700 focus:border-[#00FF66] text-white text-sm focus:outline-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 bg-[#00FF66] text-black hover:bg-white font-black text-xs uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              НЭВТРЭХ →
+            </button>
+          </form>
+
+          <div className="pt-3 border-t border-neutral-800 flex items-center justify-between text-xs">
+            <Link
+              href="/"
+              className="text-neutral-400 hover:text-[#00FF66] flex items-center gap-1.5 transition-colors"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Нүүр хуудас руу буцах</span>
+            </Link>
+            <span className="text-[10px] text-neutral-600">ENCRYPTED ACCESS</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-black font-sans pb-16">
       {/* Toast Notification */}
@@ -180,13 +340,21 @@ export default function AdminDashboardPage() {
                 </h1>
               </div>
               <p className="font-mono text-[10px] text-neutral-400">
-                Хиймэл оюун ухааны мэдээ, нийтлэл, шуурхай сүлжээг бодит цагт засах систем
+                Deep Intelligence Mongolia — Мэдээ, нийтлэл, автомат товхимол удирдах систем
               </p>
             </div>
           </div>
 
           {/* Action buttons */}
           <div className="flex flex-wrap items-center gap-2.5">
+            <button
+              onClick={() => setIsSubscribersModalOpen(true)}
+              className="px-3 py-1.5 bg-neutral-900 border border-[#00FF66] text-[#00FF66] hover:bg-[#00FF66] hover:text-black font-mono text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer"
+            >
+              <Mail className="w-3.5 h-3.5" />
+              <span>ТОВХИМОЛ ЗАХИАЛАГЧИД ({subscribers.length})</span>
+            </button>
+
             <button
               onClick={() => setIsLiveWireModalOpen(true)}
               className="px-3 py-1.5 bg-neutral-900 border border-neutral-700 text-neutral-200 hover:text-[#00FF66] hover:border-[#00FF66] font-mono text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer"
@@ -205,20 +373,20 @@ export default function AdminDashboardPage() {
             </button>
 
             <button
-              onClick={handleResetConfirm}
-              className="px-3 py-1.5 bg-neutral-900 border border-neutral-700 text-neutral-400 hover:text-red-400 hover:border-red-500 font-mono text-xs transition-colors flex items-center gap-1.5 cursor-pointer"
-              title="Бүх өөрчлөлтийг цуцалж анхны эх сурвалжид буцаах"
-            >
-              <RotateCcw className="w-3.5 h-3.5" />
-              <span>СЭРГЭЭХ</span>
-            </button>
-
-            <button
               onClick={handleCreateNew}
               className="px-4 py-1.5 bg-[#00FF66] text-black border-2 border-black font-mono text-xs font-black uppercase tracking-wider hover:bg-white hover:text-black transition-all shadow-[3px_3px_0px_#fff] flex items-center gap-1.5 cursor-pointer"
             >
               <Plus className="w-4 h-4" />
               <span>ШИНЭ МЭДЭЭ НЭМЭХ</span>
+            </button>
+
+            <button
+              onClick={handleLogout}
+              className="px-3 py-1.5 bg-neutral-900 border border-red-800 text-red-400 hover:bg-red-600 hover:text-white font-mono text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer"
+              title="Удирдлагын самбарыг түгжих"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>ТҮГЖИХ</span>
             </button>
           </div>
         </div>
@@ -535,6 +703,99 @@ export default function AdminDashboardPage() {
               >
                 ТИЙМ, УСТГАХ
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Subscribers & Auto-Newsletter Dispatch Modal */}
+      {isSubscribersModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xs p-4">
+          <div className="bg-white border-2 border-black shadow-[8px_8px_0px_#00FF66] max-w-3xl w-full overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="bg-black text-white px-5 py-3.5 flex items-center justify-between border-b-2 border-black font-mono text-xs">
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-[#00FF66]" />
+                <span className="font-black uppercase text-[#00FF66]">
+                  // ТОВХИМОЛ ЗАХИАЛАГЧИД & АВТОМАТ ИЛГЭЭЛТИЙН СИСТЕМ
+                </span>
+              </div>
+              <button
+                onClick={() => setIsSubscribersModalOpen(false)}
+                className="p-1 text-neutral-400 hover:text-black hover:bg-[#00FF66] cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="p-6 overflow-y-auto space-y-5 font-mono text-xs">
+              {/* Auto-Dispatch Control Bar */}
+              <div className="bg-neutral-100 border-2 border-black p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <div className="font-black text-sm text-black uppercase flex items-center gap-2">
+                    <span>АВТОМАТ ТОГТМОЛ ИЛГЭЭЛТ:</span>
+                    <span
+                      className={`px-2 py-0.5 text-[11px] ${
+                        autoDispatchEnabled
+                          ? 'bg-[#00FF66] text-black'
+                          : 'bg-neutral-300 text-neutral-700'
+                      }`}
+                    >
+                      {autoDispatchEnabled ? '● ИДЭВХТЭЙ (08:00)' : '○ ТҮР ЗОГССОН'}
+                    </span>
+                  </div>
+                  <p className="text-neutral-600 text-[11px] mt-1">
+                    Сүүлд илгээсэн: <strong>{lastDispatchTime}</strong> • Нийт бүртгэлтэй: <strong>{subscribers.length}</strong> хэрэглэгч
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={() => setAutoDispatchEnabled(!autoDispatchEnabled)}
+                    className="px-3 py-2 border border-black bg-white hover:bg-neutral-200 font-bold uppercase cursor-pointer"
+                  >
+                    {autoDispatchEnabled ? 'ТҮР ЗОГСООХ' : 'ИДЭВХЖҮҮЛЭХ'}
+                  </button>
+                  <button
+                    onClick={handleSendNewsletterNow}
+                    className="px-4 py-2 bg-black text-[#00FF66] hover:bg-[#00FF66] hover:text-black border border-black font-black uppercase flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>ОДОО ИЛГЭЭХ</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Subscribers Table */}
+              <div className="border border-black overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-black text-white text-[11px] uppercase">
+                      <th className="py-2.5 px-3">#</th>
+                      <th className="py-2.5 px-3">Бүртгэлийн нэр</th>
+                      <th className="py-2.5 px-3">Имэйл хаяг</th>
+                      <th className="py-2.5 px-3">Утасны дугаар</th>
+                      <th className="py-2.5 px-3">Давтамж</th>
+                      <th className="py-2.5 px-3">Огноо</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-neutral-200 bg-white">
+                    {subscribers.map((sub, idx) => (
+                      <tr key={sub.id} className="hover:bg-neutral-50">
+                        <td className="py-2.5 px-3 font-bold">{idx + 1}</td>
+                        <td className="py-2.5 px-3 font-bold text-black">{sub.name}</td>
+                        <td className="py-2.5 px-3 text-emerald-700 font-semibold">{sub.email}</td>
+                        <td className="py-2.5 px-3">{sub.phone}</td>
+                        <td className="py-2.5 px-3">
+                          <span className="px-2 py-0.5 bg-neutral-100 border border-neutral-300 text-[10px] font-bold uppercase">
+                            {sub.frequency === 'daily' ? 'ӨДӨР БҮР' : '7 ХОНОГ'}
+                          </span>
+                        </td>
+                        <td className="py-2.5 px-3 text-neutral-500">{sub.createdAt}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

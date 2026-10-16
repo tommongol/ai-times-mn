@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Search, Mail, X, TrendingUp, SlidersHorizontal } from 'lucide-react';
+import { Search, Mail, X, TrendingUp, Lock } from 'lucide-react';
 import { NAV_SECTIONS } from '@/data/news';
+import { NewsletterModal } from '@/components/NewsletterModal';
 
 interface Props {
   activeSection: string;
@@ -30,6 +31,7 @@ export const NewspaperHeader: React.FC<Props> = ({
   onSearchChange,
 }) => {
   const [localInput, setLocalInput] = useState(searchQuery);
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,8 +61,8 @@ export const NewspaperHeader: React.FC<Props> = ({
             <span className="text-neutral-600">|</span>
             <span className="text-neutral-200">{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
             <span className="hidden md:inline text-neutral-600">|</span>
-            <span className="hidden md:inline text-neutral-300">
-              ХИЙМЭЛ ОЮУН УХААНЫ ДЭЛХИЙН БОДИТ ЦАГИЙН СЭТГҮҮЛ ЗҮЙ
+            <span className="hidden md:inline text-[#00FF66] font-bold tracking-wider uppercase">
+              Deep Intelligence Mongolia
             </span>
           </div>
 
@@ -68,18 +70,18 @@ export const NewspaperHeader: React.FC<Props> = ({
             <Link
               href="/admin"
               className="inline-flex items-center gap-1.5 text-white bg-neutral-800 hover:bg-[#00FF66] hover:text-black px-2.5 py-1 border border-neutral-700 font-bold transition-colors cursor-pointer uppercase tracking-wider"
-              title="Мэдээ нийтлэл засах редакцын удирдлага"
+              title="Нууц үгээр нэвтрэх редакцын удирдлага"
             >
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#00FF66] group-hover:text-black" />
+              <Lock className="w-3.5 h-3.5 text-[#00FF66] group-hover:text-black" />
               <span>РЕДАКЦ / DASHBOARD</span>
             </Link>
             <span className="text-neutral-600">|</span>
             <button
-              onClick={() => alert('Өдөр тутмын AI товхимолд бүртгэлээ!')}
-              className="hover:text-[#00FF66] flex items-center gap-1.5 transition-colors uppercase tracking-wider cursor-pointer py-1 font-bold"
+              onClick={() => setIsNewsletterOpen(true)}
+              className="bg-[#00FF66] text-black hover:bg-white px-2.5 py-1 flex items-center gap-1.5 transition-colors uppercase tracking-wider cursor-pointer font-black"
             >
-              <Mail className="w-3.5 h-3.5 text-[#00FF66]" />
-              <span>ТОВХИМОЛ</span>
+              <Mail className="w-3.5 h-3.5" />
+              <span>ТОВХИМОЛ / БҮРТГЭЛ</span>
             </button>
           </div>
         </div>
@@ -107,7 +109,7 @@ export const NewspaperHeader: React.FC<Props> = ({
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-1.5 font-mono text-xs text-neutral-600 uppercase tracking-widest">
-                <span className="font-bold text-black">// THE AI FRONTIER & DEEP TECH JOURNAL</span>
+                <span className="font-bold text-black">// DEEP INTELLIGENCE MONGOLIA</span>
               </div>
             </button>
           </div>
@@ -197,6 +199,11 @@ export const NewspaperHeader: React.FC<Props> = ({
           </ul>
         </div>
       </nav>
+
+      <NewsletterModal
+        isOpen={isNewsletterOpen}
+        onClose={() => setIsNewsletterOpen(false)}
+      />
     </header>
   );
 };
