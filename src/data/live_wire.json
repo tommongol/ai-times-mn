@@ -1,43 +1,118 @@
 [
   {
-    "time": "16:20",
-    "source": "META AI",
-    "title": "Meta 'Muse Wonder' кодчиллын SWE-bench дээр 79% авч тэргүүлэв; 816B 'Muse Spark Open' загварыг Apple M5 Ultra-д зориулж гаргалаа"
+    "time": "20:50",
+    "title": "Meta 'Muse Wonder' ба 'Muse Wonder Full' SWE-bench дээр 79% авч, тэргүүлэгчдийг гүйцлээ",
+    "source": "Meta AI"
   },
   {
-    "time": "16:00",
-    "source": "GOOGLE",
-    "title": "Gemini 4 Argon бодит туршилтаар ганц 2D гэрэл зургаас 3D принтерийн STL баримал шууд кодчилон үүсгэлээ"
+    "time": "20:45",
+    "title": "Meta 816B параметртэй 'Muse Spark Open' загвараа Apple M5 Ultra Mac Studio-д зориулан гаргалаа",
+    "source": "Meta AI"
   },
   {
-    "time": "15:40",
-    "source": "BFL // ALIBABA",
-    "title": "Black Forest Labs 'FLUX 3 Image Klein' болон Alibaba 'Qwen-Image-2.1-Turbo' нээлттэй зургийн загварууд гарлаа"
+    "time": "20:40",
+    "title": "Google 'Gemini 4 Argon' бүх хэрэглэгчдэд нээгдэж, 2D зургаас 3D принтерийн STL загвар үүсгэв",
+    "source": "Google Blog"
   },
   {
-    "time": "15:15",
-    "source": "NVIDIA // MSFT",
-    "title": "Microsoft 80B 'MAI-Base-2', NVIDIA 120B 'Nemotron 3.5 SuperVL' болон 60 дахин хямд 'Ultramarine 1 Flash' зарлагдлаа"
+    "time": "20:35",
+    "title": "Krea 3 Beta нээгдэж, 8 секундэд 2K нягтаршилтай зургийг Bounding Box-оор засварлаж эхэллээ",
+    "source": "Krea AI"
   },
   {
-    "time": "14:50",
-    "source": "MICROSOFT",
-    "title": "Агентын шийдвэр гаргалтын шинэ өрсөлдөөн: Microsoft Decision-1 болон Bespoke Labs Nimble-v4 Max танилцуулагдлаа"
+    "time": "20:30",
+    "title": "Black Forest Labs 5.6B параметртэй, 4K зураг үүсгэгч 'FLUX 3 Image Klein' нээлттэй загвараа цацлаа",
+    "source": "BFL"
   },
   {
-    "time": "14:25",
-    "source": "OPENAI",
-    "title": "OpenAI '28 Days of Shipping': Гар утаснаас Dot үүсгэх, GPT-6.1 Sol-ийн 500K контекст ба 3 удаагийн Reset"
+    "time": "20:25",
+    "title": "Alibaba 8 алхмаар 2K зураг үүсгэж засварладаг 'Qwen-Image-2.1-Turbo' (7B) загвараа нээлээ",
+    "source": "Qwen"
   },
   {
-    "time": "14:00",
-    "source": "XAI // ELEVEN",
-    "title": "xAI бодит цагийн 'Grok Voice 3.0' болон ElevenLabs видеоны хөгжим автоматаар зохиогч 'Instant Soundtracks' гаргалаа"
+    "time": "20:20",
+    "title": "Microsoft AI 80B идэвхтэй параметртэй 'MAI-Base-2' суурь загварынхаа сургалтыг дуусгав",
+    "source": "Microsoft AI"
   },
   {
-    "time": "13:40",
-    "source": "XBOX // APPLE",
-    "title": "Microsoft 'Xbox Labs', Epic Games-ийн AI шилжилт болон Apple-ийн ухаалаг дэлгэц 'Apple HomeView' танилцуулагдлаа"
+    "time": "20:15",
+    "title": "NVIDIA 120B 'Nemotron 3.5 Super VL' болон локал 'Bolt' загваруудаараа хурдны дээд амжилт тогтоов",
+    "source": "NVIDIA"
+  },
+  {
+    "time": "20:10",
+    "title": "Paper Instruments 'Ultramarine 1 Flash' загвар Claude Fable 5-тай дүйцэх ажлыг 60 дахин хямд гүйцэтгэв",
+    "source": "Paper Instruments"
+  },
+  {
+    "time": "20:05",
+    "title": "OpenAI 'GPT-6.1 Sol' загварын анхдагч контекст цонхыг Codex дээр 500,000 токен болгон тэллээ",
+    "source": "OpenAI"
+  },
+  {
+    "time": "20:00",
+    "title": "ChatGPT 'Dots' загварыг гар утаснаас шууд үүсгэж, Codex-той ажил хуваарилах боломжтой боллоо",
+    "source": "ChatGPT"
+  },
+  {
+    "time": "19:55",
+    "title": "OpenAI Codex хэрэглэгчийн дараагийн команд (prompt)ыг урьдчилан таамаглаж бичдэг 'Composer Predictions' гаргав",
+    "source": "OpenAI Devs"
+  },
+  {
+    "time": "19:50",
+    "title": "Microsoft магадлалын тохируулгатай 'Microsoft-Decision-1' хурдан шийдвэрийн загвараа танилцууллаа",
+    "source": "Microsoft"
+  },
+  {
+    "time": "19:45",
+    "title": "Bespoke Labs 'Nimble-v4-max' загвар Decision Index дээр Jev 1.13-ыг ялж #1 байрт орлоо",
+    "source": "Bespoke Labs"
+  },
+  {
+    "time": "19:40",
+    "title": "xAI 'Grok Voice 3.0' Speech-to-Speech индекс дээр 86.9 оноогоор дэлхийд тэргүүлэв",
+    "source": "xAI"
+  },
+  {
+    "time": "19:35",
+    "title": "ElevenLabs видеог үзээд хөгжим болон SFX эффектийг хугацааны шугам (timeline) дээр өрдөг 'Instant Soundtracks' гаргалаа",
+    "source": "ElevenLabs"
+  },
+  {
+    "time": "19:30",
+    "title": "Facebook алгоритмаа өөрийн үгээр шууд удирдах 'Your Algorithm, Your Words' AI горим нэвтрүүлэв",
+    "source": "Meta"
+  },
+  {
+    "time": "19:25",
+    "title": "Google Android 'Circle to Search' дээр луйврын мессежийг дугуйлж шалгадаг AI Overview нэмлээ",
+    "source": "Google"
+  },
+  {
+    "time": "19:20",
+    "title": "Хүмүүс болон 150+ AI агентыг нэг чат сувагт нэгтгэн удирдах 'Kylon' платформ нээлтээ хийлээ",
+    "source": "Kylon"
+  },
+  {
+    "time": "19:15",
+    "title": "Microsoft тоглоомын кодыг AI-аар задлан нэгтгэх туршилтын 'Xbox Labs' салбарыг байгууллаа",
+    "source": "The Verge"
+  },
+  {
+    "time": "19:10",
+    "title": "Epic Games-ийн Tim Sweeney хөгжүүлэгчдээ бүрэн AI хурдасгал руу шилжүүлж буйгаа зарлав",
+    "source": "Epic Games"
+  },
+  {
+    "time": "19:05",
+    "title": "Apple бүтэн дэлгэцийн харилцан ярианы 'Siri AI' бүхий шинэ 'Apple TV 4K'-г танилцууллаа",
+    "source": "Apple"
+  },
+  {
+    "time": "19:00",
+    "title": "Apple ухаалаг гэрт зориулсан анхны дэлгэц болох 'Apple HomeView' загварыг албан ёсоор танилцууллаа",
+    "source": "The Verge"
   },
   {
     "time": "14:30",
