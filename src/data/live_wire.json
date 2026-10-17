@@ -1,5 +1,45 @@
 [
   {
+    "time": "16:20",
+    "source": "META AI",
+    "title": "Meta 'Muse Wonder' кодчиллын SWE-bench дээр 79% авч тэргүүлэв; 816B 'Muse Spark Open' загварыг Apple M5 Ultra-д зориулж гаргалаа"
+  },
+  {
+    "time": "16:00",
+    "source": "GOOGLE",
+    "title": "Gemini 4 Argon бодит туршилтаар ганц 2D гэрэл зургаас 3D принтерийн STL баримал шууд кодчилон үүсгэлээ"
+  },
+  {
+    "time": "15:40",
+    "source": "BFL // ALIBABA",
+    "title": "Black Forest Labs 'FLUX 3 Image Klein' болон Alibaba 'Qwen-Image-2.1-Turbo' нээлттэй зургийн загварууд гарлаа"
+  },
+  {
+    "time": "15:15",
+    "source": "NVIDIA // MSFT",
+    "title": "Microsoft 80B 'MAI-Base-2', NVIDIA 120B 'Nemotron 3.5 SuperVL' болон 60 дахин хямд 'Ultramarine 1 Flash' зарлагдлаа"
+  },
+  {
+    "time": "14:50",
+    "source": "MICROSOFT",
+    "title": "Агентын шийдвэр гаргалтын шинэ өрсөлдөөн: Microsoft Decision-1 болон Bespoke Labs Nimble-v4 Max танилцуулагдлаа"
+  },
+  {
+    "time": "14:25",
+    "source": "OPENAI",
+    "title": "OpenAI '28 Days of Shipping': Гар утаснаас Dot үүсгэх, GPT-6.1 Sol-ийн 500K контекст ба 3 удаагийн Reset"
+  },
+  {
+    "time": "14:00",
+    "source": "XAI // ELEVEN",
+    "title": "xAI бодит цагийн 'Grok Voice 3.0' болон ElevenLabs видеоны хөгжим автоматаар зохиогч 'Instant Soundtracks' гаргалаа"
+  },
+  {
+    "time": "13:40",
+    "source": "XBOX // APPLE",
+    "title": "Microsoft 'Xbox Labs', Epic Games-ийн AI шилжилт болон Apple-ийн ухаалаг дэлгэц 'Apple HomeView' танилцуулагдлаа"
+  },
+  {
     "time": "14:30",
     "source": "DOUYIN GALA",
     "title": "ByteDance бодит цагийн World Model-оо танилцуулж, 'King of Comedy' киног 3D камерын замаар 12 өнцгөөс дахин зураглав"
@@ -28,45 +68,5 @@
     "time": "12:45",
     "source": "TECHCRUNCH",
     "title": "FBI OpenAI-ийн инженерийг удирдлагын хурлын өрөөнд нууц микрофон байрлуулсан хэргээр баривчлав"
-  },
-  {
-    "time": "12:20",
-    "source": "OYASUMI",
-    "title": "World Gacha: Веб хөтөч дээр 3D хот үүсгэж Blender рүү GLB/FBX форматаар үнэгүй экспортлох хэрэгсэл гарлаа"
-  },
-  {
-    "time": "19:16",
-    "title": "Dependence on AI makes human brains less nimble, MIT professor says",
-    "source": "Fox News"
-  },
-  {
-    "time": "17:20",
-    "title": "An update on independent evaluators",
-    "source": "Anthropic"
-  },
-  {
-    "time": "17:00",
-    "title": "Apple and Meta team up to make Muse AI model run on Mac computers",
-    "source": "CNBC"
-  },
-  {
-    "time": "16:00",
-    "title": "Scientists are finding AI may make us remember things that never happened",
-    "source": "The Washington Post"
-  },
-  {
-    "time": "15:04",
-    "title": "As AI stocks plunge, Apple is riding high",
-    "source": "Yahoo Finance"
-  },
-  {
-    "time": "12:01",
-    "title": "Amazon introduces 2 new AI products from Bee: Bee Frontier and Bee Eclipse",
-    "source": "About Amazon"
-  },
-  {
-    "time": "11:00",
-    "title": "Kids’ Content Is Deeply Broken. A New Platform Wants to Fix It",
-    "source": "WIRED"
   }
 ]

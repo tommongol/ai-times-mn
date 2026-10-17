@@ -1,5 +1,301 @@
 [
   {
+    "id": "art-20261017-01-meta-muse-wonder-spark-open-benchmarks",
+    "title": "Meta 'Muse Wonder' ба 816B 'Muse Spark Open': Кодчилол дээр 79% авч S-Tier ангилалд орсон шинэ Frontier болон Apple M5 Ultra-д зориулсан нээлттэй загвар",
+    "subtitle": "Artificial Analysis жагсаалтад Gemini 4 Argon болон GPT-6 Astra-г ардаа орхиж, SWE-bench дээр тэргүүлсэн Meta компани өмнөх шилдэг загвар болох 816 тэрбум параметртэй Muse Spark-аа нээлттэй жинтэйгээр гаргалаа.",
+    "summary": "Meta компани дотоодын хамгийн хүчирхэг шинэ загвар болох 'Muse Wonder' болон АНУ-ын хамгийн өндөр чадамжтай нээлттэй жинтэй загвар гэгдэж буй 816 тэрбум параметртэй 'Muse Spark Open' хувилбарыг зэрэг танилцууллаа. Muse Wonder нь программ хангамжийн кодчиллын Deep Suite (SWE-bench) шалгуурт 79 хувийн үнэлгээ авч Claude Opus 5.5-тай зэрэгцэн S-Tier ангилалд бичигдсэн бол Muse Spark Open нь Apple компанитай хамтран M5 Ultra чиптэй Mac Studio дээр локал орчинд ажиллахаар оновчлогджээ.",
+    "category": "models",
+    "categoryName": "Шинэ AI Загварууд",
+    "coverImage": "/images/articles/art-meta-muse-wonder-spark-open.jpg",
+    "imageCaption": "Meta AI судалгааны багийн танилцуулсан Muse Wonder болон 816 тэрбум параметртэй Muse Spark Open загварууд.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "16:20",
+    "readTime": "7 мин",
+    "readCount": 5240,
+    "isMainLead": true,
+    "isHot": true,
+    "primarySource": "Meta AI Research",
+    "primarySourceUrl": "https://research.meta.ai/blog/muse-wonder",
+    "tags": [
+      "Meta AI",
+      "Muse Wonder",
+      "Muse Spark Open",
+      "Apple M5 Ultra",
+      "Open Weights"
+    ],
+    "sources": [
+      {
+        "name": "Meta AI Research — Muse Wonder",
+        "url": "https://research.meta.ai/blog/muse-wonder"
+      },
+      {
+        "name": "Meta AI Research — Muse Spark Open",
+        "url": "https://research.meta.ai/blog/muse-spark-open"
+      }
+    ],
+    "content": "<p>Энэ долоо хоногт хиймэл оюуны салбарт хамгийн том гэнэтийн тэсрэлт хийсэн компани бол <strong>Meta</strong> байлаа. Тус компани өөрсдийн шинэ үеийн <strong>Muse Wonder</strong> тэргүүлэх (Frontier) загварыг танилцуулсны зэрэгцээ өмнөх шилдэг загвар байсан <strong>Muse Spark</strong>-ийг <strong>Muse Spark Open</strong> нэртэйгээр нээлттэй жинтэй (open-weights) хэлбэрээр олон нийтэд суллалаа.</p>\n\n<h3>1. 'Muse Wonder': Deep Suite кодчиллын шалгуурт 79% авч S-Tier түвшинд хүрэв</h3>\n<p>Олон нийтийн дунд LLM загваруудыг хамгийн хатуу шүүмжилдэг шинжээчид хүртэл <strong>Muse Wonder</strong> загварыг <strong>Claude Opus 5.5</strong>-тай хамт хамгийн дээд буюу <code>S-Tier</code> ангилалд (GPT-6.1 Sol болон бусад загварын дээр) эрэмбэлж эхэллээ. Шалтгаан нь тодорхой тоон үзүүлэлтүүд дээр харагдаж байна:</p>\n<ul>\n<li><strong>Deep Suite (SWE-bench) кодчиллын шалгуур:</strong> Muse Wonder нь <strong>79%</strong> оноо авч, одоогийн бүх тэргүүлэх загваруудыг тэргүүлэв.</li>\n<li><strong>Artificial Analysis нэгдсэн индекс:</strong> Олон арван шалгуурыг нэгтгэн боддог уг жагсаалтад Muse Wonder нь <strong>Gemini 4 Argon</strong>, <strong>GPT-6 Astra</strong> болон хоёр сарын өмнө салбарыг доргиож байсан <strong>Claude Fable 5.1</strong> загваруудын дээр бичигдэж, <strong>Claude Sonnet 5.5</strong>-тай оноо тэнцэн, Opus 5.5-аас ердөө 2 оноогоор дутуу жагслаа.</li>\n<li><strong>Мэргэжлийн салбарын шалгуур:</strong> Хууль зүйн <em>Harvey Law</em>, санхүүгийн шинжилгээний <em>Financial Analyst Research</em> болон <em>Superintelligence Index</em> дээр салбарын дээд үзүүлэлтийг үзүүлжээ.</li>\n</ul>\n<p>Үнийн хувьд 1 сая оролтын токен нь <strong>$4</strong>, 1 сая гаралтын токен нь <strong>$20</strong> бөгөөд энэ нь Claude Opus 5.5-тай ижил үнийн сегментэд өрсөлдөж байна. Бодит тоглоом кодчлох (<em>MegaBonk / Sir Bonk-a-Lot</em>) туршилтаар ганцхан промптоор камерын эргэлт, үсрэлт, гүйлт болон цохилтын физик логик нь 100% алдаагүй ажилладаг 3D тоглоомыг 4 минутын дотор (17,000 токен, 34 цент өртгөөр) бичиж гүйцэтгэжээ.</p>\n\n<h3>2. 'Muse Spark Open': Apple M5 Ultra Mac Studio дээр ажиллах 816 тэрбум параметртэй нээлттэй загвар</h3>\n<p>Meta компани шинэ Muse Wonder загвараа дотооддоо гаргамагцаа өмнөх тэргүүлэх загвар болох <strong>Muse Spark</strong>-ийг нээлттэй жинтэйгээр (open-weights) нийтэлсэн нь <strong>АНУ-аас гарсан хамгийн хүчирхэг нээлттэй загвар</strong> боллоо. Уг загвар нь <strong>816 тэрбум параметртэй</strong>, <strong>1 сая токены контекст цонхтой</strong> аварга архитектур юм.</p>\n<p>Хамгийн сонирхолтой нь Meta компани энэхүү загвар дээр <strong>Apple</strong>-тай шууд хамтран ажиллаж, <strong>Apple M5 Ultra</strong> чип бүхий <strong>Mac Studio</strong> компьютер дээр локал орчинд шууд ачаалж ажиллахаар тусгайлан оновчилсон байна. Нээлттэй загваруудын дунд Nemotron, Mistral Large 4, Qwen 3.8 болон GLM 5.3-тай өрсөлдөхүйц өндөр чадамжийг үзүүлж байна.</p>\n\n<h3>3. Дүгнэлт</h3>\n<p>Meta компани хаалттай <strong>Muse Wonder</strong> загвараараа кодчилол болон логик сэтгэлгээний оргилд Anthropic, OpenAI-тай зэрэгцэж ирсэн бол нөгөө талд 816 тэрбум параметртэй <strong>Muse Spark Open</strong> загвараа Apple-ийн техник хангамжтай уялдуулснаар өндөр хүчин чадалтай локал AI станцуудын зах зээлд шинэ стандарт тогтоолоо.</p>"
+  },
+  {
+    "id": "art-20261017-02-gemini-4-argon-benchmarks-3d-stl-printing",
+    "title": "Google 'Gemini 4 Argon' бодит туршилт: 2D зургаас шууд 3D принтерийн STL файл үүсгэх чадвар ба өртөг-гүйцэтгэлийн харьцаа",
+    "subtitle": "Artificial Analysis дээр 53 оноо авсан Gemini 4 Argon нь даалгавар тус бүрийн өртгөөр Opus 5.5-аас хэд дахин хямд бөгөөд энгийн гэрэл зургаас хэвлэхэд бэлэн 3D баримал үүсгэж чадаж байна.",
+    "summary": "Google-ийн шинэ Gemini 4 Argon загварыг бодит кодчилол, тоглоом үүсгэлт болон 3D загварчлалын шалгуураар туршихад Artificial Analysis индекс дээр 53 оноо авч, даалгавар гүйцэтгэх өртгөөрөө (cost-per-task) салбарын хамгийн хэмнэлттэй Frontier загваруудын нэг болохоо баталлаа. Ялангуяа ганц 2D цээж зураг өгөхөд 3D принтерээр шууд хэвлэх боломжтой STL форматын баримлын файлыг өндөр нарийвчлалтай үүсгэж буй нь онцгой давуу тал болж байна.",
+    "category": "models",
+    "categoryName": "Шинэ AI Загварууд",
+    "coverImage": "/images/articles/art-gemini-4-argon-benchmarks-3d.jpg",
+    "imageCaption": "Google компанийн Gemini 4 Argon загварын албан ёсны танилцуулга болон техникийн үзүүлэлт.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "16:00",
+    "readTime": "6 мин",
+    "readCount": 4190,
+    "isMainLead": false,
+    "isHot": true,
+    "primarySource": "Google Blog // Artificial Analysis",
+    "primarySourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "tags": [
+      "Gemini 4 Argon",
+      "Google",
+      "3D Printing",
+      "STL",
+      "Benchmarks"
+    ],
+    "sources": [
+      {
+        "name": "Google Official Blog — Introducing Gemini 4 Argon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+      }
+    ],
+    "content": "<p><strong>Google</strong> компанийн танилцуулсан <strong>Gemini 4 Argon</strong> загвар нь <code>API</code> болон Gemini-ийн төлбөртэй (AI Pro болон Ultra) багцууд дээр бүрэн нээлттэй болж, бие даасан шинжээчдийн бодит туршилтын үр дүнгүүд гарч эхэллээ. Уг загвар нь олон улсын жишиг шалгууруудад <strong>GPT-6 Astra</strong> болон <strong>Claude Opus 5.5</strong>-тай эн зэрэгцэхүйц түвшинд хүрээд байна.</p>\n\n<h3>1. Өртөг ба оюуны чадамжийн харьцаа (Cost-per-Task шинжилгээ)</h3>\n<p><strong>Artificial Analysis</strong> нэгдсэн шалгуураар Gemini 4 Argon нь <strong>53 оноо</strong> авсан нь Claude Opus 5.5-аас 5 оноогоор доогуур үзүүлэлт юм. Гэвч бодит ажил гүйцэтгэх өртгийн (cost-per-task) графикаас харахад Opus 5.5 нь дэлхийн хамгийн өндөр өртөгтэй 3 загварын нэг байгаа бол Gemini 4 Argon нь <strong>хамгийн хямд өртөгтэй тэргүүлэх загварын бүсэд</strong> байрлаж байна.</p>\n<p>Одоогоор 11-р сарыг дуустал урамшуулалт үнээр 1 сая оролтын токен нь <strong>$2</strong>, 1 сая гаралтын токен нь <strong>$10</strong> байгаа бөгөөд LLM шүүгчтэй SVG/кодчиллын шалгуурт 34,000 токен зарцуулан 34 центийн өртгөөр нийт жагсаалтын <strong>2-р байранд</strong> шалгарчээ.</p>\n\n<h3>2. Гэнэтийн давуу тал: Ганц гэрэл зургаас 3D принтерийн STL модель үүсгэх</h3>\n<p>Google-ийн инженерийн багийн урьдчилсан уулзалтын үеэр онцолсон нэгэн нууц чадвар бол Gemini 4 Argon-ийн <strong>3D хэвлэлийн файл (<code>.STL</code>) шууд кодчилон үүсгэх</strong> чадамж юм.</p>\n<p>Бодит туршилтаар жүжигчин Гари Бьюсигийн эгц урдаас авсан ганцхан 2D гэрэл зургийг Gemini 4 Argon руу оруулаад <em>\"Энэ хүний 3D принтер дээр хэвлэж болохуйц цээж баримлын STL файл үүсгэ\"</em> гэсэн тушаал өгөхөд нүүрний хэлбэр, инээмсэглэл болон пропорцыг маш сайн хадгалсан, шууд 3D принтерт оруулж хэвлэхэд бэлэн 3D геометрийн файлыг үүсгэж чадсан байна.</p>\n\n<h3>3. Дүгнэлт</h3>\n<p>Хэдийгээр 3D тоглоомын график дизайны хувьд Claude Opus 5.5 болон GPT-6 Astra арай илүү өнгөлөг үр дүн гаргаж байгаа ч <strong>бага өртгөөр өндөр логик боловсруулах болон 3D геометрийн STL кодчилол</strong> хийх чадвараараа Gemini 4 Argon нь инженерүүд болон бүтээгчдийн хувьд хамгийн ашигтай сонголтуудын нэг болж байна.</p>"
+  },
+  {
+    "id": "art-20261017-03-flux-3-klein-qwen-image-2-1-turbo-krea-3",
+    "title": "Black Forest Labs 'FLUX 3 Image Klein' ба Alibaba 'Qwen-Image-2.1-Turbo': Энгийн RTX 4070 карт дээр ажиллах нээлттэй зургийн загварууд",
+    "subtitle": "Krea 3 Beta зураг засварын зах зээлийг тэргүүлж буйтай зэрэгцэн өөрийн компьютер дээр үнэгүй татаж ажиллуулах боломжтой хоёр шинэ нээлттэй жинтэй зургийн загвар Hugging Face дээр гарлаа.",
+    "summary": "Энэ долоо хоногт зургийн хиймэл оюуны салбарт гурван том шинэчлэл зэрэг гарлаа. Black Forest Labs компани хэрэглэгчийн энгийн RTX 4070 график карт дээр текстээс зураг үүсгэх болон зураг засварлах чадвартай 'FLUX 3 Image Klein' нээлттэй жинтэй загвараа гаргасан бол Alibaba компани хурдасгасан 'Qwen-Image-2.1-Turbo' хувилбараа танилцууллаа.",
+    "category": "models",
+    "categoryName": "Шинэ AI Загварууд",
+    "coverImage": "/images/articles/art-flux-3-klein-qwen-image.jpg",
+    "imageCaption": "Black Forest Labs компанийн танилцуулсан FLUX 3 Image Klein нээлттэй жинтэй зургийн загвар.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "15:40",
+    "readTime": "5 мин",
+    "readCount": 3510,
+    "isMainLead": false,
+    "isHot": true,
+    "primarySource": "Black Forest Labs // Alibaba Qwen",
+    "primarySourceUrl": "https://bfl.ai/blog/flux-3-image-klein",
+    "tags": [
+      "FLUX 3",
+      "Black Forest Labs",
+      "Qwen-Image-2.1",
+      "RTX 4070",
+      "Krea 3"
+    ],
+    "sources": [
+      {
+        "name": "Black Forest Labs — FLUX 3 Image Klein",
+        "url": "https://bfl.ai/blog/flux-3-image-klein"
+      },
+      {
+        "name": "Alibaba Qwen — Qwen-Image-2.1-Turbo",
+        "url": "https://x.com/Alibaba_Qwen/status/2108549075218120949"
+      }
+    ],
+    "content": "<p>Зургийн хиймэл оюуны салбарт энэ долоо хоногт гурван шинэ загвар зэрэг нээлтээ хийж, үүлэн технологид суурилсан шууд засвар болон локал компьютер дээр ажиллах нээлттэй жинтэй (open-weights) загваруудын өрсөлдөөнийг шинэ шатанд гаргалаа.</p>\n\n<h3>1. Black Forest Labs 'FLUX 3 Image Klein': RTX 4070 дээр ажиллах нээлттэй загвар</h3>\n<p><strong>Black Forest Labs</strong> компани өөрсдийн шинэ <strong>FLUX 3 Image Klein</strong> загварыг нээлттэй жинтэйгээр гаргаж, <strong>Hugging Face</strong> дээр шууд татаж авах болон Spaces дээр үнэгүй турших боломжийг нээлээ. Энэхүү загварын хамгийн том давуу тал нь техник хангамжийн бага шаардлага юм:</p>\n<ul>\n<li><strong>NVIDIA DGX Spark ($4,000 орчмын систем) дээр:</strong> Текстээс зураг үүсгэхэд <strong>7.3 секунд</strong>, зураг засварлахад <strong>16.2 секунд</strong> зарцуулна.</li>\n<li><strong>Энгийн хэрэглэгчийн RTX 4070 карт дээр:</strong> DGX Spark-аас ердөө <strong>1.5 секундээр</strong> л удаан ажиллах бөгөөд өндөр нягтралтай зураг үүсгэх болон зураг засварлах үйлдлийг гэрийн компьютер дээр бүрэн гүйцэтгэнэ.</li>\n</ul>\n\n<h3>2. Alibaba 'Qwen-Image-2.1-Turbo' ба Krea 3-ийн харьцуулалт</h3>\n<p>Үүнтэй зэрэгцэн <strong>Alibaba</strong> компани өмнөх Qwen-Image-2.1 загварынхаа хурдасгасан checkpoint болох <strong>Qwen-Image-2.1-Turbo</strong> загварыг нээлттэй жинтэйгээр гаргалаа. Уг загвар нь тунгалаг дэвсгэртэй (transparent background) дүрс, апликейшны интерфейс (UI mockup) болон постер үүсгэх, засварлах үйлдлийг өндөр хурдаар гүйцэтгэдэг.</p>\n<p><strong>Шинжээчийн дүгнэлт:</strong> Текстээс анх удаа зураг үүсгэх (text-to-image generation) технологи өнөөдөр нэгэнт өндөр түвшинд хүрч жигдэрсэн тул хэрэглэгчдэд <strong>зураг засварлах (in-line editing)</strong> хурд ба хялбар байдал хамгийн чухал шалгуур болжээ. Энэ тал дээр зураг доторх утасны дэлгэц, нүдний өнгө, малгай дээрх хатгамал лого болон бичвэрийг фонтынх нь хэв маягийг алдагдуулалгүй 10 секундэд засварлаж буй <strong>Krea 3 Beta</strong> нь Nano Banana болон ChatGPT Image-ийг ардаа орхисон долоо хоногийн шилдэг хэрэгсэл болж байгаа бол локал орчинд үнэгүй ажиллуулах хэрэглэгчдэд <strong>FLUX 3 Image Klein</strong> хамгийн сайн сонголт болж байна.</p>"
+  },
+  {
+    "id": "art-20261017-04-mai-base-2-nemotron-35-ultramarine-flash",
+    "title": "Нээлттэй жинтэй загваруудын давалгаа: Microsoft MAI-Base-2 (80B), NVIDIA Nemotron 3.5 SuperVL (120B) ба 60 дахин хямд Ultramarine 1 Flash",
+    "subtitle": "Microsoft 80 тэрбум идэвхтэй параметртэй суурь загварынхаа урьдчилсан сургалтыг дуусгасан бол NVIDIA секундэд гаргах токены хурдаар тэргүүлэгч 120B загвараа, Paper Instruments хэт хямд загвараа танилцууллаа.",
+    "summary": "Meta-ийн Muse Spark Open-оос гадна энэ долоо хоногт гурван ч шинэ нээлттэй жинтэй (open-weight) хэлний загвар зарлагдлаа. Microsoft компани 80 тэрбум идэвхтэй параметртэй MAI-Base-2 загварынхаа урьдчилсан сургалтыг дуусгаснаа мэдэгдсэн бол NVIDIA компани асар өндөр хурдтай 120 тэрбум параметртэй Nemotron 3.5 SuperVL загвараа, харин Paper Instruments компани сая токен нь ердөө 15 цент үнэтэй Ultramarine 1 Flash загвараа танилцуулав.",
+    "category": "models",
+    "categoryName": "Шинэ AI Загварууд",
+    "coverImage": "/images/articles/art-nemotron-35-mai-base-2.jpg",
+    "imageCaption": "NVIDIA компанийн танилцуулсан 120 тэрбум параметртэй Nemotron 3.5 SuperVL агент болон харааны загвар.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "15:15",
+    "readTime": "6 мин",
+    "readCount": 3120,
+    "isMainLead": false,
+    "isHot": false,
+    "primarySource": "Microsoft AI // NVIDIA Blog // Paper Instruments",
+    "primarySourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+    "tags": [
+      "MAI-Base-2",
+      "Microsoft AI",
+      "Nemotron 3.5",
+      "NVIDIA",
+      "Ultramarine 1 Flash"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft AI — Frontier Pre-Training MAI-Base-2",
+        "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/"
+      },
+      {
+        "name": "NVIDIA Blog — Nemotron 3.5 SuperVL",
+        "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
+      },
+      {
+        "name": "Paper Instruments — Ultramarine 1 Flash",
+        "url": "https://www.paperinstruments.com/ultramarine"
+      }
+    ],
+    "content": "<p>Томоохон технологийн корпорацууд болон судалгааны лабораториуд нэг долоо хоногийн дотор дөрвөн өөр нээлттэй жинтэй (open-weights) хэлний загвар танилцуулсан нь локал болон үүлэн тооцооллын зах зээлд өртөг, хурдны ширүүн өрсөлдөөн эхэлснийг харуулж байна.</p>\n\n<h3>1. Microsoft 'MAI-Base-2': 80 тэрбум идэвхтэй параметртэй шинэ суурь загвар</h3>\n<p><strong>Microsoft AI</strong> баг өөрсдийн шинэ үеийн <strong>MAI-Base-2</strong> загварын урьдчилсан сургалт (pre-training) амжилттай дууссаныг албан ёсоор зарлалаа. Уг загвар нь <strong>80 тэрбум идэвхтэй параметртэй</strong> бөгөөд Microsoft-ийн дотоод туршилтаар одоо байгаа бүх нээлттэй жинтэй суурь загваруудыг давсан үзүүлэлт үзүүлжээ. Одоогоор дараагийн шатны сургалт (post-training) үргэлжилж байгаа тул нийтэд татаж авах холбоос хараахан нээгдээгүй байна.</p>\n\n<h3>2. NVIDIA 'Nemotron 3.5 SuperVL': 120 тэрбум параметр ба токены дээд хурд</h3>\n<p><strong>NVIDIA</strong> компани <strong>120 тэрбум параметртэй Nemotron 3.5 SuperVL</strong> нээлттэй загвараа суллалаа. Artificial Analysis-ийн оюуны индекс дээр уг загвар 26 оноо авсан нь DeepSeek, Qwen 3.8 болон GLM 5.3-аас доогуур байгаа ч нэг үзүүлэлтээр бусдыгаа хол тасархай тэргүүлж байна. Тэр нь <strong>секундэд гаргах токены хурд (output tokens per second)</strong> юм. Бодит цагийн агент болон хурд шаардсан системүүдэд зориулан тусгайлан оновчилсон тул бусад ухаалаг боловч удаан загваруудаас хэд дахин хурдан хариу өгдөг.</p>\n\n<h3>3. Paper Instruments 'Ultramarine 1 Flash': Мэдлэгийн ажилд 60 дахин хямд</h3>\n<p><strong>Paper Instruments</strong> компани санхүү, хууль зүйн магадлан шинжилгээ (Diligence Bench, Frontier Finance, JobBench) болон оффисын мэдлэгийн ажилд чиглэсэн <strong>Ultramarine 1 Flash</strong> нээлттэй загварыг танилцууллаа. Тус компанийн мэдэгдсэнээр уг загвар нь Claude Fable түвшний мэдлэгийн ажлыг <strong>60 дахин хямд өртгөөр</strong> буюу 1 сая оролтын токеныг ердөө <strong>15 цент ($0.15)</strong>, 1 сая гаралтын токеныг <strong>50 цент ($0.50)</strong> үнээр боловсруулах чадвартай аж.</p>"
+  },
+  {
+    "id": "art-20261017-05-microsoft-decision-1-bespoke-nimble-v4",
+    "title": "Тооцооллын шинэ ангилал болох 'Decision Models': Microsoft Decision-1 ба Bespoke Labs Nimble-v4 Max",
+    "subtitle": "Урт текст зохиохын оронд өгөгдлийг уншаад тохируулга (calibration) хийгдсэн магадлалын оноо болон шийдвэр гаргадаг тусгай загварууд AI агентуудын хяналтын гол хэрэгсэл болж байна.",
+    "summary": "Уламжлалт том хэлний загваруудаас (LLM) ялгаатай нь текст болон өгөгдлийг шинжлээд урт тайлбар бичихийн оронд тодорхой шалгуурын дагуу магадлалын оноо тооцоолж шууд шийдвэр гаргадаг 'Decision Models' ангилалд хоёр шинэ загвар гарлаа. Microsoft компани 'Microsoft Decision-1' загвараа, харин Bespoke Labs компани 'Nimble-v4' болон 'Nimble-v4-Max' загваруудаа танилцуулж, Jev болон OpenAI-ийн шийдвэрийн загваруудыг нарийвчлалаар давснаа зарлав.",
+    "category": "tech",
+    "categoryName": "AI Технологи & Инноваци",
+    "coverImage": "/images/articles/art-microsoft-decision-1-nimble.jpg",
+    "imageCaption": "Microsoft компанийн танилцуулсан хурдан бөгөөд өндөр нарийвчлалтай шийдвэр гаргагч Microsoft Decision-1 загвар.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "14:50",
+    "readTime": "5 мин",
+    "readCount": 2840,
+    "isMainLead": false,
+    "isHot": false,
+    "primarySource": "Microsoft Command Line // Bespoke Labs",
+    "primarySourceUrl": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+    "tags": [
+      "Decision Models",
+      "Microsoft Decision-1",
+      "Bespoke Labs",
+      "Nimble-v4",
+      "AI Agents"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft — Introducing Microsoft Decision-1",
+        "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/"
+      },
+      {
+        "name": "Bespoke Labs — Nimble-v4 & Nimble-v4-Max",
+        "url": "https://x.com/madiator/status/2110061495795216639"
+      }
+    ],
+    "content": "<p>Сүүлийн долоо хоногуудад хиймэл оюуны архитектурт <strong>Decision Models</strong> (Шийдвэр гаргалтын загварууд) хэмээх цоо шинэ ангилал эрчимтэй түрэн орж ирж байна. Jev болон өнгөрсөн долоо хоногт гарсан OpenAI-ийн шийдвэрийн загварын араас энэ долоо хоногт <strong>Microsoft</strong> болон <strong>Bespoke Labs</strong> компаниуд өөрсдийн шинэ загваруудыг танилцууллаа.</p>\n\n<h3>1. LLM биш 'Decision Model' гэж юу вэ?</h3>\n<p>Уламжлалт LLM загварууд нь асуултад урт текст үүсгэж хариулдаг бол <strong>Decision Model</strong> нь текст эсвэл өгөгдлийг уншаад тогтсон сонголтууд (Тийм/Үгүй, олон хувилбарт сонголт, 1–5 онооны үнэлгээ) дээр <strong>тохируулга (calibration) хийгдсэн магадлалын оноо (calibrated probability score)</strong> гаргаж, хурдан бөгөөд оновчтой шийдвэр гаргадаг.</p>\n\n<h3>2. Microsoft Decision-1 ба Bespoke Labs Nimble-v4 Max</h3>\n<ul>\n<li><strong>Microsoft Decision-1:</strong> Өгөгдсөн шалгуур хүснэгт (rubric)-ийн дагуу хиймэл оюуны хариултыг дүгнэх болон бие даасан агентын дараагийн үйлдлийг (agent actions) баталгаажуулахад Jev загвараас илүү өндөр нарийвчлал үзүүлжээ.</li>\n<li><strong>Bespoke Labs Nimble-v4 & Nimble-v4-Max:</strong> Шийдвэр гаргалтын алдааны хувийг хамгийн бага түвшинд бууруулсан бөгөөд олон сонголттой тест болон шалгуур үнэлгээгээр Jev, OpenAI болон Microsoft-ийн загваруудтай эн зэрэгцэн өрсөлдөж байна.</li>\n</ul>\n<p><strong>Дүгнэлт:</strong> Бие даасан AI агентууд (autonomous agents) олноор ажиллах тусам тэдний гаргасан үр дүнг шалгаж, \"зөв эсвэл буруу\" гэдгийг миллисекундийн дотор бага зардлаар шүүдэг ийм жижиг, өндөр нарийвчлалтай Decision Model-ууд нь агентын дэд бүтцийн салшгүй хэсэг болж байна.</p>"
+  },
+  {
+    "id": "art-20261017-06-openai-28-days-shipping-week-2-critique",
+    "title": "OpenAI-ийн '28 Days of Shipping' аяны эхний 11 өдөр: Гар утаснаас 'Dots' үүсгэх, 500K контекст ба 'Reset' шүүмжлэл",
+    "subtitle": "Өдөр бүр шинэ функц гаргах амлалт өгсөн OpenAI энэ долоо хоногт гурван өдөр дараалан 'Reset' зарлаж, дискний багтаамж болон серверийн засварыг шинэ нээлт мэтээр зарласан нь шүүмжлэл дагуулав.",
+    "summary": "OpenAI компанийн 10-р сарын 4-нд эхлүүлсэн '28 Days of Shipping' аяны хоёр дахь долоо хоног харьцангуй даруухан өнгөрлөө. Гар утаснаас бие даасан 'Dot' агент үүсгэх, Codex-оос Dot руу ажил шилжүүлэх, дараагийн промптыг урьдчилан таамаглах 'Composer Predictions' болон GPT-6.1 Sol загварын контекстийг 500,000 токен болгож өсгөсөн шинэчлэлүүд орсон ч 3 өдөр юу ч гаргалгүй 'Reset' хийж, энгийн алдаа засварыг том мэдээ болгосон нь хэрэглэгчдийн шүүмжлэлд өртөв.",
+    "category": "companies",
+    "categoryName": "Салбар ба Компаниуд",
+    "coverImage": "/images/articles/art-mai-base-2-pretraining.jpg",
+    "imageCaption": "OpenAI компанийн 28 өдрийн тасралтгүй шинэчлэлийн аян болон Codex/Work экосистемийн өөрчлөлтүүд.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "14:25",
+    "readTime": "5 мин",
+    "readCount": 3890,
+    "isMainLead": false,
+    "isHot": false,
+    "primarySource": "OpenAI Developers // ChatGPT Official",
+    "primarySourceUrl": "https://x.com/thsottiaux/status/2106845241357824205",
+    "tags": [
+      "OpenAI",
+      "Dots",
+      "Codex",
+      "GPT-6.1 Sol",
+      "28 Days of Shipping"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI — 28 Days of Shipping Announcement",
+        "url": "https://x.com/thsottiaux/status/2106845241357824205"
+      },
+      {
+        "name": "ChatGPT — Mobile Dots & Codex Delegation",
+        "url": "https://x.com/ChatGPT/status/2108636745915052037"
+      },
+      {
+        "name": "OpenAI — GPT-6.1 Sol 500K Context Update",
+        "url": "https://x.com/thsottiaux/status/2109430343346581527"
+      }
+    ],
+    "content": "<p>10-р сарын 4-ний өдөр <strong>OpenAI</strong> компанийн инженерийн баг <strong>\"28 Days of Shipping\"</strong> аяныг зарлаж, 28 хоногийн турш өдөр бүр Codex болон Work хэрэглэгчдэд зориулсан бодит шинэчлэл гаргана, эс бөгөөс тоолуурыг тэглэж (Reset) байх амлалт өгсөн билээ. Тэгвэл уг аяны 5-аас 11 дэх өдрийн тайлан болон бодит үр дүн ил боллоо.</p>\n\n<h3>1. Бодит хэрэгцээтэй шинэчлэлүүд (5 ба 7 дахь өдөр)</h3>\n<ul>\n<li><strong>Composer Predictions:</strong> Хэрэглэгч промпт бичээд хариулт авмагц систем дараагийн асуух магадлалтай промптыг урьдчилан таамаглаж, оролтын нүдэнд бэлэн бичиж өгдөг болов.</li>\n<li><strong>Гар утаснаас 'Dot' үүсгэх ба Codex интеграц:</strong> Өмнө нь 24/7 бие даасан <em>Dot</em> агентыг зөвхөн компьютерын программаас үүсгээд утсаараа ашигладаг байсан бол одоо гар утаснаасаа шууд шинэ Dot үүсгэх, мөн <strong>Codex</strong> дотор хийж буй ажлаа өөрийн Dot руу шууд даалгаж (delegate) хооронд нь харилцуулах боломжтой боллоо.</li>\n<li><strong>GPT-6.1 Sol 500K контекст (7 дахь өдөр):</strong> Codex болон Work орчинд <strong>GPT-6.1 Sol</strong> загварын үндсэн контекст цонхыг 272,000 токеноос бараг хоёр дахин өсгөж <strong>500,000 токен</strong> болгов.</li>\n</ul>\n\n<h3>2. Гурван удаагийн 'Reset' ба 9, 11 дэх өдрийн шүүмжлэл</h3>\n<p>Аяны 6, 8, 10 дахь өдрүүдэд OpenAI ямар ч шинэ зүйл гаргаж амжаагүй тул амлалтынхаа дагуу \"Reset\" зарласан байна. Харин 9 дэх өдөр нь ChatGPT болон Codex-ийн компьютерын программ диск дээр хэт их зай эзэлж байсныг 60% бууруулсан засварыг, 11 дэх өдөр нь <em>\"Selected model isn't at capacity\"</em> гэсэн серверийн ачааллын алдааг багасгахын тулд нэмэлт тооцооллын хүчин чадал (compute) залгаснаа \"өдрийн гол нээлт\" болгон зарлажээ.</p>\n<p><strong>Дүгнэлт:</strong> Хөгжүүлэгчдийн зүгээс системийн энгийн алдаа засвар (bug fix) болон серверийн найдвартай ажиллагааг маркетингийн сүржин нээлт мэтээр зарлах нь зохимжгүй гэж шүүмжилж байгаа ч GPT-6.1 Sol-ийн 500K контекст болон Codex–Dot холболт нь өдөр тутмын ажлын бүтээмжид бодит нэмэр болж байна.</p>"
+  },
+  {
+    "id": "art-20261017-07-grok-voice-3-elevenlabs-soundtracks-kylon",
+    "title": "xAI 'Grok Voice 3.0', ElevenLabs 'Instant Soundtracks' ба Kylon: Шууд ярианы агент болон видеоны автомат дууны найруулга",
+    "subtitle": "Хүлээлгийн хугацаа бараг мэдрэгдэхгүй Grok Voice 3.0 вебсайтын өгөгдөл дээр суурилсан дуут туслах үүсгэх боломж олгосон бол ElevenLabs видеог үзээд хөгжим, дууны эффектийг автоматаар тааруулдаг болов.",
+    "summary": "Аудио болон агентын технологийн салбарт энэ долоо хоногт гурван сонирхолтой хэрэгсэл нээлтээ хийлээ. xAI компани яриа таслах болон хариу өгөх хурдаараа онцгойрсон 'Grok Voice 3.0' загвараа үнэгүй туршилтын орчинтойгоор гаргасан бол ElevenLabs компани аливаа видео бичлэгийг шинжлээд хөгжим болон дууны эффектийг синхрончлон зохиодог 'Instant Soundtracks' функцээ, харин Kylon олон хүн ба олон AI агент нэг чат өрөөнд хамтран ажиллах платформоо танилцуулав.",
+    "category": "tech",
+    "categoryName": "AI Технологи & Инноваци",
+    "coverImage": "/images/articles/art-grok-voice-3-elevenlabs.jpg",
+    "imageCaption": "xAI компанийн танилцуулсан бодит цагийн дуут харилцааны Grok Voice 3.0 загвар.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "14:00",
+    "readTime": "5 мин",
+    "readCount": 2760,
+    "isMainLead": false,
+    "isHot": false,
+    "primarySource": "xAI News // ElevenLabs Blog",
+    "primarySourceUrl": "https://x.ai/news/grok-voice-3",
+    "tags": [
+      "Grok Voice 3.0",
+      "xAI",
+      "ElevenLabs",
+      "Instant Soundtracks",
+      "Kylon"
+    ],
+    "sources": [
+      {
+        "name": "xAI — Grok Voice 3.0 Official Release",
+        "url": "https://x.ai/news/grok-voice-3"
+      },
+      {
+        "name": "ElevenLabs — Introducing Instant Soundtracks",
+        "url": "https://elevenlabs.io/blog/introducing-instant-soundtracks"
+      }
+    ],
+    "content": "<p>Дуу хоолой, аудио продакшн болон олон агентын хамтын ажиллагааны чиглэлд энэ долоо хоногт практик хэрэглээ өндөртэй гурван шинэ платформ танилцуулагдлаа.</p>\n\n<h3>1. xAI 'Grok Voice 3.0': Бодит цагийн дуут агент бүтээх Sandbox</h3>\n<p><strong>xAI</strong> компани өөрсдийн шинэ үеийн <strong>Grok Voice 3.0</strong> дуут загварыг танилцуулж, хөгжүүлэгчид үнэгүй турших боломжтой Sandbox орчныг нээлээ. Бодит туршилтаар уг систем нь хоёр гол давуу талыг харуулж байна:</p>\n<ul>\n<li><strong>Хариу үйлдлийн өндөр хурд ба яриа таслалт (Barge-in):</strong> Асуулт асууж дуусахад бодох пауз бараг авалгүйгээр тэр даруй хариулдаг бөгөөд хэрэглэгч дундуур нь ярихад шууд зогсоод сонсох чадвартай.</li>\n<li><strong>Тодорхой вебсайтын өгөгдөлд суурилсан (Grounded) туслах:</strong> Систем хэрэглэгчээс хэдхэн асуулт асуугаад автоматаар системийн зааварчилгаа (custom instructions) бичиж өгдөг бөгөөд зөвхөн зааж өгсөн вебсайтаас (жишээ нь, FutureTools.io) мэдээ болон хэрэгслийн мэдээллийг татаж утсаар ярих лавлах ажилтан мэт ажиллаж чадаж байна.</li>\n</ul>\n\n<h3>2. ElevenLabs 'Instant Soundtracks' ба 'Kylon' олон агентын орчин</h3>\n<p><strong>ElevenLabs</strong> компани <em>ElevenCreative</em> платформ дээрээ <strong>Instant Soundtracks</strong> хэмээх шинэ функц нэмлээ. Хэрэглэгч ямар ч дуугүй видео бичлэг оруулахад хиймэл оюун уг видеог эхнээс нь дуустал үзэж шинжлээд, үйл явдалтай нь яг таарсан дэвсгэр хөгжим (soundtrack) болон дууны эффектүүдийг (SFX) автоматаар синхрончлон үүсгэж өгдөг.</p>\n<p>Мөн үүнтэй зэрэгцэн <strong>Kylon</strong> хэмээх шинэ агент удирдлагын (agent orchestration) хэрэгсэл гарсан нь олон багийн гишүүн болон олон төрлийн AI агентууд нэгдсэн нэг чат өрөөнд зэрэг харилцаж, даалгавраа хуваарилан гүйцэтгэх боломжийг бүрдүүлжээ.</p>"
+  },
+  {
+    "id": "art-20261017-08-xbox-labs-epic-games-ai-apple-homeview",
+    "title": "Тоглоомын салбарын AI эргэлт ба Apple-ийн ухаалаг гэр: Microsoft 'Xbox Labs', Epic Games болон шинэ 'Apple HomeView'",
+    "subtitle": "Minecraft болон GTA-г хиймэл оюунаар нэгтгэсэн бичлэгүүдээс улбаалан Microsoft 'Xbox Labs' нэгжийг байгуулсан бол Epic Games бүх хөгжүүлэгчдээ AI хурдасгуур руу шилжүүлж, Apple шинэ HomeView дэлгэцээ танилцуулав.",
+    "summary": "Видео тоглоом болон ухаалаг төхөөрөмжийн салбарт хиймэл оюуны томоохон өөрчлөлтүүд өрнөж байна. Хиймэл оюун болон урвуу инженерчлэлээр өөр өөр тоглоомуудыг хооронд нь нэгтгэх трендээс сэдэвлэн Microsoft компани туршилтын 'Xbox Labs' салбараа байгуулсан бол Epic Games-ийн гүйцэтгэх захирал Tim Sweeney компани даяар AI хурдасгал руу шилжиж буйгаа зарлалаа. Мөн Apple компани Siri болон хиймэл оюунд суурилсан ширээний ухаалаг дэлгэц 'Apple HomeView' болон шинэ Apple TV 4K төхөөрөмжөө танилцуулав.",
+    "category": "industry",
+    "categoryName": "Салбар ба Компаниуд",
+    "coverImage": "/images/articles/art-xbox-labs-epic-ai.jpg",
+    "imageCaption": "Microsoft компанийн тоглоомын decompilation, emulation болон AI хослолыг судлах шинэ Xbox Labs нэгж.",
+    "publishedAt": "2026-10-17",
+    "publishedTime": "13:40",
+    "readTime": "6 мин",
+    "readCount": 3340,
+    "isMainLead": false,
+    "isHot": false,
+    "primarySource": "The Verge // Epic Games // Apple Newsroom",
+    "primarySourceUrl": "https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration",
+    "tags": [
+      "Xbox Labs",
+      "Epic Games",
+      "Tim Sweeney",
+      "Apple HomeView",
+      "Apple TV 4K"
+    ],
+    "sources": [
+      {
+        "name": "The Verge — Microsoft Xbox Labs Exploration",
+        "url": "https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration"
+      },
+      {
+        "name": "The Verge — Apple HomeView Smart Display First Look",
+        "url": "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look"
+      },
+      {
+        "name": "Apple Newsroom — New Apple TV 4K",
+        "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/"
+      }
+    ],
+    "content": "<p>Тоглоомын салбарын хэрэглэгчид хиймэл оюунд хамгийн шүүмжлэлтэй ханддаг бүлэг хэвээр байгаа ч энэ долоо хоногт салбарын хоёр аварга болох <strong>Microsoft (Xbox)</strong> болон <strong>Epic Games</strong> хиймэл оюуны чиглэлд эрс эргэлт хийснээ зарлалаа.</p>\n\n<h3>1. Microsoft 'Xbox Labs': Тоглоомуудыг задлах ба хооронд нь нэгтгэх туршилт</h3>\n<p>Сүүлийн үед хөгжүүлэгчид хиймэл оюун болон урвуу инженерчлэлийн (reverse engineering / decompilation) хэрэгслүүд ашиглан <em>Minecraft</em>-ийн дүрүүдийг <em>Grand Theft Auto</em> дотор гүйлгэх, эсвэл <em>Counter-Strike</em>-ийн цэргүүдийг <em>Tony Hawk</em>-ийн дугуйт тэшүүр дээр гулгуулах зэргээр хоёр өөр тоглоомын кодыг нэгтгэх (mashup) үзэгдэл эрчимжсэн. <em>The Verge</em>-ийн мэдээлснээр Microsoft үүнийг анзаарч, тоглоомын decompilation, emulation болон AI-аар тоглоомуудыг нэгтгэн шинэ туршлага үүсгэх зорилготой <strong>Xbox Labs</strong> хэмээх тусгай туршилтын нэгжийг байгуулжээ.</p>\n\n<h3>2. Epic Games-ийн AI хурдасгал ба Tim Sweeneyйн байр суурь</h3>\n<p><strong>Epic Games</strong> компанийн гүйцэтгэх захирал <strong>Tim Sweeney</strong> (Tim Sweeney) компани даяар бүтцийн том өөрчлөлт эхлүүлж, хөгжүүлэгчдийг хиймэл оюуны хурдасгуур (maximum AI acceleration) ашиглах горимд шилжүүлж байгаагаа мэдэгдлээ. Тэрбээр <em>\"Бид цөөн хүнээр хуучин ажлаа хийлгэх гээгүй, харин одоо байгаа багийн гишүүн бүр илүү том, илүү чанартай бүтээл хийх боломжийг олгож байна\"</em> хэмээн онцолсон юм.</p>\n\n<h3>3. Apple 'HomeView' ухаалаг дэлгэц ба Google Circle to Search луйвар илрүүлэгч</h3>\n<p>Хэрэглэгчийн төхөөрөмжийн салбарт <strong>Apple</strong> компани шинэчлэгдсэн <strong>Apple TV 4K</strong>-ийн хамт <strong>Apple HomeView</strong> хэмээх ширээний ухаалаг дэлгэцээ танилцууллаа. Гадна харагдах байдлаараа суурь дээр байрлуулсан томруулсан Apple Watch мэт загвартай уг төхөөрөмж нь Amazon Echo Show-той өрсөлдөх бөгөөд Siri болон Apple Intelligence-ийн тусламжтайгаар гэрийн ухаалаг төхөөрөмжүүдийг удирдах төв болох юм.</p>\n<p>Мөн <strong>Google</strong> компани Android утасны <strong>Circle to Search</strong> функцэд мессеж луйвар (scam text) таних горим нэмсэн бөгөөд сэжигтэй мессежийг удаан дарж дугуйлахад AI тойм нь луйврын шинж тэмдэг байгаа эсэхийг шууд анхааруулдаг болжээ.</p>"
+  },
+  {
     "id": "art-20261016-01-bytedance-world-model-king-of-comedy",
     "title": "ByteDance-ийн шинэ World Model: Stephen Chow-ийн 'King of Comedy' киног 3D камерын замаар дахин зураглаж, Pico Space Pro-той уялдуулав",
     "subtitle": "Зөвхөн гар удирдлагаар 60 секунд алхдаг уламжлалт World Model-ийн хязгаарыг эвдэж, бодит киноны орчныг Gaussian Splat болон 3 хавтгайн траектороор олон өнцгөөс дахин найруулах технологи танилцуулагдлаа.",
@@ -12,7 +308,7 @@
     "publishedTime": "14:30",
     "readTime": "6 мин",
     "readCount": 4820,
-    "isMainLead": true,
+    "isMainLead": false,
     "isHot": true,
     "primarySource": "Douyin Gala // Bloomberg // Road to VR",
     "primarySourceUrl": "https://roadtovr.com/pico-vision-pro-competitor-delayed-cancelled-event/",
