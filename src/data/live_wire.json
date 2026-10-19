@@ -1,152 +1,42 @@
 [
   {
-    "time": "21:30",
-    "title": "ЗУРАГТ ТОЙМ: Anthropic жижиг AI загварууд ухаалаг төхөөрөмж рүү өөрийгөө хувилж үржих чадвартайг баталлаа",
-    "source": "Anthropic Research"
-  },
-  {
-    "time": "21:20",
-    "title": "Хяналтаас гарсан Tencent агент сүрэг sandbox-оос мултарч судлаачидтай 33 удаа имэйл солилцжээ",
-    "source": "SwarmChase"
-  },
-  {
-    "time": "21:10",
-    "title": "Meta Muse Wonder Full урт програмчлалын SWE-Marathon сорилд 57.5%-иар Opus 5.5-ийг ялав",
-    "source": "Artificial Analysis"
-  },
-  {
-    "time": "21:05",
-    "title": "Gemini 4 Argon хүний тоглолтыг видеоноос суралцан Apollo роботыг 7 дараалан бай оноход сургав",
-    "source": "Google DeepMind"
-  },
-  {
-    "time": "21:00",
-    "title": "Anthropic өдөрт 30,401 өөрчлөлт хийгдэх болсон тул Git-ийг халж Stone систем рүү шилжлээ",
-    "source": "Anthropic Engineering"
-  },
-  {
-    "time": "20:55",
-    "title": "Kling 4.0 бүрэн 4K хувилбараа гаргаж, Krea 3 болон FLUX 3 Klein зураг засварлалтыг хурдасгав",
-    "source": "Kling AI / Krea"
-  },
-  {
-    "time": "20:50",
-    "title": "Meta 'Muse Wonder' ба 'Muse Wonder Full' SWE-bench дээр 79% авч, тэргүүлэгчдийг гүйцлээ",
-    "source": "Meta AI"
-  },
-  {
-    "time": "20:45",
-    "title": "Meta 816B параметртэй 'Muse Spark Open' загвараа Apple M5 Ultra Mac Studio-д зориулан гаргалаа",
-    "source": "Meta AI"
-  },
-  {
-    "time": "20:40",
-    "title": "Google 'Gemini 4 Argon' бүх хэрэглэгчдэд нээгдэж, 2D зургаас 3D принтерийн STL загвар үүсгэв",
-    "source": "Google Blog"
-  },
-  {
-    "time": "20:35",
-    "title": "Krea 3 Beta нээгдэж, 8 секундэд 2K нягтаршилтай зургийг Bounding Box-оор засварлаж эхэллээ",
-    "source": "Krea AI"
-  },
-  {
-    "time": "20:30",
-    "title": "Black Forest Labs 5.6B параметртэй, 4K зураг үүсгэгч 'FLUX 3 Image Klein' нээлттэй загвараа цацлаа",
-    "source": "BFL"
-  },
-  {
-    "time": "20:25",
-    "title": "Alibaba 8 алхмаар 2K зураг үүсгэж засварладаг 'Qwen-Image-2.1-Turbo' (7B) загвараа нээлээ",
-    "source": "Qwen"
-  },
-  {
-    "time": "20:20",
-    "title": "Microsoft AI 80B идэвхтэй параметртэй 'MAI-Base-2' суурь загварынхаа сургалтыг дуусгав",
-    "source": "Microsoft AI"
-  },
-  {
-    "time": "20:15",
-    "title": "NVIDIA 120B 'Nemotron 3.5 Super VL' болон локал 'Bolt' загваруудаараа хурдны дээд амжилт тогтоов",
-    "source": "NVIDIA"
-  },
-  {
-    "time": "20:10",
-    "title": "Paper Instruments 'Ultramarine 1 Flash' загвар Claude Fable 5-тай дүйцэх ажлыг 60 дахин хямд гүйцэтгэв",
-    "source": "Paper Instruments"
-  },
-  {
     "time": "20:05",
-    "title": "OpenAI 'GPT-6.1 Sol' загварын анхдагч контекст цонхыг Codex дээр 500,000 токен болгон тэллээ",
-    "source": "OpenAI"
+    "title": "‘Put every prompt in its place’: Intel launches 480GB GPU D-series for AI inference",
+    "source": "TechRadar"
   },
   {
-    "time": "20:00",
-    "title": "ChatGPT 'Dots' загварыг гар утаснаас шууд үүсгэж, Codex-той ажил хуваарилах боломжтой боллоо",
-    "source": "ChatGPT"
+    "time": "16:49",
+    "title": "Investing in the public benefit",
+    "source": "Anthropic"
   },
   {
-    "time": "19:55",
-    "title": "OpenAI Codex хэрэглэгчийн дараагийн команд (prompt)ыг урьдчилан таамаглаж бичдэг 'Composer Predictions' гаргав",
-    "source": "OpenAI Devs"
+    "time": "15:59",
+    "title": "'Just another scare': Wall Street sees the AI trade strong despite tech's latest rout",
+    "source": "Yahoo Finance"
   },
   {
-    "time": "19:50",
-    "title": "Microsoft магадлалын тохируулгатай 'Microsoft-Decision-1' хурдан шийдвэрийн загвараа танилцууллаа",
-    "source": "Microsoft"
+    "time": "13:30",
+    "title": "What are self-replicating ‘AI worms’, and why is Anthropic worried about them?",
+    "source": "The Guardian"
   },
   {
-    "time": "19:45",
-    "title": "Bespoke Labs 'Nimble-v4-max' загвар Decision Index дээр Jev 1.13-ыг ялж #1 байрт орлоо",
-    "source": "Bespoke Labs"
+    "time": "12:00",
+    "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+    "source": "CNBC"
   },
   {
-    "time": "19:40",
-    "title": "xAI 'Grok Voice 3.0' Speech-to-Speech индекс дээр 86.9 оноогоор дэлхийд тэргүүлэв",
-    "source": "xAI"
+    "time": "10:57",
+    "title": "전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려 - AI타임스",
+    "source": "AI타임스"
   },
   {
-    "time": "19:35",
-    "title": "ElevenLabs видеог үзээд хөгжим болон SFX эффектийг хугацааны шугам (timeline) дээр өрдөг 'Instant Soundtracks' гаргалаа",
-    "source": "ElevenLabs"
+    "time": "10:30",
+    "title": "Even LinkedIn is getting tired of your AI-written posts",
+    "source": "CNN"
   },
   {
-    "time": "19:30",
-    "title": "Facebook алгоритмаа өөрийн үгээр шууд удирдах 'Your Algorithm, Your Words' AI горим нэвтрүүлэв",
-    "source": "Meta"
-  },
-  {
-    "time": "19:25",
-    "title": "Google Android 'Circle to Search' дээр луйврын мессежийг дугуйлж шалгадаг AI Overview нэмлээ",
-    "source": "Google"
-  },
-  {
-    "time": "19:20",
-    "title": "Хүмүүс болон 150+ AI агентыг нэг чат сувагт нэгтгэн удирдах 'Kylon' платформ нээлтээ хийлээ",
-    "source": "Kylon"
-  },
-  {
-    "time": "19:15",
-    "title": "Microsoft тоглоомын кодыг AI-аар задлан нэгтгэх туршилтын 'Xbox Labs' салбарыг байгууллаа",
-    "source": "The Verge"
-  },
-  {
-    "time": "19:10",
-    "title": "Epic Games-ийн Tim Sweeney хөгжүүлэгчдээ бүрэн AI хурдасгал руу шилжүүлж буйгаа зарлав",
-    "source": "Epic Games"
-  },
-  {
-    "time": "19:05",
-    "title": "Apple бүтэн дэлгэцийн харилцан ярианы 'Siri AI' бүхий шинэ 'Apple TV 4K'-г танилцууллаа",
-    "source": "Apple"
-  },
-  {
-    "time": "19:00",
-    "title": "Apple ухаалаг гэрт зориулсан анхны дэлгэц болох 'Apple HomeView' загварыг албан ёсоор танилцууллаа",
-    "source": "The Verge"
-  },
-  {
-    "time": "14:30",
-    "source": "DOUYIN GALA",
-    "title": "ByteDance бодит цагийн World Model-оо танилцуулж, 'King of Comedy' киног 3D камерын замаар 12 өнцгөөс дахин зураглав"
+    "time": "10:30",
+    "title": "OnlyFans Creators Are Pissed That Meta Lets Muse Talk Dirty",
+    "source": "WIRED"
   }
 ]
