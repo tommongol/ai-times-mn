@@ -50,19 +50,19 @@ export const NewspaperFooter: React.FC = () => {
                 <span>РЕДАКЦИЙН СТАНДАРТ</span>
               </div>
               <p>
-                AImedee.mn нь хиймэл оюун ухаан, дэвшилтэт технологийн салбарын мэдээлэл, техникийн шинжилгээ, зах зээлийн судалгааг олон нийтэд хүргэдэг мэргэшсэн цахим сэтгүүл юм. Манай редакц зөвхөн баталгаажсан өгөгдөл, албан ёсны судалгааны тайлангуудад тулгуурлан мэдээллийг нийтэлдэг.
+                Deep Intelligence Mongolia нь хиймэл оюун ухаан, дэвшилтэт технологийн салбарын мэдээлэл, техникийн шинжилгээ, зах зээлийн судалгааг олон нийтэд хүргэдэг мэргэшсэн цахим сэтгүүл юм. Манай редакц зөвхөн баталгаажсан өгөгдөл, албан ёсны судалгааны тайлангуудад тулгуурлан мэдээллийг нийтэлдэг.
               </p>
             </div>
 
             <div className="text-[11px] text-neutral-400 space-y-1">
               <p>
-                <strong>Мэдээллийн сүлжээ:</strong> AImedee Media • <strong>Холбоо барих:</strong> contact@aimedee.mn
+                <strong>Мэдээллийн сүлжээ:</strong> Deep Intelligence Media • <strong>Холбоо барих:</strong> contact@deepintelligence.mn
               </p>
               <p>
                 <strong>Хаяг:</strong> Улаанбаатар хот, Сүхбаатар дүүрэг, Мэдээлэл технологийн үндэсний төв
               </p>
               <p className="text-neutral-500 pt-2">
-                © {new Date().getFullYear()} AImedee.mn. Бүх эрх хуулиар хамгаалагдсан. Нийтлэлийг иш татан ашиглахдаа холбоосыг заавал дурдана уу.
+                © {new Date().getFullYear()} Deep Intelligence Mongolia. Бүх эрх хуулиар хамгаалагдсан. Нийтлэлийг иш татан ашиглахдаа холбоосыг заавал дурдана уу.
               </p>
             </div>
           </div>
@@ -77,13 +77,13 @@ export const NewspaperFooter: React.FC = () => {
                 </div>
                 <ul className="space-y-2 text-neutral-400">
                   <li className="hover:text-white transition-colors cursor-pointer">
-                    • Мэдээ, нийтлэл санал болгох: editorial@aimedee.mn
+                    • Мэдээ, нийтлэл санал болгох: editorial@deepintelligence.mn
                   </li>
                   <li className="hover:text-white transition-colors cursor-pointer">
-                    • Хамтран ажиллах & Зар сурталчилгаа: ads@aimedee.mn
+                    • Хамтран ажиллах & Зар сурталчилгаа: ads@deepintelligence.mn
                   </li>
                   <li className="hover:text-white transition-colors cursor-pointer">
-                    • Техникийн дэмжлэг: dev@aimedee.mn
+                    • Техникийн дэмжлэг: dev@deepintelligence.mn
                   </li>
                 </ul>
               </div>

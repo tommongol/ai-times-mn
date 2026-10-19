@@ -23,11 +23,11 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'AImedee.mn — Хиймэл Оюун Ухааны Мэргэшсэн Сонин',
+  title: 'Deep Intelligence Mongolia — Хиймэл Оюун Ухааны Мэргэшсэн Сонин',
   description: 'Хиймэл оюуны салбарын хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, технологийн шинжилгээг нэг дороос.',
-  keywords: ['AImedee', 'AI сонин', 'Хиймэл оюун', 'Шинэ AI загварууд', 'Технологийн мэдээ'],
+  keywords: ['Deep Intelligence', 'Deep Intelligence Mongolia', 'AI сонин', 'Хиймэл оюун', 'Шинэ AI загварууд', 'Технологийн мэдээ'],
   openGraph: {
-    title: 'AImedee.mn — Хиймэл Оюун Ухааны Мэргэшсэн Сонин',
+    title: 'Deep Intelligence Mongolia — Хиймэл Оюун Ухааны Мэргэшсэн Сонин',
     description: 'Хиймэл оюуны салбарын хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, технологийн шинжилгээг нэг дороос.',
     type: 'website',
     locale: 'mn_MN',

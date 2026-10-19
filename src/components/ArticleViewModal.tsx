@@ -162,7 +162,7 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
         {/* Footer */}
         <div className="px-6 py-3 border-t-2 border-black bg-neutral-100 flex items-center justify-between font-mono text-xs">
           <span className="text-neutral-500">
-            AImedee.mn — Хиймэл оюун ухааны бодит сэтгүүл зүй
+            Deep Intelligence Mongolia — Хиймэл оюун ухааны бодит сэтгүүл зүй
           </span>
           <button
             onClick={onClose}

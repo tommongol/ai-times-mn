@@ -136,7 +136,7 @@ export const NewspaperLead: React.FC<Props> = ({
               </div>
             </div>
             <a
-              href="mailto:ads@aimedee.mn"
+              href="mailto:ads@deepintelligence.mn"
               className="font-mono text-xs font-bold bg-white text-black hover:bg-black hover:text-[#00FF66] border border-black px-3 py-1.5 transition-colors shrink-0 uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
             >
               ХОЛБОГДОХ →
