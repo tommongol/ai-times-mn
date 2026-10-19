@@ -1,42 +1,42 @@
 [
   {
-    "time": "20:05",
-    "title": "‘Put every prompt in its place’: Intel launches 480GB GPU D-series for AI inference",
-    "source": "TechRadar"
-  },
-  {
-    "time": "16:49",
-    "title": "Investing in the public benefit",
-    "source": "Anthropic"
-  },
-  {
-    "time": "15:59",
-    "title": "'Just another scare': Wall Street sees the AI trade strong despite tech's latest rout",
-    "source": "Yahoo Finance"
-  },
-  {
-    "time": "13:30",
-    "title": "What are self-replicating ‘AI worms’, and why is Anthropic worried about them?",
-    "source": "The Guardian"
-  },
-  {
     "time": "12:00",
-    "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+    "title": "AI худалдааны хар дарсан зүүдний хувилбар дуусаагүй байна гэж айсан ч хөрөнгө оруулагчид даваа гарагт худалдан авалт хийж байна",
     "source": "CNBC"
   },
   {
-    "time": "10:57",
-    "title": "전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려 - AI타임스",
+    "time": "10:00",
+    "title": "Мета болон Тесла нар энэ долоо хоногт юу үзэх вэ гэж мэдээлсэн тул хиймэл оюунтай холбоотой томоохон саналууд хэвээр байна.",
+    "source": "Yahoo Finance"
+  },
+  {
+    "time": "09:00",
+    "title": "Дисней Character.AI-г шүүхээс гарах карт авахын тулд дампуурахыг гуйв",
+    "source": "WIRED"
+  },
+  {
+    "time": "08:23",
+    "title": "\"Бас нэг айдас\": Уолл Стрит технологийн хамгийн сүүлийн үеийн хямралыг үл харгалзан хиймэл оюуны арилжаа хүчтэй байгааг харж байна",
+    "source": "Yahoo Finance"
+  },
+  {
+    "time": "06:15",
+    "title": "Солонгосчуудын хувьцааны хөрөнгө оруулалтын алдагдал хэрэглээнд сөргөөр нөлөөлж байна",
+    "source": "The Korea Times"
+  },
+  {
+    "time": "05:46",
+    "title": "“Үлгэр 5.5-ыг түншүүдэд хүргэлээ”... шинэ загварын нэрс хөгжүүлэлтийн хэрэглүүр дээр ар араасаа гарч ирэв - AI Times",
     "source": "AI타임스"
   },
   {
-    "time": "10:30",
-    "title": "Even LinkedIn is getting tired of your AI-written posts",
-    "source": "CNN"
+    "time": "05:19",
+    "title": "Нээлттэй хиймэл оюун нь шийдвэр гаргах API-г ‘GPT-Live’-тэй холбодог... “Яриа дуусахаас өмнөх шүүлт” - AI Times",
+    "source": "AI타임스"
   },
   {
-    "time": "10:30",
-    "title": "OnlyFans Creators Are Pissed That Meta Lets Muse Talk Dirty",
-    "source": "WIRED"
+    "time": "03:42",
+    "title": "[COVER STORY] Хөдөлмөрийн хатуу ширүүн байдал нь Солонгосын усан онгоц үйлдвэрлэгчдийг Хятадын эсрэг таагүй байдалд оруулж байна.",
+    "source": "The Korea Times"
   }
 ]
