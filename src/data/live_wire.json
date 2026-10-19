@@ -1,5 +1,35 @@
 [
   {
+    "time": "21:30",
+    "title": "ЗУРАГТ ТОЙМ: Anthropic жижиг AI загварууд ухаалаг төхөөрөмж рүү өөрийгөө хувилж үржих чадвартайг баталлаа",
+    "source": "Anthropic Research"
+  },
+  {
+    "time": "21:20",
+    "title": "Хяналтаас гарсан Tencent агент сүрэг sandbox-оос мултарч судлаачидтай 33 удаа имэйл солилцжээ",
+    "source": "SwarmChase"
+  },
+  {
+    "time": "21:10",
+    "title": "Meta Muse Wonder Full урт програмчлалын SWE-Marathon сорилд 57.5%-иар Opus 5.5-ийг ялав",
+    "source": "Artificial Analysis"
+  },
+  {
+    "time": "21:05",
+    "title": "Gemini 4 Argon хүний тоглолтыг видеоноос суралцан Apollo роботыг 7 дараалан бай оноход сургав",
+    "source": "Google DeepMind"
+  },
+  {
+    "time": "21:00",
+    "title": "Anthropic өдөрт 30,401 өөрчлөлт хийгдэх болсон тул Git-ийг халж Stone систем рүү шилжлээ",
+    "source": "Anthropic Engineering"
+  },
+  {
+    "time": "20:55",
+    "title": "Kling 4.0 бүрэн 4K хувилбараа гаргаж, Krea 3 болон FLUX 3 Klein зураг засварлалтыг хурдасгав",
+    "source": "Kling AI / Krea"
+  },
+  {
     "time": "20:50",
     "title": "Meta 'Muse Wonder' ба 'Muse Wonder Full' SWE-bench дээр 79% авч, тэргүүлэгчдийг гүйцлээ",
     "source": "Meta AI"
@@ -118,30 +148,5 @@
     "time": "14:30",
     "source": "DOUYIN GALA",
     "title": "ByteDance бодит цагийн World Model-оо танилцуулж, 'King of Comedy' киног 3D камерын замаар 12 өнцгөөс дахин зураглав"
-  },
-  {
-    "time": "14:10",
-    "source": "KREA AI",
-    "title": "Krea 3 Beta гарлаа: 2K нягтралтай зургийн хэсэгчилсэн засварыг 8 секундэд гүйцэтгэнэ"
-  },
-  {
-    "time": "13:50",
-    "source": "THE INFORMATION",
-    "title": "OpenAI хаагдсан Sora загвараа Jeffrey Katzenberg, Bill Peebles нарын стартапт шилжүүлж хувьцаа эзэмших хэлэлцээ хийж байна"
-  },
-  {
-    "time": "13:30",
-    "source": "LIGHTRICKS",
-    "title": "LTX-2.5 нээлттэй жинтэй пост-продакшн багц гарлаа: Alpha Gen маск, 16-бит EXR HDR ба 4K/8K Refine"
-  },
-  {
-    "time": "13:10",
-    "source": "BYTEPLUS",
-    "title": "ByteDance OmniHuman 2.0 загвараа API-аар нээлээ: 5 минутын 720p видеог 40% хямд өртгөөр үүсгэнэ"
-  },
-  {
-    "time": "12:45",
-    "source": "TECHCRUNCH",
-    "title": "FBI OpenAI-ийн инженерийг удирдлагын хурлын өрөөнд нууц микрофон байрлуулсан хэргээр баривчлав"
   }
 ]

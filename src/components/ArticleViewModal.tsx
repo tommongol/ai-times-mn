@@ -129,9 +129,34 @@ export const ArticleViewModal: React.FC<Props> = ({ article, onClose }) => {
 
           {/* Full content (Clean HTML) */}
           <div
-            className="text-base sm:text-lg text-neutral-900 leading-relaxed font-sans"
+            className="text-base sm:text-lg text-neutral-900 leading-relaxed font-sans space-y-4"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
+
+          {/* Appendix: Primary Sources */}
+          {article.sources && article.sources.length > 0 && (
+            <div className="mt-8 pt-5 border-t-2 border-black bg-neutral-50 p-4 sm:p-5">
+              <div className="font-mono text-xs font-black uppercase tracking-wider text-black mb-3 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 bg-[#00FF66] border border-black inline-block" />
+                <span>ХАВСРАЛТ // ТОЙМЫН ЭХ СУРВАЛЖУУД:</span>
+              </div>
+              <ul className="space-y-2 font-mono text-xs sm:text-sm">
+                {article.sources.map((src, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-neutral-500 font-bold">[{idx + 1}]</span>
+                    <a
+                      href={src.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-800 hover:text-black font-semibold underline break-all"
+                    >
+                      {src.name} — {src.url}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* Footer */}

@@ -66,6 +66,10 @@ export default function HomePage() {
   }, [articles, mainLead, subLeads]);
 
   // Section specific slices (deduplicated from top lead stories)
+  const reviewArticles = useMemo(() => {
+    return remainingArticles.filter((a) => a.category === 'review');
+  }, [remainingArticles]);
+
   const modelArticles = useMemo(() => {
     return remainingArticles.filter((a) => a.category === 'models');
   }, [remainingArticles]);
@@ -240,6 +244,14 @@ export default function HomePage() {
             <div className="max-w-7xl mx-auto px-4 pt-8">
               {/* Live 24H Realtime News Wire */}
               <LiveWire />
+
+              {/* Section Review: ДОЛОО ХОНОГИЙН ЗУРАГТ ТОЙМ */}
+              <SectionBlock
+                title="Долоо хоногийн хиймэл оюуны зурагт тойм (Weekly AI Review)"
+                articles={reviewArticles}
+                onSelect={setSelectedArticle}
+                onViewAll={() => setActiveSection('review')}
+              />
 
               {/* Section 0: ШИНЭ AI ЗАГВАРУУД (FRONTIER MODELS & BENCHMARKS) */}
               <SectionBlock
