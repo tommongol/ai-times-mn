@@ -179,7 +179,7 @@ export default function ArticleDetailPage() {
           {/* LEFT / MAIN READER COLUMN (8 Cols) */}
           <article className="lg:col-span-8 bg-white border-2 border-black p-6 sm:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
             {/* Article Header */}
-            <header className="border-b-2 border-black pb-6 mb-6">
+            <header className="pb-6 mb-4">
               <div className="flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3">
                 <span>/// {article.categoryName}</span>
                 {article.primarySource && (
@@ -219,7 +219,7 @@ export default function ArticleDetailPage() {
 
             {/* Primary Cover Image & Caption */}
             <div className="mb-6 space-y-2">
-              <div className="w-full bg-neutral-100 border-2 border-black overflow-hidden flex items-center justify-center p-2 sm:p-3">
+              <div className="w-full overflow-hidden flex items-center justify-center">
                 <img
                   src={article.coverImage}
                   alt={article.title}
@@ -229,14 +229,14 @@ export default function ArticleDetailPage() {
                 />
               </div>
               {article.imageCaption && (
-                <p className="text-xs font-mono text-neutral-600 bg-neutral-50 p-2.5 border-l-2 border-black">
+                <p className="text-xs font-sans text-neutral-500 mt-2">
                   // {article.imageCaption}
                 </p>
               )}
             </div>
 
-            {/* WIRED Lead Summary Callout */}
-            <div className="p-4 sm:p-5 mb-8 bg-neutral-900 text-white border-l-4 border-[#00FF66] text-sm sm:text-base leading-relaxed font-mono">
+            {/* Editorial Lead Summary (Clean, elegant, no harsh black box) */}
+            <div className="text-base sm:text-lg text-neutral-800 leading-relaxed font-serif mb-8 border-l-2 border-emerald-600 pl-4 py-1 italic">
               {article.summary}
             </div>
 
@@ -248,7 +248,7 @@ export default function ArticleDetailPage() {
 
             {/* Appendix: Primary Sources (Clean, small, discreet inline list) */}
             {article.sources && article.sources.length > 0 && (
-              <div className="mt-8 pt-4 border-t border-neutral-200 font-sans text-xs text-neutral-500 leading-relaxed">
+              <div className="mt-8 pt-3 font-sans text-xs text-neutral-500 leading-relaxed">
                 <span className="font-bold text-neutral-700 uppercase tracking-wider mr-2">
                   Эх сурвалжууд:
                 </span>
@@ -273,7 +273,7 @@ export default function ArticleDetailPage() {
             )}
 
             {/* Previous / Next Article Navigation */}
-            <div className="mt-10 pt-6 border-t-2 border-black grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-10 pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {prevArticle ? (
                 <Link
                   href={`/article/${prevArticle.id}`}

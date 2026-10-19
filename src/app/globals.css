@@ -69,17 +69,25 @@
 .article-body p {
   margin: 0 0 1.25em;
 }
+.article-body hr {
+  display: none !important;
+}
+.article-body h1,
 .article-body h2,
 .article-body h3,
-.article-body h4 {
+.article-body h4,
+.article-body h5,
+.article-body h6 {
   font-family: var(--font-sans), -apple-system, "Segoe UI", sans-serif;
-  font-size: 1.15em !important;
+  font-size: 1.2em !important;
   font-weight: 800 !important;
   line-height: 1.35 !important;
   color: #111 !important;
   margin: 1.8em 0 0.6em !important;
   padding: 0 !important;
   border: 0 !important;
+  border-bottom: 0 !important;
+  text-decoration: none !important;
   background: none !important;
   text-transform: none !important;
   letter-spacing: normal !important;
@@ -102,12 +110,17 @@
 }
 .article-body figure {
   margin: 2em 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 .article-body figure img {
   width: 100%;
   height: auto;
   border: 0 !important;
   border-radius: 2px !important;
+  box-shadow: none !important;
 }
 .article-body figcaption {
   font-family: var(--font-sans), sans-serif;
@@ -115,23 +128,38 @@
   line-height: 1.5;
   color: #6b7280 !important;
   margin-top: 0.5em !important;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
 }
 /* Single, calm highlight style for any callout / quote box */
-.article-body blockquote,
-.article-body div[style*="border-left"],
-.article-body div[style*="background"] {
+.article-body blockquote {
   margin: 1.8em 0 !important;
   padding: 0.2em 0 0.2em 1.1em !important;
   border: 0 !important;
-  border-left: 3px solid #00c853 !important;
+  border-left: 3px solid #059669 !important;
   background: transparent !important;
   font-family: inherit !important;
   font-size: 1em !important;
-  color: #222 !important;
+  color: #374151 !important;
   box-shadow: none !important;
 }
-.article-body div[style*="border-top"] {
+.article-body div[class*="border-l-4"],
+.article-body div[class*="border-2"],
+.article-body div[style*="border-left"],
+.article-body div[style*="background"] {
+  border: 0 !important;
+  border-left: 3px solid #059669 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.2em 0 0.2em 1.1em !important;
+  margin: 1.8em 0 !important;
+}
+.article-body div[class*="border-t"],
+.article-body div[class*="border-b"],
+.article-body div[style*="border-top"],
+.article-body div[style*="border-bottom"] {
   border-top: 0 !important;
-  padding-top: 0 !important;
-  margin-top: 1.5em !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
