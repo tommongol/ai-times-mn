@@ -51,6 +51,8 @@ export const NewspaperLead: React.FC<Props> = ({
               <img
                 src={mainLead.coverImage}
                 alt={mainLead.title}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
               />
             </div>
@@ -87,6 +89,7 @@ export const NewspaperLead: React.FC<Props> = ({
                     <img
                       src={art.coverImage}
                       alt={art.title}
+                      decoding="async"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     />
                     <span className="absolute top-2 right-2 bg-black text-[#00FF66] font-mono text-[10px] font-bold px-1.5 py-0.5">
