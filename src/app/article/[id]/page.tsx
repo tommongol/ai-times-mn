@@ -242,38 +242,33 @@ export default function ArticleDetailPage() {
 
             {/* Full Continuous Article Body (HTML + Inline Figures) */}
             <div
-              className="text-base sm:text-[17px] text-neutral-900 leading-[1.8] font-sans space-y-5 [&_h3]:text-xl [&_h3]:sm:text-2xl [&_h3]:font-black [&_h3]:text-black [&_h3]:mt-8 [&_h3]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_li]:leading-relaxed [&_figure]:my-6 [&_figure_img]:w-full [&_figure_img]:border [&_figure_img]:border-black"
+              className="article-body"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
 
-            {/* Appendix: Primary Sources */}
+            {/* Appendix: Primary Sources (Clean, small, discreet inline list) */}
             {article.sources && article.sources.length > 0 && (
-              <div className="mt-10 pt-6 border-t-2 border-black bg-neutral-50 p-5 sm:p-6">
-                <div className="font-mono text-xs sm:text-sm font-black uppercase tracking-wider text-black mb-4 flex items-center gap-2">
-                  <span className="w-3 h-3 bg-[#00FF66] border border-black inline-block" />
-                  <span>ХАВСРАЛТ // АШИГЛАСАН ЭХ СУРВАЛЖ БА ХОЛБООСУУД:</span>
-                </div>
-                <ul className="space-y-2.5 font-mono text-xs sm:text-sm">
+              <div className="mt-8 pt-4 border-t border-neutral-200 font-sans text-xs text-neutral-500 leading-relaxed">
+                <span className="font-bold text-neutral-700 uppercase tracking-wider mr-2">
+                  Эх сурвалжууд:
+                </span>
+                <span className="inline">
                   {article.sources.map((src, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-2.5 bg-white p-2.5 border border-neutral-200 hover:border-black transition-colors"
-                    >
-                      <span className="bg-black text-[#00FF66] font-bold px-1.5 py-0.5 text-[11px] shrink-0">
-                        [{idx + 1}]
-                      </span>
+                    <React.Fragment key={idx}>
                       <a
                         href={src.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-emerald-800 hover:text-black font-bold underline break-all flex items-center gap-1.5"
+                        className="text-neutral-600 hover:text-emerald-700 underline underline-offset-2 transition-colors"
                       >
-                        <span>{src.name}</span>
-                        <ExternalLink className="w-3.5 h-3.5 shrink-0 inline" />
+                        {src.name}
                       </a>
-                    </li>
+                      {idx < article.sources.length - 1 && (
+                        <span className="mx-1.5 text-neutral-400">•</span>
+                      )}
+                    </React.Fragment>
                   ))}
-                </ul>
+                </span>
               </div>
             )}
 

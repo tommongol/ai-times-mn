@@ -58,3 +58,80 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ---------- Long-form article body (continuous, calm reading) ---------- */
+.article-body {
+  font-family: Georgia, "Times New Roman", var(--font-sans), serif;
+  font-size: 19px;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+.article-body p {
+  margin: 0 0 1.25em;
+}
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  font-family: var(--font-sans), -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.15em !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  color: #111 !important;
+  margin: 1.8em 0 0.6em !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+.article-body strong {
+  font-weight: 700;
+}
+.article-body a {
+  color: #065f46;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-body ul,
+.article-body ol {
+  margin: 0 0 1.25em 1.4em;
+  list-style: disc;
+}
+.article-body li {
+  margin-bottom: 0.4em;
+}
+.article-body figure {
+  margin: 2em 0 !important;
+}
+.article-body figure img {
+  width: 100%;
+  height: auto;
+  border: 0 !important;
+  border-radius: 2px !important;
+}
+.article-body figcaption {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px !important;
+  line-height: 1.5;
+  color: #6b7280 !important;
+  margin-top: 0.5em !important;
+}
+/* Single, calm highlight style for any callout / quote box */
+.article-body blockquote,
+.article-body div[style*="border-left"],
+.article-body div[style*="background"] {
+  margin: 1.8em 0 !important;
+  padding: 0.2em 0 0.2em 1.1em !important;
+  border: 0 !important;
+  border-left: 3px solid #00c853 !important;
+  background: transparent !important;
+  font-family: inherit !important;
+  font-size: 1em !important;
+  color: #222 !important;
+  box-shadow: none !important;
+}
+.article-body div[style*="border-top"] {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 1.5em !important;
+}
