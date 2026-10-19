@@ -18,12 +18,15 @@ import {
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { useNews } from '@/context/NewsContext';
-import { NAV_SECTIONS } from '@/data/news';
+import { ARTICLES as DEFAULT_ARTICLES, LIVE_WIRE as DEFAULT_LIVE_WIRE, NAV_SECTIONS } from '@/data/news';
 
 export default function ArticleDetailPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
-  const { articles, liveWire } = useNews();
+  const { articles: contextArticles, liveWire: contextLiveWire } = useNews();
+
+  const articles = contextArticles && contextArticles.length > 0 ? contextArticles : DEFAULT_ARTICLES;
+  const liveWire = contextLiveWire && contextLiveWire.length > 0 ? contextLiveWire : DEFAULT_LIVE_WIRE;
 
   const articleId = decodeURIComponent(params?.id || '');
 
@@ -31,7 +34,19 @@ export default function ArticleDetailPage() {
     return articles.findIndex((a) => a.id === articleId || a.slug === articleId);
   }, [articles, articleId]);
 
-  const article = currentIndex >= 0 ? articles[currentIndex] : null;
+  let article = currentIndex >= 0 ? articles[currentIndex] : null;
+
+  // Bulletproof fallback: If article has stale template from old browser cache, replace with fresh server article
+  if (
+    !article ||
+    article.content.includes('1. Үйл явдлын') ||
+    article.content.includes('AImedee.mn') ||
+    article.summary.includes('албан ёсны мэдээллээр:')
+  ) {
+    const fresh = DEFAULT_ARTICLES.find((a) => a.id === articleId || a.slug === articleId);
+    if (fresh) article = fresh;
+  }
+
   const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
   const nextArticle =
     currentIndex >= 0 && currentIndex < articles.length - 1

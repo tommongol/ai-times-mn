@@ -8,11 +8,12 @@ import { SectionBlock } from '@/components/SectionBlock';
 import { LiveWire } from '@/components/LiveWire';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { useNews } from '@/context/NewsContext';
-import { NAV_SECTIONS } from '@/data/news';
+import { ARTICLES as DEFAULT_ARTICLES, NAV_SECTIONS } from '@/data/news';
 import { Search, ArrowUpDown, XCircle } from 'lucide-react';
 
 export default function HomePage() {
-  const { articles } = useNews();
+  const { articles: contextArticles } = useNews();
+  const articles = contextArticles && contextArticles.length > 0 ? contextArticles : DEFAULT_ARTICLES;
   const [activeSection, setActiveSection] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [searchSort, setSearchSort] = useState<'latest' | 'views'>('latest');

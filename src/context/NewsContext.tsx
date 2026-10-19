@@ -26,35 +26,38 @@ const STORAGE_LIVEWIRE_KEY = 'aimedee_livewire_custom_v2';
 export const NewsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [articles, setArticles] = useState<NewsArticle[]>(DEFAULT_ARTICLES);
   const [liveWire, setLiveWire] = useState<LiveWireItem[]>(DEFAULT_LIVE_WIRE);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  // Load from local storage or API on mount
+  // On mount: PURGE ALL STALE LOCALSTORAGE DATA & fetch latest server state
   useEffect(() => {
-    try {
-      const cachedArticles = localStorage.getItem(STORAGE_ARTICLES_KEY);
-      const cachedLiveWire = localStorage.getItem(STORAGE_LIVEWIRE_KEY);
-
-      if (cachedArticles) {
-        setArticles(JSON.parse(cachedArticles));
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem(STORAGE_ARTICLES_KEY);
+        localStorage.removeItem(STORAGE_LIVEWIRE_KEY);
+        localStorage.removeItem('aimedee_articles_custom');
+        localStorage.removeItem('aimedee_livewire_custom');
+        // Purge any key containing aimedee
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+          const k = localStorage.key(i);
+          if (k && (k.startsWith('aimedee_') || k.includes('articles_custom'))) {
+            localStorage.removeItem(k);
+          }
+        }
+      } catch (e) {
+        console.warn('LocalStorage purge error:', e);
       }
-      if (cachedLiveWire) {
-        setLiveWire(JSON.parse(cachedLiveWire));
-      }
-    } catch (e) {
-      console.warn('Could not read from localStorage:', e);
-    } finally {
-      setIsLoading(false);
     }
 
-    // Try fetching from API in background
+    // Always ensure fresh bundled articles are active
+    setArticles(DEFAULT_ARTICLES);
+    setLiveWire(DEFAULT_LIVE_WIRE);
+
+    // Refresh from API in background if available
     fetch('/api/articles')
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data && Array.isArray(data) && data.length > 0) {
-          // If no local custom override, or user hasn't modified locally, adopt server
-          if (!localStorage.getItem(STORAGE_ARTICLES_KEY)) {
-            setArticles(data);
-          }
+          setArticles(data);
         }
       })
       .catch(() => {
@@ -65,9 +68,7 @@ export const NewsProvider: React.FC<{ children: React.ReactNode }> = ({ children
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data && Array.isArray(data) && data.length > 0) {
-          if (!localStorage.getItem(STORAGE_LIVEWIRE_KEY)) {
-            setLiveWire(data);
-          }
+          setLiveWire(data);
         }
       })
       .catch(() => {
