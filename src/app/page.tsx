@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import Link from 'next/link';
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperLead } from '@/components/NewspaperLead';
 import { SectionBlock } from '@/components/SectionBlock';
 import { LiveWire } from '@/components/LiveWire';
-import { ArticleViewModal } from '@/components/ArticleViewModal';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { useNews } from '@/context/NewsContext';
-import { NewsArticle, NAV_SECTIONS } from '@/data/news';
+import { NAV_SECTIONS } from '@/data/news';
 import { Search, ArrowUpDown, XCircle } from 'lucide-react';
 
 export default function HomePage() {
@@ -16,7 +16,17 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [searchSort, setSearchSort] = useState<'latest' | 'views'>('latest');
-  const [selectedArticle, setSelectedArticle] = useState<NewsArticle | null>(null);
+
+  // Support navigating back from /article/[id] with ?section=... or ?q=...
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const sec = params.get('section');
+      const q = params.get('q');
+      if (sec) setActiveSection(sec);
+      if (q) setSearchQuery(q);
+    }
+  }, []);
 
   // Multi-field search and category filtering
   const filteredArticles = useMemo(() => {
@@ -43,7 +53,6 @@ export default function HomePage() {
       if (searchSort === 'views') {
         return b.readCount - a.readCount;
       }
-      // default: latest by date + time
       return (
         new Date(`${b.publishedAt}T${b.publishedTime}`).getTime() -
         new Date(`${a.publishedAt}T${a.publishedTime}`).getTime()
@@ -56,6 +65,7 @@ export default function HomePage() {
     return articles.find((a) => a.isMainLead) || articles[0];
   }, [articles]);
 
+  // The 4 right-side stories are strictly separate news stories (not review pieces)
   const subLeads = useMemo(() => {
     return articles
       .filter((a) => a.id !== mainLead?.id && a.category !== 'review')
@@ -67,7 +77,7 @@ export default function HomePage() {
     return articles.filter((a) => !leadIds.has(a.id));
   }, [articles, mainLead, subLeads]);
 
-  // Weekly AI Illustrated Review (dedicated single review section)
+  // Dedicated Weekly AI Illustrated Review
   const reviewArticles = useMemo(() => {
     return articles.filter((a) => a.category === 'review');
   }, [articles]);
@@ -172,15 +182,17 @@ export default function HomePage() {
             {filteredArticles.length > 0 ? (
               <div className="divide-y divide-neutral-200">
                 {filteredArticles.map((art) => (
-                  <article
+                  <Link
                     key={art.id}
-                    onClick={() => setSelectedArticle(art)}
+                    href={`/article/${art.id}`}
                     className="py-6 cursor-pointer group flex flex-col sm:flex-row gap-6 items-start hover:bg-white p-4 transition-colors border-l-2 border-transparent hover:border-black"
                   >
                     <div className="w-full sm:w-64 aspect-[16/10] shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300 relative">
                       <img
                         src={art.coverImage}
                         alt={art.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -205,7 +217,7 @@ export default function HomePage() {
                         ДЭЛГЭРЭНГҮЙ УНШИХ →
                       </div>
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
             ) : (
@@ -235,11 +247,10 @@ export default function HomePage() {
         ) : (
           /* Default WIRED Magazine Home Front Page */
           <>
-            {/* Magazine Lead Story & Featured Articles Area */}
+            {/* Magazine Lead Story & 4 Separate Featured Articles */}
             <NewspaperLead
               mainLead={mainLead}
               subLeads={subLeads}
-              onSelect={setSelectedArticle}
             />
 
             {/* Content Container */}
@@ -257,17 +268,17 @@ export default function HomePage() {
                         /// ДОЛОО ХОНОГИЙН ХИЙМЭЛ ОЮУНЫ ЗУРАГТ ТОЙМ (WEEKLY AI REVIEW)
                       </h2>
                     </div>
-                    <button
-                      onClick={() => setSelectedArticle(reviewArticles[0])}
+                    <Link
+                      href={`/article/${reviewArticles[0].id}`}
                       className="font-mono text-xs font-bold text-black hover:text-[#00FF66] hover:bg-black px-3 py-1 border border-black transition-colors cursor-pointer uppercase tracking-wider"
                     >
                       БҮТЭН ТОЙМ УНШИХ →
-                    </button>
+                    </Link>
                   </div>
 
-                  <article
-                    onClick={() => setSelectedArticle(reviewArticles[0])}
-                    className="group cursor-pointer bg-white border-2 border-black p-5 sm:p-7 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,255,102,1)] transition-all"
+                  <Link
+                    href={`/article/${reviewArticles[0].id}`}
+                    className="block group cursor-pointer bg-white border-2 border-black p-5 sm:p-7 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,255,102,1)] transition-all"
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
                       <div className="lg:col-span-5">
@@ -337,7 +348,7 @@ export default function HomePage() {
                         </div>
                       </div>
                     </div>
-                  </article>
+                  </Link>
                 </section>
               )}
 
@@ -345,7 +356,6 @@ export default function HomePage() {
               <SectionBlock
                 title="Шинэ AI Загварууд (Frontier Models & Benchmarks)"
                 articles={modelArticles}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('models')}
               />
 
@@ -353,7 +363,6 @@ export default function HomePage() {
               <SectionBlock
                 title="AI Технологи & Инноваци"
                 articles={techArticles}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('tech')}
               />
 
@@ -361,7 +370,6 @@ export default function HomePage() {
               <SectionBlock
                 title="Бодлого & Стратеги"
                 articles={policyArticles}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('policy')}
               />
 
@@ -369,7 +377,6 @@ export default function HomePage() {
               <SectionBlock
                 title="Хууль, Шүүх & Зохиогчийн эрх"
                 articles={lawArticles}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('law')}
               />
 
@@ -377,7 +384,6 @@ export default function HomePage() {
               <SectionBlock
                 title="Салбар ба Компаниуд"
                 articles={[...companiesArticles, ...industryArticles]}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('industry')}
               />
 
@@ -385,7 +391,6 @@ export default function HomePage() {
               <SectionBlock
                 title="Намтар, Хөрөг & Ярилцлага"
                 articles={interviewArticles}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('interview')}
               />
 
@@ -393,7 +398,6 @@ export default function HomePage() {
               <SectionBlock
                 title="Эрэн сурвалжлах тойм & Түүхэн шинжилгээ"
                 articles={opinionArticles}
-                onSelect={setSelectedArticle}
                 onViewAll={() => setActiveSection('opinion')}
               />
             </div>
@@ -403,12 +407,6 @@ export default function HomePage() {
 
       {/* WIRED Footer with 100% Real Attribution */}
       <NewspaperFooter />
-
-      {/* Modal Article Reader */}
-      <ArticleViewModal
-        article={selectedArticle}
-        onClose={() => setSelectedArticle(null)}
-      />
     </div>
   );
 }

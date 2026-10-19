@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { NewsArticle } from '@/data/news';
 
 interface Props {
   mainLead: NewsArticle;
   subLeads: NewsArticle[];
-  onSelect: (art: NewsArticle) => void;
+  onSelect?: (art: NewsArticle) => void;
 }
 
 export const NewspaperLead: React.FC<Props> = ({
   mainLead,
   subLeads,
-  onSelect,
 }) => {
   const rightFourArticles = subLeads.slice(0, 4);
 
@@ -22,8 +22,8 @@ export const NewspaperLead: React.FC<Props> = ({
         
         {/* Left Side: Main Cover Story (6 cols / 50%) */}
         <div className="lg:col-span-6 flex flex-col lg:border-r-2 border-black lg:pr-6 xl:pr-8">
-          <article
-            onClick={() => onSelect(mainLead)}
+          <Link
+            href={`/article/${mainLead.id}`}
             className="group cursor-pointer flex flex-col h-full justify-between"
           >
             {/* Kicker badge */}
@@ -71,7 +71,7 @@ export const NewspaperLead: React.FC<Props> = ({
                 ДЭЛГЭРЭНГҮЙ УНШИХ →
               </span>
             </div>
-          </article>
+          </Link>
         </div>
 
         {/* Right Side: 4 Symmetrical Stories (2x2 Grid) + Bottom Horizontal Ad Banner Space (6 cols / 50%) */}
@@ -79,9 +79,9 @@ export const NewspaperLead: React.FC<Props> = ({
           {/* 2x2 Grid of 4 Stories */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {rightFourArticles.map((art, idx) => (
-              <article
+              <Link
                 key={art.id}
-                onClick={() => onSelect(art)}
+                href={`/article/${art.id}`}
                 className="group cursor-pointer bg-white border border-neutral-200 hover:border-black p-3.5 flex flex-col justify-between transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
                 <div>
@@ -116,7 +116,7 @@ export const NewspaperLead: React.FC<Props> = ({
                     УНШИХ →
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 

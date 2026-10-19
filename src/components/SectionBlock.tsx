@@ -1,20 +1,20 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { NewsArticle } from '@/data/news';
 import { ArrowUpRight } from 'lucide-react';
 
 interface Props {
   title: string;
   articles: NewsArticle[];
-  onSelect: (art: NewsArticle) => void;
+  onSelect?: (art: NewsArticle) => void;
   onViewAll?: () => void;
 }
 
 export const SectionBlock: React.FC<Props> = ({
   title,
   articles,
-  onSelect,
   onViewAll,
 }) => {
   if (!articles.length) return null;
@@ -44,9 +44,9 @@ export const SectionBlock: React.FC<Props> = ({
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {articles.slice(0, 4).map((art, idx) => {
           return (
-            <article
+            <Link
               key={art.id}
-              onClick={() => onSelect(art)}
+              href={`/article/${art.id}`}
               className="group cursor-pointer h-full flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-4 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <div>
@@ -82,7 +82,7 @@ export const SectionBlock: React.FC<Props> = ({
                   УНШИХ →
                 </span>
               </div>
-            </article>
+            </Link>
           );
         })}
       </div>
