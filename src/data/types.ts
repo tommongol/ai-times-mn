@@ -1,0 +1,59 @@
+export type ArticleCategory =
+  | 'all'
+  | 'review'
+  | 'models'
+  | 'tech'
+  | 'policy'
+  | 'law'
+  | 'companies'
+  | 'industry'
+  | 'interview'
+  | 'opinion';
+
+export interface NewsArticle {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle?: string;
+  category: ArticleCategory;
+  categoryName: string;
+  primarySource: string;
+  primarySourceUrl: string;
+  publishedAt: string;
+  publishedTime: string;
+  readCount: number;
+  readTime?: string;
+  tags?: string[];
+  rank?: number;
+  coverImage: string;
+  imageCaption?: string;
+  isMainLead?: boolean;
+  isHot?: boolean;
+  summary: string;
+  content: string;
+  sources: { name: string; url: string }[];
+}
+
+export type ArticleCardData = Omit<NewsArticle, 'content' | 'sources'> & {
+  content?: string;
+  sources?: { name: string; url: string }[];
+};
+
+export interface LiveWireItem {
+  time: string;
+  title: string;
+  source: string;
+}
+
+export const NAV_SECTIONS = [
+  { id: 'all', name: 'БҮХ МЭДЭЭ' },
+  { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
+  { id: 'models', name: 'ШИНЭ AI ЗАГВАРУУД' },
+  { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
+  { id: 'policy', name: 'БОДЛОГО' },
+  { id: 'law', name: 'ХУУЛЬ & ШҮҮХ' },
+  { id: 'companies', name: 'КОМПАНИУД' },
+  { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
+  { id: 'interview', name: 'НАМТАР & ХӨРӨГ' },
+  { id: 'opinion', name: 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ' },
+] as const;

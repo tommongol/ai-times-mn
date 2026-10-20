@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { NAV_SECTIONS } from '@/data/news';
+import { NAV_SECTIONS } from '@/data/types';
 import { ShieldCheck, Mail, ArrowUpRight } from 'lucide-react';
 
 export const NewspaperFooter: React.FC = () => {

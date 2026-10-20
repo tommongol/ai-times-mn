@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useMemo } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
   ArrowLeft,
@@ -16,70 +16,28 @@ import {
 } from 'lucide-react';
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
-import { useNews } from '@/context/NewsContext';
-import { ARTICLES as DEFAULT_ARTICLES, LIVE_WIRE as DEFAULT_LIVE_WIRE, NAV_SECTIONS } from '@/data/news';
+import { NewsArticle, ArticleCardData, LiveWireItem, NAV_SECTIONS } from '@/data/types';
 
-export function ArticleDetailClient({ initialId }: { initialId?: string }) {
-  const params = useParams<{ id: string }>();
+interface Props {
+  article: NewsArticle | null;
+  prevArticle: ArticleCardData | null;
+  nextArticle: ArticleCardData | null;
+  relatedArticles: ArticleCardData[];
+  trendingArticles: ArticleCardData[];
+  moreStories: ArticleCardData[];
+  liveWire: LiveWireItem[];
+}
+
+export function ArticleDetailClient({
+  article,
+  prevArticle,
+  nextArticle,
+  relatedArticles,
+  trendingArticles,
+  moreStories,
+  liveWire,
+}: Props) {
   const router = useRouter();
-  const { articles: contextArticles, liveWire: contextLiveWire } = useNews();
-
-  const articles = contextArticles && contextArticles.length > 0 ? contextArticles : DEFAULT_ARTICLES;
-  const liveWire = contextLiveWire && contextLiveWire.length > 0 ? contextLiveWire : DEFAULT_LIVE_WIRE;
-
-  const articleId = decodeURIComponent(initialId || params?.id || '');
-
-  const currentIndex = useMemo(() => {
-    return articles.findIndex((a) => a.id === articleId || a.slug === articleId);
-  }, [articles, articleId]);
-
-  let article = currentIndex >= 0 ? articles[currentIndex] : null;
-
-  // Bulletproof fallback: If article has stale template from old browser cache, replace with fresh server article
-  if (
-    !article ||
-    article.content.includes('1. Үйл явдлын') ||
-    article.content.includes('AImedee.mn') ||
-    article.summary.includes('албан ёсны мэдээллээр:')
-  ) {
-    const fresh = DEFAULT_ARTICLES.find((a) => a.id === articleId || a.slug === articleId);
-    if (fresh) article = fresh;
-  }
-
-  const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
-  const nextArticle =
-    currentIndex >= 0 && currentIndex < articles.length - 1
-      ? articles[currentIndex + 1]
-      : null;
-
-  // Related / Recommended articles (same category first, then latest other stories)
-  const relatedArticles = useMemo(() => {
-    if (!article) return articles.slice(0, 6);
-    const sameCat = articles.filter(
-      (a) => a.id !== article.id && a.category === article.category
-    );
-    const others = articles.filter(
-      (a) => a.id !== article.id && a.category !== article.category
-    );
-    return [...sameCat, ...others].slice(0, 6);
-  }, [articles, article]);
-
-  // Top 5 most-read stories
-  const trendingArticles = useMemo(() => {
-    return [...articles]
-      .filter((a) => a.id !== article?.id)
-      .sort((a, b) => (b.readCount || 0) - (a.readCount || 0))
-      .slice(0, 5);
-  }, [articles, article]);
-
-  // Bottom 4 stories from other categories
-  const moreStories = useMemo(() => {
-    const excludeIds = new Set([
-      article?.id,
-      ...relatedArticles.map((r) => r.id),
-    ]);
-    return articles.filter((a) => !excludeIds.has(a.id)).slice(0, 4);
-  }, [articles, article, relatedArticles]);
 
   const handleShare = () => {
     if (typeof window !== 'undefined' && navigator.clipboard) {
@@ -123,7 +81,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-black font-sans selection:bg-[#00FF66] selection:text-black">
-      {/* Global Masthead & Navigation */}
       <NewspaperHeader
         activeSection={article.category}
         onSelectSection={(sec) => router.push(`/?section=${sec}`)}
@@ -133,7 +90,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
         }}
       />
 
-      {/* Breadcrumb & Reader Toolbar */}
       <div className="bg-neutral-900 text-white border-b-2 border-black">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
           <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
@@ -187,12 +143,9 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
         </div>
       </div>
 
-      {/* Main 12-Column Editorial Page Layout */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT / MAIN READER COLUMN (8 Cols) */}
           <article className="lg:col-span-8 bg-white border-2 border-black p-6 sm:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-            {/* Article Header */}
             <header className="pb-6 mb-4">
               <div className="flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3">
                 <span>/// {article.categoryName}</span>
@@ -214,7 +167,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
                 </p>
               )}
 
-              {/* Topic Tags */}
               {article.tags && article.tags.length > 0 && (
                 <div className="flex items-center gap-2 flex-wrap pt-2 font-mono text-xs">
                   <span className="font-bold text-neutral-500">// СЭДВҮҮД:</span>
@@ -231,7 +183,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
               )}
             </header>
 
-            {/* Primary Cover Image & Caption */}
             <div className="mb-6 space-y-2">
               <div className="w-full overflow-hidden flex items-center justify-center">
                 <img
@@ -249,18 +200,15 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
               )}
             </div>
 
-            {/* Editorial Lead Summary (Clean, elegant, no harsh black box) */}
             <div className="text-base sm:text-lg text-neutral-800 leading-relaxed font-serif mb-8 border-l-2 border-emerald-600 pl-4 py-1 italic">
               {article.summary}
             </div>
 
-            {/* Full Continuous Article Body (HTML + Inline Figures) */}
             <div
               className="article-body"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
 
-            {/* Appendix: Primary Sources (Clean, small, discreet inline list) */}
             {article.sources && article.sources.length > 0 && (
               <div className="mt-8 pt-3 font-sans text-xs text-neutral-500 leading-relaxed">
                 <span className="font-bold text-neutral-700 uppercase tracking-wider mr-2">
@@ -286,7 +234,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
               </div>
             )}
 
-            {/* Previous / Next Article Navigation */}
             <div className="mt-10 pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {prevArticle ? (
                 <Link
@@ -324,9 +271,7 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
             </div>
           </article>
 
-          {/* RIGHT SIDEBAR COLUMN: RECOMMENDED, TRENDING, LINKS & WIRE (4 Cols) */}
           <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-6">
-            {/* 1. Recommended / Related Stories */}
             <div className="bg-white border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex items-center justify-between pb-3 mb-4 border-b-2 border-black">
                 <div className="flex items-center gap-2">
@@ -370,7 +315,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
               </div>
             </div>
 
-            {/* 2. Most Read / Trending Stories */}
             <div className="bg-white border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex items-center justify-between pb-3 mb-4 border-b-2 border-black">
                 <div className="flex items-center gap-2">
@@ -407,7 +351,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
               </div>
             </div>
 
-            {/* 3. Live 24H Wire in Sidebar */}
             <div className="bg-neutral-900 text-white border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex items-center justify-between pb-3 mb-4 border-b border-neutral-700">
                 <div className="flex items-center gap-2 font-mono text-xs font-black text-[#00FF66] uppercase">
@@ -434,7 +377,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
               </div>
             </div>
 
-            {/* 4. Quick Category Links */}
             <div className="bg-white border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex items-center gap-2 pb-3 mb-4 border-b-2 border-black">
                 <Layers className="w-4 h-4 text-black" />
@@ -461,7 +403,6 @@ export function ArticleDetailClient({ initialId }: { initialId?: string }) {
           </aside>
         </div>
 
-        {/* Bottom Section: More Stories to Explore */}
         {moreStories.length > 0 && (
           <section className="mt-12 pt-8 border-t-2 border-black">
             <div className="flex items-center justify-between pb-3 mb-6 border-b-2 border-black">

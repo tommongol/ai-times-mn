@@ -2,12 +2,12 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { NewsArticle } from '@/data/news';
+import { ArticleCardData } from '@/data/types';
 
 interface Props {
-  mainLead: NewsArticle;
-  subLeads: NewsArticle[];
-  onSelect?: (art: NewsArticle) => void;
+  mainLead: ArticleCardData;
+  subLeads: ArticleCardData[];
+  onSelect?: (art: ArticleCardData) => void;
 }
 
 export const NewspaperLead: React.FC<Props> = ({

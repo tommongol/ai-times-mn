@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { useNews } from '@/context/NewsContext';
+import { useNews, NewsProvider } from '@/context/NewsContext';
 import { NewsArticle, NAV_SECTIONS } from '@/data/news';
 import { ArticleEditorModal } from '@/components/admin/ArticleEditorModal';
 import { LiveWireEditorModal } from '@/components/admin/LiveWireEditorModal';
@@ -40,6 +40,14 @@ const DEFAULT_ADMIN_PASSWORDS = ['aimedee2026', 'admin2026'];
 const ADMIN_AUTH_SESSION_KEY = 'aimedee_admin_auth_v1';
 
 export default function AdminDashboardPage() {
+  return (
+    <NewsProvider>
+      <AdminDashboardInner />
+    </NewsProvider>
+  );
+}
+
+function AdminDashboardInner() {
   const {
     articles,
     liveWire,

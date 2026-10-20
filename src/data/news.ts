@@ -1,48 +1,33 @@
 import rawArticles from './articles.json';
 import rawLiveWire from './live_wire.json';
+import { NewsArticle, ArticleCardData, LiveWireItem, NAV_SECTIONS } from './types';
 
-export interface NewsArticle {
-  id: string;
-  slug: string;
-  title: string;
-  subtitle?: string;
-  category: 'all' | 'review' | 'models' | 'tech' | 'policy' | 'law' | 'companies' | 'industry' | 'interview' | 'opinion';
-  categoryName: string;
-  primarySource: string;
-  primarySourceUrl: string;
-  publishedAt: string;
-  publishedTime: string;
-  readCount: number;
-  readTime?: string;
-  tags?: string[];
-  rank?: number;
-  coverImage: string;
-  imageCaption?: string;
-  isMainLead?: boolean;
-  isHot?: boolean;
-  summary: string;
-  content: string;
-  sources: { name: string; url: string }[];
-}
-
-export interface LiveWireItem {
-  time: string;
-  title: string;
-  source: string;
-}
-
-export const NAV_SECTIONS = [
-  { id: 'all', name: 'БҮХ МЭДЭЭ' },
-  { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
-  { id: 'models', name: 'ШИНЭ AI ЗАГВАРУУД' },
-  { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
-  { id: 'policy', name: 'БОДЛОГО' },
-  { id: 'law', name: 'ХУУЛЬ & ШҮҮХ' },
-  { id: 'companies', name: 'КОМПАНИУД' },
-  { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
-  { id: 'interview', name: 'НАМТАР & ХӨРӨГ' },
-  { id: 'opinion', name: 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ' },
-] as const;
+export type { NewsArticle, ArticleCardData, LiveWireItem };
+export { NAV_SECTIONS };
 
 export const ARTICLES: NewsArticle[] = rawArticles as NewsArticle[];
 export const LIVE_WIRE: LiveWireItem[] = rawLiveWire as LiveWireItem[];
+
+export function toArticleCard(art: NewsArticle): ArticleCardData {
+  return {
+    id: art.id,
+    slug: art.slug,
+    title: art.title,
+    subtitle: art.subtitle,
+    category: art.category,
+    categoryName: art.categoryName,
+    primarySource: art.primarySource,
+    primarySourceUrl: art.primarySourceUrl,
+    publishedAt: art.publishedAt,
+    publishedTime: art.publishedTime,
+    readCount: art.readCount,
+    readTime: art.readTime,
+    tags: art.tags,
+    rank: art.rank,
+    coverImage: art.coverImage,
+    imageCaption: art.imageCaption,
+    isMainLead: art.isMainLead,
+    isHot: art.isHot,
+    summary: art.summary,
+  };
+}

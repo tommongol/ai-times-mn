@@ -34,8 +34,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { NewsProvider } from '@/context/NewsContext';
-
 export default function RootLayout({
   children,
 }: {
@@ -44,9 +42,7 @@ export default function RootLayout({
   return (
     <html lang="mn" className={`${inter.variable} ${playfair.variable} ${mono.variable}`}>
       <body className="min-h-screen flex flex-col bg-[#FAFAF7] text-neutral-900 font-sans antialiased">
-        <NewsProvider>
-          {children}
-        </NewsProvider>
+        {children}
       </body>
     </html>
   );

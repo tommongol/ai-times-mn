@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Search, Mail, X, TrendingUp, Lock } from 'lucide-react';
-import { NAV_SECTIONS } from '@/data/news';
+import { NAV_SECTIONS } from '@/data/types';
 import { NewsletterModal } from '@/components/NewsletterModal';
 
 interface Props {

@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { NewsArticle } from '@/data/news';
+import { ArticleCardData } from '@/data/types';
 import { ArrowUpRight } from 'lucide-react';
 
 interface Props {
   title: string;
-  articles: NewsArticle[];
-  onSelect?: (art: NewsArticle) => void;
+  articles: ArticleCardData[];
+  onSelect?: (art: ArticleCardData) => void;
   onViewAll?: () => void;
 }
 
