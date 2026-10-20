@@ -47,6 +47,7 @@ export const SectionBlock: React.FC<Props> = ({
             <Link
               key={art.id}
               href={`/article/${art.id}`}
+              prefetch={false}
               className="group cursor-pointer h-full flex flex-col justify-between bg-white border border-neutral-200 hover:border-black p-4 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <div>

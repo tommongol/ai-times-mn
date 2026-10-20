@@ -48,32 +48,9 @@ export const NewsProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
     }
 
-    // Always ensure fresh bundled articles are active
+    // Always ensure fresh bundled articles are active immediately without redundant 622KB API re-fetch on visitor load
     setArticles(DEFAULT_ARTICLES);
     setLiveWire(DEFAULT_LIVE_WIRE);
-
-    // Refresh from API in background if available
-    fetch('/api/articles')
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data && Array.isArray(data) && data.length > 0) {
-          setArticles(data);
-        }
-      })
-      .catch(() => {
-        // Ignore background fetch failure
-      });
-
-    fetch('/api/live-wire')
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data && Array.isArray(data) && data.length > 0) {
-          setLiveWire(data);
-        }
-      })
-      .catch(() => {
-        // Ignore background fetch failure
-      });
   }, []);
 
   // Save to localStorage & send to API

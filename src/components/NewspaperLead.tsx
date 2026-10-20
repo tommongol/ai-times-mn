@@ -82,6 +82,7 @@ export const NewspaperLead: React.FC<Props> = ({
               <Link
                 key={art.id}
                 href={`/article/${art.id}`}
+                prefetch={false}
                 className="group cursor-pointer bg-white border border-neutral-200 hover:border-black p-3.5 flex flex-col justify-between transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,0.04)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
                 <div>
@@ -89,6 +90,7 @@ export const NewspaperLead: React.FC<Props> = ({
                     <img
                       src={art.coverImage}
                       alt={art.title}
+                      loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     />

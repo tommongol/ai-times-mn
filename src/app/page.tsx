@@ -186,6 +186,7 @@ export default function HomePage() {
                   <Link
                     key={art.id}
                     href={`/article/${art.id}`}
+                    prefetch={false}
                     className="py-6 cursor-pointer group flex flex-col sm:flex-row gap-6 items-start hover:bg-white p-4 transition-colors border-l-2 border-transparent hover:border-black"
                   >
                     <div className="w-full sm:w-64 aspect-[16/10] shrink-0 overflow-hidden bg-neutral-100 border border-neutral-300 relative">
