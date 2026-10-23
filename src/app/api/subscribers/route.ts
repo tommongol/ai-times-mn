@@ -3,8 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import initialSubscribers from '@/data/subscribers.json';
 
-// GET нь src/middleware.ts-ээр зөвхөн редакцад нээлттэй. POST нь нийтэд нээлттэй боловч
-// бусдын бүртгэлийг хэзээ ч буцаахгүй.
+// Зөвхөн POST: бүртгэл хүлээн авна, бусдын бүртгэлийг хэзээ ч буцаахгүй (GET байхгүй).
 // Анхаар: Vercel-ийн файлын систем зөвхөн уншдаг тул энд бичсэн бүртгэл хадгалагдахгүй —
 // жинхэнэ товхимолд өгөгдлийн сан (MongoDB / Resend Audiences г.м.) хэрэгтэй.
 
@@ -23,11 +22,6 @@ function readSubscribers() {
     // ignore read error on serverless
   }
   return initialSubscribers;
-}
-
-export async function GET() {
-  const list = readSubscribers();
-  return NextResponse.json({ subscribers: list });
 }
 
 export async function POST(req: Request) {

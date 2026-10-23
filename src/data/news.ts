@@ -1,11 +1,18 @@
 import rawArticles from './articles.json';
 import rawLiveWire from './live_wire.json';
-import { NewsArticle, ArticleCardData, LiveWireItem, NAV_SECTIONS } from './types';
+import { NewsArticle, ArticleCardData, LiveWireItem, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from './types';
 
 export type { NewsArticle, ArticleCardData, LiveWireItem };
 export { NAV_SECTIONS };
 
-export const ARTICLES: NewsArticle[] = rawArticles as NewsArticle[];
+// Мэдээ автоматаар нэмэгдэхэд хуучин ангилал (models, policy, companies) ирсэн ч шинэ булан руугаа орно
+function normalizeCategory(art: NewsArticle): NewsArticle {
+  const category = (LEGACY_SECTION_ALIASES[art.category] || art.category) as NewsArticle['category'];
+  const section = NAV_SECTIONS.find((s) => s.id === category);
+  return section ? { ...art, category, categoryName: section.name } : art;
+}
+
+export const ARTICLES: NewsArticle[] = (rawArticles as NewsArticle[]).map(normalizeCategory);
 export const LIVE_WIRE: LiveWireItem[] = rawLiveWire as LiveWireItem[];
 
 export function toArticleCard(art: NewsArticle): ArticleCardData {

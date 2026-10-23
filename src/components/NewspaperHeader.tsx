@@ -53,11 +53,6 @@ export const NewspaperHeader: React.FC<Props> = ({
       <div className="border-b border-neutral-800 bg-neutral-900 text-xs text-neutral-300 py-2 px-4 font-mono">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
           <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 text-[#00FF66] font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
-              LIVE INTEL
-            </span>
-            <span className="text-neutral-600">|</span>
             <span className="text-neutral-200">{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
             <span className="hidden md:inline text-neutral-600">|</span>
             <span className="hidden md:inline text-[#00FF66] font-bold tracking-wider uppercase">
