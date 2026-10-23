@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { Search, Mail, X, TrendingUp, Lock } from 'lucide-react';
+import { Search, Mail, X, TrendingUp } from 'lucide-react';
 import { NAV_SECTIONS } from '@/data/types';
 import { NewsletterModal } from '@/components/NewsletterModal';
 
@@ -67,15 +66,6 @@ export const NewspaperHeader: React.FC<Props> = ({
           </div>
 
           <div className="flex items-center gap-3 text-xs">
-            <Link
-              href="/admin"
-              className="inline-flex items-center gap-1.5 text-white bg-neutral-800 hover:bg-[#00FF66] hover:text-black px-2.5 py-1 border border-neutral-700 font-bold transition-colors cursor-pointer uppercase tracking-wider"
-              title="Нууц үгээр нэвтрэх редакцын удирдлага"
-            >
-              <Lock className="w-3.5 h-3.5 text-[#00FF66] group-hover:text-black" />
-              <span>РЕДАКЦ / DASHBOARD</span>
-            </Link>
-            <span className="text-neutral-600">|</span>
             <button
               onClick={() => setIsNewsletterOpen(true)}
               className="bg-[#00FF66] text-black hover:bg-white px-2.5 py-1 flex items-center gap-1.5 transition-colors uppercase tracking-wider cursor-pointer font-black"

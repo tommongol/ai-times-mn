@@ -34,7 +34,7 @@ FEEDS = [
     {
         'name': 'The Korea Times',
         'url': 'https://news.google.com/rss/search?q=site:koreatimes.co.kr+(%22AI%22+OR+%22artificial+intelligence%22)&hl=en-US&gl=US&ceid=US:en',
-        'default_category': 'policy'
+        'default_category': 'law'
     },
     {
         'name': 'Google News AI Interviews',
@@ -44,7 +44,12 @@ FEEDS = [
     {
         'name': 'Google News AI',
         'url': 'https://news.google.com/rss/topics/CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB?hl=en-US&gl=US&ceid=US:en',
-        'default_category': 'companies'
+        'default_category': 'industry'
+    },
+    {
+        'name': 'Google News Robotics',
+        'url': 'https://news.google.com/rss/search?q=(humanoid+robot+OR+robotics+OR+%22embodied+AI%22)+when:7d&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'robotics'
     },
     {
         'name': 'WIRED',
@@ -118,15 +123,15 @@ def create_slug(title):
 
 def determine_category(title, summary=""):
     combined = (title + " " + summary).lower()
-    if any(k in combined for k in ['lawsuit', 'sue', 'sued', 'court', 'copyright', 'judge', 'antitrust', 'illegal', 'legal', 'law', 'шүүх', 'зарга', 'нэхэмжлэл']):
-        return 'law', 'ХУУЛЬ & ШҮҮХ'
-    elif any(k in combined for k in ['policy', 'regulation', 'ban', 'government', 'bill', 'act', 'sovereign', 'military', 'defense', 'pentagon', 'white house', 'бодлого', 'төрийн']):
-        return 'policy', 'БОДЛОГО'
+    if any(k in combined for k in ['robot', 'humanoid', 'drone', 'embodied', 'optimus', 'unitree', 'boston dynamics', 'figure ai', 'робот', 'дрон']):
+        return 'robotics', 'РОБОТ ТЕХНИК'
+    elif any(k in combined for k in ['lawsuit', 'sue', 'sued', 'court', 'copyright', 'judge', 'antitrust', 'illegal', 'legal', 'law', 'шүүх', 'зарга', 'нэхэмжлэл',
+                                     'policy', 'regulation', 'ban', 'government', 'bill', 'act', 'sovereign', 'military', 'defense', 'pentagon', 'white house', 'бодлого', 'төрийн']):
+        return 'law', 'ХУУЛЬ, ШҮҮХ & БОДЛОГО'
     elif any(k in combined for k in ['chip', 'semiconductor', 'model', 'architecture', 'hbm', 'reasoning', 'benchmark', 'code', 'agent', 'gpu', 'llm', 'transistor']):
         return 'tech', 'AI ТЕХНОЛОГИ'
-    elif any(k in combined for k in ['openai', 'nvidia', 'google', 'meta', 'anthropic', 'apple', 'microsoft', 'amazon', 'startup', 'ipo', 'stock', 'invest', 'valuation', 'capex']):
-        return 'companies', 'КОМПАНИУД'
-    elif any(k in combined for k in ['health', 'doctor', 'hospital', 'movie', 'film', 'cinema', 'car', 'auto', 'energy', 'business', 'enterprise', 'robot', 'spacex', 'factory']):
+    elif any(k in combined for k in ['openai', 'nvidia', 'google', 'meta', 'anthropic', 'apple', 'microsoft', 'amazon', 'startup', 'ipo', 'stock', 'invest', 'valuation', 'capex',
+                                     'health', 'doctor', 'hospital', 'movie', 'film', 'cinema', 'car', 'auto', 'energy', 'business', 'enterprise', 'spacex', 'factory']):
         return 'industry', 'САЛБАР & БИЗНЕС'
     elif any(k in combined for k in ['interview', 'profile', 'biography', 'ярилцлага', 'хөрөг']):
         return 'interview', 'НАМТАР & ХӨРӨГ'

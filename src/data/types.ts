@@ -1,11 +1,9 @@
 export type ArticleCategory =
   | 'all'
   | 'review'
-  | 'models'
   | 'tech'
-  | 'policy'
+  | 'robotics'
   | 'law'
-  | 'companies'
   | 'industry'
   | 'interview'
   | 'opinion';
@@ -48,12 +46,17 @@ export interface LiveWireItem {
 export const NAV_SECTIONS = [
   { id: 'all', name: 'БҮХ МЭДЭЭ' },
   { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
-  { id: 'models', name: 'ШИНЭ AI ЗАГВАРУУД' },
   { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
-  { id: 'policy', name: 'БОДЛОГО' },
-  { id: 'law', name: 'ХУУЛЬ & ШҮҮХ' },
-  { id: 'companies', name: 'КОМПАНИУД' },
+  { id: 'robotics', name: 'РОБОТ ТЕХНИК' },
+  { id: 'law', name: 'ХУУЛЬ, ШҮҮХ & БОДЛОГО' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
   { id: 'interview', name: 'НАМТАР & ХӨРӨГ' },
   { id: 'opinion', name: 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ' },
 ] as const;
+
+// Нэгтгэсэн хуучин ангиллын холбоос (?section=models г.м.) шинэ ангилал руугаа очно
+export const LEGACY_SECTION_ALIASES: Record<string, string> = {
+  models: 'tech',
+  policy: 'law',
+  companies: 'industry',
+};

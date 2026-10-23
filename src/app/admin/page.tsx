@@ -28,16 +28,13 @@ import {
   Scale,
   Building2,
   FileText,
-  Lock,
-  LogOut,
   Mail,
   Send,
   Users,
   X,
 } from 'lucide-react';
 
-const DEFAULT_ADMIN_PASSWORDS = ['aimedee2026', 'admin2026'];
-const ADMIN_AUTH_SESSION_KEY = 'aimedee_admin_auth_v1';
+// Нэвтрэлтийг src/middleware.ts сервер талд шалгадаг (ADMIN_PASSWORD env).
 
 export default function AdminDashboardPage() {
   return (
@@ -63,12 +60,6 @@ function AdminDashboardInner() {
     exportLiveWireJson,
   } = useNews();
 
-  // Password authentication state
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [authChecked, setAuthChecked] = useState<boolean>(false);
-  const [passwordInput, setPasswordInput] = useState<string>('');
-  const [authError, setAuthError] = useState<string | null>(null);
-
   // Subscribers & Auto-Newsletter Dispatch state
   const [subscribers, setSubscribers] = useState<SubscriberRecord[]>(
     initialSubscribers as SubscriberRecord[]
@@ -78,12 +69,6 @@ function AdminDashboardInner() {
   const [lastDispatchTime, setLastDispatchTime] = useState<string>('Өнөөдөр 08:00 (Автомат)');
 
   useEffect(() => {
-    const savedAuth = sessionStorage.getItem(ADMIN_AUTH_SESSION_KEY);
-    if (savedAuth === 'authenticated') {
-      setIsAuthenticated(true);
-    }
-    setAuthChecked(true);
-
     // Load subscribers from API & localStorage
     const loadSubscribers = async () => {
       try {
@@ -109,28 +94,6 @@ function AdminDashboardInner() {
     };
     loadSubscribers();
   }, []);
-
-  const handlePasswordLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    const envPass = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
-    const validPasswords = envPass
-      ? [envPass, ...DEFAULT_ADMIN_PASSWORDS]
-      : DEFAULT_ADMIN_PASSWORDS;
-
-    if (validPasswords.includes(passwordInput.trim())) {
-      sessionStorage.setItem(ADMIN_AUTH_SESSION_KEY, 'authenticated');
-      setIsAuthenticated(true);
-      setAuthError(null);
-      setPasswordInput('');
-    } else {
-      setAuthError('Нууц үг буруу байна! Зөвхөн редакцын эрхтэй хэрэглэгч нэвтэрнэ.');
-    }
-  };
-
-  const handleLogout = () => {
-    sessionStorage.removeItem(ADMIN_AUTH_SESSION_KEY);
-    setIsAuthenticated(false);
-  };
 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -186,12 +149,12 @@ function AdminDashboardInner() {
   const stats = useMemo(() => {
     const total = articles.length;
     const techCount = articles.filter((a) => a.category === 'tech').length;
-    const policyCount = articles.filter((a) => a.category === 'policy').length;
+    const roboticsCount = articles.filter((a) => a.category === 'robotics').length;
     const lawCount = articles.filter((a) => a.category === 'law').length;
     const totalViews = articles.reduce((acc, curr) => acc + curr.readCount, 0);
     const mainLead = articles.find((a) => a.isMainLead);
 
-    return { total, techCount, policyCount, lawCount, totalViews, mainLeadTitle: mainLead?.title };
+    return { total, techCount, roboticsCount, lawCount, totalViews, mainLeadTitle: mainLead?.title };
   }, [articles]);
 
   const handleEdit = (article: NewsArticle) => {
@@ -244,80 +207,6 @@ function AdminDashboardInner() {
     setLastDispatchTime(nowStr);
     showToast(`Тогтмол товхимлыг бүртгэлтэй ${subscribers.length} хэрэглэгч рүү амжилттай илгээлээ!`);
   };
-
-  if (!authChecked) {
-    return <div className="min-h-screen bg-black" />;
-  }
-
-  // PASSWORD PROTECTION SCREEN
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen bg-neutral-950 text-white flex flex-col items-center justify-center p-4 font-mono">
-        <div className="w-full max-w-md bg-black border-2 border-[#00FF66] shadow-[8px_8px_0px_0px_rgba(0,255,102,0.35)] p-6 sm:p-8 space-y-6">
-          <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
-            <div className="flex items-center gap-2.5">
-              <div className="p-2 bg-[#00FF66] text-black">
-                <Lock className="w-5 h-5" />
-              </div>
-              <div>
-                <h1 className="text-base font-black uppercase tracking-wider text-white">
-                  РЕДАКЦЫН НУУЦЛАЛТАЙ ХЭСЭГ
-                </h1>
-                <p className="text-[11px] text-[#00FF66]">
-                  // DEEP INTELLIGENCE MONGOLIA — DASHBOARD
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-xs text-neutral-400 leading-relaxed">
-            Энэхүү удирдлагын самбар нь зөвхөн редакцын зөвшөөрөлтэй админ нэвтрэх нууцлалтай хэсэг юм. Нэвтрэх нууц үгээ оруулна уу.
-          </p>
-
-          {authError && (
-            <div className="p-3 bg-red-950/80 border border-red-500 text-red-300 text-xs font-bold">
-              [!] {authError}
-            </div>
-          )}
-
-          <form onSubmit={handlePasswordLogin} className="space-y-4">
-            <div>
-              <label className="block text-xs font-bold text-neutral-300 uppercase mb-1.5">
-                АДМИН НУУЦ ҮГ (PASSWORD):
-              </label>
-              <input
-                type="password"
-                autoFocus
-                required
-                value={passwordInput}
-                onChange={(e) => setPasswordInput(e.target.value)}
-                placeholder="Нууц үгээ оруулна уу..."
-                className="w-full px-3.5 py-2.5 bg-neutral-900 border-2 border-neutral-700 focus:border-[#00FF66] text-white text-sm focus:outline-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-3 bg-[#00FF66] text-black hover:bg-white font-black text-xs uppercase tracking-wider transition-colors cursor-pointer"
-            >
-              НЭВТРЭХ →
-            </button>
-          </form>
-
-          <div className="pt-3 border-t border-neutral-800 flex items-center justify-between text-xs">
-            <Link
-              href="/"
-              className="text-neutral-400 hover:text-[#00FF66] flex items-center gap-1.5 transition-colors"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Нүүр хуудас руу буцах</span>
-            </Link>
-            <span className="text-[10px] text-neutral-600">ENCRYPTED ACCESS</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-black font-sans pb-16">
@@ -388,14 +277,6 @@ function AdminDashboardInner() {
               <span>ШИНЭ МЭДЭЭ НЭМЭХ</span>
             </button>
 
-            <button
-              onClick={handleLogout}
-              className="px-3 py-1.5 bg-neutral-900 border border-red-800 text-red-400 hover:bg-red-600 hover:text-white font-mono text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer"
-              title="Удирдлагын самбарыг түгжих"
-            >
-              <LogOut className="w-3.5 h-3.5" />
-              <span>ТҮГЖИХ</span>
-            </button>
           </div>
         </div>
       </header>
@@ -422,19 +303,19 @@ function AdminDashboardInner() {
           <div className="bg-white border-2 border-black p-3.5 shadow-[4px_4px_0px_#000]">
             <div className="font-mono text-[10px] text-neutral-500 font-bold uppercase flex items-center gap-1">
               <ShieldCheck className="w-3 h-3 text-purple-600" />
-              БОДЛОГО БА СТРАТЕГИ
+              РОБОТ ТЕХНИК
             </div>
-            <div className="text-2xl font-black mt-1 font-mono">{stats.policyCount}</div>
-            <div className="text-[10px] text-neutral-500 font-mono mt-0.5">AI Act, геополитик</div>
+            <div className="text-2xl font-black mt-1 font-mono">{stats.roboticsCount}</div>
+            <div className="text-[10px] text-neutral-500 font-mono mt-0.5">Хүн дүрст робот, дрон</div>
           </div>
 
           <div className="bg-white border-2 border-black p-3.5 shadow-[4px_4px_0px_#000]">
             <div className="font-mono text-[10px] text-neutral-500 font-bold uppercase flex items-center gap-1">
               <Scale className="w-3 h-3 text-amber-600" />
-              ХУУЛЬ & ШҮҮХ
+              ХУУЛЬ, ШҮҮХ & БОДЛОГО
             </div>
             <div className="text-2xl font-black mt-1 font-mono">{stats.lawCount}</div>
-            <div className="text-[10px] text-neutral-500 font-mono mt-0.5">Зохиогчийн эрх, зарга</div>
+            <div className="text-[10px] text-neutral-500 font-mono mt-0.5">Зохиогчийн эрх, зарга, AI Act</div>
           </div>
 
           <div className="bg-white border-2 border-black p-3.5 shadow-[4px_4px_0px_#000] col-span-2 sm:col-span-1">

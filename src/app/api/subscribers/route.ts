@@ -3,7 +3,15 @@ import fs from 'fs';
 import path from 'path';
 import initialSubscribers from '@/data/subscribers.json';
 
+// GET нь src/middleware.ts-ээр зөвхөн редакцад нээлттэй. POST нь нийтэд нээлттэй боловч
+// бусдын бүртгэлийг хэзээ ч буцаахгүй.
+// Анхаар: Vercel-ийн файлын систем зөвхөн уншдаг тул энд бичсэн бүртгэл хадгалагдахгүй —
+// жинхэнэ товхимолд өгөгдлийн сан (MongoDB / Resend Audiences г.м.) хэрэгтэй.
+
 const filePath = path.join(process.cwd(), 'src/data/subscribers.json');
+const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,24}$/;
+const PHONE_RE = /^\+?[0-9\s-]{6,20}$/;
+const FREQUENCIES = new Set(['daily', 'weekly']);
 
 function readSubscribers() {
   try {
@@ -25,7 +33,10 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, phone, frequency = 'daily' } = body;
+    const name = typeof body?.name === 'string' ? body.name.trim().slice(0, 80) : '';
+    const email = typeof body?.email === 'string' ? body.email.trim().toLowerCase() : '';
+    const phone = typeof body?.phone === 'string' ? body.phone.trim() : '';
+    const frequency = FREQUENCIES.has(body?.frequency) ? body.frequency : 'daily';
 
     if (!email || !phone) {
       return NextResponse.json(
@@ -33,13 +44,16 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+    if (!EMAIL_RE.test(email) || !PHONE_RE.test(phone)) {
+      return NextResponse.json({ error: 'Имэйл эсвэл утасны дугаар буруу байна.' }, { status: 400 });
+    }
 
     const list = readSubscribers();
     const newSub = {
       id: `sub-${Date.now()}`,
-      name: (name || email.split('@')[0]).trim(),
-      email: email.trim().toLowerCase(),
-      phone: phone.trim(),
+      name: name || email.split('@')[0],
+      email,
+      phone,
       frequency,
       autoDispatch: true,
       createdAt: new Date().toISOString().slice(0, 16).replace('T', ' '),
@@ -54,7 +68,7 @@ export async function POST(req: Request) {
       // On read-only serverless environment, client also syncs to localStorage
     }
 
-    return NextResponse.json({ ok: true, subscriber: newSub, subscribers: updated });
+    return NextResponse.json({ ok: true, subscriber: newSub });
   } catch {
     return NextResponse.json({ error: 'Бүртгэл хадгалахад алдаа гарлаа.' }, { status: 500 });
   }

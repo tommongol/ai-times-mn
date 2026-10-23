@@ -7,7 +7,7 @@ import { NewspaperLead } from '@/components/NewspaperLead';
 import { SectionBlock } from '@/components/SectionBlock';
 import { LiveWire } from '@/components/LiveWire';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
-import { ArticleCardData, LiveWireItem, NAV_SECTIONS } from '@/data/types';
+import { ArticleCardData, LiveWireItem, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from '@/data/types';
 import { Search, ArrowUpDown, XCircle } from 'lucide-react';
 
 interface Props {
@@ -25,7 +25,7 @@ export function HomeClient({ articles, liveWire }: Props) {
       const params = new URLSearchParams(window.location.search);
       const sec = params.get('section');
       const q = params.get('q');
-      if (sec) setActiveSection(sec);
+      if (sec) setActiveSection(LEGACY_SECTION_ALIASES[sec] || sec);
       if (q) setSearchQuery(q);
     }
   }, []);
@@ -79,16 +79,12 @@ export function HomeClient({ articles, liveWire }: Props) {
     return articles.filter((a) => a.category === 'review');
   }, [articles]);
 
-  const modelArticles = useMemo(() => {
-    return remainingArticles.filter((a) => a.category === 'models');
-  }, [remainingArticles]);
-
   const techArticles = useMemo(() => {
     return remainingArticles.filter((a) => a.category === 'tech');
   }, [remainingArticles]);
 
-  const policyArticles = useMemo(() => {
-    return remainingArticles.filter((a) => a.category === 'policy');
+  const roboticsArticles = useMemo(() => {
+    return remainingArticles.filter((a) => a.category === 'robotics');
   }, [remainingArticles]);
 
   const lawArticles = useMemo(() => {
@@ -97,10 +93,6 @@ export function HomeClient({ articles, liveWire }: Props) {
 
   const industryArticles = useMemo(() => {
     return remainingArticles.filter((a) => a.category === 'industry');
-  }, [remainingArticles]);
-
-  const companiesArticles = useMemo(() => {
-    return remainingArticles.filter((a) => a.category === 'companies');
   }, [remainingArticles]);
 
   const interviewArticles = useMemo(() => {
@@ -212,6 +204,15 @@ export function HomeClient({ articles, liveWire }: Props) {
                     </div>
                   </Link>
                 ))}
+              </div>
+            ) : !searchQuery ? (
+              <div className="py-16 text-center bg-neutral-50 border-2 border-black p-8 my-6">
+                <h3 className="font-mono text-base font-black text-black mb-2 uppercase">
+                  ЭНЭ АНГИЛАЛД УДАХГҮЙ МЭДЭЭ НЭМЭГДЭНЭ
+                </h3>
+                <p className="text-xs text-neutral-600 max-w-md mx-auto font-mono">
+                  Шинэ булан нээгдлээ. Анхны нийтлэлүүд бэлтгэгдэж байна.
+                </p>
               </div>
             ) : (
               <div className="py-16 text-center bg-neutral-50 border-2 border-black p-8 my-6">
@@ -342,32 +343,26 @@ export function HomeClient({ articles, liveWire }: Props) {
               )}
 
               <SectionBlock
-                title="Шинэ AI Загварууд (Frontier Models & Benchmarks)"
-                articles={modelArticles}
-                onViewAll={() => setActiveSection('models')}
-              />
-
-              <SectionBlock
-                title="AI Технологи & Инноваци"
+                title="AI Технологи & Шинэ загварууд"
                 articles={techArticles}
                 onViewAll={() => setActiveSection('tech')}
               />
 
               <SectionBlock
-                title="Бодлого & Стратеги"
-                articles={policyArticles}
-                onViewAll={() => setActiveSection('policy')}
+                title="Робот техник (Robotics)"
+                articles={roboticsArticles}
+                onViewAll={() => setActiveSection('robotics')}
               />
 
               <SectionBlock
-                title="Хууль, Шүүх & Зохиогчийн эрх"
+                title="Хууль, Шүүх, Бодлого & Зохиогчийн эрх"
                 articles={lawArticles}
                 onViewAll={() => setActiveSection('law')}
               />
 
               <SectionBlock
-                title="Салбар ба Компаниуд"
-                articles={[...companiesArticles, ...industryArticles]}
+                title="Салбар, Бизнес & Компаниуд"
+                articles={industryArticles}
                 onViewAll={() => setActiveSection('industry')}
               />
 
