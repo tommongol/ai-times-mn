@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/guard.mjs",
     "build": "next build",
     "start": "next start",
     "check:spell": "python3 scripts/audit_mn_spell.py",
