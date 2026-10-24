@@ -64,20 +64,14 @@ export function HomeClient({ articles, liveWire }: Props) {
     return articles.find((a) => a.isMainLead) || articles[0];
   }, [articles]);
 
-  const subLeads = useMemo(() => {
-    return articles
-      .filter((a) => a.id !== mainLead?.id && a.category !== 'review')
-      .slice(0, 4);
-  }, [articles, mainLead]);
+  const reviewLead = useMemo(() => {
+    return articles.find((a) => a.category === 'review') || null;
+  }, [articles]);
 
   const remainingArticles = useMemo(() => {
-    const leadIds = new Set([mainLead?.id, ...subLeads.map((a) => a.id)]);
+    const leadIds = new Set([mainLead?.id, reviewLead?.id].filter(Boolean));
     return articles.filter((a) => !leadIds.has(a.id));
-  }, [articles, mainLead, subLeads]);
-
-  const reviewArticles = useMemo(() => {
-    return articles.filter((a) => a.category === 'review');
-  }, [articles]);
+  }, [articles, mainLead, reviewLead]);
 
   const techArticles = useMemo(() => {
     return remainingArticles.filter((a) => a.category === 'tech');
@@ -241,106 +235,11 @@ export function HomeClient({ articles, liveWire }: Props) {
           <>
             <NewspaperLead
               mainLead={mainLead}
-              subLeads={subLeads}
+              reviewLead={reviewLead}
             />
 
             <div className="max-w-7xl mx-auto px-4 pt-8">
               <LiveWire items={liveWire} />
-
-              {reviewArticles.length > 0 && (
-                <section className="py-8 border-b-2 border-black">
-                  <div className="flex items-center justify-between pb-3 mb-6 border-b-2 border-black">
-                    <div className="flex items-center gap-3">
-                      <span className="w-3 h-3 bg-[#00FF66] inline-block border border-black"></span>
-                      <h2 className="font-mono text-sm sm:text-base font-black text-black tracking-wider uppercase">
-                        /// ДОЛОО ХОНОГИЙН ХИЙМЭЛ ОЮУНЫ ЗУРАГТ ТОЙМ (WEEKLY AI REVIEW)
-                      </h2>
-                    </div>
-                    <Link
-                      href={`/article/${reviewArticles[0].id}`}
-                      prefetch={false}
-                      className="font-mono text-xs font-bold text-black hover:text-[#00FF66] hover:bg-black px-3 py-1 border border-black transition-colors cursor-pointer uppercase tracking-wider"
-                    >
-                      БҮТЭН ТОЙМ УНШИХ →
-                    </Link>
-                  </div>
-
-                  <Link
-                    href={`/article/${reviewArticles[0].id}`}
-                    prefetch={false}
-                    className="block group cursor-pointer bg-white border-2 border-black p-5 sm:p-7 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,255,102,1)] transition-all"
-                  >
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                      <div className="lg:col-span-5">
-                        <div className="aspect-[16/10] w-full overflow-hidden border border-black bg-neutral-100 relative">
-                          <img
-                            src={reviewArticles[0].coverImage}
-                            alt={reviewArticles[0].title}
-                            loading="lazy"
-                            decoding="async"
-                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                          />
-                          <span className="absolute top-2 left-2 bg-black text-[#00FF66] font-mono text-xs font-bold px-2.5 py-1 uppercase">
-                            20 ЭХ СУРВАЛЖ • ЗУРАГТ ТОЙМ
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="lg:col-span-7 flex flex-col justify-between space-y-3">
-                        <div className="flex items-center gap-3 font-mono text-xs">
-                          <span className="bg-[#00FF66] text-black font-black px-2 py-0.5 border border-black uppercase">
-                            {reviewArticles[0].categoryName}
-                          </span>
-                          <span className="text-neutral-600 font-bold">
-                            {reviewArticles[0].publishedAt} • {reviewArticles[0].readTime}
-                          </span>
-                        </div>
-
-                        <h3 className="text-xl sm:text-2xl font-black text-black group-hover:text-emerald-700 transition-colors leading-snug">
-                          {reviewArticles[0].title}
-                        </h3>
-
-                        <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
-                          {reviewArticles[0].summary}
-                        </p>
-
-                        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 pt-2">
-                          {[
-                            '/images/articles/ihg-ai-worm-pipeline.jpg',
-                            '/images/articles/ihg-tencent-agent-fleet.jpg',
-                            '/images/articles/ihg-gemini-apollo-cornhole.jpg',
-                            '/images/articles/ihg-anthropic-stone-commands.jpg',
-                            '/images/articles/ihg-flux3-klein-vs-krea3.jpg',
-                            '/images/articles/ihg-omnihuman-20-lipsync.jpg',
-                          ].map((thumb, idx) => (
-                            <div
-                              key={idx}
-                              className="aspect-[16/10] overflow-hidden border border-neutral-300 bg-neutral-100"
-                            >
-                              <img
-                                src={thumb}
-                                alt={`Тоймын зураг ${idx + 1}`}
-                                loading="lazy"
-                                decoding="async"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="pt-2 flex items-center justify-between border-t border-neutral-200 font-mono text-xs">
-                          <span className="text-neutral-600">
-                            Хавсралт: 20 анхдагч эх сурвалж багтсан
-                          </span>
-                          <span className="font-black text-black group-hover:text-emerald-700 uppercase">
-                            ДЭЛГЭРЭНГҮЙ ЗУРАГТ ТОЙМЫГ НЭЭХ →
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </section>
-              )}
 
               <SectionBlock
                 title="AI Технологи & Шинэ загварууд"
