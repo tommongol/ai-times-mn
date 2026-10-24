@@ -46,7 +46,7 @@ export function NewsletterTokenAction({ mode }: { mode: 'confirm' | 'unsubscribe
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#FAFAF7] text-black px-4">
       <Link href="/" className="font-mono font-black text-2xl mb-6">
-        AIMEDEE<span className="bg-black text-[#00FF66] px-1 ml-0.5">.MN</span>
+        <span className="bg-black text-[#00FF66] px-1 mr-1.5">AI</span>MONGOLIA
       </Link>
       <div className="w-full max-w-md bg-white border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,255,102,1)] p-6 sm:p-8 space-y-5">
         <h1 className="font-black text-xl">{t.title}</h1>

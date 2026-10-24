@@ -55,7 +55,7 @@ export const NewspaperHeader: React.FC<Props> = ({
             <span className="text-neutral-200">{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
             <span className="hidden md:inline text-neutral-600">|</span>
             <span className="hidden md:inline text-[#00FF66] font-bold tracking-wider uppercase">
-              Deep Intelligence Mongolia
+              AI Mongolia
             </span>
           </div>
 
@@ -86,15 +86,15 @@ export const NewspaperHeader: React.FC<Props> = ({
               className="group inline-flex flex-col items-center lg:items-start text-left cursor-pointer"
             >
               <div className="flex items-baseline tracking-tighter">
-                <span className="font-black text-4xl sm:text-5xl lg:text-[54px] leading-none text-black uppercase tracking-tight group-hover:text-neutral-800 transition-colors">
-                  AIMEDEE
+                <span className="text-[#00FF66] bg-black px-2 py-0.5 mr-2 font-black text-2xl sm:text-3xl lg:text-[34px] font-mono self-center">
+                  AI
                 </span>
-                <span className="text-[#00FF66] bg-black px-2 py-0.5 ml-2 font-black text-lg sm:text-xl font-mono">
-                  .MN
+                <span className="font-black text-4xl sm:text-5xl lg:text-[54px] leading-none text-black uppercase tracking-tight group-hover:text-neutral-800 transition-colors">
+                  MONGOLIA
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-1.5 font-mono text-xs text-neutral-600 uppercase tracking-widest">
-                <span className="font-bold text-black">// DEEP INTELLIGENCE MONGOLIA</span>
+                <span className="font-bold text-black">// ХИЙМЭЛ ОЮУНЫ МЭДЭЭ</span>
               </div>
             </button>
           </div>

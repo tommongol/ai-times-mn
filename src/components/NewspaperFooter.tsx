@@ -32,11 +32,11 @@ export const NewspaperFooter: React.FC = () => {
           {/* Left: Brand & Editorial Charter */}
           <div className="md:col-span-8 space-y-4">
             <div className="flex items-baseline gap-2">
-              <span className="font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
-                AIMEDEE
+              <span className="text-black bg-[#00FF66] px-2 py-0.5 font-black text-lg self-center">
+                AI
               </span>
-              <span className="text-black bg-[#00FF66] px-2 py-0.5 font-black text-sm">
-                .MN
+              <span className="font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
+                MONGOLIA
               </span>
               <span className="text-neutral-400 text-[11px] ml-3 hidden sm:inline">
                 // ARTIFICIAL INTELLIGENCE JOURNAL
@@ -50,19 +50,19 @@ export const NewspaperFooter: React.FC = () => {
                 <span>РЕДАКЦИЙН СТАНДАРТ</span>
               </div>
               <p>
-                Deep Intelligence Mongolia нь хиймэл оюун ухаан, дэвшилтэт технологийн салбарын мэдээлэл, техникийн шинжилгээ, зах зээлийн судалгааг олон нийтэд хүргэдэг мэргэшсэн цахим сэтгүүл юм. Манай редакц зөвхөн баталгаажсан өгөгдөл, албан ёсны судалгааны тайлангуудад тулгуурлан мэдээллийг нийтэлдэг.
+                AI Mongolia нь хиймэл оюун ухаан, дэвшилтэт технологийн салбарын мэдээлэл, техникийн шинжилгээ, зах зээлийн судалгааг олон нийтэд хүргэдэг мэргэшсэн цахим сэтгүүл юм. Манай редакц зөвхөн баталгаажсан өгөгдөл, албан ёсны судалгааны тайлангуудад тулгуурлан мэдээллийг нийтэлдэг.
               </p>
             </div>
 
             <div className="text-[11px] text-neutral-400 space-y-1">
               <p>
-                <strong>Мэдээллийн сүлжээ:</strong> Deep Intelligence Media • <strong>Холбоо барих:</strong> contact@deepintelligence.mn
+                <strong>Холбоо барих:</strong> <a href="mailto:hello@mongol.guru" className="hover:text-white underline">hello@mongol.guru</a>
               </p>
               <p>
                 <strong>Хаяг:</strong> Улаанбаатар хот, Сүхбаатар дүүрэг, Мэдээлэл технологийн үндэсний төв
               </p>
               <p className="text-neutral-500 pt-2">
-                © {new Date().getFullYear()} Deep Intelligence Mongolia. Бүх эрх хуулиар хамгаалагдсан. Нийтлэлийг иш татан ашиглахдаа холбоосыг заавал дурдана уу.
+                © {new Date().getFullYear()} AI Mongolia. Бүх эрх хуулиар хамгаалагдсан. Нийтлэлийг иш татан ашиглахдаа холбоосыг заавал дурдана уу.
               </p>
             </div>
           </div>
@@ -76,14 +76,11 @@ export const NewspaperFooter: React.FC = () => {
                   <span>РЕДАКЦТАЙ ХОЛБОГДОХ</span>
                 </div>
                 <ul className="space-y-2 text-neutral-400">
-                  <li className="hover:text-white transition-colors cursor-pointer">
-                    • Мэдээ, нийтлэл санал болгох: editorial@deepintelligence.mn
-                  </li>
-                  <li className="hover:text-white transition-colors cursor-pointer">
-                    • Хамтран ажиллах & Зар сурталчилгаа: ads@deepintelligence.mn
-                  </li>
-                  <li className="hover:text-white transition-colors cursor-pointer">
-                    • Техникийн дэмжлэг: dev@deepintelligence.mn
+                  <li>
+                    • Мэдээ санал болгох, хамтран ажиллах:{' '}
+                    <a href="mailto:hello@mongol.guru" className="hover:text-white underline">
+                      hello@mongol.guru
+                    </a>
                   </li>
                 </ul>
               </div>

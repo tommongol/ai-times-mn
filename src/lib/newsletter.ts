@@ -4,7 +4,7 @@ import { ARTICLES, NewsArticle } from '@/data/news';
 // Товхимлын серверийн туслахууд: Supabase-ийн aitimes_* функц, Resend илгээлт, имэйлийн загвар.
 
 export const SITE_URL = (process.env.SITE_URL || 'https://ai-times-mn.vercel.app').replace(/\/$/, '');
-const FROM = process.env.NEWSLETTER_FROM || 'Deep Intelligence Mongolia <tovhimol@mongol.guru>';
+const FROM = process.env.NEWSLETTER_FROM || 'AI Mongolia <tovhimol@mongol.guru>';
 const REPLY_TO = process.env.NEWSLETTER_REPLY_TO || 'hello@mongol.guru';
 
 export type Frequency = 'every3days' | 'weekly';
@@ -75,7 +75,7 @@ function shell(title: string, body: string, footer: string): string {
 <body style="margin:0;padding:0;background:#f4f4f0;font-family:Arial,Helvetica,sans-serif;color:#111">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f0"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border:2px solid #111">
-<tr><td style="background:#111;padding:16px 24px"><span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#ffffff">AIMEDEE</span><span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#00ff66">.MN</span><div style="font-family:'Courier New',monospace;font-size:11px;color:#9ca3af;margin-top:2px">DEEP INTELLIGENCE MONGOLIA</div></td></tr>
+<tr><td style="background:#111;padding:16px 24px"><span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#00ff66">AI</span> <span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#ffffff">MONGOLIA</span><div style="font-family:'Courier New',monospace;font-size:11px;color:#9ca3af;margin-top:2px">ХИЙМЭЛ ОЮУНЫ МЭДЭЭ</div></td></tr>
 <tr><td style="padding:24px">${body}</td></tr>
 <tr><td style="padding:16px 24px;border-top:1px solid #e5e5e5;font-size:12px;color:#6b7280;line-height:1.5">${footer}</td></tr>
 </table></td></tr></table></body></html>`;
@@ -84,7 +84,7 @@ function shell(title: string, body: string, footer: string): string {
 export function confirmEmail(email: string, token: string): OutgoingEmail {
   const link = `${SITE_URL}/tovhimol/batalgaajuulah?t=${token}`;
   const body = `<h1 style="font-size:22px;margin:0 0 12px">Захиалгаа баталгаажуулна уу</h1>
-<p style="font-size:15px;line-height:1.6;margin:0 0 20px">Та Deep Intelligence Mongolia-гийн товхимолд бүртгүүлсэн байна. Доорх товчийг дарж баталгаажуулснаар товхимол ирж эхэлнэ.</p>
+<p style="font-size:15px;line-height:1.6;margin:0 0 20px">Та AI Mongolia-гийн товхимолд бүртгүүлсэн байна. Доорх товчийг дарж баталгаажуулснаар товхимол ирж эхэлнэ.</p>
 <p style="margin:0 0 20px"><a href="${link}" style="display:inline-block;background:#111;color:#00ff66;text-decoration:none;font-weight:bold;padding:12px 22px;font-family:'Courier New',monospace">БАТАЛГААЖУУЛАХ</a></p>
 <p style="font-size:13px;color:#6b7280;line-height:1.5;margin:0">Хэрэв та бүртгүүлээгүй бол энэ имэйлийг үл тоомсорлоорой, танд дахин юу ч ирэхгүй.</p>`;
   return {
@@ -92,7 +92,7 @@ export function confirmEmail(email: string, token: string): OutgoingEmail {
     to: [email],
     reply_to: REPLY_TO,
     subject: 'Товхимлын захиалгаа баталгаажуулна уу',
-    html: shell('Захиалга баталгаажуулах', body, 'Deep Intelligence Mongolia'),
+    html: shell('Захиалга баталгаажуулах', body, 'AI Mongolia'),
     text: `Товхимлын захиалгаа баталгаажуулах холбоос: ${link}\n\nХэрэв та бүртгүүлээгүй бол энэ имэйлийг үл тоомсорлоорой.`,
   };
 }

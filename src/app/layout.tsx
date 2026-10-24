@@ -23,11 +23,11 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Deep Intelligence Mongolia — Хиймэл Оюун Ухааны Мэргэшсэн Сонин',
+  title: 'AI Mongolia — Хиймэл оюуны мэдээ, шинжилгээ',
   description: 'Хиймэл оюуны салбарын хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, технологийн шинжилгээг нэг дороос.',
-  keywords: ['Deep Intelligence', 'Deep Intelligence Mongolia', 'AI сонин', 'Хиймэл оюун', 'Шинэ AI загварууд', 'Технологийн мэдээ'],
+  keywords: ['AI Mongolia', 'AI сонин', 'Хиймэл оюун', 'Шинэ AI загварууд', 'Технологийн мэдээ'],
   openGraph: {
-    title: 'Deep Intelligence Mongolia — Хиймэл Оюун Ухааны Мэргэшсэн Сонин',
+    title: 'AI Mongolia — Хиймэл оюуны мэдээ, шинжилгээ',
     description: 'Хиймэл оюуны салбарын хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, технологийн шинжилгээг нэг дороос.',
     type: 'website',
     locale: 'mn_MN',

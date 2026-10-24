@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { NewsletterTokenAction } from '@/components/NewsletterTokenAction';
 
 export const metadata: Metadata = {
-  title: 'Захиалга цуцлах — Deep Intelligence Mongolia',
+  title: 'Захиалга цуцлах — AI Mongolia',
   robots: { index: false, follow: false },
 };
 

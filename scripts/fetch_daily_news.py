@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AImedee.mn - Autonomous Daily AI News Aggregator & Pipeline
+AI Mongolia - Autonomous Daily AI News Aggregator & Pipeline
 Aggregates news from:
 1. Wired (AI Section)
 2. TechRadar (AI Section)

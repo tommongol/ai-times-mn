@@ -19,7 +19,7 @@ for (const p of FORBIDDEN_PATHS) {
   if (existsSync(p)) errors.push(`${p} хасагдсан хэсэг буцаж орсон байна`);
 }
 
-const FORBIDDEN_TEXT = ['aimedee2026', 'admin2026', 'NEXT_PUBLIC_ADMIN_PASSWORD'];
+const FORBIDDEN_TEXT = ['aimedee2026', 'admin2026', 'NEXT_PUBLIC_ADMIN_PASSWORD', 'Deep Intelligence Mongolia', 'deepintelligence.mn', 'AIMEDEE'];
 function scan(dir) {
   for (const name of readdirSync(dir)) {
     const full = path.join(dir, name);

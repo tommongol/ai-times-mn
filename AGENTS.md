@@ -47,3 +47,9 @@
 байхгүй — зөвхөн `aitimes_*` функцээр (`src/lib/newsletter.ts`). Шинэ захиалагч имэйлээр
 баталгаажуулна (`/tovhimol/batalgaajuulah`), имэйл бүрд цуцлах холбоос (`/tovhimol/tsutslah`) бий.
 Илгээлт: Vercel Cron өдөр бүр 09:00 (УБ) `/api/newsletter/send` → Resend. Мэдээг `articles.json`-оос авна.
+
+## Нэр
+
+Сайтын нэр **AI Mongolia** (лого: ногоон «AI» тэмдэг + «MONGOLIA»). «Deep Intelligence Mongolia»,
+«AIMEDEE.MN» нэрийг дахин бүү хэрэглэ. Холбоо барих имэйл: hello@mongol.guru — байхгүй домен дээр
+имэйл хаяг бүү зохио.
