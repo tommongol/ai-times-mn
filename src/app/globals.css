@@ -96,9 +96,15 @@
   font-weight: 700;
 }
 .article-body a {
-  color: #065f46;
+  color: #047857;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.article-body a:hover {
+  color: #064e3b;
+  text-decoration-thickness: 2px;
 }
 .article-body ul,
 .article-body ol {
