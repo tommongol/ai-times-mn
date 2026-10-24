@@ -94,7 +94,7 @@ export const NewspaperHeader: React.FC<Props> = ({
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-1.5 font-mono text-xs text-neutral-600 uppercase tracking-widest">
-                <span className="font-bold text-black">// ХИЙМЭЛ ОЮУНЫ МЭДЭЭ</span>
+                <span className="font-bold text-black">// ХИЙМЭЛ ОЮУНЫ МЭДЭЭ МЭДЭЭЛЭЛ</span>
               </div>
             </button>
           </div>

@@ -75,7 +75,7 @@ function shell(title: string, body: string, footer: string): string {
 <body style="margin:0;padding:0;background:#f4f4f0;font-family:Arial,Helvetica,sans-serif;color:#111">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f0"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border:2px solid #111">
-<tr><td style="background:#111;padding:16px 24px"><span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#00ff66">AI</span> <span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#ffffff">MONGOLIA</span><div style="font-family:'Courier New',monospace;font-size:11px;color:#9ca3af;margin-top:2px">ХИЙМЭЛ ОЮУНЫ МЭДЭЭ</div></td></tr>
+<tr><td style="background:#111;padding:16px 24px"><span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#00ff66">AI</span> <span style="font-family:'Courier New',monospace;font-weight:bold;font-size:20px;color:#ffffff">MONGOLIA</span><div style="font-family:'Courier New',monospace;font-size:11px;color:#9ca3af;margin-top:2px">ХИЙМЭЛ ОЮУНЫ МЭДЭЭ МЭДЭЭЛЭЛ</div></td></tr>
 <tr><td style="padding:24px">${body}</td></tr>
 <tr><td style="padding:16px 24px;border-top:1px solid #e5e5e5;font-size:12px;color:#6b7280;line-height:1.5">${footer}</td></tr>
 </table></td></tr></table></body></html>`;
