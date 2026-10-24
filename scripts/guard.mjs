@@ -12,6 +12,8 @@ const FORBIDDEN_PATHS = [
   'src/components/admin',
   'src/app/api/articles',
   'src/app/api/live-wire',
+  'src/components/NewsletterModal.tsx',
+  'src/data/subscribers.json',
 ];
 for (const p of FORBIDDEN_PATHS) {
   if (existsSync(p)) errors.push(`${p} хасагдсан хэсэг буцаж орсон байна`);

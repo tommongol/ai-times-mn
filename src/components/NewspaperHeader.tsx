@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Search, Mail, X, TrendingUp } from 'lucide-react';
 import { NAV_SECTIONS } from '@/data/types';
-import { NewsletterModal } from '@/components/NewsletterModal';
 
 interface Props {
   activeSection: string;
@@ -30,7 +30,6 @@ export const NewspaperHeader: React.FC<Props> = ({
   onSearchChange,
 }) => {
   const [localInput, setLocalInput] = useState(searchQuery);
-  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,13 +60,14 @@ export const NewspaperHeader: React.FC<Props> = ({
           </div>
 
           <div className="flex items-center gap-3 text-xs">
-            <button
-              onClick={() => setIsNewsletterOpen(true)}
+            <Link
+              href="/tovhimol"
+              prefetch={false}
               className="bg-[#00FF66] text-black hover:bg-white px-2.5 py-1 flex items-center gap-1.5 transition-colors uppercase tracking-wider cursor-pointer font-black"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span>ТОВХИМОЛ / БҮРТГЭЛ</span>
-            </button>
+              <span>ТОВХИМОЛ ЗАХИАЛАХ</span>
+            </Link>
           </div>
         </div>
       </div>
@@ -185,10 +185,6 @@ export const NewspaperHeader: React.FC<Props> = ({
         </div>
       </nav>
 
-      <NewsletterModal
-        isOpen={isNewsletterOpen}
-        onClose={() => setIsNewsletterOpen(false)}
-      />
     </header>
   );
 };
