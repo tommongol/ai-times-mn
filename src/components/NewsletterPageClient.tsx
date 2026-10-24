@@ -68,9 +68,10 @@ export function NewsletterPageClient() {
               <div className="flex items-start gap-3 bg-emerald-50 border-2 border-black p-4">
                 <CheckCircle2 className="w-7 h-7 text-emerald-600 shrink-0" />
                 <div>
-                  <h1 className="font-black text-base sm:text-lg text-black">Бүртгэл амжилттай</h1>
+                  <h1 className="font-black text-base sm:text-lg text-black">Имэйлээ шалгана уу</h1>
                   <p className="text-sm text-neutral-700 mt-1">
-                    {email} хаяг руу {frequency === 'weekly' ? '7 хоногт' : '3 хоногт'} нэг удаа товхимол илгээнэ.
+                    {email} хаяг руу баталгаажуулах холбоос илгээлээ. Түүнийг дарснаар{' '}
+                    {frequency === 'weekly' ? '7 хоногт' : '3 хоногт'} нэг удаа товхимол ирж эхэлнэ.
                   </p>
                 </div>
               </div>
