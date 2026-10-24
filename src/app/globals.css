@@ -115,28 +115,31 @@
   margin-bottom: 0.4em;
 }
 .article-body figure {
-  margin: 2em 0 !important;
+  margin: 0.75em 0 2em !important;
   border: 0 !important;
   background: transparent !important;
   padding: 0 !important;
   box-shadow: none !important;
+}
+.article-body p + figure {
+  margin-top: -0.35em !important;
 }
 .article-body figure img {
   width: 100%;
   height: auto;
-  border: 0 !important;
-  border-radius: 2px !important;
-  box-shadow: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 3px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
 }
 .article-body figcaption {
   font-family: var(--font-sans), sans-serif;
   font-size: 13px !important;
-  line-height: 1.5;
+  line-height: 1.45;
   color: #6b7280 !important;
-  margin-top: 0.5em !important;
+  margin-top: 0.4em !important;
   border: 0 !important;
   background: transparent !important;
-  padding: 0 !important;
+  padding: 0 0.1em !important;
 }
 /* Single, calm highlight style for any callout / quote box */
 .article-body blockquote {
