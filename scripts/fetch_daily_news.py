@@ -124,7 +124,7 @@ def create_slug(title):
 def determine_category(title, summary=""):
     combined = (title + " " + summary).lower()
     if any(k in combined for k in ['robot', 'humanoid', 'drone', 'embodied', 'optimus', 'unitree', 'boston dynamics', 'figure ai', 'робот', 'дрон']):
-        return 'robotics', 'РОБОТ ТЕХНИК'
+        return 'robotics', 'РОБОТ'
     elif any(k in combined for k in ['lawsuit', 'sue', 'sued', 'court', 'copyright', 'judge', 'antitrust', 'illegal', 'legal', 'law', 'шүүх', 'зарга', 'нэхэмжлэл',
                                      'policy', 'regulation', 'ban', 'government', 'bill', 'act', 'sovereign', 'military', 'defense', 'pentagon', 'white house', 'бодлого', 'төрийн']):
         return 'law', 'ХУУЛЬ, ШҮҮХ & БОДЛОГО'

@@ -47,7 +47,7 @@ export const NAV_SECTIONS = [
   { id: 'all', name: 'БҮХ МЭДЭЭ' },
   { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
   { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
-  { id: 'robotics', name: 'РОБОТ ТЕХНИК' },
+  { id: 'robotics', name: 'РОБОТ' },
   { id: 'law', name: 'ХУУЛЬ, ШҮҮХ & БОДЛОГО' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
   { id: 'interview', name: 'НАМТАР & ХӨРӨГ' },

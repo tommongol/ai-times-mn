@@ -349,7 +349,7 @@ export function HomeClient({ articles, liveWire }: Props) {
               />
 
               <SectionBlock
-                title="Робот техник (Robotics)"
+                title="Робот"
                 articles={roboticsArticles}
                 onViewAll={() => setActiveSection('robotics')}
               />
