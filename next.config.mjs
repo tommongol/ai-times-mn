@@ -13,6 +13,17 @@ const securityHeaders = [
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
+  // Хуучин vercel.app хаягаас ai.mongol.guru руу. /api/* үлдэнэ — Vercel Cron шилжүүлэлт дагадаггүй.
+  async redirects() {
+    return [
+      {
+        source: '/:path((?!api/).*)',
+        has: [{ type: 'host', value: 'ai-times-mn.vercel.app' }],
+        destination: 'https://ai.mongol.guru/:path',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

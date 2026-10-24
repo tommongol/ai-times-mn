@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { ARTICLES } from '@/data/news';
 
-const SITE_URL = 'https://ai-times-mn.vercel.app';
+const SITE_URL = 'https://ai.mongol.guru';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

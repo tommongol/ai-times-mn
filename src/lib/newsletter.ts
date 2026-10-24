@@ -3,7 +3,7 @@ import { ARTICLES, NewsArticle } from '@/data/news';
 // Зөвхөн серверт (API route-оос) импортлоно — түлхүүр уншдаг.
 // Товхимлын серверийн туслахууд: Supabase-ийн aitimes_* функц, Resend илгээлт, имэйлийн загвар.
 
-export const SITE_URL = (process.env.SITE_URL || 'https://ai-times-mn.vercel.app').replace(/\/$/, '');
+export const SITE_URL = (process.env.SITE_URL || 'https://ai.mongol.guru').replace(/\/$/, '');
 const FROM = process.env.NEWSLETTER_FROM || 'AI Mongolia <tovhimol@mongol.guru>';
 const REPLY_TO = process.env.NEWSLETTER_REPLY_TO || 'hello@mongol.guru';
 

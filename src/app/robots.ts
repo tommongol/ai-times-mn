@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const SITE_URL = 'https://ai-times-mn.vercel.app';
+const SITE_URL = 'https://ai.mongol.guru';
 
 export default function robots(): MetadataRoute.Robots {
   return {

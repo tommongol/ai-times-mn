@@ -50,6 +50,6 @@
 
 ## Нэр
 
-Сайтын нэр **AI Mongolia** (лого: ногоон «AI» тэмдэг + «MONGOLIA»). «Deep Intelligence Mongolia»,
+Сайтын нэр **AI Mongolia**, хаяг **https://ai.mongol.guru** (ai-times-mn.vercel.app үүн рүү шилждэг) (лого: ногоон «AI» тэмдэг + «MONGOLIA»). «Deep Intelligence Mongolia»,
 «AIMEDEE.MN» нэрийг дахин бүү хэрэглэ. Холбоо барих имэйл: hello@mongol.guru — байхгүй домен дээр
 имэйл хаяг бүү зохио.

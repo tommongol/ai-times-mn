@@ -23,6 +23,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ai.mongol.guru'),
   title: 'AI Mongolia — Хиймэл оюуны мэдээ, шинжилгээ',
   description: 'Хиймэл оюуны салбарын хамгийн сүүлийн үеийн мэдээ, нийтлэл, ярилцлага, технологийн шинжилгээг нэг дороос.',
   keywords: ['AI Mongolia', 'AI сонин', 'Хиймэл оюун', 'Шинэ AI загварууд', 'Технологийн мэдээ'],
