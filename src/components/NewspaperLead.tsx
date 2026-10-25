@@ -129,12 +129,12 @@ export const NewspaperLead: React.FC<Props> = ({
                 {/* 6 Preview Thumbnails Strip */}
                 <div className="grid grid-cols-6 gap-2 mb-4 pt-1">
                   {[
+                    '/images/articles/rev-openai-biological-research.jpg',
+                    '/images/articles/rev-tencent-wevisone-vl.jpg',
+                    '/images/articles/rev-pure-video-dynamics.jpg',
+                    '/images/articles/rev-hi3d-mesh-generation.jpg',
                     '/images/articles/inv-kling-official.jpg',
-                    '/images/articles/art-xbox-labs-epic-ai.jpg',
-                    '/images/articles/kg-gemini-4-argon-4.jpg',
-                    '/images/articles/kg-muse-wonder-1.jpg',
-                    '/images/articles/ihg-omnihuman-20-lipsync.jpg',
-                    '/images/articles/rev-xiao-esp32-sense.jpg',
+                    '/images/articles/rev-block-dessa-voice.jpg',
                   ].map((thumb, idx) => (
                     <div
                       key={idx}
