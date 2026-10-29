@@ -55,7 +55,7 @@ export const NewspaperHeader: React.FC<Props> = ({
             <span className="text-neutral-200">{new Date().toISOString().split('T')[0]} ULAANBAATAR</span>
             <span className="hidden md:inline text-neutral-600">|</span>
             <span className="hidden md:inline text-[#00FF66] font-bold tracking-wider uppercase">
-              AI Mongolia
+              Latest update of AI
             </span>
           </div>
 
