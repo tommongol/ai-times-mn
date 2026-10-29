@@ -35,6 +35,7 @@ export function toArticleCard(art: NewsArticle): ArticleCardData {
     imageCaption: art.imageCaption,
     isMainLead: art.isMainLead,
     isHot: art.isHot,
+    previewImages: art.previewImages,
     summary: art.summary,
   };
 }

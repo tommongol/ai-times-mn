@@ -27,6 +27,7 @@ export interface NewsArticle {
   imageCaption?: string;
   isMainLead?: boolean;
   isHot?: boolean;
+  previewImages?: string[];
   summary: string;
   content: string;
   sources: { name: string; url: string }[];

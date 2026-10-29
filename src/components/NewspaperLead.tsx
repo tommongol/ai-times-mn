@@ -128,14 +128,17 @@ export const NewspaperLead: React.FC<Props> = ({
 
                 {/* 6 Preview Thumbnails Strip */}
                 <div className="grid grid-cols-6 gap-2 mb-4 pt-1">
-                  {[
-                    '/images/articles/rev-openai-biological-research.jpg',
-                    '/images/articles/rev-tencent-wevisone-vl.jpg',
-                    '/images/articles/rev-pure-video-dynamics.jpg',
-                    '/images/articles/rev-hi3d-mesh-generation.jpg',
-                    '/images/articles/inv-kling-official.jpg',
-                    '/images/articles/rev-block-dessa-voice.jpg',
-                  ].map((thumb, idx) => (
+                  {(reviewLead.previewImages && reviewLead.previewImages.length >= 6
+                    ? reviewLead.previewImages.slice(0, 6)
+                    : [
+                        '/images/articles/rev-metr-agent-monitoring-evasion.jpg',
+                        '/images/articles/rev-claude-scorpion-protein.jpg',
+                        '/images/articles/rev-cognition-devin-fusion.jpg',
+                        '/images/articles/rev-bfl-flux3-max.jpg',
+                        '/images/articles/rev-solar-renderer-neural.jpg',
+                        '/images/articles/rev-moss-image-5b.jpg',
+                      ]
+                  ).map((thumb, idx) => (
                     <div
                       key={idx}
                       className="aspect-[16/10] overflow-hidden border border-neutral-300 bg-neutral-100 relative group-hover:border-black transition-colors"
