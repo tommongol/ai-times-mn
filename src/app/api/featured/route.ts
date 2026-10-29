@@ -12,7 +12,7 @@ function card(a: NewsArticle) {
   return {
     id: a.id,
     title: a.title,
-    summary: a.subtitle || a.summary,
+    summary: a.summary || a.subtitle,
     image: a.coverImage ? new URL(a.coverImage, SITE).href : null,
     url: `${SITE}/article/${encodeURIComponent(a.id)}`,
   };
