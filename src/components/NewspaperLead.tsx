@@ -94,7 +94,7 @@ export const NewspaperLead: React.FC<Props> = ({
                       // ЗУРАГТ ТОЙМ
                     </span>
                     <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider">
-                      [WEEKLY AI REVIEW]
+                      [AI REVIEW]
                     </span>
                   </div>
                   <span className="font-mono text-xs text-neutral-500">
