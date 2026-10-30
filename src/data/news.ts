@@ -12,10 +12,56 @@ function normalizeCategory(art: NewsArticle): NewsArticle {
   return section ? { ...art, category, categoryName: section.name } : art;
 }
 
-export const ARTICLES: NewsArticle[] = (rawArticles as NewsArticle[]).map(normalizeCategory);
+function articleTimestamp(art: { publishedAt?: string; publishedTime?: string }): number {
+  const dt = `${art.publishedAt || '1970-01-01'}T${art.publishedTime || '00:00'}`;
+  const t = Date.parse(dt);
+  return Number.isNaN(t) ? 0 : t;
+}
+
+function extractContentImages(html?: string): string[] {
+  if (!html) return [];
+  const matches = html.matchAll(/<img[^>]+src=["']([^"']+)["']/gi);
+  const seen = new Set<string>();
+  const urls: string[] = [];
+  for (const m of matches) {
+    const url = m[1]?.trim();
+    if (url && !seen.has(url)) {
+      seen.add(url);
+      urls.push(url);
+    }
+  }
+  return urls;
+}
+
+export const ARTICLES: NewsArticle[] = (rawArticles as NewsArticle[])
+  .map(normalizeCategory)
+  .sort((a, b) => articleTimestamp(b) - articleTimestamp(a));
+
 export const LIVE_WIRE: LiveWireItem[] = rawLiveWire as LiveWireItem[];
 
+/**
+ * Нүүр хуудасны болон mongol.guru (/api/featured)-ийн хоёр онцлох мэдээг
+ * огнооны эрэмбээр автоматаар сонгоно:
+ * 1) mainLead — Хамгийн сүүлд орсон Хадаас материал (review бус, isMainLead=true эсвэл хамгийн шинэ нийтлэл)
+ * 2) reviewLead — Хамгийн сүүлд орсон Зурагт тойм (category === 'review')
+ */
+export function selectFeaturedArticles<T extends { id: string; category: string; isMainLead?: boolean }>(
+  list: T[]
+): { mainLead: T; reviewLead: T | null } {
+  const nonReview = list.filter((a) => a.category !== 'review');
+  const mainLead = nonReview.find((a) => a.isMainLead) || nonReview[0] || list[0];
+  const reviewLead = list.find((a) => a.category === 'review' && a.id !== mainLead?.id) || null;
+  return { mainLead, reviewLead };
+}
+
 export function toArticleCard(art: NewsArticle): ArticleCardData {
+  const autoThumbs =
+    art.previewImages && art.previewImages.length > 0
+      ? art.previewImages
+      : art.category === 'review'
+        ? extractContentImages(art.content).slice(0, 6)
+        : undefined;
+
   return {
     id: art.id,
     slug: art.slug,
@@ -35,7 +81,7 @@ export function toArticleCard(art: NewsArticle): ArticleCardData {
     imageCaption: art.imageCaption,
     isMainLead: art.isMainLead,
     isHot: art.isHot,
-    previewImages: art.previewImages,
+    previewImages: autoThumbs,
     summary: art.summary,
   };
 }

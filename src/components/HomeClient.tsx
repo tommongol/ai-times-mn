@@ -8,6 +8,7 @@ import { SectionBlock } from '@/components/SectionBlock';
 import { LiveWire } from '@/components/LiveWire';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
 import { ArticleCardData, LiveWireItem, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from '@/data/types';
+import { selectFeaturedArticles } from '@/data/news';
 import { Search, ArrowUpDown, XCircle } from 'lucide-react';
 
 interface Props {
@@ -60,12 +61,8 @@ export function HomeClient({ articles, liveWire }: Props) {
     });
   }, [articles, activeSection, searchQuery, searchSort]);
 
-  const mainLead = useMemo(() => {
-    return articles.find((a) => a.isMainLead) || articles[0];
-  }, [articles]);
-
-  const reviewLead = useMemo(() => {
-    return articles.find((a) => a.category === 'review') || null;
+  const { mainLead, reviewLead } = useMemo(() => {
+    return selectFeaturedArticles(articles);
   }, [articles]);
 
   const remainingArticles = useMemo(() => {

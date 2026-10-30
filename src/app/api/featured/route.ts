@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import { ARTICLES, NewsArticle } from '@/data/news';
+import { ARTICLES, NewsArticle, selectFeaturedArticles } from '@/data/news';
 
 // Нүүрний хоёр онцлох материал — «Хадаас материал» ба «Зурагт тойм». mongol.guru-гийн нүүр хуудас
-// үүнийг уншиж харуулна. Нүүртэй адил дүрмээр сонгоно. Статик: байршуулалт бүрд шинэчлэгдэнэ.
+// үүнийг уншиж харуулна. Нүүртэй яг ижил selectFeaturedArticles() дүрмээр хамгийн шинэ хоёр мэдээг сонгоно.
 
 export const dynamic = 'force-static';
 
@@ -19,8 +19,7 @@ function card(a: NewsArticle) {
 }
 
 export function GET() {
-  const lead = ARTICLES.find((a) => a.isMainLead) || ARTICLES[0];
-  const review = ARTICLES.find((a) => a.category === 'review' && a.id !== lead?.id);
-  const items = [lead, review].filter((a): a is NewsArticle => Boolean(a)).map(card);
+  const { mainLead, reviewLead } = selectFeaturedArticles(ARTICLES);
+  const items = [mainLead, reviewLead].filter((a): a is NewsArticle => Boolean(a)).map(card);
   return NextResponse.json({ items });
 }
