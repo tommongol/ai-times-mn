@@ -131,12 +131,12 @@ export const NewspaperLead: React.FC<Props> = ({
                   {(reviewLead.previewImages && reviewLead.previewImages.length >= 6
                     ? reviewLead.previewImages.slice(0, 6)
                     : [
-                        '/images/articles/rev-metr-agent-monitoring-evasion.jpg',
-                        '/images/articles/rev-claude-scorpion-protein.jpg',
-                        '/images/articles/rev-cognition-devin-fusion.jpg',
-                        '/images/articles/rev-bfl-flux3-max.jpg',
-                        '/images/articles/rev-solar-renderer-neural.jpg',
-                        '/images/articles/rev-moss-image-5b.jpg',
+                        '/images/articles/rev-metr-agent-monitoring-evasion-v2.jpg',
+                        '/images/articles/rev-claude-scorpion-protein-v2.jpg',
+                        '/images/articles/rev-cognition-devin-fusion-v2.jpg',
+                        '/images/articles/rev-bfl-flux3-max-v2.jpg',
+                        '/images/articles/rev-solar-renderer-neural-v2.jpg',
+                        '/images/articles/rev-moss-image-5b-v2.jpg',
                       ]
                   ).map((thumb, idx) => (
                     <div
