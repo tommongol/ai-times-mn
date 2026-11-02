@@ -32,6 +32,20 @@ function scan(dir) {
 }
 scan('src');
 
+// Гарчгийн уртын хашлага: хэт урт, сунжирсан гарчиг оруулахыг хориглоно.
+try {
+  const articles = JSON.parse(readFileSync('src/data/articles.json', 'utf8'));
+  for (const a of articles) {
+    const words = (a.title || '').trim().split(/\s+/).filter(Boolean).length;
+    const chars = (a.title || '').length;
+    if (words > 10 || chars > 75) {
+      errors.push(`articles.json [${a.id}]: Гарчиг хэт урт (${words} үг, ${chars} тэмдэгт; дээд хязгаар 10 үг / 75 тэмдэгт): «${a.title}»`);
+    }
+  }
+} catch (e) {
+  errors.push(`articles.json уншихад алдаа гарлаа: ${e.message}`);
+}
+
 // Локал компьютер дээр: GitHub-ын main-аас хоцорсон хуулбараас байршуулахыг хориглоно.
 // Vercel-ийн сервер дээр .git байхгүй тул энэ шалгалт алгасагдана.
 if (!process.env.VERCEL && existsSync('.git')) {
