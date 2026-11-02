@@ -41,6 +41,11 @@ try {
     if (words > 10 || chars > 75) {
       errors.push(`articles.json [${a.id}]: Гарчиг хэт урт (${words} үг, ${chars} тэмдэгт; дээд хязгаар 10 үг / 75 тэмдэгт): «${a.title}»`);
     }
+    if (!a.coverImage) {
+      errors.push(`articles.json [${a.id}]: coverImage талбар дутуу байна (imageUrl биш coverImage гэж бичнэ)`);
+    } else if (a.coverImage.startsWith('/images/') && !existsSync(path.join('public', a.coverImage))) {
+      errors.push(`articles.json [${a.id}]: coverImage зураг олдсонгүй: public${a.coverImage}`);
+    }
   }
 } catch (e) {
   errors.push(`articles.json уншихад алдаа гарлаа: ${e.message}`);
