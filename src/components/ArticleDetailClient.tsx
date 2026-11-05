@@ -11,12 +11,11 @@ import {
   Clock,
   Eye,
   Flame,
-  Radio,
   Layers,
 } from 'lucide-react';
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
-import { NewsArticle, ArticleCardData, LiveWireItem, NAV_SECTIONS } from '@/data/types';
+import { NewsArticle, ArticleCardData, NAV_SECTIONS } from '@/data/types';
 
 interface Props {
   article: NewsArticle | null;
@@ -25,7 +24,6 @@ interface Props {
   relatedArticles: ArticleCardData[];
   trendingArticles: ArticleCardData[];
   moreStories: ArticleCardData[];
-  liveWire: LiveWireItem[];
 }
 
 export function ArticleDetailClient({
@@ -35,7 +33,6 @@ export function ArticleDetailClient({
   relatedArticles,
   trendingArticles,
   moreStories,
-  liveWire,
 }: Props) {
   const router = useRouter();
 
@@ -347,32 +344,6 @@ export function ArticleDetailClient({
                       </div>
                     </div>
                   </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-neutral-900 text-white border-2 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-neutral-700">
-                <div className="flex items-center gap-2 font-mono text-xs font-black text-[#00FF66] uppercase">
-                  <Radio className="w-4 h-4 animate-pulse" />
-                  <span>ШУУД МЭДЭЭНИЙ УРСГАЛ</span>
-                </div>
-                <span className="font-mono text-[10px] bg-[#00FF66] text-black font-bold px-1.5 py-0.5">
-                  24H LIVE
-                </span>
-              </div>
-
-              <div className="space-y-3 divide-y divide-neutral-800 font-mono text-xs">
-                {liveWire.slice(0, 6).map((item, idx) => (
-                  <div key={idx} className="pt-3 first:pt-0">
-                    <div className="flex items-center justify-between text-[10px] text-neutral-400 mb-1">
-                      <span className="text-[#00FF66] font-bold">{item.time}</span>
-                      <span>[{item.source}]</span>
-                    </div>
-                    <p className="text-neutral-200 font-sans text-xs leading-snug">
-                      {item.title}
-                    </p>
-                  </div>
                 ))}
               </div>
             </div>

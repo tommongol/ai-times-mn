@@ -5,18 +5,16 @@ import Link from 'next/link';
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperLead } from '@/components/NewspaperLead';
 import { SectionBlock } from '@/components/SectionBlock';
-import { LiveWire } from '@/components/LiveWire';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
-import { ArticleCardData, LiveWireItem, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from '@/data/types';
+import { ArticleCardData, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from '@/data/types';
 import { selectFeaturedArticles } from '@/data/news';
 import { Search, ArrowUpDown, XCircle } from 'lucide-react';
 
 interface Props {
   articles: ArticleCardData[];
-  liveWire: LiveWireItem[];
 }
 
-export function HomeClient({ articles, liveWire }: Props) {
+export function HomeClient({ articles }: Props) {
   const [activeSection, setActiveSection] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [searchSort, setSearchSort] = useState<'latest' | 'views'>('latest');
@@ -236,8 +234,6 @@ export function HomeClient({ articles, liveWire }: Props) {
             />
 
             <div className="max-w-7xl mx-auto px-4 pt-8">
-              <LiveWire items={liveWire} />
-
               <SectionBlock
                 title="AI Технологи & Шинэ загварууд"
                 articles={techArticles}

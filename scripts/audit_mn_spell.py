@@ -40,15 +40,11 @@ def main():
     api_key = get_api_key()
     base_dir = Path(__file__).resolve().parent.parent
     articles_path = base_dir / "src/data/articles.json"
-    live_wire_path = base_dir / "src/data/live_wire.json"
 
     with open(articles_path, encoding="utf-8") as f:
         articles = json.load(f)
 
-    with open(live_wire_path, encoding="utf-8") as f:
-        live_wire = json.load(f)
-
-    print(f"Loaded {len(articles)} articles and {len(live_wire)} live wire items.")
+    print(f"Loaded {len(articles)} articles.")
 
     # Collect all words from articles and live wire
     # Cyrillic words regex: [А-ЯЁӨҮа-яёөү]+(?:[-‐][А-ЯЁӨҮа-яёөү]+)*
@@ -79,9 +75,6 @@ def main():
         index_text(a.get("summary", ""), f"article:{aid}:summary")
         index_text(a.get("imageCaption", ""), f"article:{aid}:imageCaption")
         index_text(a.get("content", ""), f"article:{aid}:content")
-
-    for i, item in enumerate(live_wire):
-        index_text(item.get("title", ""), f"live_wire:{i}:title")
 
     all_unique_words = sorted(list(word_locations.keys()))
     print(f"Total unique Cyrillic words to check: {len(all_unique_words)}")

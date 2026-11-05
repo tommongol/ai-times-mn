@@ -1,8 +1,7 @@
 import rawArticles from './articles.json';
-import rawLiveWire from './live_wire.json';
-import { NewsArticle, ArticleCardData, LiveWireItem, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from './types';
+import { NewsArticle, ArticleCardData, NAV_SECTIONS, LEGACY_SECTION_ALIASES } from './types';
 
-export type { NewsArticle, ArticleCardData, LiveWireItem };
+export type { NewsArticle, ArticleCardData };
 export { NAV_SECTIONS };
 
 // Мэдээ автоматаар нэмэгдэхэд хуучин ангилал (models, policy, companies) ирсэн ч шинэ булан руугаа орно
@@ -36,8 +35,6 @@ function extractContentImages(html?: string): string[] {
 export const ARTICLES: NewsArticle[] = (rawArticles as NewsArticle[])
   .map(normalizeCategory)
   .sort((a, b) => articleTimestamp(b) - articleTimestamp(a));
-
-export const LIVE_WIRE: LiveWireItem[] = rawLiveWire as LiveWireItem[];
 
 /**
  * Нүүр хуудасны болон mongol.guru (/api/featured)-ийн хоёр онцлох мэдээг

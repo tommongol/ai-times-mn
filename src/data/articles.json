@@ -25,6 +25,490 @@
     "content": "<p class=\"lead\">Anthropic компани <strong>Claude Desktop</strong> программыг сууриар нь өөрчилж, хэрэглэгчдийн дунд <strong>«Claude 2.0»</strong> хэмээн нэрлэгдэж буй томоохон шинэчлэлтийг нэвтрүүллээ. Өмнө нь тушаалын мөр дээр ажилладаг байсан <strong>Claude Code</strong> болон <strong>Cowork</strong> горимууд одоо үндсэн программ дотор нэгдэж, код бичих мэдлэггүй хүн ч компьютерынхоо файлуудыг цэгцлэх, интерактив тайлан гаргах, олон цаг үргэлжлэх цогц даалгаврыг агент руу даатгах боломжтой болсон байна.</p>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-desktop-cover.jpg\" alt=\"Claude 2.0 Desktop программын шинэ боломжууд\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Claude 2.0 программын дөрвөн гол шинэчлэл: Live Dashboard Artifact, Environment болон Remote Control самбар, /goal бие даасан давталт, Projects удирдлагын төв.</figcaption>\n</figure>\n\n<h3>1. Claude Code ба Cowork: Тушаалын мөргүйгээр компьютер дээрээ ажиллах горим</h3>\n<p>Шинэчлэгдсэн программын хамгийн том өөрчлөлт бол <strong>Chat</strong> болон <strong>Cowork (Code)</strong> горимууд нэг цонхонд нэгдсэн явдал юм. Хэрэглэгч тусгай цонх нээж тушаал бичихийн оронд энгийн ярианы хэлээр компьютер дээрх хавтас, файлуудаа удирдаж чадна.</p>\n<ul>\n  <li><strong>Файлын системтэй шууд харьцах:</strong> Жишээлбэл, <em>«Downloads хавтсыг төрлөөр нь ангилж, давхардсан файлуудыг устга»</em> гэсэн ганцхан өгүүлбэр бичихэд Claude файлуудыг PDF, зураг, хүснэгт, суулгац, архив, аудио гэсэн 6 хавтаст ангилж, давхардсан файлуудыг цэвэрлэн тайлан гаргадаг.</li>\n  <li><strong>Дотоод хэрэгслүүдийг дуудах:</strong> Компьютер дээр суусан программ болон кодуудыг Claude шууд дуудаж ажиллуулах тул видео хөрвүүлэх, өгөгдөл боловсруулах зэрэг ажлыг үндсэн цонхноосоо гүйцэтгэнэ.</li>\n</ul>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-cowork-downloads.jpg\" alt=\"Claude Cowork горимоор Downloads хавтас цэгцэлж буй байдал\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Энгийн ярианы тушаалаар Downloads хавтас дахь 1,204 файлыг шалгаж, төрлөөр нь ангилан цэгцэлж буй төлөвлөгөө.</figcaption>\n</figure>\n\n<h3>2. Таван төрлийн шинэ Artifact: Баримтаас хөдөлгөөнт дүрс хүртэл</h3>\n<p>Өмнө нь зөвхөн энгийн текст болон код харуулдаг байсан <strong>Artifacts</strong> хэсэг одоо 5 төрлийн тусгай форматтай болж өргөжжээ:</p>\n<ol>\n  <li><strong>Document (Баримт бичиг):</strong> Урт хэмжээний тайлан, нийтлэл, төлөвлөгөөг цонх дотор шууд засварлах, хэсэгчлэн сайжруулах боломжтой текст засварлагч.</li>\n  <li><strong>Slides (Танилцуулга):</strong> Бүрэн дизайнтай илтгэлийн хуудаснуудыг (жишээ нь, <em>Launch Plan · December 2026</em>) шууд үүсгэж, хуудас тус бүрээр нь харах болон татаж авах горим.</li>\n  <li><strong>Design (Дизайн):</strong> Веб хуудас болон UI загварыг бодит хэмжээс, өнгөний зохицолтойгоор шууд зурж турших орчин.</li>\n  <li><strong>Live Dashboards (Амьд хяналтын самбар):</strong> Гаднын эх үүсвэр болон дотоод файлуудтай холбогдож, захиалагчдын тоо (<code>12,480</code>), цахим захидал нээсэн хувь (<code>52.4%</code>), сарын орлого (<code>$6,192</code>) зэрэг үзүүлэлтийг шууд шинэчлэгддэг графиктайгаар харуулдаг самбар.</li>\n  <li><strong>Motion (Хөдөлгөөнт график ба видео):</strong> JavaScript болон Canvas код (<code>export function scene(ctx, t)</code>) дээр суурилсан хөдөлгөөнт дүрс, танилцуулга видеог шууд үүсгэж тоглуулах хэрэгсэл.</li>\n</ol>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-artifacts-dashboard.jpg\" alt=\"Claude 2.0 Live Dashboard Artifact\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Live Dashboard Artifact: «The Weekend Table» мэдээллийн хуудасны захиалагч, орлого болон нийтлэлүүдийн үзүүлэлтийг бодит өгөгдлөөр харуулсан самбар.</figcaption>\n</figure>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-artifacts-motion-slides.jpg\" alt=\"Claude 2.0 Slides Artifact\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Slides Artifact: Бүтээгдэхүүн нэвтрүүлэх төлөвлөгөөний 5 хуудас бүхий бэлэн танилцуулга.</figcaption>\n</figure>\n\n<h3>3. Шинэ зохион байгуулалт: Home, Code ба Environment самбар</h3>\n<p>Программын зүүн болон баруун талын самбарууд олон төсөл дээр зэрэг ажиллахад зориулагдан шинэчлэгдсэн байна. Зүүн талын <strong>Session Rail</strong> дээр яриануудаа сэдвээр нь <strong>Sections</strong> (жишээ нь, <em>Nature Badger</em>, <em>Create Flow</em>, <em>Scripts</em>, <em>Motion Graphics</em>) болгон бүлэглэж, хурааж эсвэл дэлгэж болно.</p>\n<p>Харин баруун талын <strong>Environment</strong> самбарт тухайн ажлын бүх техникийн мэдээлэл ил харагдана:</p>\n<ul>\n  <li><strong>Ажиллах орчин ба Git:</strong> Агент таны компьютер дээр (<code>This computer</code>) эсвэл үүлэн орчинд ажиллаж байгаа эсэх, аль хавтас болон Git салбар (<code>main</code>) дээр байгааг харуулж, өөрчлөлтийг (<code>Changes +2,228 -1</code>) нэг товчоор <strong>Commit changes</strong> хийнэ.</li>\n  <li><strong>Context хэмжигч:</strong> 1 сая token санах ойн хэдэн хувь нь дүүрч байгааг (жишээ нь, <code>19% used — 193.9k of 1M tokens</code>) бодит цагт хянана.</li>\n</ul>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-environment-panel.jpg\" alt=\"Claude 2.0 Environment болон Remote Control самбар\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Баруун талын Environment самбар: Ажлын хавтас, Remote Control тохиргоо, 1 сая token Context хэмжигч болон Git өөрчлөлтийн мэдээлэл.</figcaption>\n</figure>\n\n<h3>4. Тасралтгүй ажиллагаа: Remote Control, Cloud Sessions ба /goal горим</h3>\n<p>Удаан үргэлжлэх даалгаврыг компьютер унтарсан эсвэл хэрэглэгч гадуур яваа үед ч таслахгүй үргэлжлүүлэх гурван шийдэл нэмэгджээ:</p>\n<ul>\n  <li><strong>Remote Control ба унтах горимын хяналт:</strong> Программ дотроос <em>Remote Control</em> тохиргоог асааснаар утаснаасаа компьютер дээрх агентаа удирдах бөгөөд даалгавар дуустал компьютерыг унтуулахгүй (<code>never sleeps</code>) барьдаг.</li>\n  <li><strong>Cloud Sessions:</strong> Компьютероо авч явах боломжгүй үед даалгаврыг үүлэн орчин руу шилжүүлж, Anthropic-ийн төв систем дээр үргэлжлүүлэн ажиллуулна.</li>\n  <li><strong><code>/goal</code> бие даасан давталт:</strong> Энгийн тушаал өгөхөд агент нэг удаа хариулаад зогсдог бол <code>/goal</code> тушаал (жишээ нь, <em>«/goal бүх 5 хуудас алдаагүй ачаалж, холбоос бүр ажилладаг болсон байх»</em>) өгөхөд Claude ажлаа гүйцэтгээд, өөрийгөө шалгаж (<code>check</code>), алдаа байвал дахин засаж олон тойрог (<code>2h 19m · LAP 3</code>) тасралтгүй ажилласаар зорилгод хүрмэгц зогсдог.</li>\n</ul>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-goal-loop.jpg\" alt=\"Claude /goal бие даасан давталтын горим\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">/goal тушаалын давталт: Агент 2 цаг 19 минутын турш 3 тойрог (LAP 3) ажиллаж, бүх шалгуурыг биелүүлсний дараа дуусгавар болгож байна.</figcaption>\n</figure>\n\n<h3>5. Олон даалгавар зэрэг удирдах: Split View, Nested ба Master Sessions</h3>\n<p>Нэг яриан дотор олон сэдэв холилдож санах ой дүүрдэг асуудлыг шийдэхийн тулд шаталсан удирдлагын бүтэц орж ирсэн байна:</p>\n<ul>\n  <li><strong>Side Chats ба Split View:</strong> Үндсэн ажлаасаа хазайхгүйгээр хажуугийн жижиг цонхонд (Side chat) тодруулга асуух эсвэл дэлгэцээ хувааж (Split view) хоёр өөр яриаг зэрэгцүүлэн харах боломжтой.</li>\n  <li><strong>Nested Sessions (Дэд ярианууд):</strong> Төв ярианаас (Main chat) дөрвөн өөр дэд даалгавар (Sub-session) салбарлуулан зэрэг ажиллуулж, тус бүрийнх нь үр дүнг эргүүлэн нэгтгэнэ.</li>\n  <li><strong>Master Sessions ба Projects:</strong> Томоохон төслүүд дээр Claude өөрөө «багийн ахлагч» (<code>Team lead: Claude</code>) болж ажиллана. Жишээлбэл, <em>Pricing site</em> төслийн самбар дээр хэрэглэгчийн шийдвэрийг хүлээж буй асуултууд (<code>Waiting on you</code>), төслийн файлууд (<code>Library</code>) болон үүлэн ба дотоод орчинд зэрэг явагдаж буй салбар ажлууд (<code>Threads</code>) нэг дор харагдана.</li>\n</ul>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-multitask-projects.jpg\" alt=\"Claude 2.0 Projects болон Master Session хяналтын самбар\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Projects самбар: Claude багийн ахлагчаар ажиллаж, хэрэглэгчээс асуух шийдвэрүүд болон салбар даалгавруудыг нэг дороос удирдаж буй харагдац.</figcaption>\n</figure>\n\n<h3>6. Mod Your Claude: Программаа өөрийнхөөрөө өргөтгөх</h3>\n<p>Claude Desktop программ нь өөрөө нээлттэй бүтэцтэй болсон тул хэрэглэгчид программынхаа харагдац болон үйлдлийг <strong>Mods</strong> буюу нэмэлт өргөтгөлөөр өөрчлөх боломжтой болжээ.</p>\n<ul>\n  <li><strong>Status Bar ба зардлын хяналт:</strong> Мессеж бичих хэсгийн дээр token зарцуулалт, долоо хоногийн хязгаар, ярианы өртөг (<code>$24</code>) болон дараагийн илгээлтэд cache шинэчлэгдэх зардал (<code>357k to rewrite ≈ $2.85</code>) зэргийг ил харуулдаг самбар нэмж болно.</li>\n  <li><strong>Cache Keeper:</strong> Урт ярианы cache санах ой 60 минутын дараа хөрч устдаг тул цаг дуусахаас өмнө автоматаар сэргээж (<code>Cache warm · 91% hits</code>), token зардлыг хэмнэдэг нэмэлт хэрэгслийг суулгах боломжтой.</li>\n  <li><strong>Нууц түлхүүр ба тохиргоог далдлах:</strong> <code>.env</code> файл дахь API түлхүүр болон хувийн мэдээллийг дэлгэц дээр автоматаар бүдгэрүүлж нууцлах тохиргоог Claude өөрөө хийж гүйцэтгэнэ.</li>\n</ul>\n\n<figure class=\"my-6\">\n  <img src=\"/images/articles/lead-claude20-mods-cache.jpg\" alt=\"Claude 2.0 Mod ба Cache хэмжигч\" class=\"w-full rounded-lg border border-stone-300 shadow-sm\" />\n  <figcaption class=\"text-xs text-stone-500 mt-2 font-sans\">Хэрэглэгчийн нэмэлт Mod: Баруун дээд буланд Cache hits (91%) хэмжигч, доод хэсэгт token өртөг болон төлөвийг харуулсан мөр.</figcaption>\n</figure>\n\n<h3>Дүгнэлт</h3>\n<p>Энэхүү шинэчлэлтээр Anthropic компани <strong>Claude</strong>-ийг зүгээр нэг асуултад хариулдаг туслахаас компьютер болон үүлэн орчинд бие даан ажилладаг, олон салбар даалгаврыг зэрэг удирддаг <strong>үйлдлийн орчин</strong> болгон хувиргалаа. Ялангуяа <code>/goal</code> давталт, 5 төрлийн Artifact болон Master Session бүтэц нь программ хангамж хөгжүүлэгчдээс гадна өдөр тутмын оффисын ажилтнуудад агентыг бүрэн хүчээр нь хэрэглэх боломжийг нээж байна.</p>\n<p class=\"text-xs text-stone-500 mt-4\">Эх сурвалж: <a href=\"https://www.youtube.com/watch?v=tM0dwXhOv2o\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">Futurepedia — Claude 2.0 Is Here. EVERYTHING in 15 Minutes</a></p>"
   },
   {
+    "id": "art-20261106-cua-master-27b-osworld-agent",
+    "slug": "cua-master-27b-open-computer-use-agent-osworld-benchmark",
+    "title": "CUA-Master-27B: Компьютер удирдах сорилд 80.2 оноо авсан нээлттэй агент",
+    "subtitle": "Хятадын дөрвөн судалгааны баг видео хичээлээс суралцдаг 27 тэрбум параметртэй компьютер удирдагч агентаа нээлттэй болголоо.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "author": "Том Монгол",
+    "primarySource": "arXiv / CUHK MMLab & Tsinghua",
+    "primarySourceUrl": "https://arxiv.org/abs/2611.03126",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:30",
+    "readTime": "5 мин унших",
+    "readCount": 2840,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "coverImage": "/images/articles/daily-20261106-tech-1.jpg",
+    "imageUrl": "/images/articles/daily-20261106-tech-1.jpg",
+    "imageCaption": "CUA-Master-27B загварын OSWorld-Verified сорилын дүн болон хоёр давхар давталтат сургалтын бүтэц.",
+    "tags": [
+      "CUA-Master-27B",
+      "OSWorld",
+      "Computer-Use Agent",
+      "Qwen-3.5",
+      "Нээлттэй загвар"
+    ],
+    "summary": "Хонконгийн Хятадын их сургууль (CUHK MMLab), Цинхуа их сургууль, HKUST(GZ) болон JD Explore Academy хамтран компьютер бие даан удирддаг CUA-Master-27B нээлттэй загварыг танилцууллаа. Qwen-3.5-27B дээр суурилсан уг агент нь OSWorld-Verified сорилд 80.2 оноо авч, хаалттай аварга загваруудтай эн зэрэгцэв.",
+    "sources": [
+      {
+        "name": "arXiv:2611.03126 — CUA-Master: Scaling Computer-Use Agents",
+        "url": "https://arxiv.org/abs/2611.03126"
+      },
+      {
+        "name": "AI Weekly: CUA-Master-27B Scores 80.2 on OSWorld-Verified",
+        "url": "https://aiweekly.co/alerts/cua-master-27b-scores-802-on-osworld-verified-from-cuhk-thu-jd"
+      },
+      {
+        "name": "Emergent: CUA-Master-27B Hits 80.2 on OSWorld",
+        "url": "https://emergent.sh/news/cua-master-27b-hits-80-2-osworld-beats-ui"
+      }
+    ],
+    "content": "<p class=\"lead\">Хонконгийн Хятадын их сургуулийн <strong>MMLab</strong>, <strong>Цинхуа их сургууль</strong>, <strong>HKUST(GZ)</strong> болон <strong>JD Explore Academy</strong>-ийн судлаачид компьютерын дэлгэц, хулгана, гар болон тушаалын мөрийг бие даан удирддаг <strong>CUA-Master-27B</strong> нээлттэй загварыг (<code>arXiv:2611.03126</code>) нийтэд гаргалаа. Ердөө 27 тэрбум параметртэй уг загвар нь үйлдлийн системийн бодит орчны <strong>OSWorld-Verified</strong> сорилд <strong>80.2%</strong>-ийн амжилт үзүүлж, нээлттэй жинтэй агентуудын дээд амжилтыг шинэчлэв.</p>\n\n<h3>Хоёр давхар эргэх холбоо: Видео хичээлээс үйлдлийн дараалал үүсгэх нь</h3>\n<p>Компьютер удирддаг агентуудыг сургахад хамгийн том саад нь программ хангамж дээрх олон алхамт үйлдлийн баталгаажсан өгөгдөл хомс байдаг явдал юм. Судалгааны баг <strong>Qwen-3.5-27B</strong> суурь загвар дээр «хоёр давхар давталтат сайжруулалтын тогтолцоо» (nested double-loop recursive improvement) боловсруулж энэ бэрхшээлийг шийджээ:</p>\n<ul>\n  <li><strong>Дотоод өгөгдлийн эргүүлэг (Inner Data Flywheel):</strong> YouTube, TikTok болон Bilibili платформ дээрх программ хангамжийн зааварчилгаа, видео хичээлүүдийг шүүж, дүрс болон утгын шинжилгээгээр хулганын даралт, цэс сонголт, кодын бичилт зэрэг хөдөлгөөний замыг сэргээн бодит даалгавар болгон хувиргадаг.</li>\n  <li><strong>Гадаад ертөнцийн загварын эргүүлэг (Outer World-Data-Model Loop):</strong> Агентын унасан болон алдсан үйлдэл бүрийг оношилж, аль программын ямар цонхон дээр алдаж байгааг тогтоогоод яг тэр сул талыг нь нөхөх шинэ даалгавруудыг автоматаар үүсгэн дахин сургадаг.</li>\n</ul>\n\n<h3>OSWorld сорилын үр дүн ба аваргуудтай хийсэн харьцуулалт</h3>\n<p>Бодит Ubuntu болон ширээний компьютерын орчинд файл боловсруулах, веб хөтөч удирдах, хүснэгт тооцоолох, терминал дээр код ажиллуулах чадварыг шалгадаг <strong>OSWorld</strong> жишиг сорилд CUA-Master-27B онцгой үзүүлэлт гаргалаа:</p>\n<ul>\n  <li><strong>OSWorld-Verified сорилд 80.2 оноо:</strong> Суурь Qwen-3.5-27B загварын анхны 42.1 оноог бараг хоёр дахин өсгөж, өмнөх нээлттэй аварга болох 72 тэрбум параметртэй UI-TARS-72B (64.8%)-ийг хол орхив.</li>\n  <li><strong>Хаалттай загваруудтай ойртсон дүн:</strong> Хэмжээгээрээ хэд дахин том хаалттай загварууд болох Anthropic-ийн <strong>Claude Opus 5</strong> (82.5%) болон OpenAI-ийн <strong>GPT-5.6 Sol</strong> (81.4%) загваруудад тулж очсон байна.</li>\n  <li><strong>OSWorld 2.0 хүндрүүлсэн сорил:</strong> Олон программ дамжсан нарийн даалгавруудтай шинэчилсэн сорилд <strong>36.9 оноо</strong> авч, ижил хэмжээний нээлттэй загваруудыг тэргүүллээ.</li>\n</ul>\n\n<h3>Дотоод сервер дээр өртөг багатай ажиллуулах боломж</h3>\n<p>Хаалттай API дуудаж компьютерын дэлгэцийн зургийг алхам бүрд илгээх нь байгууллагуудад өндөр зардал дагуулахаас гадна дотоод мэдээллийг гадагш алдах эрсдэл үүсгэдэг. Харин 27 тэрбум параметртэй CUA-Master-27B загварыг байгууллагууд өөрийн дотоод график карт дээр шууд суулган хэрэглэх боломжтой бөгөөд оффисын давтагддаг маягт бөглөлт, системийн тохиргоо, өгөгдөл хуулах зэрэг ажлыг гаднын сервергүйгээр бүрэн автоматжуулах зам нээгдэж байна.</p>"
+  },
+  {
+    "id": "art-20261106-ibm-hashicorp-vault-agentic-iam",
+    "slug": "ibm-watsonx-orchestrate-hashicorp-vault-agent-identity-security",
+    "title": "IBM ба HashiCorp: Байгууллагын AI агентад «цахим үнэмлэх» олгоно",
+    "subtitle": "Бие даасан агентууд хүний эрхийг хэтрүүлэн хэрэглэхээс сэргийлж, богино хугацааны нууц түлхүүрээр хянах тогтолцоо нэвтэрлээ.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "author": "Том Монгол",
+    "primarySource": "IBM Newsroom & HashiCorp",
+    "primarySourceUrl": "https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:30",
+    "readTime": "5 мин унших",
+    "readCount": 2410,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": false,
+    "coverImage": "/images/articles/daily-20261106-tech-2.jpg",
+    "imageUrl": "/images/articles/daily-20261106-tech-2.jpg",
+    "imageCaption": "IBM watsonx Orchestrate болон HashiCorp Vault 2.1+ системийн AI агентын эрх баталгаажуулах дөрвөн шатлалт бүтэц.",
+    "tags": [
+      "IBM",
+      "HashiCorp Vault",
+      "watsonx Orchestrate",
+      "Agentic IAM",
+      "Кибер аюулгүй байдал"
+    ],
+    "summary": "Gartner судалгааны байгууллагын тооцоогоор 2028 он гэхэд Fortune 500 компанийн дундаж нэг байгууллага 150,000 гаруй AI агент ажиллуулах ч одоогоор ердөө 13% нь агентын хяналтын тогтолцоотой байна. IBM болон HashiCorp компаниуд watsonx Orchestrate ба Vault системдээ агентад тусгай үнэмлэх, түр зуурын түлхүүр олгодог шийдлийг нэвтрүүллээ.",
+    "sources": [
+      {
+        "name": "IBM Newsroom: IBM Introduces Identity and Control for AI Agents",
+        "url": "https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise"
+      },
+      {
+        "name": "HashiCorp Blog: HashiCorp Vault Agentic IAM Generally Available",
+        "url": "https://www.hashicorp.com/en/blog/hashicorp-vault-agentic-iam-is-now-generally-available"
+      }
+    ],
+    "content": "<p class=\"lead\"><strong>IBM</strong> болон түүний охин компани <strong>HashiCorp</strong> байгууллагын түвшинд ажиллаж буй хиймэл оюуны агентуудад бие даасан «хүн бус цахим үнэмлэх» (Agent Identity) олгож, өгөгдлийн сан болон үүлэн систем рүү нэвтрэх эрхийг секундээр хянах <strong>Agentic IAM</strong> шийдлээ танилцууллаа. Уг шинэчлэлт нь <strong>IBM watsonx Orchestrate</strong> болон <strong>HashiCorp Vault Enterprise 2.1+</strong> системүүдийг шууд холбож, агентын дураараа үйлдэл хийх эрсдэлийг хааж байна.</p>\n\n<h3>150,000 агентын давлагаа ба «төөрөлдсөн төлөөлөгч»-ийн аюул</h3>\n<p>Судалгааны <strong>Gartner</strong> байгууллагын тооцоогоор 2028 он гэхэд Fortune 500 жагсаалтын дундаж нэг компани <strong>150,000 гаруй AI агент</strong> зэрэг ажиллуулах төлөвтэй байна. Гэвч өнөөдрийн байдлаар байгууллагуудын ердөө <strong>13%</strong> нь агентын эрхийг хянах засаглалын тогтолцоотой байгаа юм.</p>\n<p>Ихэнх компаниуд агентыг ажиллуулахдаа тухайн ажилтны эсвэл системийн байнгын API түлхүүрийг шууд өгдөг. Үүнээс болж кибер аюулгүй байдалд <em>«confused deputy»</em> буюу «төөрөлдсөн төлөөлөгч» гэгддэг ноцтой цоорхой үүсдэг: хэрэв агент буруу заавар (prompt injection) авбал удирдаж буй хүнийхээ өндөр эрхийг хэрэглэн санхүүгийн баримт устгах, нууц мэдээлэл татах зэрэг зөвшөөрөлгүй үйлдэл хийх аюултай.</p>\n\n<h3>Дөрвөн шатлалт хамгаалалт: Entra ID-аас Vault хүртэл</h3>\n<p>IBM болон HashiCorp-ийн шинэ бүтэц нь агентыг энгийн программ биш, харин тусгай бүртгэлтэй «ажилтан» мэт бүртгэж дөрвөн шатаар хянадаг:</p>\n<ul>\n  <li><strong>Баталгаажсан үнэмлэх (Identity Provider):</strong> Агент ажиллаж эхлэхэд <strong>Microsoft Entra Agent ID</strong> эсвэл <strong>IBM Verify</strong> систем тухайн агентыг хэн эзэмшдэг, ямар үүрэгтэйг тодорхойлсон тусгай JWT токен олгоно.</li>\n  <li><strong>Удирдлагын давхарга (watsonx Orchestrate):</strong> Агент <strong>Model Context Protocol (MCP)</strong>-оор гаднын хэрэгсэл дуудах үед хэрэглэгчийн анхны зорилго болон агентын зөвшөөрөгдсөн хүрээг зэрэг хадгалж дамжуулна.</li>\n  <li><strong>Богино настай динамик түлхүүр (HashiCorp Vault Registry):</strong> Vault-ийн <em>Agent Registry</em> нь ирсэн токеныг шалгаад өгөгдлийн сан руу нэвтрэх хэдхэн минутын настай, зөвхөн тухайн даалгаварт тохирсон түр түлхүүр (ephemeral credential) үүсгэж өгнө.</li>\n  <li><strong>Шууд цуцлах хяналт (Instant Revocation):</strong> Хэрэв агент зөвшөөрөгдсөн хүрээнээсээ хальж өөр хүснэгт эсвэл сервер рүү хандахыг оролдвол Vault тэр даруй эрхийг нь тасалж, аудитын бүртгэлд бичдэг.</li>\n</ul>\n\n<h3>Байгууллагын хиймэл оюуны шинэ стандарт</h3>\n<p>Одоогоор BlackRock, ABN AMRO, Adobe, Лондоны хөрөнгийн бирж болон Starbucks зэрэг томоохон байгууллагууд системийн нууцлалаа HashiCorp Vault дээр даатгаж байна. Шинэ Agentic IAM нэмэгдсэнээр банк санхүү, эрүүл мэнд, эрчим хүчний салбарын компаниуд дотоод мэдээллээ алдах айдасгүйгээр олон мянган бие даасан агентыг үндсэн системдээ холбон хэрэглэх суурь тавигдлаа.</p>"
+  },
+  {
+    "id": "art-20261106-xiaomi-humanoid-8hour-ev-factory",
+    "slug": "xiaomi-humanoid-robot-8-hour-shift-beijing-ev-factory",
+    "title": "Xiaomi-ийн хүн дүрст робот машины үйлдвэрт 8 цаг тасралтгүй ажиллав",
+    "subtitle": "Бээжин дэх цахилгаан автомашины үйлдвэрт хоёр робот бүтэн ээлжийн турш эд анги ангилж, алдаагаа өөрөө зассан байна.",
+    "category": "robotics",
+    "categoryName": "РОБОТ",
+    "author": "Том Монгол",
+    "primarySource": "Electrek / Xiaomi Auto",
+    "primarySourceUrl": "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory/",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:30",
+    "readTime": "5 мин унших",
+    "readCount": 3190,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "coverImage": "/images/articles/daily-20261106-robotics-1.jpg",
+    "imageUrl": "/images/articles/daily-20261106-robotics-1.jpg",
+    "imageCaption": "Xiaomi Auto үйлдвэрийн дамжлага дээрх хүн дүрст роботуудын 8 цагийн ээлжийн үзүүлэлт болон олон роботын хоршил.",
+    "tags": [
+      "Xiaomi",
+      "Xiaomi-Robotics-1",
+      "Хүн дүрст робот",
+      "Цахилгаан машин",
+      "Үйлдвэрийн автоматжуулалт"
+    ],
+    "summary": "Xiaomi компани Бээжин дэх ухаалаг цахилгаан автомашины үйлдвэртээ хүн дүрст роботуудыг 8 цагийн бүтэн ээлжээр тасралтгүй ажиллуулсан бичлэгээ танилцууллаа. 100,000 цагийн бодит өгөгдөл дээр сургасан Xiaomi-Robotics-1 загвараар удирдуулсан роботууд машины голын хайрцгийн хажуугийн хавхлагыг ангилж, шалан дээр унасан эд ангийг дугуйт роботтой хамтран цэгцэлжээ.",
+    "sources": [
+      {
+        "name": "Electrek: Xiaomi's Humanoid Robots Work a Full 8-Hour Shift in Its EV Factory",
+        "url": "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory/"
+      }
+    ],
+    "content": "<p class=\"lead\">Хятадын технологийн аварга <strong>Xiaomi</strong> компани Бээжин дэх цахилгаан автомашины (EV) үйлдвэрийнхээ угсралтын дамжлага дээр бүтэн хэмжээний хүн дүрст роботуудыг <strong>8 цагийн ээлжийн турш тасралтгүй</strong> бие даан ажиллуулснаа зарлалаа. Wuzhen хотод болсон Дэлхийн интернэтийн чуулганы үеэр танилцуулсан уг туршилт нь хүн дүрст роботыг лабораторийн богино үзүүлбэрээс бүтэн өдрийн үйлдвэрлэлийн норм руу шилжүүлсэн чухал алхам болов.</p>\n\n<h3>Дамжлагын даалгавар ба Xiaomi-Robotics-1 суурь загвар</h3>\n<p>Роботууд үйлдвэрийн «Голын хайрцгийн хажуугийн таг ангилах өртөө» (Center Console Side-Cover Sorting Workstation) дээр ажилласан байна. Зөөлөн, уян хатан хуванцар эд ангийг хайрцгаас сугалж аваад, угсралтын шугамаар орж ирж буй автомашины дараалалд тааруулан тавиурын нүх бүрд гацаалгүй шургуулах нь механик гарт багагүй ур чадвар шаарддаг ажил юм.</p>\n<ul>\n  <li><strong>100,000 цагийн сургалт:</strong> Роботын тархи болох <strong>Xiaomi-Robotics-1</strong> нээлттэй суурь загварыг бодит орчны роботын 100,000 цагийн харилцан үйлдлийн өгөгдлөөр урьдчилан сургажээ.</li>\n  <li><strong>Гурван шатлалт ахиц:</strong> Гуравдугаар сард Xiaomi-ийн робот тус үйлдвэрт 3 цагийн турш эрэг боох дадлага хийхдээ 76 секундийн мөчлөгтэйгөөр <strong>90.2%</strong>-ийн амжилт үзүүлж байсан бол аравдугаар сард ажилтнуудын орон сууцанд 30 минутад 10 гаруй гэрийн ажил гүйцэтгэж, улмаар энэ сард 8 цагийн бүтэн ээлжийн даалгаварт шилжсэн байна.</li>\n</ul>\n\n<h3>Унасан эд ангийг цэгцлэх олон роботын хоршил</h3>\n<p>Бичлэгийн хамгийн анхаарал татсан хэсэг нь 1 минут 37 дахь секундэд гардаг «Унасан материалыг олон робот хамтран шийдвэрлэх» үзэгдэл юм. Хоёр хөлт робот эд анги зөөх явцад нэг таг шалан дээр унахад, дугуйт суурьтай хоёр гартай өөр нэг робот гүйн ирж шалнаас эд ангийг авч өгснөөр дамжлага зогсолтгүй үргэлжилжээ. Түүнчлэн эд ангийн хайрцгуудыг өөрөө явагч тэргэнцрүүд (AMR) зөөж, үйлдвэрийн төв системтэй шууд хоршин ажилласан байна.</p>\n\n<h3>Шүүмжлэлт өнцөг: Ил болоогүй тоон үзүүлэлтүүд</h3>\n<p>Хэдийгээр 8 цагийн туршилт нь Tesla-ийн Optimus роботын хаалттай үзүүлбэрүүдээс илүү бодит үйлдвэрлэлд ойртсон ч <em>Electrek</em>-ийн шинжээчид хэд хэдэн чухал тоо баримт орхигдсоныг онцолжээ. Тухайлбал, Xiaomi 8 цагийн хугацаанд нийт хэдэн эд анги ангилсан, хүн хэдэн удаа хөндлөнгөөс оролцсон болон цэнэг дуусах асуудлыг батарей солих замаар шийдсэн эсэхээ тайлагнаагүй байна. Гэсэн хэдий ч гүйцэтгэх захирал Lei Jun-ий дэвшүүлсэн «таван жилийн дотор үйлдвэрүүддээ хүн дүрст роботыг олноор нь нэвтрүүлэх» төлөвлөгөө хуваарийн дагуу урагшилж буйг энэ туршилт харууллаа.</p>"
+  },
+  {
+    "id": "art-20261106-korea-kimm-ai-humanoid-data-factory",
+    "slug": "south-korea-kimm-opens-first-ai-humanoid-data-factory",
+    "title": "Өмнөд Солонгос хүн дүрст робот сургах анхны «Өгөгдлийн үйлдвэр»-ээ нээлээ",
+    "subtitle": "Тэжон хотод байгуулагдсан үндэсний төвд 12 хүн дүрст робот автомашин болон ахуйн орчны үйлдлүүдийг тасралтгүй бичиж байна.",
+    "category": "robotics",
+    "categoryName": "РОБОТ",
+    "author": "Том Монгол",
+    "primarySource": "EurekAlert / KIMM",
+    "primarySourceUrl": "https://www.eurekalert.org/news-releases/1150252",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:30",
+    "readTime": "5 мин унших",
+    "readCount": 2650,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": false,
+    "coverImage": "/images/articles/daily-20261106-robotics-2.jpg",
+    "imageUrl": "/images/articles/daily-20261106-robotics-2.jpg",
+    "imageCaption": "БНСУ-ын Машин механизм, материалын хүрээлэнгийн (KIMM) «AI Humanoid Data Factory» төвийн хүчин чадал болон сургалтын мөчлөг.",
+    "tags": [
+      "Өмнөд Солонгос",
+      "KIMM",
+      "KAIROS",
+      "VLA загвар",
+      "Хүн дүрст робот"
+    ],
+    "summary": "БНСУ-ын Машин механизм, материалын хүрээлэн (KIMM) болон Электроник, харилцаа холбооны судалгааны хүрээлэн (ETRI) хамтран Тэжон хотод улсынхаа анхны «AI Humanoid Data Factory» буюу хүн дүрст роботын өгөгдөл үйлдвэрлэх төвийг нээлээ. Хоёр давхар, 1,000 ам метр талбайтай уг төвд 12 робот ажиллаж, гаднын өгөгдлөөс хараат бус үндэсний сан бүрдүүлж эхлэв.",
+    "sources": [
+      {
+        "name": "EurekAlert: Korea Opens Its First AI Humanoid Data Factory",
+        "url": "https://www.eurekalert.org/news-releases/1150252"
+      },
+      {
+        "name": "KIMM Official Release: AI Humanoid Data Factory Opening",
+        "url": "https://www.kimm.re.kr/eng/sub011001/view/id/1605"
+      }
+    ],
+    "content": "<p class=\"lead\">БНСУ-ын Машин механизм, материалын хүрээлэн (<strong>KIMM</strong>) болон Электроник, харилцаа холбооны судалгааны хүрээлэн (<strong>ETRI</strong>) хамтран Тэжон хот дахь төв байрандаа тус улсын анхны <strong>«AI Humanoid Data Factory»</strong> буюу хүн дүрст роботын өгөгдөл үйлдвэрлэх төвийг албан ёсоор нээлээ. Доктор Chan Hun Park-аар ахлуулсан уг төсөл нь Солонгос улсыг гаднын роботын өгөгдөл болон суурь загвараас хараат бус болгох стратегийн зорилготой юм.</p>\n\n<h3>Яагаад роботод тусгай «өгөгдлийн үйлдвэр» хэрэгтэй вэ?</h3>\n<p>Текст болон зургийн хиймэл оюуныг интернэт дэх тэрбум тэрбум баримтаар сургаж болдог бол бодит ертөнцөд хувцас эвхэх, машины товчлуур дарах зэрэг биет үйлдэлд зориулсан бэлэн өгөгдөл интернэтэд байдаггүй. Роботын <strong>хараа, хэл ба үйлдлийн (VLA)</strong> нейрон сүлжээг сургахын тулд үе мөчний өнцөг, даралтын хүч, камерын дүрс болон хөдөлгөөний замыг миллисекунд бүрээр бүртгэх шаардлагатай байдаг.</p>\n\n<h3>1,000 ам метр талбай ба 12 KAIROS роботын битүү мөчлөг</h3>\n<p>Хоёр давхар бүхий <strong>1,000 ам метр</strong> талбайтай уг байгууламжид одоогоор дотоодын <strong>KAIROS</strong> платформ зэрэг <strong>12 хүн дүрст робот</strong> зэрэг ажиллаж байгаа бөгөөд ойрын хугацаанд тоог нь <strong>25</strong> болгон нэмэгдүүлэхээр төлөвлөжээ. Сургалтын үйл явц дөрвөн шатлалтай битүү мөчлөгөөр явагдана:</p>\n<ul>\n  <li><strong>Алсын удирдлагатай бичлэг:</strong> Операторууд роботуудыг алсаас удирдан нарийн үйлдлүүд гүйцэтгүүлж, мөч бүрийн мэдрэгчийн болон хөдөлгөөний өгөгдлийг серверт хадгална.</li>\n  <li><strong>Үйлдвэрлэл ба ахуйн хос орчин:</strong> Нээлтийн үеэр роботууд автомашины бүхээг доторх товчлуур, хөшүүргийг нарийн дарахаас гадна хөргөгчөөс зүйл гаргах, угаасан хувцас цэгцлэх, буйдан засах зэрэг өдөр тутмын ажлуудыг гүйцэтгэн өгөгдөл цуглуулж үзүүлэв.</li>\n  <li><strong>Загвар сургалт ба бодит шалгалт:</strong> Цугларсан өгөгдлөөр хиймэл оюуны загварыг сургаад буцаан биет робот дээр суулгаж, хүний оролцоогүйгээр даалгаврыг хэрхэн гүйцэтгэж байгааг шалгадаг.</li>\n</ul>\n\n<h3>2027 оны сүүлээр дотоодын компаниудад нээлттэй болно</h3>\n<p>KIMM-ийн ерөнхийлөгч Seog-Hyeon Ryu <em>«Өндөр чанартай роботын даалгаврын өгөгдлийг их хэмжээгээр бүрдүүлэх нь үндэсний технологийн өрсөлдөх чадварын амин сүнс юм»</em> хэмээн онцолсон байна. Тус төвд хуримтлагдсан өгөгдлийн сан болон туршилтын дэд бүтцийг 2027 оны сүүлээс эхлэн Өмнөд Солонгосын робот үйлдвэрлэгч компаниуд, гарааны бизнес болон их сургуулиудад үе шаттайгаар нээлттэй болгож, үндэсний хэмжээний экосистем үүсгэх ажээ.</p>"
+  },
+  {
+    "id": "art-20261106-law-1-cjeu-gemini-rag-copyright",
+    "slug": "cjeu-advocate-general-gemini-rag-press-copyright-c250-25",
+    "title": "Европын Дээд шүүх: Агент мэдээ хуулбарлавал зохиогчийн эрх зөрчинө",
+    "subtitle": "Google Gemini-д холбогдох C-250/25 хэргийн дүгнэлтээр бодит цагийн хайлт нь хэвлэн нийтлэгчийн эрхийг зөрчих эрсдэлтэй болов.",
+    "summary": "Европын Холбооны Шүүхийн (CJEU) Ерөнхий зөвлөх Maciej Szpunar нь Google Gemini агенттай холбоотой C-250/25 хэрэг дээр анхны жишиг дүгнэлтээ танилцууллаа. Тэрбээр их хэлний загвар сургах болон бодит цагийн мэдээлэл шүүж хариулах (RAG) үйлдлийг хуулийн хувьд хоёр тусад нь авч үзэх шаардлагатайг тогтоов.",
+    "category": "law",
+    "categoryName": "ХУУЛЬ, ШҮҮХ & БОДЛОГО",
+    "author": "Том Монгол",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:20",
+    "readTime": "6 мин унших",
+    "readCount": 2410,
+    "rank": 4,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "coverImage": "/images/articles/daily-20261106-law-1.jpg",
+    "imageUrl": "/images/articles/daily-20261106-law-1.jpg",
+    "imageCaption": "Европын Холбооны Шүүхийн C-250/25 хэргийн задаргаа: Их хэлний загварын сургалт (TDM) болон бодит цагийн RAG гаралтын эрх зүйн ялгаа.",
+    "primarySource": "Court of Justice of the EU (CURIA)",
+    "primarySourceUrl": "https://curia.europa.eu/site/upload/docs/application/pdf/2026-11/cp260155en.pdf",
+    "tags": [
+      "CJEU",
+      "Google Gemini",
+      "Зохиогчийн эрх",
+      "Европын Холбоо",
+      "RAG"
+    ],
+    "sources": [
+      {
+        "name": "CURIA — Advocate General's Opinion in Case C-250/25 (Like Company v. Google Ireland)",
+        "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2026-11/cp260155en.pdf"
+      },
+      {
+        "name": "EU Perspectives — Google's Gemini May Breach Publishers' Rights, Top EU Court Adviser Warns",
+        "url": "https://euperspectives.eu/2026/11/googles-gemini-may-breach-publishers-rights-top-eu-court-adviser-warns/"
+      }
+    ],
+    "content": "<p>Европын Холбооны Шүүхийн (CJEU) Ерөнхий зөвлөх Maciej Szpunar хиймэл оюуны салбарт түүхэн жишиг тогтоох <strong>C-250/25 дугаартай хэрэг</strong> (<em>Like Company v. Google Ireland</em>) дээр албан ёсны хууль зүйн дүгнэлтээ танилцууллаа. Унгарын мэдээллийн веб сайтуудыг эзэмшигч Like Company нь Google компанийн <strong>Gemini</strong> агентыг сэтгүүл зүйн нийтлэлүүдийг нь зөвшөөрөлгүй хуулбарлаж, хэрэглэгчдэд хураангуйлан түгээсэн хэмээн Будапешт хотын шүүхэд өгсөн юм. Энэ нь Европын дээд шатны шүүх дээр их хэлний загвар болон хэвлэн нийтлэгчдийн эрхийн маргааныг хэлэлцэж буй анхны тохиолдол болж байна.</p>\n\n<h3>Сургалтын өгөгдөл ба TDM чөлөөлөлтийн зааг</h3>\n<p>Ерөнхий зөвлөх дүгнэлтдээ хиймэл оюуны системийн ажиллагааг урьдчилсан сургалт болон бодит цагийн хариулт гэсэн хоёр үндсэн үе шатанд хуваан шинжилжээ. Европын Холбооны Цахим нэгдсэн зах зээлийн удирдамжийн (DSM Directive) 4 дүгээр зүйлд зааснаар текст болон өгөгдөл олборлох (Text and Data Mining буюу TDM) үйл явц нь тодорхой нөхцөлд зохиогчийн эрхийн зөрчилд тооцогдохгүй байх боломжтой.</p>\n<ul>\n  <li><strong>Хууль ёсны нэвтрэлт:</strong> Хөгжүүлэгч компани нь зөвхөн олон нийтэд нээлттэй, хууль ёсны дагуу хандах боломжтой веб хуудаснуудаас өгөгдөл цуглуулсан байх ёстой.</li>\n  <li><strong>Татгалзах эрхийг хүндэтгэх:</strong> Хэрэв хэвлэн нийтлэгч тал <code>robots.txt</code> эсвэл машин унших боломжтой тусгай протоколоор өгөгдлөө сургалтад хэрэглүүлэхээс татгалзсан (opt-out) бол технологийн компани заавал тусгай зөвшөөрөл буюу лиценз авах үүрэгтэй.</li>\n</ul>\n\n<h3>Бодит цагийн RAG хайлт яагаад хууль зөрчих вэ?</h3>\n<p>Харин хиймэл оюуны агент нь хэрэглэгчийн асуултад хариулахдаа <strong>RAG (Retrieval-Augmented Generation)</strong> буюу бодит цагийн мэдээлэл шүүх технологи хэрэглэн веб сайтуудаас шууд мэдээ татаж хариулах үед хуулийн хариуцлага огцом чангарна гэж дүгнэв. Удирдамжийн 15 дугаар зүйлээр хамгаалагдсан хэвлэн нийтлэгчдийн зэргэлдээх эрх дараах тохиолдолд зөрчигдөнө:</p>\n<ul>\n  <li><strong>Техникийн хамгаалалтыг тойрох:</strong> Төлбөртэй хаалт (paywall) болон хандалтын хязгаарлалтыг тойрч гарсан тохиолдолд шууд хууль бус үйлдэлд тооцогдоно.</li>\n  <li><strong>Эх сурвалжийг орлох хуулбар:</strong> Агент нь зөвхөн бодит баримтыг дурдахаас хэтэрч, анхны нийтлэлийн өвөрмөц үг хэллэг, бүтцийг давтан гаргаснаар уншигч эх веб сайт руу орох шаардлагагүй болгож байвал энэ нь зохиогчийн эрхийн шууд зөрчил болно.</li>\n</ul>\n\n<h3>Салбарт үзүүлэх нөлөө</h3>\n<p>Ерөнхий зөвлөхийн дүгнэлт нь шүүхийн эцсийн шийдвэр биш боловч Европын Холбооны Шүүх ихэнх тохиолдолд уг зөвлөмжийг үндэслэн зургаан сарын дотор эцсийн шийдвэрээ гаргадаг уламжлалтай. Хэрэв уг дүгнэлт хэвээр батлагдвал Google, OpenAI, Anthropic зэрэг компаниуд Европын зах зээлд бодит цагийн веб хайлттай агент ажиллуулахдаа мэдээллийн агентлагуудтай албан ёсны орлого хуваах гэрээ байгуулах зайлшгүй шаардлагатай болно.</p>"
+  },
+  {
+    "id": "art-20261106-law-2-elvis-presley-anthropic-copyright",
+    "slug": "elvis-presley-estate-abg-sues-anthropic-41m-copyright",
+    "title": "Элвис Преслийн сан Anthropic-аас 41.1 сая доллар нэхэмжлэв",
+    "subtitle": "Claude загварыг 274 дууны үгээр зөвшөөрөлгүй сургасан хэмээн шүүхэд өгч, сургалтын өгөгдөл болон жинг устгахыг шаардлаа.",
+    "summary": "Элвис Преслийн оюуны өмчийг эзэмшигч ABG EPE IP LLC болон хөгжмийн хэвлэн нийтлэгчид Anthropic компанийг зохиогчийн эрх зөрчсөн үндэслэлээр Калифорнийн холбооны шүүхэд өглөө. Нэхэмжлэгч тал 274 дуу тус бүрд 150 мянган доллар буюу нийт 41.1 сая долларын нөхөн төлбөр шаардаж байна.",
+    "category": "law",
+    "categoryName": "ХУУЛЬ, ШҮҮХ & БОДЛОГО",
+    "author": "Том Монгол",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:20",
+    "readTime": "6 мин унших",
+    "readCount": 2180,
+    "rank": 5,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "coverImage": "/images/articles/daily-20261106-law-2.jpg",
+    "imageUrl": "/images/articles/daily-20261106-law-2.jpg",
+    "imageCaption": "ABG EPE IP LLC ба Anthropic компанийн шүүхийн маргааны гол үзүүлэлтүүд болон Wikimedia сангийн хоёр шатлалт эрх зүйн санал.",
+    "primarySource": "The Guardian",
+    "primarySourceUrl": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Elvis Presley",
+      "Зохиогчийн эрх",
+      "Wikimedia"
+    ],
+    "sources": [
+      {
+        "name": "The Guardian — Elvis Presley Estate Sues Anthropic Over AI Training on Music Catalog",
+        "url": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music"
+      },
+      {
+        "name": "Wikimedia Foundation — Why Wikimedia Is Speaking Up in a Major AI Copyright Case",
+        "url": "https://diff.wikimedia.org/2026/10/30/why-wikimedia-is-speaking-up-in-a-major-ai-copyright-case/"
+      }
+    ],
+    "content": "<p>Дэлхийн рок хөгжмийн хаан Элвис Преслийн нэр, дүр төрх болон уран бүтээлийн эрхийг эзэмшигч <strong>ABG EPE IP LLC</strong> (Authentic Brands Group-ийн салбар) болон Raleigh Music Publishing компаниуд хамтран хиймэл оюуны <strong>Anthropic</strong> компанийн эсрэг АНУ-ын Калифорнийн хойд дүүргийн холбооны шүүхэд нэхэмжлэл гаргалаа. Энэ нь хөгжмийн салбарын нэгдсэн холбоод бус, нэг уран бүтээлчийн өв залгамжлагч сан дангаараа их хэлний загвар хөгжүүлэгчийг шүүхэд өгсөн анхны томоохон хэрэг болж байна.</p>\n\n<h3>274 дууны сан ба 41.1 сая долларын нэхэмжлэл</h3>\n<p>Шүүхийн баримтад дурдсанаар Anthropic компани өөрийн <strong>Claude</strong> их хэлний загваруудыг сургах явцдаа Элвис Преслийн <em>«Can't Help Falling in Love»</em>, <em>«All Shook Up»</em>, <em>«Return to Sender»</em> зэрэг дэлхийд алдартай 274 бүтээлийн дууны үг болон хөгжмийн зохиомжийг зөвшөөрөлгүй хуулбарлан хэрэглэсэн гэж буруутгагджээ.</p>\n<ul>\n  <li><strong>Дээд хэмжээний торгууль:</strong> Нэхэмжлэгч тал зохиогчийн эрх зөрчигдсөн бүтээл тус бүрд хуульд заасан дээд хэмжээ буюу 150,000 долларын нөхөн төлбөр тооцож, нийт <strong>41.1 сая доллар</strong> гаргуулахаар шаардсан байна.</li>\n  <li><strong>Загварын жинг устгах шаардлага:</strong> Мөнгөн төлбөрөөс гадна хууль бусаар цуглуулсан сургалтын өгөгдлийн сан болон уг өгөгдлөөр сургасан нейрон сүлжээний жинг (model weights) бүрэн устгахыг шүүхээс хүсжээ.</li>\n  <li><strong>Цахим хамгаалалтыг гэмтээсэн гэх үндэслэл:</strong> Anthropic-ийг веб хуудаснуудаас дууны үг татахдаа зохиогчийн эрхийн удирдлагын мэдээллийг (CMI) санаатайгаар хасаж, цахим хамгаалалтыг тойрсон гэж үзэж байна.</li>\n</ul>\n\n<h3>Wikimedia сангийн хөндлөнгийн дүгнэлт ба «Шударга хэрэглээ»</h3>\n<p>Энэхүү шүүх хуралтай зэрэгцэн Нью-Йоркийн өмнөд дүүргийн шүүх дээр явагдаж буй <em>The New York Times v. OpenAI</em> хэрэгт Wikipedia нэвтэрхий толийг хариуцагч <strong>Wikimedia Foundation</strong> хөндлөнгийн тайлбар (amicus brief) ирүүлсэн нь хуульчдын анхаарлыг татлаа. Wikimedia сан хоёр талын аль нэгийг шууд дэмжихээс татгалзаж, шүүхийг хоёр шатлалт зааг тогтоохыг уриалсан байна.</p>\n<ul>\n  <li><strong>Сургалтыг чөлөөлөх:</strong> Нээлттэй мэдээллийн санг уншиж статистик зүй тогтол суралцах нь эх бүтээлийг шууд орлодоггүй тул «шударга хэрэглээ» (fair use) гэж үзэх нь нээлттэй шинжлэх ухаан болон мэдлэгийн санд тустай.</li>\n  <li><strong>Хуулбарласан гаралтыг хязгаарлах:</strong> Харин хиймэл оюуны агент нь дууны үг эсвэл сонины нийтлэлийг үгчлэн хуулбарлаж хэрэглэгчид харуулах нь зах зээлийн шууд орлуулалт болох тул зохиогчийн эрхийн зөрчилд тооцох ёстой хэмээн зөвлөжээ.</li>\n</ul>"
+  },
+  {
+    "id": "art-20261106-industry-1-gartner-2-7t-ai-spend-amd-record",
+    "slug": "gartner-global-ai-spending-2-7-trillion-amd-data-center-8-5b",
+    "title": "Gartner: Дэлхийн AI зардал 2.7 их наяд долларт хүрнэ",
+    "subtitle": "Дэд бүтцийн хөрөнгө оруулалт 1.48 их наяд долларыг давж, AMD-ийн дата төвийн улирлын орлого 97 хувиар өсөн 8.5 тэрбумд хүрлээ.",
+    "summary": "Судалгааны Gartner байгууллага дэлхийн хиймэл оюуны салбарын нийт зардал 2.7 их наяд долларт хүрэх тооцоог танилцууллаа. Үүний 1.48 их наяд доллар нь зөвхөн дата төв болон процессорын дэд бүтцэд чиглэж байгаа бөгөөд AMD компанийн дата төвийн улирлын орлого 97 хувиар өсөж 8.5 тэрбум долларын дээд амжилт тогтоов.",
+    "category": "industry",
+    "categoryName": "САЛБАР & БИЗНЕС",
+    "author": "Том Монгол",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:20",
+    "readTime": "6 мин унших",
+    "readCount": 3120,
+    "rank": 4,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "coverImage": "/images/articles/daily-20261106-industry-1.jpg",
+    "imageUrl": "/images/articles/daily-20261106-industry-1.jpg",
+    "imageCaption": "Gartner-ийн 2.7 их наяд долларын AI зардлын бүтэц болон AMD компанийн дата төвийн 8.5 тэрбум долларын улирлын орлогын өсөлт.",
+    "primarySource": "Gartner / CIO Dive",
+    "primarySourceUrl": "https://www.ciodive.com/news/ai-spending-2026-gartner-infrastructure/804120/",
+    "tags": [
+      "Gartner",
+      "AMD",
+      "Дата төв",
+      "Хөрөнгө оруулалт",
+      "Instinct GPU"
+    ],
+    "sources": [
+      {
+        "name": "Gartner — Worldwide AI Spending Forecast & Infrastructure ROI Analysis",
+        "url": "https://www.gartner.com/en/newsroom"
+      },
+      {
+        "name": "TechTarget — AMD Data Center Revenue Surges 97% to Record $8.5 Billion",
+        "url": "https://www.techtarget.com/searchdatacenter/news"
+      }
+    ],
+    "content": "<p>Технологийн судалгааны тэргүүлэгч <strong>Gartner</strong> байгууллагын шинэ тайлангаар дэлхийн хиймэл оюуны салбарын нийт зардал энэ онд <strong>2.7 их наяд долларт</strong> хүрэхээр байна. Их хэлний загваруудын сургалт болон бие даасан агентын системийг байгууллагын түвшинд нэвтрүүлэх өрсөлдөөн эрчимжсэнээр нийт зардлын талаас илүү хувь буюу <strong>1.48 их наяд доллар</strong> нь зөвхөн хиймэл оюуны дэд бүтэц, сервер, өндөр хурдны сүлжээний тоног төхөөрөмжид зарцуулагдаж байгааг тайланд онцолжээ.</p>\n\n<h3>Хөрөнгө оруулалтын өгөөж ба 8.5 их наядын зөрүү</h3>\n<p>Microsoft, Alphabet, Meta, Amazon, Oracle зэрэг үүлэн технологийн аваргуудын үндсэн хөрөнгийн зардал (CapEx) нийлбэр дүнгээрээ 800 тэрбум долларыг давж, удахгүй 1.3 их наяд долларын босгыг давах төлөвтэй байна. Гэвч Gartner-ийн шинжээчид хөрөнгө оруулалтын эргэн төлөлтийн эрсдэлийг анхаарууллаа:</p>\n<ul>\n  <li><strong>Шаардлагатай орлогын босго:</strong> Одоогийн байгуулж буй дата төвүүдийн зардлыг бүрэн нөхөж, урт хугацаанд ашигт ажиллагаанд хүрэхийн тулд салбарын компаниуд 2030 он гэхэд хуримтлагдсан дүнгээр <strong>8.5 их наяд долларын</strong> шууд орлого олох шаардлагатай.</li>\n  <li><strong>Программ хангамжийн хоцрогдол:</strong> Техник хангамжийн худалдан авалт хэт хурдтай тэлж байгаа ч эцсийн хэрэглэгчдээс орох программ хангамж болон агентын үйлчилгээний бодит орлого дэд бүтцийнхээ өсөлтийг гүйцэхгүй байгаа нь хөрөнгийн зах зээлд хүчтэй савлагаа үүсгэж байна.</li>\n</ul>\n\n<h3>AMD-ийн дата төвийн орлого 97 хувиар өсөв</h3>\n<p>Дэд бүтцийн энэхүү аварга урсгалын үр дүнд хагас дамжуулагч үйлдвэрлэгч <strong>AMD</strong> компани санхүүгийн түүхэн дээд амжилтаа тогтоолоо. Тус компанийн дата төвийн сегментийн улирлын орлого өмнөх оны мөн үеэс <strong>97 хувиар өсөж, 8.5 тэрбум долларт</strong> хүрсэн байна.</p>\n<ul>\n  <li><strong>Instinct ба EPYC процессорын эрэлт:</strong> Тавдугаар үеийн <em>EPYC Turin</em> сервер процессор болон <em>Instinct MI325X / MI350</em> хурдасгуур чипнүүдийг Microsoft, Meta, OpenAI, Anthropic, Oracle зэрэг компаниуд өргөн хүрээнд худалдан авч суурилуулжээ.</li>\n  <li><strong>Олон эх үүсвэрт стратеги:</strong> NVIDIA компани <em>Vera Rubin</em> платформоо бүрэн үйлдвэрлэлд оруулж зах зээлийг тэргүүлсээр байгаа ч томоохон үүлэн операторууд нэг нийлүүлэгчээс хараат бус байх, зардлаа бууруулах үүднээс AMD-ийн чипнүүдийг болон өөрсдийн тусгай процессорыг (ASIC) хослуулан хэрэглэх бодлого баримталж байна.</li>\n</ul>\n\n<h3>Үндэсний дэд бүтэц ба тусгай чипний шилжилт</h3>\n<p>Хувийн хэвшлийн үүлэн компаниудаас гадна АНУ, Европын Холбоо, Ази болон Ойрх Дорнодын засгийн газрууд технологийн тусгаар тогтнолоо хангах зорилгоор үндэсний хэмжээний дата төвүүдэд төсвийн хөрөнгө оруулалт хийж байна. Үүний зэрэгцээ TSMC үйлдвэрийн өндөр хүчин чадлын багтаамж бүрэн захиалагдаж, дараагийн хоёр жилийн нийлүүлэлтийн гэрээнүүд урьдчилан баталгаажжээ.</p>"
+  },
+  {
+    "id": "art-20261106-industry-2-datacenter-power-moratorium-hbm-ssd",
+    "slug": "us-state-data-center-power-moratoriums-hbm-ssd-supply-backlog",
+    "title": "Эрчим хүчний хомсдолоос болж дата төвийн зөвшөөрлийг царцаав",
+    "subtitle": "Нью-Йорк, Техас мужууд 50 МВт-аас дээш чадалтай дата төвүүдийг хязгаарлаж, HBM санах ой болон сервер суурилуулалт гацаанд орлоо.",
+    "summary": "АНУ-ын хэд хэдэн мужид цахилгаан эрчим хүчний сүлжээний хэт ачаалал болон иргэдийн цахилгааны төлбөрийн өсөлтөөс шалтгаалан шинэ дата төв барих зөвшөөрлийг түр царцааж эхэллээ. Үүний улмаас HBM санах ой, өндөр багтаамжийн сервер болон трансформаторын нийлүүлэлтийн сүлжээнд давхар гацаа үүсээд байна.",
+    "category": "industry",
+    "categoryName": "САЛБАР & БИЗНЕС",
+    "author": "Том Монгол",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:20",
+    "readTime": "6 мин унших",
+    "readCount": 2790,
+    "rank": 5,
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "coverImage": "/images/articles/daily-20261106-industry-2.jpg",
+    "imageUrl": "/images/articles/daily-20261106-industry-2.jpg",
+    "imageCaption": "АНУ-ын мужуудын 50 МВт+ дата төвийн хязгаарлалт, 800V эрчим хүчний шилжилт болон HBM/SSD тоног төхөөрөмжийн нийлүүлэлтийн гацаа.",
+    "primarySource": "Data Center Knowledge",
+    "primarySourceUrl": "https://www.datacenterknowledge.com/energy-power-supply/ai-s-expansion-hits-the-limits-of-local-power",
+    "tags": [
+      "Дата төв",
+      "Эрчим хүч",
+      "HBM",
+      "Enterprise SSD",
+      "Дэд бүтэц"
+    ],
+    "sources": [
+      {
+        "name": "Data Center Knowledge — AI's Expansion Hits the Limits of Local Power Grids",
+        "url": "https://www.datacenterknowledge.com/energy-power-supply/ai-s-expansion-hits-the-limits-of-local-power"
+      },
+      {
+        "name": "S&P Global — Power Constraints and High-Capacity SSD/HBM Supply Backlogs",
+        "url": "https://www.spglobal.com/marketintelligence/en/"
+      }
+    ],
+    "content": "<p>Хиймэл оюуны аварга кластеруудын цахилгаан болон усны хэрэглээ орон нутгийн шугам сүлжээний даацаас хэтэрснээр АНУ-ын муж улсуудын хууль тогтоогчид технологийн компаниудын эсрэг хатуу хориг арга хэмжээ авч эхэллээ. Цахилгааны үнийн өсөлтөд бухимдсан сонгогчдын шахалтаар дата төвийн барилгын зөвшөөрлийг түр царцаах болон эрчим хүчний сүлжээний шинэчлэлийн зардлыг технологийн компаниудаар бүрэн төлүүлэх хуулийн төслүүд ар араасаа батлагдаж байна.</p>\n\n<h3>50 МВт-ын хязгаарлалт ба «Ratepayer Protection Act»</h3>\n<p>Муж улсууд болон холбооны засгийн газрын түвшинд эрчим хүчний сүлжээний найдвартай ажиллагааг хамгаалах гурван том өөрчлөлт хэрэгжиж эхэллээ:</p>\n<ul>\n  <li><strong>Нью-Йорк ба Техасын царцаалт:</strong> Нью-Йорк муж 50 мегаваттаас (МВт) дээш чадалтай шинэ дата төвүүдийн барилгын зөвшөөрлийг түр зогсоосон бол Техас мужийн эрчим хүчний зохицуулагч (ERCOT) сүлжээнд холбогдох хүсэлтүүдэд гүнзгийрүүлсэн аудит эхлүүлэв.</li>\n  <li><strong>Хэрэглэгчийг хамгаалах хууль:</strong> Холбооны түвшинд санаачилсан <em>Ratepayer Protection Act</em> хуулиар өндөр хүчдэлийн шугам болон дэд станцын шинэчлэлийн зардлыг жирийн айл өрхийн цахилгааны төлбөрт шингээхийг хориглож, дата төв эзэмшигч компаниудаар 100 хувь төлүүлэхээр тусгажээ.</li>\n  <li><strong>Нууцлалын гэрээнээс татгалзах:</strong> Пенсильвани зэрэг мужууд технологийн компаниудыг орон нутгийн захиргаатай нууцлалын гэрээ (NDA) байгуулахыг хориглож, эрчим хүч болон усны зарцуулалтаа иргэдэд ил тод тайлагнахыг үүрэг болгов.</li>\n</ul>\n\n<h3>HBM санах ой ба Enterprise SSD-ийн давхар гацаа</h3>\n<p>Цахилгаан сүлжээний зөвшөөрөл саатсан нь хагас дамжуулагч болон өгөгдөл хадгалах төхөөрөмжийн нийлүүлэлтийн сүлжээнд шууд доргилт үүсгэж байна. Нэг талаас SK Hynix, Samsung, Micron компаниудын <strong>HBM3e болон HBM4</strong> өндөр хурдны санах ой, мөн RAG систем болон сургалтын завсрын өгөгдөл хадгалах 60ТБ–122ТБ багтаамжтай <strong>Enterprise SSD</strong> дискнүүдийн захиалга жилийн турш дүүрч хомсдол үүсжээ.</p>\n<p>Гэвч нөгөө талаас 800 вольтын (800V) тэжээлийн архитектур болон өндөр хүчдэлийн трансформаторын нийлүүлэлтийн хүлээлт 24–36 сард хүрсэн байна. Үүний улмаас дата төвийн барилгууд цахилгааны сүлжээнд холбогдож чадахгүйд хүрч, технологийн компаниудын тэрбум тэрбум доллараар худалдаж авсан серверүүд агуулахад сул хадгалагдах логистикийн шинэ гацаа үүсээд байна. Энэхүү хүндрэлийг давахын тулд үүлэн операторууд бага оврын цөмийн реактор болон бие даасан эрчим хүчний станцуудыг дата төвийн дэргэд шууд барих урт хугацааны гэрээ рүү шилжиж эхэллээ. Ингэснээр ирэх жилүүдэд чипний нийлүүлэлтээс илүүтэйгээр эрчим хүчний найдвартай эх үүсвэр нь хиймэл оюуны өрсөлдөөний гол хэмжүүр болохоор байна.</p>"
+  },
+  {
+    "id": "art-20261106-mira-murati-thinking-machines-tinker",
+    "slug": "mira-murati-thinking-machines-lab-tinker-open-weights",
+    "title": "Mira Murati: Нээлттэй жинтэй загвар ба Tinker платформ",
+    "subtitle": "OpenAI-ийн технологийн захирал асан Mira Murati 12 тэрбум долларын үнэлгээтэй Thinking Machines Lab болон Tinker орчноо танилцуулав.",
+    "category": "interview",
+    "categoryName": "НАМТАР & ХӨРӨГ",
+    "primarySource": "TIME (time.com)",
+    "primarySourceUrl": "https://time.com/collections/time100-ai/",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:10",
+    "readCount": 3180,
+    "readTime": "6 мин унших",
+    "tags": [
+      "TIME",
+      "Mira Murati",
+      "Thinking Machines Lab",
+      "Tinker",
+      "Нээлттэй загвар",
+      "Хөрөг"
+    ],
+    "coverImage": "/images/articles/daily-20261106-interview-1.jpg",
+    "imageUrl": "/images/articles/daily-20261106-interview-1.jpg",
+    "imageCaption": "Thinking Machines Lab-ийн Tinker платформ: Хаалттай API-аас татгалзаж, нээлттэй жинтэй загварыг нарийн тохируулах бүтэц.",
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "summary": "OpenAI компанийн технологийн захирал асан Mira Murati шинээр байгуулсан Thinking Machines Lab компанидаа түүхэн дээд хэмжээний буюу 2 тэрбум долларын анхан шатны хөрөнгө оруулалт татаж, 12 тэрбум долларын үнэлгээнд хүрлээ. Тэрээр TIME сэтгүүлд өгсөн ярилцлагадаа хаалттай загварыг токен бүрээр түрээслэх монопол тогтолцоог халж, Tinker платформоор дамжуулан хэрэглэгчдэд загварын жинг өөрийн өгөгдөлд нийцүүлэн удирдах эрх чөлөө олгохоо зарлав.",
+    "content": "<p class=\"lead\">OpenAI компанийн технологийн захирал асан <strong>Mira Murati</strong> хиймэл оюуны салбарын хамгийн өндөр хүлээлттэй гарааны компани болох <strong>Thinking Machines Lab</strong>-ийг үүсгэн байгуулж, анхан шатны санхүүжилтээр 2 тэрбум доллар босгон 12 тэрбум долларын үнэлгээнд хүрлээ. Тэрээр <em>TIME</em> сэтгүүлд өгсөн ярилцлагадаа хүний оролцоог шахан гаргадаг хаалттай системийн эсрэг зогсож, хүний чадавхыг тэлэх нээлттэй, уян хатан архитектурыг бүтээж буйгаа онцолсон байна.</p>\n\n<h3>Хаалттай API-ийн монополиос Tinker платформ руу</h3>\n<p>Өнөөгийн их хэлний загварын зах зээлд цөөн хэдэн аварга компани бүх хүнд ижилхэн хариулт өгдөг хаалттай загварыг токен бүрээр түрээслэх тогтолцоо ноёрхож байна. Mira Murati энэхүү төвлөрлийг задлахын тулд <strong>Tinker</strong> хэмээх үүлэн платформыг танилцууллаа. Уг платформ нь инженерүүд болон байгууллагуудад өндөр өртөгтэй дата төв барихгүйгээр нээлттэй жинтэй (open-weight) нейрон сүлжээг өөрсдийн нарийн мэргэжлийн өгөгдөлд мэс заслын нарийвчлалтайгаар тохируулах боломж олгодог.</p>\n<ul>\n  <li><strong>Түүхэн санхүүжилт ба дэд бүтэц:</strong> Цахиурын хөндийн түүхэн дэх хамгийн том анхан шатны хөрөнгө оруулалт болох 2 тэрбум долларыг татаж, Nvidia компанитай график процессор болон үүлэн тооцооллын стратегийн түншлэл байгуулав.</li>\n  <li><strong>Загварын жинг удирдах эрх:</strong> Байгууллагууд дотоод нууц мэдээллээ гаднын сервер рүү илгээхийн оронд Tinker орчинд загварын зан төлөв, логик дүрмийг өөрсдийн стандартад нийцүүлэн сургаж хэрэглэх боломжтой.</li>\n  <li><strong>Бодит цагийн олон төрөлт харилцаа:</strong> Дуу хоолой, дүрс болон текстийг тасалж хүлээлгэлгүй зэрэг боловсруулдаг богино эргэлтийн (micro-turn) загваруудыг хөгжүүлж, хүнтэй шууд харилцах хурдыг шинэ түвшинд гаргаж байна.</li>\n</ul>\n\n<h3>Автоматжуулалт биш, хүний шийдвэр гаргах эрх мэдэл</h3>\n<p>OpenAI-д ChatGPT, DALL-E болон дуу хоолойн горимыг удирдан гаргаж, 2023 оны удирдлагын хямралын үеэр гүйцэтгэх захирлын үүргийг түр гүйцэтгэж байсан туршлага нь түүнд салбарын сул талыг дотроос нь харах боломж олгожээ. Тэрээр хиймэл оюуны зорилго бол хүний хөдөлмөрийг бүрэн орлох биш, харин хүний сэтгэлгээ ба шийдвэр гаргах чадавхыг өргөтгөх явдал гэж үздэг. Бэлэн хариултыг сохроор хүлээж авах нь байгууллагын бүтээлч чадварыг сулруулдаг тул хэрэглэгч өөрөө алгоритмын чиглэлийг залдаг байх ёстойг тэрээр анхааруулав.</p>\n<p>Математик болон программчлалын код бичих зэрэг хатуу дүрэмтэй салбарууд хурдтай автоматжиж байгаа ч нарийн мэдрэмж, ёс зүй, стратегийн шийдвэр шаарддаг ажлуудад хүн болон хиймэл оюуны хамтын ажиллагаа чухал хэвээр байна. Thinking Machines Lab-ийн баримталж буй нээлттэй жинтэй загвар ба Tinker платформын хослол нь хиймэл оюуныг цөөн корпорацын өмч биш, хүн бүрд хүртээмжтэй суурь хэрэгсэл болгох шинэ жишиг тогтоож байна.</p>",
+    "sources": [
+      {
+        "name": "TIME: Mira Murati & Thinking Machines Lab Profile",
+        "url": "https://time.com/collections/time100-ai/"
+      },
+      {
+        "name": "Thinking Machines Lab Official",
+        "url": "https://thinkingmachines.ai"
+      }
+    ]
+  },
+  {
+    "id": "art-20261106-chollet-brown-arc-agi-test-time-compute",
+    "slug": "francois-chollet-noam-brown-arc-agi-test-time-compute",
+    "title": "François Chollet ба Noam Brown: Сэтгэх тооцооллын шинэ эрин",
+    "subtitle": "Урьдчилсан сургалтын хана мөргөсөн их хэлний загварууд тестлэх үеийн тооцоолол ба программ хайлтаар шинэ бодлого бодож эхэллээ.",
+    "category": "interview",
+    "categoryName": "НАМТАР & ХӨРӨГ",
+    "primarySource": "ARC Prize & Sequoia AI Ascent (arcprize.org)",
+    "primarySourceUrl": "https://arcprize.org",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:10",
+    "readCount": 2940,
+    "readTime": "7 мин унших",
+    "tags": [
+      "François Chollet",
+      "Noam Brown",
+      "ARC-AGI",
+      "Ndea",
+      "Test-Time Compute",
+      "Хөрөг"
+    ],
+    "coverImage": "/images/articles/daily-20261106-interview-2.jpg",
+    "imageUrl": "/images/articles/daily-20261106-interview-2.jpg",
+    "imageCaption": "ARC-AGI сорил дээрх урьдчилсан сургалтын (Pre-training) хана болон тестлэх үеийн тооцооллын (Test-Time Compute) үсрэлт.",
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": false,
+    "summary": "Keras сан болон ARC-AGI сорилыг үндэслэгч François Chollet, OpenAI-ийн сэтгэн бодох загварын гол судлаач Noam Brown нар хиймэл оюуны хөгжил өгөгдөл цээжлэх үеэс давж, бодлого бодох үеийн тооцоолол (test-time compute) руу бүрэн шилжсэнийг тайлбарлав. Статик сорилын хүснэгтүүд утгаа алдаж, загварын чадвар асуулт бүрд зарцуулах тооцооллын төсвөөс шууд хамаардаг болсон байна.",
+    "content": "<p class=\"lead\">Сүүлийн таван жилийн турш хиймэл оюуны лабораториуд интернэтийн текстийг илүү олон график карт дээр урьдчилан сургах (pre-training) аргаар их хэлний загварын чадварыг өсгөж ирсэн. Гэвч <strong>ARC-AGI</strong> сорилыг санаачлагч, <strong>Ndea</strong> лабораторийг үндэслэгч <strong>François Chollet</strong> болон OpenAI-ийн судлаач <strong>Noam Brown</strong> нарын онцолсноор зөвхөн өгөгдөл цээжлэх замаар жинхэнэ оюун ухаанд хүрэх боломжгүй нь нэгэнт батлагджээ.</p>\n\n<h3>François Chollet: Цээжлэлт биш, шинэ ур чадвар эзэмших хурд</h3>\n<p>François Chollet оюун ухааныг «мэдлэгийн сангийн хэмжээ» биш, харин өмнө нь огт харж байгаагүй шинэ дүрмийг цөөн жишээн дээрээс ойлгож, программ зохион шийдвэрлэх чадвар хэмээн тодорхойлдог. Түүний үүсгэн байгуулсан <strong>Ndea</strong> судалгааны төв болон <strong>ARC Prize</strong> уралдаан нь нейрон сүлжээг дискрет программ хайлттай (program synthesis) хослуулах чиглэлд төвлөрч байна.</p>\n<ul>\n  <li><strong>Урьдчилсан сургалтын тааз:</strong> Зөвхөн дараагийн үгийг таамагладаг уламжлалт их хэлний загварууд ARC-AGI сорил дээр 30 орчим хувиас дээш гарч чадалгүй гацсан бөгөөд дата нэмээд ч шинэ логик бодлогыг бодож чадаагүй юм.</li>\n  <li><strong>Тестлэх үеийн дасан зохицол:</strong> Хариулт өгөхийн өмнө олон зуун жижиг программын хувилбарыг үүсгэж, алдааг нь шалган засварласнаар сорилын гүйцэтгэл 85 хувиас давж, хүний дундаж түвшинд дөхөж эхэллээ.</li>\n  <li><strong>Үр ашигтай суралцахуй:</strong> Жинхэнэ ерөнхий хиймэл оюун нь тэрбум жишээ унших бус, гуравхан жишээ хараад л цаад зүй тогтлыг нь программчлан томьёолдог байх ёстойг тэрээр онцолдог.</li>\n</ul>\n\n<h3>Noam Brown: Төсвөөс хамаарах уян хатан сэтгэлгээ</h3>\n<p>Покер болон Diplomacy тоглоомын супер агентуудыг бүтээж, улмаар OpenAI-ийн сэтгэн бодох загваруудыг удирдсан <strong>Noam Brown</strong> уламжлалт үнэлгээний систем эвдэрснийг анхааруулж байна. Өмнө нь загвар ямар ч асуултад ижилхэн хэмжээний тооцоолол зарцуулдаг байсан бол одоо загварын хүчин чадал нь тухайн даалгаварт хэдэн секунд, хэдэн цагийн тооцоолол (test-time compute) хуваарилснаас шууд хамаардаг болжээ.</p>\n<p>Математикийн баталгаа гаргах, программ хангамжийн цогц архитектур зохиох, шинжлэх ухааны таамаглал шалгах зэрэг ажлуудад олон агентыг зэрэгцүүлэн хэдэн цагаар ажиллуулж, буруу замаас нь буцаан (backtracking) шалгах нь хүний олон жилийн оюуны хөдөлмөрийг хэдхэн цагт багтаах боломж олгож байна. Энэхүү хоёр эрдэмтний судалгаа нь хиймэл оюуны өрсөлдөөн «хэн том загвар сургах вэ» гэдгээс «хэн бодлого бодох мөчид хамгийн үр ашигтай хайлт хийх вэ» гэдэг рүү эргэлт буцалтгүй шилжсэнийг харуулж байна.</p>",
+    "sources": [
+      {
+        "name": "ARC Prize Official Technical Report",
+        "url": "https://arcprize.org"
+      },
+      {
+        "name": "Sequoia Capital: AI Ascent — Noam Brown on Test-Time Compute",
+        "url": "https://www.sequoiacap.com"
+      }
+    ]
+  },
+  {
+    "id": "art-20261106-x402-stripe-mpp-agentic-payments",
+    "slug": "http-402-x402-stripe-mpp-autonomous-agent-economy",
+    "title": "HTTP 402 эргэн ирэв: Агентуудын бие даасан төлбөрийн сүлжээ",
+    "subtitle": "Банкны карт болон сарын захиалгаас хальсан хиймэл оюуны агентууд x402 ба Stripe MPP протоколоор миллисекундэд төлбөр тооцож байна.",
+    "category": "opinion",
+    "categoryName": "ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ",
+    "primarySource": "Stripe & x402 Foundation (stripe.com)",
+    "primarySourceUrl": "https://stripe.com",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:10",
+    "readCount": 3620,
+    "readTime": "7 мин унших",
+    "tags": [
+      "x402",
+      "Stripe MPP",
+      "Агентын эдийн засаг",
+      "HTTP 402",
+      "Бичил төлбөр",
+      "Гүнзгий шинжилгээ"
+    ],
+    "coverImage": "/images/articles/daily-20261106-opinion-1.jpg",
+    "imageUrl": "/images/articles/daily-20261106-opinion-1.jpg",
+    "imageCaption": "x402 болон Stripe Machine Payments Protocol (MPP) ажиллагааны бүдүүвч: HTTP 402 толгойгоор 200 миллисекунд дотор бичил төлбөр гүйцэтгэх явц.",
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "summary": "Хиймэл оюуны агентууд бие даан API дуудах, өгөгдөл худалдаж авах, үүлэн тооцоолол түрээслэх болсноор хүнд зориулсан банкны карт болон сарын захиалгын систем мухардалд орлоо. Coinbase, Cloudflare, Stripe зэрэг компаниуд гучин жил идэвхгүй байсан HTTP 402 кодыг x402 болон Machine Payments Protocol (MPP) стандартаар сэргээж, машин хоорондын бичил эдийн засгийн суурийг тавьж байна.",
+    "content": "<p class=\"lead\">Вебийн анхны стандартыг зохиох үед инженерүүд ирээдүйн цахим мөнгөнд зориулан <code>HTTP 402 Payment Required</code> гэсэн төлөвийн кодыг нөөцөлж үлдээсэн ч гучин жилийн турш бараг хэрэглээгүй юм. Харин 2026 онд хиймэл оюуны агентууд хүний оролцоогүйгээр бие даан өгөгдөл татах, гаднын хэрэгсэл (MCP) дуудах, тооцооллын хүч түрээслэх болсноор энэхүү мартагдсан код дижитал эдийн засгийн гол судас болон эргэн ирлээ.</p>\n\n<h3>Хүнд зориулсан төлбөрийн систем яагаад агентыг гацаадаг вэ?</h3>\n<p>Уламжлалт банкны карт болон сарын захиалгын (subscription) загвар нь хүний хэрэглээнд зориулагдсан тул программ хоорондын өндөр давтамжит харилцаанд огт тохирдоггүй. Нэг агент даалгавар гүйцэтгэх явцдаа хоёр секундийн дотор таван өөр нийлүүлэгчээс тус бүр нь 0.0004 долларын үнэтэй мэдээлэл татах шаардлагатай болдог. Банкны уламжлалт дэд бүтэц ийм хурд болон бичил дүнг дийлдэггүй.</p>\n<ul>\n  <li><strong>Шимтгэлийн хана:</strong> Банкны картын сүлжээ гүйлгээ бүрд 0.30 орчим долларын суурь шимтгэл авдаг тул нэг центээс бага үнэтэй бичил төлбөр хийх эдийн засгийн боломжгүй байдаг.</li>\n  <li><strong>Танин баталгаажуулах саад:</strong> Хүний баталгаажуулалт (3DS, мессеж код) болон гараар бүртгүүлж API түлхүүр авах шат дамжлага нь бие даасан агентын хурдыг бүрэн зогсоодог.</li>\n  <li><strong>Түгжигдмэл захиалга:</strong> Ганц удаа өгөгдөл шалгахын тулд сарын 20 долларын багц худалдаж авах нь агентын хувьд үр ашиггүй зардал болж хувирдаг.</li>\n</ul>\n\n<h3>x402 ба Stripe MPP: 200 миллисекундийн тооцоо</h3>\n<p>Энэхүү гацааг арилгахын тулд Coinbase, Cloudflare, AWS зэрэг байгууллагууд <strong>x402</strong> стандартыг, харин Stripe болон Tempo баг <strong>Machine Payments Protocol (MPP)</strong> тогтолцоог нэвтрүүлэв. Агент аливаа сервер рүү хүсэлт илгээхэд сервер <code>HTTP 402</code> толгой дотор төлбөрийн дүн болон хаягийг буцаана. Агент өөрт олгогдсон криптографийн түр түлхүүрээр (session key) USDC зэрэг тогтвортой зоосоор төлбөрийг 180 миллисекунд дотор баталгаажуулж, өгөгдлөө шууд хүлээн авдаг.</p>\n<p>Хамгийн чухал нь аюулгүй байдлын хязгаарлалт юм. Байгууллагууд агентад банкны дансаа бүрэн даатгахгүйгээр MPC хэтэвч болон ухаалаг мандатаар «өдөрт дээд тал нь 5 доллар, нэг дуудлагад 0.01 доллараас хэтрэхгүй» гэсэн хатуу хүрээ тогтоож өгдөг. Ингэснээр интернэт нь зөвхөн хүмүүс мэдээлэл уншдаг веб байхаа больж, сая сая программ хангамж хоорондоо шууд худалдаа хийдэг бие даасан эдийн засгийн талбар болж хувирлаа.</p>",
+    "sources": [
+      {
+        "name": "Stripe Official: Agentic Commerce & Machine Payments",
+        "url": "https://stripe.com"
+      },
+      {
+        "name": "x402 Protocol Specification",
+        "url": "https://www.x402.org"
+      }
+    ]
+  },
+  {
+    "id": "art-20261106-jevons-paradox-reasoning-token-economics",
+    "slug": "jevons-paradox-reasoning-models-inference-token-economics",
+    "title": "Жевонсын парадокс: Хямд токен яагаад үүлэн зардлыг өсгөв?",
+    "subtitle": "Нэгж токены үнэ 90 гаруй хувиар хямдарсан ч сэтгэн бодох загварын далд тооцоолол болон агентын давталт үүлэн төлбөрийг огцом өсгөлөө.",
+    "category": "opinion",
+    "categoryName": "ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ",
+    "primarySource": "Inference Economics Report (revefi.com)",
+    "primarySourceUrl": "https://www.revefi.com",
+    "publishedAt": "2026-11-06",
+    "publishedTime": "07:10",
+    "readCount": 4120,
+    "readTime": "8 мин унших",
+    "tags": [
+      "Жевонсын парадокс",
+      "Токены эдийн засаг",
+      "Reasoning загвар",
+      "Үүлэн тооцоолол",
+      "FinOps",
+      "Гүнзгий шинжилгээ"
+    ],
+    "coverImage": "/images/articles/daily-20261106-opinion-2.jpg",
+    "imageUrl": "/images/articles/daily-20261106-opinion-2.jpg",
+    "imageCaption": "Жевонсын парадокс хиймэл оюунд: 1 сая токены нэгж үнэ 96 хувиар буурахад байгууллагуудын нийт үүлэн төлбөр 4 дахин өссөн үзүүлэлт.",
+    "isMainLead": false,
+    "isFeatured": false,
+    "isHot": true,
+    "summary": "2023 оноос хойш их хэлний загварын нэгж токены үнэ 10-аас 100 дахин хямдарсан боловч компаниудын хиймэл оюунд зарцуулах сарын төлбөр буурахын оронд хэд дахин өслөө. Эдийн засагч Уильям Стэнли Жевонсын нэрээр нэрлэгдсэн энэхүү парадоксыг сэтгэн бодох загварын далд тооцоолол болон олон агентын тасралтгүй давталт хэрхэн өдөөж буйг задлан шинжилье.",
+    "content": "<p class=\"lead\">2023-2026 оны хооронд их хэлний загваруудын өрсөлдөөн болон чипний хурдацтай шинэчлэлийн үр дүнд нэг сая токены үнэ 90 гаруй хувиар хямдарсан билээ. Санхүүгийн захирлууд үүнийг хараад үүлэн тооцооллын төлбөр мөн адил 90 хувиар хэмнэгдэнэ хэмээн тооцоолсон ч бодит байдал дээр байгууллагуудын сарын нэхэмжлэх 5-аас 50 дахин өссөн байна. Энэ бол 1865 онд нүүрсний хэрэглээн дээр анх ажиглагдсан <strong>Жевонсын парадокс</strong> дижитал оюуны салбарт давтагдаж буй хэрэг юм.</p>\n\n<h3>Сэтгэн бодох загварын «үл үзэгдэх татвар»</h3>\n<p>Нэгж нөөцийн үнэ хямдрах тусам хүмүүс түүнийг хэмнэхээ больж, урьд өмнө эдийн засгийн хувьд боломжгүй байсан шинэ ажлуудад бүрэн хүчээр нь хэрэглэж эхэлдэг. Үүн дээр сэтгэн бодох (reasoning) загваруудын архитектур токены зарцуулалтыг геометрийн прогрессоор үржүүлэв. Урьд нь ганц удаа асуугаад орхидог байсан ажлыг одоо тасралтгүй хяналтын горимд шилжүүлсэн нь нийт хэрэглээг огцом тэлжээ.</p>\n<ul>\n  <li><strong>Далд бодлогын токен (Hidden Chain-of-Thought):</strong> Энгийн загвар хэрэглэгчийн асуултад шууд хариулдаг бол сэтгэн бодох загвар дэлгэц дээр ганц өгүүлбэр гаргахын өмнө цаанаа хэдэн мянган «бодлогын токен» үүсгэж, хувилбаруудыг шалгадаг. Хэрэглэгчид харагдахгүй ч энэ бүх тооцоолол төлбөрт тооцогдоно.</li>\n  <li><strong>Олон агентын салбарласан давталт:</strong> Нэг даалгавар өгөхөд үндсэн агент нь дэд агентуудыг дуудаж, код бичих, алдаа шалгах, веб хайлт хийх зэргээр 12-оос 40 удаагийн дотоод хүсэлт үүсгэдэг.</li>\n  <li><strong>Хэрэглээний зардлын ноёрхол:</strong> Загварыг анх сургах нь нэг удаагийн хөрөнгө оруулалт бол харин ажиллуулах тооцоолол (inference) нь системийн бүх насжилтын зардлын 85-90 хувийг эзлэх «байнгын түрээс» болжээ.</li>\n</ul>\n\n<h3>Шийдэл: Ухаалаг чиглүүлэгч ба үр дүнгийн хэмжүүр</h3>\n<p>Жевонсын урхинд орохгүйн тулд технологийн компаниуд <strong>Inference FinOps</strong> буюу тооцооллын эдийн засгийн шинэ сахилга батыг нэвтрүүлж эхэллээ. Бүх хүсэлтийг хамгийн үнэтэй сэтгэн бодох загвар луу илгээхийн оронд ухаалаг чиглүүлэгч (model router) тавьж, өдөр тутмын энгийн даалгаврын 90 хувийг хөнгөн, хурдан загвараар гүйцэтгээд, зөвхөн нарийн логик шаардсан 10 хувийг л том загвар луу шилжүүлдэг.</p>\n<p>Эцсийн дүндээ токены нэгж үнэ хямдрах нь зардлыг автоматаар бууруулахгүй. Харин зарцуулсан токен бүрийн цаана бизнесийн бодит бүтээмж, эцсийн шийдвэр гарч байгаа эсэхийг хэмжих нь 2026 оны хиймэл оюуны удирдлагын гол шалгуур болж байна.</p>",
+    "sources": [
+      {
+        "name": "Revefi: Inference Economics & Hidden Reasoning Token Costs",
+        "url": "https://www.revefi.com"
+      },
+      {
+        "name": "SoftwareSeni: Jevons Paradox in Enterprise AI Spend",
+        "url": "https://www.softwareseni.com"
+      }
+    ]
+  },
+  {
     "id": "art-20261102-fable55-gpt62-astra-ai-selloff",
     "title": "Fable 5.5, GPT-6.2 Astra ба 500 тэрбумын уналт",
     "subtitle": "Anthropic, OpenAI-ийн шинэ загварууд дотоод сүлжээнд илэрч, харин дата төвийн хэт зардлаас болж Alphabet ганц өдөрт 500 тэрбум доллараа алдав.",

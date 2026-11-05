@@ -1,5 +1,5 @@
 import React from 'react';
-import { ARTICLES, LIVE_WIRE, toArticleCard } from '@/data/news';
+import { ARTICLES, toArticleCard } from '@/data/news';
 import { ArticleDetailClient } from '@/components/ArticleDetailClient';
 
 export function generateStaticParams() {
@@ -58,7 +58,6 @@ export default async function ArticleDetailPage({
       relatedArticles={relatedArticles}
       trendingArticles={trendingArticles}
       moreStories={moreStories}
-      liveWire={LIVE_WIRE.slice(0, 6)}
     />
   );
 }

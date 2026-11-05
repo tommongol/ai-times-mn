@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-AI Mongolia - Autonomous Daily AI News Aggregator & Pipeline
+AI Times Mongolia - Autonomous Daily AI News Aggregator & Pipeline
 Aggregates news from:
 1. Wired (AI Section)
 2. TechRadar (AI Section)
-3. Google News (AI Topic)
+3. Google News (AI & Robotics Topics)
 
-Translates, formats into deep Mongolian journalistic articles,
-deduplicates, and updates articles.json & live_wire.json.
+Translates, formats into Mongolian journalistic articles, enforces short
+headlines (<= 10 words, <= 75 chars), generates local cover images in
+public/images/articles/, updates src/data/articles.json, and validates with
+node scripts/guard.mjs.
 """
 
 import os
@@ -15,6 +17,7 @@ import re
 import sys
 import json
 import hashlib
+import subprocess
 import urllib.request
 import urllib.parse
 from datetime import datetime, timezone
@@ -23,7 +26,7 @@ from email.utils import parsedate_to_datetime
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARTICLES_FILE = os.path.join(PROJECT_DIR, 'src', 'data', 'articles.json')
-LIVE_WIRE_FILE = os.path.join(PROJECT_DIR, 'src', 'data', 'live_wire.json')
+IMAGES_DIR = os.path.join(PROJECT_DIR, 'public', 'images', 'articles')
 
 FEEDS = [
     {
@@ -63,31 +66,65 @@ FEEDS = [
     }
 ]
 
-CURATED_IMAGES = [
-    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
-]
+LOCAL_FALLBACK_IMAGES = {
+    'tech': [
+        '/images/articles/art-20261018-01.jpg',
+        '/images/articles/art-20261018-02.jpg',
+        '/images/articles/art-20261018-03.jpg',
+    ],
+    'robotics': [
+        '/images/articles/ihg-aa-robotics-arm.jpg',
+        '/images/articles/art-ind-samsung-sds-robot-orchestration.jpg',
+        '/images/articles/art-ind-tesla-optimus-gen2-figure02-factories.jpg',
+    ],
+    'law': [
+        '/images/articles/art-aitimes-copyright-fairuse-battle.jpg',
+        '/images/articles/art-20261001-01.jpg',
+    ],
+    'industry': [
+        '/images/articles/art-aitimes-anthropic-ipo-founders.jpg',
+        '/images/articles/art-20261002-01.jpg',
+        '/images/articles/art-20261002-02.jpg',
+    ],
+    'interview': [
+        '/images/articles/art-aitimes-gemini-4-hassabis.jpg',
+        '/images/articles/art-20260930-01.jpg',
+    ],
+    'opinion': [
+        '/images/articles/art-aitimes-history-dartmouth-to-reasoning.jpg',
+        '/images/articles/art-20260929-01.jpg',
+    ],
+}
 
 TRANSLATION_CACHE = {}
+
 
 def clean_html(raw_html):
     clean = re.sub(r'<[^<]+?>', '', raw_html)
     clean = clean.replace('&quot;', '"').replace('&#39;', "'").replace('&amp;', '&').replace('&nbsp;', ' ')
     return clean.strip()
 
+
 def clean_headline(title):
     title = clean_html(title)
-    # Strip any trailing ' - Source Name' or ' - domain.com' or ' | Source'
     title = re.sub(r'\s*[-|–—]\s*([A-Za-z0-9\s.]+)\s*$', '', title)
     return title.strip()
+
+
+def shorten_headline(title, max_words=9, max_chars=70):
+    """Enforce guard.mjs constraints: <= 10 words and <= 75 chars."""
+    title = re.sub(r'\s+', ' ', title).strip().rstrip('.,;:-–—')
+    words = title.split(' ')
+    if len(words) > max_words:
+        words = words[:max_words]
+    result = ' '.join(words)
+    while len(result) > max_chars and len(words) > 1:
+        words.pop()
+        result = ' '.join(words)
+    if len(result) > max_chars:
+        result = result[:max_chars].rstrip()
+    return result.rstrip('.,;:-–—')
+
 
 def translate_to_mongolian(text):
     if not text:
@@ -101,8 +138,8 @@ def translate_to_mongolian(text):
             data = json.loads(resp.read().decode('utf-8'))
             result = ''.join([part[0] for part in data[0] if part[0]])
             result = result.replace("А.И.", "AI").replace("АИ", "AI").replace("хиймэл оюун ухаан", "хиймэл оюун")
-            result = result.replace("гүйцэтгэх захирал", "гүйцэтгэх захирал (CEO)")
-            result = result.replace("эрх мэдлээр цангаж байна", "эрчим хүчний өндөр хэрэглээ шаардаж байна")
+            result = result.replace("гүйцэтгэх захирал", "CEO")
+            result = result.replace("эрх мэдлээр цангаж байна", "эрчим хүч их шаардана")
             result = result.replace("Үхсэн аав", "Талийгаач аав")
             result = re.sub(r'\s*-\s*[A-Za-z0-9.]+\s*$', '', result)
             final_res = result.strip()
@@ -113,6 +150,7 @@ def translate_to_mongolian(text):
         TRANSLATION_CACHE[text] = text
         return text
 
+
 def create_slug(title):
     slug = title.lower()
     slug = re.sub(r'[^a-z0-9\s-]', '', slug)
@@ -120,6 +158,7 @@ def create_slug(title):
     if not slug:
         slug = f"ai-update-{int(datetime.now().timestamp())}"
     return slug[:70]
+
 
 def determine_category(title, summary=""):
     combined = (title + " " + summary).lower()
@@ -139,6 +178,43 @@ def determine_category(title, summary=""):
         return 'opinion', 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ'
     return 'tech', 'AI ТЕХНОЛОГИ'
 
+
+def ensure_local_cover_image(art_id, cat_id, cat_name, source_name, en_title):
+    """Generate a local editorial card in public/images/articles/ or fall back to an existing local image."""
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    rel_path = f"/images/articles/{art_id}.jpg"
+    abs_path = os.path.join(IMAGES_DIR, f"{art_id}.jpg")
+
+    if os.path.exists(abs_path):
+        return rel_path
+
+    try:
+        from PIL import Image, ImageDraw
+        width, height = 1200, 675
+        img = Image.new('RGB', (width, height), color=(14, 17, 22))
+        draw = ImageDraw.Draw(img)
+
+        # Subtle grid lines
+        for x in range(0, width, 60):
+            draw.line([(x, 0), (x, height)], fill=(26, 32, 42), width=1)
+        for y in range(0, height, 60):
+            draw.line([(0, y), (width, y)], fill=(26, 32, 42), width=1)
+
+        # Accent frame & top bar
+        draw.rectangle([48, 48, width - 48, height - 48], outline=(0, 255, 102), width=3)
+        draw.rectangle([48, 48, width - 48, 108], fill=(0, 255, 102))
+
+        img.save(abs_path, 'JPEG', quality=88)
+        return rel_path
+    except Exception:
+        candidates = LOCAL_FALLBACK_IMAGES.get(cat_id, LOCAL_FALLBACK_IMAGES['tech'])
+        idx = int(hashlib.md5(en_title.encode('utf-8')).hexdigest(), 16) % len(candidates)
+        chosen = candidates[idx]
+        if os.path.exists(os.path.join(PROJECT_DIR, 'public', chosen.lstrip('/'))):
+            return chosen
+        return '/images/articles/art-20261018-01.jpg'
+
+
 def fetch_feed_items():
     feed_results = {}
     seen_links = set()
@@ -154,7 +230,7 @@ def fetch_feed_items():
                 root = ET.fromstring(content)
                 items = root.findall('.//item')
                 print(f" -> Found {len(items)} items in {feed_name}", flush=True)
-                
+
                 for item in items[:12]:
                     title_elem = item.find('title')
                     link_elem = item.find('link')
@@ -173,10 +249,10 @@ def fetch_feed_items():
                     seen_links.add(link)
 
                     source_name = source_elem.text if source_elem is not None and source_elem.text else feed_name
-                    
+
                     try:
                         dt = parsedate_to_datetime(pub_elem.text)
-                    except:
+                    except Exception:
                         dt = datetime.now(timezone.utc)
 
                     desc_text = clean_html(desc_elem.text) if desc_elem is not None and desc_elem.text else ""
@@ -195,6 +271,7 @@ def fetch_feed_items():
 
     return feed_results
 
+
 def generate_article_content(mn_title, en_title, source, dt_str, category_name):
     return f"""
 <div class="space-y-6">
@@ -212,10 +289,10 @@ def generate_article_content(mn_title, en_title, source, dt_str, category_name):
 </div>
 """.strip()
 
+
 def run_pipeline():
     print("=== STARTING AUTONOMOUS NEWS PIPELINE ===", flush=True)
-    
-    # 1. Load existing articles
+
     if os.path.exists(ARTICLES_FILE):
         with open(ARTICLES_FILE, 'r', encoding='utf-8') as f:
             articles = json.load(f)
@@ -223,42 +300,16 @@ def run_pipeline():
         articles = []
 
     print(f"Loaded {len(articles)} existing articles.", flush=True)
+    existing_ids = {a['id'] for a in articles}
     existing_slugs = {a['slug'] for a in articles}
     existing_titles = {a['title'].strip().lower() for a in articles}
 
-    # 2. Fetch fresh items from all feeds
     feed_data = fetch_feed_items()
 
-    # Flatten all items for Live Wire
-    all_items = []
-    for f_name, items in feed_data.items():
-        all_items.extend(items)
-    all_items.sort(key=lambda x: x['pub_dt'], reverse=True)
-
-    print(f"Total items collected across all feeds: {len(all_items)}", flush=True)
-
-    # 3. Update LIVE_WIRE ticker (top 8 newest)
-    print("Updating Live Wire ticker...", flush=True)
-    live_wire_items = []
-    for item in all_items[:8]:
-        mn_title = translate_to_mongolian(item['clean_title'])
-        live_wire_items.append({
-            'time': item['pub_dt'].strftime('%H:%M'),
-            'title': mn_title,
-            'source': item['source']
-        })
-
-    with open(LIVE_WIRE_FILE, 'w', encoding='utf-8') as f:
-        json.dump(live_wire_items, f, ensure_ascii=False, indent=2)
-    print(f"Updated live_wire.json with {len(live_wire_items)} items.", flush=True)
-
-    # 4. Balanced Round-Robin selection for full articles
-    # Ensure at least 1 from Wired, 1 from TechRadar, 1 from Google News
     selected_candidates = []
-    priority_order = ['WIRED', 'TechRadar', 'Google News AI']
-    
-    # Collect 1-2 freshest from each feed
-    for round_num in range(2):
+    priority_order = ['WIRED', 'TechRadar', 'Google News AI', 'Google News Robotics']
+
+    for _ in range(2):
         for feed_name in priority_order:
             items = feed_data.get(feed_name, [])
             for it in items:
@@ -279,19 +330,25 @@ def run_pipeline():
         if slug in existing_slugs:
             continue
 
-        mn_title = translate_to_mongolian(en_title)
-        if mn_title.lower() in existing_titles:
+        raw_mn_title = translate_to_mongolian(en_title)
+        mn_title = shorten_headline(raw_mn_title, max_words=9, max_chars=70)
+        if not mn_title or mn_title.lower() in existing_titles:
             continue
 
         dt = item['pub_dt']
         date_str = dt.strftime('%Y-%m-%d')
         time_str = dt.strftime('%H:%M')
 
-        cat_id, cat_name = determine_category(en_title, item['desc'])
-        mn_subtitle = f"{item['source']}-ийн тойм: {mn_title}. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл."
+        seq = len(new_articles) + 1
+        art_id = f"art-{dt.strftime('%Y%m%d')}-{seq:02d}"
+        while art_id in existing_ids:
+            seq += 1
+            art_id = f"art-{dt.strftime('%Y%m%d')}-{seq:02d}"
 
-        img_idx = int(hashlib.md5(en_title.encode()).hexdigest(), 16) % len(CURATED_IMAGES)
-        cover_img = CURATED_IMAGES[img_idx]
+        cat_id, cat_name = determine_category(en_title, item['desc'])
+        mn_subtitle = f"{item['source']}-ийн тойм: {raw_mn_title}. Технологийн шинэ өөрчлөлт ба зах зээлийн нөлөөлөл."
+
+        cover_img = ensure_local_cover_image(art_id, cat_id, cat_name, item['source'], en_title)
 
         content_html = generate_article_content(
             mn_title=mn_title,
@@ -307,7 +364,7 @@ def run_pipeline():
                 tags.append(brand)
 
         art_obj = {
-            'id': f"art-{dt.strftime('%Y%m%d')}-{len(new_articles)+1:02d}",
+            'id': art_id,
             'slug': slug,
             'title': mn_title,
             'subtitle': mn_subtitle,
@@ -325,7 +382,7 @@ def run_pipeline():
             'imageCaption': f"{item['source']} - {en_title}",
             'isMainLead': (len(new_articles) == 0 and len(articles) == 0),
             'isHot': (len(new_articles) < 2),
-            'summary': f"{item['source']}-ийн албан ёсны мэдээллээр: {mn_title}. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
+            'summary': f"{item['source']}-ийн албан ёсны мэдээллээр: {raw_mn_title}. Энэхүү технологийн хөгжүүлэлт нь хиймэл оюуны экосистемийг шинэ шатанд гаргаж байна.",
             'content': content_html,
             'sources': [
                 {'name': item['source'], 'url': item['link']}
@@ -333,30 +390,31 @@ def run_pipeline():
         }
 
         new_articles.append(art_obj)
+        existing_ids.add(art_id)
         existing_slugs.add(slug)
         existing_titles.add(mn_title.lower())
         print(f" -> Ingested Article: [{item['source']}] {mn_title}", flush=True)
 
-    # 5. Merge articles
     if new_articles:
         print(f"Prepending {len(new_articles)} new articles...", flush=True)
-        # Preserve all foundational articles permanently
-        foundational = [a for a in articles if a.get('isFoundational') or a['id'].startswith('art-aitimes-')]
-        regular = [a for a in articles if not (a.get('isFoundational') or a['id'].startswith('art-aitimes-'))]
-        merged_regular = (new_articles + regular)[:45]
-        updated_articles = merged_regular + foundational
+        updated_articles = new_articles + articles
 
         for idx, a in enumerate(updated_articles):
-            a['isMainLead'] = (idx == 0)
             a['rank'] = idx + 1
 
         with open(ARTICLES_FILE, 'w', encoding='utf-8') as f:
             json.dump(updated_articles, f, ensure_ascii=False, indent=2)
-        print(f"Saved {len(updated_articles)} articles ({len(foundational)} foundational) to {ARTICLES_FILE}.", flush=True)
+        print(f"Saved {len(updated_articles)} articles to {ARTICLES_FILE}.", flush=True)
     else:
         print("All priority articles already up to date.", flush=True)
 
+    print("Running scripts/guard.mjs validation...", flush=True)
+    res = subprocess.run(['node', 'scripts/guard.mjs'], cwd=PROJECT_DIR)
+    if res.returncode != 0:
+        sys.exit(res.returncode)
+
     print("=== NEWS PIPELINE FINISHED SUCCESSFULLY ===", flush=True)
+
 
 if __name__ == '__main__':
     run_pipeline()

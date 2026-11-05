@@ -38,12 +38,6 @@ export type ArticleCardData = Omit<NewsArticle, 'content' | 'sources'> & {
   sources?: { name: string; url: string }[];
 };
 
-export interface LiveWireItem {
-  time: string;
-  title: string;
-  source: string;
-}
-
 export const NAV_SECTIONS = [
   { id: 'all', name: 'БҮХ МЭДЭЭ' },
   { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
