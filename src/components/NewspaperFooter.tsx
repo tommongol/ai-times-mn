@@ -59,10 +59,10 @@ export const NewspaperFooter: React.FC = () => {
                 <strong>Холбоо барих:</strong> <a href="mailto:hello@mongol.guru" className="hover:text-white underline">hello@mongol.guru</a>
               </p>
               <p>
-                <strong>Хаяг:</strong> Улаанбаатар хот, Сүхбаатар дүүрэг, Мэдээлэл технологийн үндэсний төв
+                <strong>Хаяг:</strong> Улаанбаатар хот, Сүхбаатар дүүрэг, Мэдээлэл технологийн үндэсний төв 213 тоот
               </p>
               <p className="text-neutral-500 pt-2">
-                © {new Date().getFullYear()} AI Mongolia. Бүх эрх хуулиар хамгаалагдсан. Нийтлэлийг иш татан ашиглахдаа холбоосыг заавал дурдана уу.
+                © 2026 AI Mongolia. Нийтлэлийг иш татан ашиглахдаа холбоосыг дурдана уу.
               </p>
             </div>
           </div>
