@@ -1,6 +1,80 @@
 import React from 'react';
-import { ARTICLES, toArticleCard } from '@/data/news';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { ARTICLES, toArticleCard, type NewsArticle } from '@/data/news';
 import { ArticleDetailClient } from '@/components/ArticleDetailClient';
+import {
+  JsonLd,
+  PUBLISHER,
+  SITE_NAME,
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+  absoluteUrl,
+} from '@/lib/seo';
+
+function findArticle(rawId: string): NewsArticle | null {
+  const articleId = decodeURIComponent(rawId || '');
+  return ARTICLES.find((a) => a.id === articleId || a.slug === articleId) || null;
+}
+
+function articlePath(art: NewsArticle): string {
+  return `/article/${encodeURIComponent(art.id)}`;
+}
+
+function articleDescription(art: NewsArticle): string {
+  const text = (art.subtitle || art.summary || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  return text.length > 200 ? `${text.slice(0, 197)}…` : text;
+}
+
+function articleIsoDate(art: NewsArticle): string | undefined {
+  if (!art.publishedAt) return undefined;
+  const time = art.publishedTime && /^\d{1,2}:\d{2}$/.test(art.publishedTime) ? art.publishedTime.padStart(5, '0') : '09:00';
+  return `${art.publishedAt}T${time}:00+08:00`;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const resolved = await params;
+  const article = findArticle(resolved?.id || '');
+  if (!article) return { title: `Мэдээ олдсонгүй — ${SITE_NAME}`, robots: { index: false } };
+
+  const title = `${article.title} — ${SITE_NAME}`;
+  const description = articleDescription(article);
+  const url = articlePath(article);
+  const image = article.coverImage
+    ? { url: absoluteUrl(article.coverImage), alt: article.title }
+    : DEFAULT_OG_IMAGE;
+  const published = articleIsoDate(article);
+  const author = (article as NewsArticle & { author?: string }).author;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      title: article.title,
+      description,
+      siteName: SITE_NAME,
+      locale: 'mn_MN',
+      images: [image],
+      publishedTime: published,
+      section: article.categoryName,
+      tags: article.tags,
+      authors: author ? [author] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description,
+      images: [image.url],
+    },
+  };
+}
 
 export function generateStaticParams() {
   return ARTICLES.map((art) => ({
@@ -21,6 +95,7 @@ export default async function ArticleDetailPage({
   );
 
   const article = currentIndex >= 0 ? ARTICLES[currentIndex] : null;
+  if (!article) notFound();
   const prevArticle =
     currentIndex > 0 ? toArticleCard(ARTICLES[currentIndex - 1]) : null;
   const nextArticle =
@@ -50,7 +125,30 @@ export default async function ArticleDetailPage({
     .slice(0, 4)
     .map(toArticleCard);
 
+  const author = (article as NewsArticle & { author?: string }).author;
+  const published = articleIsoDate(article);
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title.slice(0, 110),
+    description: articleDescription(article),
+    image: [article.coverImage ? absoluteUrl(article.coverImage) : DEFAULT_OG_IMAGE.url],
+    datePublished: published,
+    dateModified: published,
+    inLanguage: 'mn',
+    articleSection: article.categoryName,
+    keywords: article.tags?.join(', '),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${articlePath(article)}` },
+    url: `${SITE_URL}${articlePath(article)}`,
+    author: author
+      ? { '@type': /AI Mongolia|Баг/i.test(author) ? 'Organization' : 'Person', name: author }
+      : { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    publisher: PUBLISHER,
+  };
+
   return (
+    <>
+    <JsonLd data={articleJsonLd} />
     <ArticleDetailClient
       article={article}
       prevArticle={prevArticle}
@@ -59,5 +157,6 @@ export default async function ArticleDetailPage({
       trendingArticles={trendingArticles}
       moreStories={moreStories}
     />
+    </>
   );
 }
