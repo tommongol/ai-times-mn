@@ -43,10 +43,10 @@ export const NAV_SECTIONS = [
   { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
   { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
   { id: 'robotics', name: 'РОБОТ' },
-  { id: 'law', name: 'ХУУЛЬ, ШҮҮХ & БОДЛОГО' },
+  { id: 'law', name: 'ХУУЛЬ & БОДЛОГО' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
-  { id: 'interview', name: 'НАМТАР & ХӨРӨГ' },
-  { id: 'opinion', name: 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ' },
+  { id: 'interview', name: 'ЯРИЛЦЛАГА & ХӨРӨГ' },
+  { id: 'opinion', name: 'ГҮНЗГИЙ ШИНЖИЛГЭЭ' },
 ] as const;
 
 // Нэгтгэсэн хуучин ангиллын холбоос (?section=models г.м.) шинэ ангилал руугаа очно

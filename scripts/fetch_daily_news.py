@@ -166,16 +166,16 @@ def determine_category(title, summary=""):
         return 'robotics', 'РОБОТ'
     elif any(k in combined for k in ['lawsuit', 'sue', 'sued', 'court', 'copyright', 'judge', 'antitrust', 'illegal', 'legal', 'law', 'шүүх', 'зарга', 'нэхэмжлэл',
                                      'policy', 'regulation', 'ban', 'government', 'bill', 'act', 'sovereign', 'military', 'defense', 'pentagon', 'white house', 'бодлого', 'төрийн']):
-        return 'law', 'ХУУЛЬ, ШҮҮХ & БОДЛОГО'
+        return 'law', 'ХУУЛЬ & БОДЛОГО'
     elif any(k in combined for k in ['chip', 'semiconductor', 'model', 'architecture', 'hbm', 'reasoning', 'benchmark', 'code', 'agent', 'gpu', 'llm', 'transistor']):
         return 'tech', 'AI ТЕХНОЛОГИ'
     elif any(k in combined for k in ['openai', 'nvidia', 'google', 'meta', 'anthropic', 'apple', 'microsoft', 'amazon', 'startup', 'ipo', 'stock', 'invest', 'valuation', 'capex',
                                      'health', 'doctor', 'hospital', 'movie', 'film', 'cinema', 'car', 'auto', 'energy', 'business', 'enterprise', 'spacex', 'factory']):
         return 'industry', 'САЛБАР & БИЗНЕС'
     elif any(k in combined for k in ['interview', 'profile', 'biography', 'ярилцлага', 'хөрөг']):
-        return 'interview', 'НАМТАР & ХӨРӨГ'
+        return 'interview', 'ЯРИЛЦЛАГА & ХӨРӨГ'
     elif any(k in combined for k in ['investigation', 'history', 'warn', 'danger', 'future', 'risk', 'crisis', 'түүх', 'эрэн сурвалжлах']):
-        return 'opinion', 'ЭРЭН СУРВАЛЖЛАГА & ТҮҮХ'
+        return 'opinion', 'ГҮНЗГИЙ ШИНЖИЛГЭЭ'
     return 'tech', 'AI ТЕХНОЛОГИ'
 
 

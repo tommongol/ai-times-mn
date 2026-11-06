@@ -235,7 +235,7 @@ export function HomeClient({ articles }: Props) {
 
             <div className="max-w-7xl mx-auto px-4 pt-8">
               <SectionBlock
-                title="AI Технологи & Шинэ загварууд"
+                title="AI Технологи"
                 articles={techArticles}
                 onViewAll={() => setActiveSection('tech')}
               />
@@ -247,25 +247,25 @@ export function HomeClient({ articles }: Props) {
               />
 
               <SectionBlock
-                title="Хууль, Шүүх, Бодлого & Зохиогчийн эрх"
+                title="Хууль & Бодлого"
                 articles={lawArticles}
                 onViewAll={() => setActiveSection('law')}
               />
 
               <SectionBlock
-                title="Салбар, Бизнес & Компаниуд"
+                title="Салбар & Бизнес"
                 articles={industryArticles}
                 onViewAll={() => setActiveSection('industry')}
               />
 
               <SectionBlock
-                title="Намтар, Хөрөг & Ярилцлага"
+                title="Ярилцлага & Хөрөг"
                 articles={interviewArticles}
                 onViewAll={() => setActiveSection('interview')}
               />
 
               <SectionBlock
-                title="Эрэн сурвалжлах тойм & Түүхэн шинжилгээ"
+                title="Гүнзгий шинжилгээ"
                 articles={opinionArticles}
                 onViewAll={() => setActiveSection('opinion')}
               />
