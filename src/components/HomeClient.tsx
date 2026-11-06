@@ -259,7 +259,7 @@ export function HomeClient({ articles }: Props) {
               />
 
               <SectionBlock
-                title="Ярилцлага & Хөрөг"
+                title="Ярилцлага"
                 articles={interviewArticles}
                 onViewAll={() => setActiveSection('interview')}
               />

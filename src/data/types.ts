@@ -45,7 +45,7 @@ export const NAV_SECTIONS = [
   { id: 'robotics', name: 'РОБОТ' },
   { id: 'law', name: 'ХУУЛЬ & БОДЛОГО' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
-  { id: 'interview', name: 'ЯРИЛЦЛАГА & ХӨРӨГ' },
+  { id: 'interview', name: 'ЯРИЛЦЛАГА' },
   { id: 'opinion', name: 'СУРВАЛЖЛАГА' },
 ] as const;
 
