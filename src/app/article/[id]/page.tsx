@@ -11,6 +11,7 @@ import {
   DEFAULT_OG_IMAGE,
   absoluteUrl,
 } from '@/lib/seo';
+import { publicImageSize } from '@/lib/imageSize';
 
 function findArticle(rawId: string): NewsArticle | null {
   const articleId = decodeURIComponent(rawId || '');
@@ -44,8 +45,10 @@ export async function generateMetadata({
   const title = `${article.title} — ${SITE_NAME}`;
   const description = articleDescription(article);
   const url = articlePath(article);
-  const image = article.coverImage
-    ? { url: absoluteUrl(article.coverImage), alt: article.title }
+  // Social cards need a raster picture with its size; an SVG cover falls back to the site card.
+  const size = article.coverImage ? publicImageSize(article.coverImage) : null;
+  const image = article.coverImage && size
+    ? { url: absoluteUrl(article.coverImage), alt: article.title, ...size }
     : DEFAULT_OG_IMAGE;
   const published = articleIsoDate(article);
   const author = (article as NewsArticle & { author?: string }).author;

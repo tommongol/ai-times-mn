@@ -31,6 +31,16 @@ const nextConfig = {
         headers: securityHeaders,
       },
       {
+        // og-image.png, logo.png: 30 хоног. HTML ба API шинэчлэгдсээр.
+        source: '/:file(og-image\\.png|logo\\.png)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=2592000, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
         source: '/images/:path*',
         headers: [
           {
