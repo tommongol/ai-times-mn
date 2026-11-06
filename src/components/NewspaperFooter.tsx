@@ -84,21 +84,10 @@ export const NewspaperFooter: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="pt-2 border-t border-neutral-800">
-                <div className="text-neutral-300 font-bold mb-2 uppercase tracking-wider text-[11px]">
-                  ХУУЛЬ ЗҮЙН МЭДЭЭЛЭЛ
-                </div>
-                <div className="flex flex-wrap gap-4 text-neutral-400 text-[10px]">
-                  <span className="hover:text-[#00FF66] cursor-pointer">ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛ</span>
-                  <span className="hover:text-[#00FF66] cursor-pointer">НУУЦЛАЛЫН БОДЛОГО</span>
-                  <span className="hover:text-[#00FF66] cursor-pointer">ЗОХИОГЧИЙН ЭРХ</span>
-                </div>
-              </div>
             </div>
 
             <div className="pt-6 text-[10px] text-neutral-500 font-mono">
-              ENGINEERED FOR DEEP TECH INTELLIGENCE
+              ENGINEERED FOR DEEP TECH INTELLIGENCE MONGOLIA
             </div>
           </div>
         </div>
