@@ -265,7 +265,7 @@ export function HomeClient({ articles }: Props) {
               />
 
               <SectionBlock
-                title="Гүнзгий шинжилгээ"
+                title="Сурвалжлага"
                 articles={opinionArticles}
                 onViewAll={() => setActiveSection('opinion')}
               />

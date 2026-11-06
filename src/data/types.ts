@@ -46,7 +46,7 @@ export const NAV_SECTIONS = [
   { id: 'law', name: 'ХУУЛЬ & БОДЛОГО' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
   { id: 'interview', name: 'ЯРИЛЦЛАГА & ХӨРӨГ' },
-  { id: 'opinion', name: 'ГҮНЗГИЙ ШИНЖИЛГЭЭ' },
+  { id: 'opinion', name: 'СУРВАЛЖЛАГА' },
 ] as const;
 
 // Нэгтгэсэн хуучин ангиллын холбоос (?section=models г.м.) шинэ ангилал руугаа очно

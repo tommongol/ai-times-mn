@@ -175,7 +175,7 @@ def determine_category(title, summary=""):
     elif any(k in combined for k in ['interview', 'profile', 'biography', 'ярилцлага', 'хөрөг']):
         return 'interview', 'ЯРИЛЦЛАГА & ХӨРӨГ'
     elif any(k in combined for k in ['investigation', 'history', 'warn', 'danger', 'future', 'risk', 'crisis', 'түүх', 'эрэн сурвалжлах']):
-        return 'opinion', 'ГҮНЗГИЙ ШИНЖИЛГЭЭ'
+        return 'opinion', 'СУРВАЛЖЛАГА'
     return 'tech', 'AI ТЕХНОЛОГИ'
 
 
