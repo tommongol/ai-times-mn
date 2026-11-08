@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   sync-news:
-    name: Aggregate AI News from Wired, TechRadar & Google News
+    name: Aggregate & Publish Autonomous AI News
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,10 +32,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Pillow for local cover generation
-        run: pip install pillow
+      - name: Install Python dependencies
+        run: pip install pillow requests
 
-      - name: Fetch, Translate & Sync AI News
+      - name: Fetch, Synthesize & Sync AI News
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BFL_API_KEY: ${{ secrets.BFL_API_KEY }}
+          MN_SPELL_KEY: ${{ secrets.MN_SPELL_KEY }}
         run: |
           python3 scripts/fetch_daily_news.py
           node scripts/guard.mjs
