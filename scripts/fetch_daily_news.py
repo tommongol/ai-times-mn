@@ -388,9 +388,9 @@ def run_pipeline():
         articles = []
 
     print(f"Loaded {len(articles)} existing articles.", flush=True)
-    existing_ids = {a['id'] for a in articles}
-    existing_slugs = {a['slug'] for a in articles}
-    existing_titles = {a['title'].strip().lower() for a in articles}
+    existing_ids = {a.get('id', '') for a in articles if a.get('id')}
+    existing_slugs = {a.get('slug', '') for a in articles if a.get('slug')}
+    existing_titles = {a.get('title', '').strip().lower() for a in articles if a.get('title')}
 
     feed_data = fetch_feed_items()
 
