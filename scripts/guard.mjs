@@ -66,6 +66,15 @@ try {
     if (!a.category || !VALID_CATEGORIES.has(a.category)) {
       errors.push(`articles.json [${a.id}]: Буруу category: «${a.category}»`);
     }
+    if (!a.publishedAt || !/^\d{4}-\d{2}-\d{2}$/.test(a.publishedAt)) {
+      errors.push(`articles.json [${a.id}]: publishedAt заавал YYYY-MM-DD форматаар байх ёстой («${a.publishedAt}»)`);
+    }
+    if (!a.publishedTime || !/^\d{2}:\d{2}$/.test(a.publishedTime)) {
+      errors.push(`articles.json [${a.id}]: publishedTime заавал HH:MM форматаар байх ёстой («${a.publishedTime}»)`);
+    }
+    if (a.author && typeof a.author !== 'string') {
+      errors.push(`articles.json [${a.id}]: author заавал текст (string) байх ёстой, обьект биш`);
+    }
     if (!a.coverImage) {
       errors.push(`articles.json [${a.id}]: coverImage талбар дутуу байна (imageUrl биш coverImage гэж бичнэ)`);
     } else if (a.coverImage.includes('images.unsplash.com')) {
