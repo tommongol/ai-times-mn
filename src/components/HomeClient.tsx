@@ -68,6 +68,10 @@ export function HomeClient({ articles }: Props) {
     return articles.filter((a) => !leadIds.has(a.id));
   }, [articles, mainLead, reviewLead]);
 
+  const mongoliaArticles = useMemo(() => {
+    return remainingArticles.filter((a) => a.category === 'mongolia');
+  }, [remainingArticles]);
+
   const techArticles = useMemo(() => {
     return remainingArticles.filter((a) => a.category === 'tech');
   }, [remainingArticles]);
@@ -234,6 +238,12 @@ export function HomeClient({ articles }: Props) {
             />
 
             <div className="max-w-7xl mx-auto px-4 pt-8">
+              <SectionBlock
+                title="Монголд"
+                articles={mongoliaArticles}
+                onViewAll={() => setActiveSection('mongolia')}
+              />
+
               <SectionBlock
                 title="AI Технологи"
                 articles={techArticles}

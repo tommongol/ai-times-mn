@@ -35,6 +35,16 @@ IMAGES_DIR = os.path.join(PROJECT_DIR, 'public', 'images', 'articles')
 
 FEEDS = [
     {
+        'name': 'Mongolia AI News',
+        'url': 'https://news.google.com/rss/search?q=%22Mongolia%22+-%22Inner+Mongolia%22+(%22artificial+intelligence%22+OR+%22AI%22+OR+%22Chimege%22+OR+%22AND+Global%22+OR+%22data+center%22)+when:30d&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'mongolia'
+    },
+    {
+        'name': 'Монгол AI Сайтууд',
+        'url': 'https://news.google.com/rss/search?q=(%22%D1%85%D0%B8%D0%B9%D0%BC%D1%8D%D0%BB+%D0%BE%D1%8E%D1%83%D0%BD%22+OR+%22Chimege%22+OR+%22Egune%22+OR+%22%D0%B4%D0%B0%D1%82%D0%B0+%D1%82%D3%A9%D0%B2%22)+(site:ikon.mn+OR+site:gogo.mn+OR+site:lemonpress.mn+OR+site:unread.today+OR+site:montsame.mn+OR+site:itoim.mn)&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'mongolia'
+    },
+    {
         'name': 'WIRED AI',
         'url': 'https://news.google.com/rss/search?q=site:wired.com+AI+when:3d&hl=en-US&gl=US&ceid=US:en',
         'default_category': 'tech'
@@ -72,6 +82,7 @@ FEEDS = [
 ]
 
 EDITORIAL_FALLBACK_IMAGES = {
+    'mongolia': '/images/articles/daily-20261106-industry-2.jpg',
     'tech': '/images/articles/art-20261018-01.jpg',
     'robotics': '/images/articles/ihg-aa-robotics-arm.jpg',
     'law': '/images/articles/art-aitimes-copyright-fairuse-battle.jpg',
@@ -200,8 +211,8 @@ def generate_article_with_gemini(gemini_key, item):
    - 2-3 ширхэг <h3> дэд гарчигтай.
    - Дэд гарчиг бүрийн дор 1-2 догол мөр дэлгэрэнгүй баримт.
    - Агуулга дотор ямар ч <img> эсвэл <figure> БҮҮ хий (зураг коверт нэг л удаа орно).
-5. category: 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion'-ийн аль тохирох нь.
-6. categoryName: 'AI ТЕХНОЛОГИ', 'РОБОТ', 'ХУУЛЬ & БОДЛОГО', 'САЛБАР & БИЗНЕС', 'ЯРИЛЦЛАГА & ХӨРӨГ', 'СУРВАЛЖЛАГА'-ын аль нэг.
+5. category: 'mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion'-ийн аль тохирох нь.
+6. categoryName: 'МОНГОЛД', 'AI ТЕХНОЛОГИ', 'РОБОТ', 'ХУУЛЬ & БОДЛОГО', 'САЛБАР & БИЗНЕС', 'ЯРИЛЦЛАГА & ХӨРӨГ', 'СУРВАЛЖЛАГА'-ын аль нэг.
 7. tags: 3-5 ширхэг түлхүүр үг (жишээ нь: ["OpenAI", "ChatGPT", "AI агент"]).
 8. image_prompt: Бодит гэрэл зургийн англи промпт (35mm documentary editorial photography, realistic cinematic lighting, highly detailed, photojournalism, no text, no infographics, no UI).
 9. image_caption: Зургийн тайлбар монголоор (1 богино өгүүлбэр).
@@ -505,10 +516,11 @@ def run_pipeline():
             art_id = f"art-{now_ub.strftime('%Y%m%d')}-{(int(time.time()) + seq) % 10000:04d}"
 
         cat_id = item.get('default_category') or art_data.get('category', 'tech')
-        if cat_id not in ['tech', 'robotics', 'law', 'industry', 'interview', 'opinion']:
+        if cat_id not in ['mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion']:
             cat_id = 'tech'
 
         cat_names = {
+            'mongolia': 'МОНГОЛД',
             'tech': 'AI ТЕХНОЛОГИ',
             'robotics': 'РОБОТ',
             'law': 'ХУУЛЬ & БОДЛОГО',

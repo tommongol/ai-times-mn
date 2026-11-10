@@ -1,6 +1,7 @@
 export type ArticleCategory =
   | 'all'
   | 'review'
+  | 'mongolia'
   | 'tech'
   | 'robotics'
   | 'law'
@@ -41,6 +42,7 @@ export type ArticleCardData = Omit<NewsArticle, 'content' | 'sources'> & {
 export const NAV_SECTIONS = [
   { id: 'all', name: 'БҮХ МЭДЭЭ' },
   { id: 'review', name: 'ЗУРАГТ ТОЙМ' },
+  { id: 'mongolia', name: 'МОНГОЛД' },
   { id: 'tech', name: 'AI ТЕХНОЛОГИ' },
   { id: 'robotics', name: 'РОБОТ' },
   { id: 'law', name: 'ХУУЛЬ & БОДЛОГО' },

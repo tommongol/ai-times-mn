@@ -43,7 +43,7 @@ function scan(dir) {
 }
 scan('src');
 
-const VALID_CATEGORIES = new Set(['review', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion', 'models', 'policy', 'companies']);
+const VALID_CATEGORIES = new Set(['review', 'mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion', 'models', 'policy', 'companies']);
 
 // Гарчгийн уртын хашлага, давхардсан ID, болон coverImage шалгалт
 try {
