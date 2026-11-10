@@ -1,5 +1,54 @@
 [
   {
+    "id": "art-20261110-anthropic-claude-fable-mythos-5-2",
+    "slug": "anthropic-claude-fable-5-2-mythos-5-2-launch",
+    "title": "Anthropic-ийн Fable 5.2 дэлхийн хамгийн хүчирхэг загвар болов",
+    "subtitle": "Мянган агентаар найман өдөрт үйлдлийн систем бүтээж, хар нүхний физикийн хоёр бодлогыг шийдсэн шинэ загварын үнэ өмнөхөөсөө хямдрав.",
+    "summary": "Anthropic компани хамгийн хүнд инженерийн болон шинжлэх ухааны даалгаварт зориулсан Claude Fable 5.2, Mythos 5.2 загваруудаа танилцуулж, Artificial Analysis жагсаалтын тэргүүн байрт бичигдлээ.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "author": "Том Тедди",
+    "primarySource": "Anthropic, Artificial Analysis",
+    "primarySourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "publishedAt": "2026-11-10",
+    "publishedTime": "11:30",
+    "readCount": 3420,
+    "readTime": "8 мин",
+    "isMainLead": true,
+    "isHot": true,
+    "coverImage": "/images/articles/lead-20261110-claude-fable-5-2.jpg",
+    "tags": [
+      "Anthropic",
+      "Claude Fable 5.2",
+      "Claude Mythos 5.2",
+      "Artificial Analysis",
+      "Fermat"
+    ],
+    "content": "<p><strong>Anthropic</strong> компани хамгийн ээдрээтэй техникийн болон шинжлэх ухааны сорилтуудыг шийдвэрлэхэд зориулсан <strong>Claude Fable 5.2</strong> болон <strong>Claude Mythos 5.2</strong> загваруудаа (<a href=\"https://www.anthropic.com/claude-fable-and-mythos-5-2\" target=\"_blank\" rel=\"noopener noreferrer\">anthropic.com</a>) албан ёсоор танилцууллаа. Хоёр загвар нь суурь бүтцийн хувьд ижил боловч Fable 5.2 нь кибер аюулгүй байдал болон биологийн хатуу хамгаалалттайгаар нийт хэрэглэгчдэд нээлттэй гарсан бол Mythos 5.2 нь зөвхөн баталгаажсан кибер аюулгүй байдал, анагаах ухааны судлаачдад тусгай хөтөлбөрөөр олгогдож байна.</p>\n\n<h2>Үзүүлэлт ба Artificial Analysis жагсаалтын тэргүүлэл</h2>\n<p>Хараат бус <strong>Artificial Analysis</strong> байгууллагын шинэчилсэн оюуны индексээр Claude Fable 5.2 нь Google-ийн Gemini 4 Carbon болон OpenAI-ийн GPT-6 Astra загваруудыг ардаа орхин <strong>дэлхийн хамгийн өндөр үзүүлэлттэй загвараар (#1)</strong> тодорлоо.</p>\n<ul>\n<li><strong>Код бичилт (FrontierCode 2.0 ба FrontierSWE v2):</strong> Нээлттэй эхийн төслүүдэд кодын өөрчлөлт нь шууд хүлээн зөвшөөрөгдөх эсэхийг шалгадаг FrontierCode 2.0 сорилд Fable 5.2 «Extra High» горим дээр <strong>49.1 хувь</strong> авч (Fable 5.1 нь 32.4%, Opus 5.5 нь 45.5%, GPT-6 Astra нь 42.8%) түүхэн дээд амжилт тогтоов. Харин FrontierSWE v2 сорилд <strong>69.9 хувь</strong>-д хүрчээ.</li>\n<li><strong>Шинжлэх ухаан ба эргэцүүлэл:</strong> Humanity’s Last Exam сорилд хэрэгсэлтэйгээр <strong>74.2 хувь</strong> (GPT-6 Astra 57.2%), Terminal-Bench-Science 0.1 сорилд Mythos 5.2 нь <strong>75.3 хувь</strong>, компьютерын орчин удирдах OSWorld 2.1 дээр <strong>89.3 хувь</strong>, харин RoboDojo роботын симуляци дээр <strong>64.9 хувь</strong> (өмнөх хувилбар 27.6%) авч тус тус тэргүүлэв.</li>\n<li><strong>Кибер аюулгүй байдал ба уургийн загварчлал:</strong> Mythos 5.2 нь CyScenarioBench дээр <strong>76.3 хувь</strong> (GPT-6 Cyber 61%), CVE цоорхой дахин илрүүлэх сорилд <strong>89.6 хувь</strong> үзүүлж, Mozilla компанийн Firefox хөтөч дээрх эмзэг байдлыг илрүүлэх үр дүнг өмнөх хувилбараасаа хоёр дахин өсгөжээ.</li>\n</ul>\n\n<h2>Хурд, үнэ болон тооцооллын үр ашиг</h2>\n<p>Шинэ хувилбар нь өмнөх Fable 5.1-ээс <strong>30 хувиар хурдан</strong> хариу өгөхөөс гадна үнийн хувьд хямдарсан байна. API-аар нэг сая оролтын токен <strong>8 ам.доллар</strong>, гаралтын токен <strong>40 ам.доллар</strong> болсон нь Fable 5.1 болон GPT-6 Astra хувилбараас ($10 / $50) 20 хувиар хямд юм. Мөн токен үүсгэх хурдыг 2.5 дахин нэмэгдүүлдэг «Fast mode» горим нь $16 / $80 үнэтэйгээр нээгджээ.</p>\n<p>Гэхдээ Artificial Analysis-ийн хэмжилтээр хамгийн дээд «Max» эргэцүүллийн горимд нэг даалгаврын дундаж өртөг <strong>26.54 ам.доллар</strong> хүрч байгаа бол «Extra High» горим нь илүү бага зардлаар илүү өндөр оноо авч буйг онцолсон байна. Тиймээс өдөр тутмын энгийн ажилд <strong>Claude Opus 5.5</strong>-ийг үндсэн хэрэгслээр сонгож, харин нарийн төвөгтэй даалгаварт Fable 5.2-ийг зөвлөх (Advisor) эсвэл жижиг загваруудыг удирдах зохицуулагчаар (Orchestrator) ажиллуулахыг Anthropic зөвлөжээ.</p>\n\n<h2>Инженерчлэл ба шинжлэх ухааны бодит нээлтүүд</h2>\n<p>Туршилтын хугацаанд Fable 5.2 болон Mythos 5.2 нь зөвхөн код бичих бус, бодит шинжлэх ухаан болон техник хангамжийн талбарт хэд хэдэн томоохон үр дүн гаргасан байна:</p>\n<ol>\n<li><strong>Хоосон хавтаснаас 8 өдрийн дотор үйлдлийн систем бүтээв:</strong> Anthropic-ийн инженер хоосон хавтас үүсгэн зөөврийн компьютерт зориулсан үйлдлийн систем бичих даалгавар өгөхөд Fable 5.2 нь <strong>1,000 гаруй дэд агентыг</strong> 8 өдрийн турш тасралтгүй удирдан ажиллуулжээ. Үр дүнд нь өөрийн цөм (kernel), диск, гар, сүлжээний драйвер, цонхны удирдлага, суулгагч болон дотоод Claude агенттай, компьютер дээр шууд асдаг (bootable) үйлдлийн систем бэлэн болсон байна.</li>\n<li><strong>Фермагийн сүүлчийн теоремыг 30 цагт батлав:</strong> Математикийн баталгааг компьютероор шалгах Lean хэл рүү хөрвүүлэх ажилд 1,000 Fable 5.2 агент хамтран ажиллаж, Фермагийн сүүлчийн теоремыг хүний оролцоо бараг үгүйгээр <strong>30 цагийн дотор 100 хувь</strong> томьёолж дуусгав. Харьцуулахад Opus 5.5 ижил 1,000 агентын бүтцээр 30 цагт дөнгөж 27 хувийг гүйцэтгэжээ.</li>\n<li><strong>Хар нүхний онолын физикийн хоёр бодлого:</strong> 1983 болон 2003 оноос хойш хэт нүсэр тооцооллын улмаас шийдэгдээгүй үлдсэн квант механикийн жижиг орчлон дахь хар нүх үүсэх фазын шилжилт болон квант таталцлын онолыг шүүх хязгаарын хоёр бодлогыг Fable 5.2 бие даан бодож дуусгасан байна.</li>\n<li><strong>Удмын сангийн эмчилгээний вирусийн бүрхүүл ба электрон төхөөрөмж:</strong> Mythos 5.2 нь AlphaFold зэрэг загваруудын дангаар нь шийдэж чаддаггүй олон арван уургийн гинжнээс тогтсон AAV вирусийн капсидын бүтцийг 34 тохиолдлоос 28-д нь өндөр нарийвчлалтай тооцоолжээ. Түүнчлэн Diode компанитай хамтран ганц догол мөр промптоор 4 давхар хэвлэмэл хавтан (PCB), 3D гэр болон программ хангамж бүхий гурван электрон төхөөрөмжийг (дуу хоолойн төв, USB хурлын яригч, халаасны виртуал тэжээвэр амьтан) нэг өдрийн дотор зохион бүтээсэн нь эхний угсралтаар шууд ажилласан байна.</li>\n</ol>\n\n<h2>Хараат бус туршилтууд ба хөгжүүлэгчдийн бүтээл</h2>\n<p>Загвар гарсан даруйд хийгдсэн хараат бус туршилтуудаар Fable 5.2-ийн практик чадвар тодорхой харагдлаа:</p>\n<ul>\n<li><strong>Тоглоом ба техник хангамжийн загварчлал:</strong> Claude Code дээр 3D амьд үлдэх төрлийн тоглоом бүтээх даалгавар өгөхөд зохиогчийн эрхийн хамгаалалтын дагуу шууд хуулбарлахаас татгалзаж, 16 минутын дотор <em>«Shardstorm»</em> нэртэй 3D тоглоомыг ямар ч алдаагүйгээр анхны оролдлогоор ажиллуулсан байна. Мөн Raspberry Pi Pico H болон дэлгэц дээр суурилсан ширээний интерактив төхөөрөмж захиалахад эд ангийн жагсаалт, MicroPython код, 3D хэвлэх 4 ширхэг <code>.STL</code> файл болон угсралтын зурагт гарын авлагыг 15 минутад бэлтгэжээ.</li>\n<li><strong>BuseyBench сорил:</strong> Кодоор нарийн SVG хөрөг зурах BuseyBench сорилд 19 минут 50 секунд зарцуулж, 122,248 токен буюу 4.89 ам.долларын өртгөөр жагсаалтын 6-р байрт орсон нь уг загвар уран сайхны дүрслэлээс илүү гүнзгий инженерчлэлд чиглэснийг харуулав.</li>\n<li><strong>Нийгэмлэгийн онцлох туршилтууд:</strong> Хөгжүүлэгч <a href=\"https://x.com/MatthewBerman/status/2119871207206158459\" target=\"_blank\" rel=\"noopener noreferrer\">Matthew Berman</a> бодит цагийн гэрэлтүүлэгтэй <em>Gears of War</em> хэв маягийн 3D буудлагын тоглоом, <a href=\"https://x.com/The_Alex/status/2119884217261892083\" target=\"_blank\" rel=\"noopener noreferrer\">Alex</a> Adobe Photoshop, Premiere-ийн хувилбарууд болон <em>Zelda</em>, <em>Halo</em> төрлийн нийт 23 төсөл, <a href=\"https://x.com/petergyang/status/2119886560992854431\" target=\"_blank\" rel=\"noopener noreferrer\">Peter Yang</a> цэвэр кодоор бичигдсэн 20 секундийн 3D аяллын сурталчилгаа, харин <a href=\"https://x.com/mattshumer_/status/2119877065701036047\" target=\"_blank\" rel=\"noopener noreferrer\">Matt Shumer</a> бодит цаг агаар болон эвдрэлийн физиктэй Сан Диего хотын 1:1 хэмжээст эзлэхүүнт шоо (voxel) симуляци («Mirror Earth») бүтээн танилцуулаад байна.</li>\n</ul>",
+    "sources": [
+      {
+        "name": "Anthropic — Introducing Claude Fable 5.2 and Mythos 5.2",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      },
+      {
+        "name": "Matthew Berman — Fable 5.2 3D Game Showcase",
+        "url": "https://x.com/MatthewBerman/status/2119871207206158459"
+      },
+      {
+        "name": "Alex — 23 Projects Built with Fable 5.2",
+        "url": "https://x.com/The_Alex/status/2119884217261892083"
+      },
+      {
+        "name": "Peter Yang — Programmatic 3D Motion Ad",
+        "url": "https://x.com/petergyang/status/2119886560992854431"
+      },
+      {
+        "name": "Matt Shumer — Mirror Earth 1:1 Voxel Simulation",
+        "url": "https://x.com/mattshumer_/status/2119877065701036047"
+      }
+    ]
+  },
+  {
     "id": "art-20261108-rapid-news-28",
     "slug": "rapid-medee-28-ai-updates-weekly",
     "title": "Rapid мэдээ: Хиймэл оюуны салбарын 28 гол үйл явдал",
@@ -9,7 +58,7 @@
     "CustomCategory": "Rapid мэдээ",
     "publishedAt": "2026-11-09",
     "readTime": "9 мин",
-    "isMainLead": true,
+    "isMainLead": false,
     "isFeatured": true,
     "coverImage": "/images/articles/lead-20261108-rapid-news.jpg",
     "author": "Том Тедди",
