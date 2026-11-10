@@ -25,7 +25,7 @@ import hashlib
 import subprocess
 import urllib.request
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 
@@ -36,33 +36,38 @@ IMAGES_DIR = os.path.join(PROJECT_DIR, 'public', 'images', 'articles')
 FEEDS = [
     {
         'name': 'WIRED AI',
-        'url': 'https://news.google.com/rss/search?q=site:wired.com+AI&hl=en-US&gl=US&ceid=US:en',
-        'default_category': 'tech'
-    },
-    {
-        'name': 'TechRadar AI',
-        'url': 'https://news.google.com/rss/search?q=site:techradar.com+AI&hl=en-US&gl=US&ceid=US:en',
+        'url': 'https://news.google.com/rss/search?q=site:wired.com+AI+when:3d&hl=en-US&gl=US&ceid=US:en',
         'default_category': 'tech'
     },
     {
         'name': 'AI Times Korea',
-        'url': 'https://news.google.com/rss/search?q=site:aitimes.com&hl=ko&gl=KR&ceid=KR:ko',
+        'url': 'https://news.google.com/rss/search?q=site:aitimes.com+when:2d&hl=ko&gl=KR&ceid=KR:ko',
         'default_category': 'tech'
     },
     {
-        'name': 'Google News AI',
+        'name': 'Google News Robotics',
+        'url': 'https://news.google.com/rss/search?q=(humanoid+robot+OR+robotics+OR+%22embodied+AI%22)+when:3d&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'robotics'
+    },
+    {
+        'name': 'Google News AI Law & Policy',
+        'url': 'https://news.google.com/rss/search?q=(%22AI+regulation%22+OR+%22AI+copyright%22+OR+%22AI+safety+law%22+OR+%22AI+policy%22)+when:3d&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'law'
+    },
+    {
+        'name': 'Google News AI Business',
         'url': 'https://news.google.com/rss/topics/CAAqIAgKIhpDQkFTRFFvSEwyMHZNRzFyZWhJQ1pXNG9BQVAB?hl=en-US&gl=US&ceid=US:en',
         'default_category': 'industry'
     },
     {
-        'name': 'Google News Robotics',
-        'url': 'https://news.google.com/rss/search?q=(humanoid+robot+OR+robotics+OR+%22embodied+AI%22)+when:7d&hl=en-US&gl=US&ceid=US:en',
-        'default_category': 'robotics'
+        'name': 'Google News AI Interviews',
+        'url': 'https://news.google.com/rss/search?q=%22AI%22+interview+(Yann+LeCun+OR+Jensen+Huang+OR+Demis+Hassabis+OR+Dario+Amodei+OR+Sam+Altman)+when:7d&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'interview'
     },
     {
-        'name': 'Google News AI Interviews',
-        'url': 'https://news.google.com/rss/search?q=%22AI%22+interview+(Yann+LeCun+OR+Jensen+Huang+OR+Bill+Gates+OR+Dario+Amodei+OR+Sam+Altman)+2026&hl=en-US&gl=US&ceid=US:en',
-        'default_category': 'interview'
+        'name': 'TechRadar AI Analysis',
+        'url': 'https://news.google.com/rss/search?q=site:techradar.com+AI+when:3d&hl=en-US&gl=US&ceid=US:en',
+        'default_category': 'opinion'
     }
 ]
 
@@ -171,8 +176,10 @@ def fetch_feed_items():
                         'source': source_name,
                         'pub_dt': dt,
                         'desc': desc_text,
-                        'feed_name': feed_name
+                        'feed_name': feed_name,
+                        'default_category': feed.get('default_category', 'tech')
                     })
+                feed_results[feed_name].sort(key=lambda x: x['pub_dt'], reverse=True)
         except Exception as e:
             print(f"Error fetching {feed_name}: {e}", flush=True)
 
@@ -426,7 +433,7 @@ def run_pipeline():
     feed_data = fetch_feed_items()
 
     selected_candidates = []
-    priority_order = ['WIRED AI', 'TechRadar AI', 'AI Times Korea', 'Google News AI', 'Google News Robotics', 'Google News AI Interviews']
+    priority_order = [f['name'] for f in FEEDS]
 
     for feed_name in priority_order:
         items = feed_data.get(feed_name, [])
@@ -439,9 +446,9 @@ def run_pipeline():
     print(f"Selected {len(selected_candidates)} priority candidates for ingestion.", flush=True)
 
     new_articles = []
-    # Ingest up to 2 high-impact articles per scheduled run to keep feed curated
+    # Ingest up to 4 high-impact articles per scheduled run across categories
     for item in selected_candidates:
-        if len(new_articles) >= 2:
+        if len(new_articles) >= 4:
             break
 
         en_title = item['clean_title']
@@ -487,17 +494,17 @@ def run_pipeline():
             if flagged:
                 print(f"mn-spell notice: flagged words {flagged}", flush=True)
 
-        dt = item['pub_dt']
-        date_str = dt.strftime('%Y-%m-%d')
-        time_str = dt.strftime('%H:%M')
+        now_ub = datetime.now(timezone(timedelta(hours=8)))
+        date_str = now_ub.strftime('%Y-%m-%d')
+        time_str = now_ub.strftime('%H:%M')
 
         seq = len(new_articles) + 1
-        art_id = f"art-{dt.strftime('%Y%m%d')}-{int(time.time()) % 10000:04d}"
+        art_id = f"art-{now_ub.strftime('%Y%m%d')}-{int(time.time()) % 10000:04d}"
         while art_id in existing_ids:
             seq += 1
-            art_id = f"art-{dt.strftime('%Y%m%d')}-{(int(time.time()) + seq) % 10000:04d}"
+            art_id = f"art-{now_ub.strftime('%Y%m%d')}-{(int(time.time()) + seq) % 10000:04d}"
 
-        cat_id = art_data.get('category', 'tech')
+        cat_id = item.get('default_category') or art_data.get('category', 'tech')
         if cat_id not in ['tech', 'robotics', 'law', 'industry', 'interview', 'opinion']:
             cat_id = 'tech'
 
@@ -506,7 +513,7 @@ def run_pipeline():
             'robotics': 'РОБОТ',
             'law': 'ХУУЛЬ & БОДЛОГО',
             'industry': 'САЛБАР & БИЗНЕС',
-            'interview': 'ЯРИЛЦЛАГА & ХӨРӨГ',
+            'interview': 'ЯРИЛЦЛАГА',
             'opinion': 'СУРВАЛЖЛАГА'
         }
         cat_name = cat_names.get(cat_id, 'AI ТЕХНОЛОГИ')
