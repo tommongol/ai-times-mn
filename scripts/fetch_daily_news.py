@@ -36,12 +36,12 @@ IMAGES_DIR = os.path.join(PROJECT_DIR, 'public', 'images', 'articles')
 FEEDS = [
     {
         'name': 'Mongolia AI News',
-        'url': 'https://news.google.com/rss/search?q=%22Mongolia%22+-%22Inner+Mongolia%22+(%22artificial+intelligence%22+OR+%22AI%22+OR+%22Chimege%22+OR+%22AND+Global%22+OR+%22data+center%22)+when:30d&hl=en-US&gl=US&ceid=US:en',
+        'url': 'https://news.google.com/rss/search?q=%22Mongolia%22+-%22Inner+Mongolia%22+-%22AI-92%22+-%22AI-95%22+-fuel+-gasoline+-petrol+(%22artificial+intelligence%22+OR+%22generative+AI%22+OR+%22data+center%22+OR+%22Chimege%22+OR+%22Egune%22)+when:14d&hl=en-US&gl=US&ceid=US:en',
         'default_category': 'mongolia'
     },
     {
         'name': 'Монгол AI Сайтууд',
-        'url': 'https://news.google.com/rss/search?q=(%22%D1%85%D0%B8%D0%B9%D0%BC%D1%8D%D0%BB+%D0%BE%D1%8E%D1%83%D0%BD%22+OR+%22Chimege%22+OR+%22Egune%22+OR+%22%D0%B4%D0%B0%D1%82%D0%B0+%D1%82%D3%A9%D0%B2%22)+(site:ikon.mn+OR+site:gogo.mn+OR+site:lemonpress.mn+OR+site:unread.today+OR+site:montsame.mn+OR+site:itoim.mn)&hl=en-US&gl=US&ceid=US:en',
+        'url': 'https://news.google.com/rss/search?q=(%22%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%22+OR+%22%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D0%B1%D0%B0%D0%B0%D1%82%D0%B0%D1%80%22+OR+%22%D0%A6%D0%A5%D0%A5%D0%A5%D0%AF%22+OR+%22%D0%A7%D0%B8%D0%BC%D1%8D%D0%B3%D1%8D%22+OR+%22%D0%AD%D0%B3%D2%AF%D0%BD%D1%8D%22)+(%22%D1%85%D0%B8%D0%B9%D0%BC%D1%8D%D0%BB+%D0%BE%D1%8E%D1%83%D0%BD%22+OR+%22%D0%B4%D0%B0%D1%82%D0%B0+%D1%82%D3%A9%D0%B2%22+OR+%22%D0%B8%D1%85+%D1%85%D1%8D%D0%BB%D0%BD%D0%B8%D0%B9+%D0%B7%D0%B0%D0%B3%D0%B2%D0%B0%D1%80%22)+-%22%D0%90%D0%98-92%22+-%22%D0%90%D0%98-95%22+-%D1%88%D0%B0%D1%82%D0%B0%D1%85%D1%83%D1%83%D0%BD+-%D1%82%D2%AF%D0%BB%D1%88+-%D0%B1%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD+(site:ikon.mn+OR+site:gogo.mn+OR+site:lemonpress.mn+OR+site:unread.today+OR+site:montsame.mn+OR+site:itoim.mn+OR+site:mddic.gov.mn)+when:14d&hl=en-US&gl=US&ceid=US:en',
         'default_category': 'mongolia'
     },
     {
@@ -136,8 +136,52 @@ def create_slug(title):
     slug = re.sub(r'[^a-z0-9\s-]', '', slug)
     slug = re.sub(r'\s+', '-', slug).strip('-')
     if not slug:
-        slug = f"ai-update-{int(time.time())}"
+        digest = hashlib.sha1(title.strip().lower().encode('utf-8')).hexdigest()[:10]
+        slug = f"mn-ai-{digest}"
     return slug[:70]
+
+
+OFFTOPIC_PATTERNS = [
+    r'\bai-?92\b', r'\bai-?95\b', r'аи-?92', r'аи-?95',
+    r'\bgasoline\b', r'\bpetrol\b', r'\bdiesel\b', r'\bfuel orders?\b', r'\btonnes of fuel\b',
+    r'шатахуун', r'бензин', r'дизель\s+түлш', r'түлш\s+импорт',
+    r'\bhunted in mongolia\b', r'\bfluorspar\b', r'\bmining rights\b', r'\binner mongolia\b'
+]
+
+MONGOLIA_SIGNAL_TERMS = [
+    'mongolia', 'ulaanbaatar', 'монгол', 'улаанбаатар', 'цхххя', 'mddic',
+    'chimege', 'чимэгэ', 'egune', 'эгүнэ', 'bolorsoft', 'болорсофт', 'and global'
+]
+
+AI_SIGNAL_TERMS = [
+    'artificial intelligence', 'generative ai', 'machine learning', 'deep learning',
+    'llm', 'large language model', 'data center', 'datacenter', 'cloud', 'robot',
+    'chimege', 'egune', 'bolorsoft', 'neural', 'openai', 'anthropic', 'gemini',
+    'хиймэл оюун', 'их хэлний загвар', 'дата төв', 'үүлэн', 'робот', 'нейрон'
+]
+
+
+def is_candidate_pre_filtered(item):
+    """Reject off-topic noise (e.g. AI-92 fuel, non-Mongolia stories in Mongolia feeds) early."""
+    text = f"{item.get('clean_title', '')} {item.get('desc', '')}".lower()
+    for pat in OFFTOPIC_PATTERNS:
+        if re.search(pat, text):
+            return True, f"matched offtopic pattern {pat}"
+
+    if item.get('default_category') == 'mongolia':
+        now_utc = datetime.now(timezone.utc)
+        pub_dt = item.get('pub_dt')
+        if pub_dt is not None:
+            if pub_dt.tzinfo is None:
+                pub_dt = pub_dt.replace(tzinfo=timezone.utc)
+            if (now_utc - pub_dt).days > 14:
+                return True, f"mongolia feed story too old ({pub_dt.date()})"
+        if not any(term in text for term in MONGOLIA_SIGNAL_TERMS):
+            return True, "mongolia feed story lacks explicit Mongolia/domestic signal"
+        if not (any(term in text for term in AI_SIGNAL_TERMS) or re.search(r'\bai\b', text)):
+            return True, "mongolia feed story lacks explicit AI/tech signal in title/summary"
+
+    return False, ""
 
 
 def fetch_feed_items():
@@ -198,11 +242,26 @@ def fetch_feed_items():
 
 
 def generate_article_with_gemini(gemini_key, item):
-    """Use Gemini 3.8 Flash to write authentic Mongolian journalism with strict rules."""
-    system_prompt = """Чи бол 'AI Mongolia' цахим сэтгүүлийн тэргүүлэх шинжээч сэтгүүлч.
-Өгөгдсөн хиймэл оюуны шинэ мэдээгээр чанартай, амьд монгол хэлээр мэдээллийн нийтлэл бэлтгэж JSON форматаар буцаа.
+    """Use Gemini 3.8 Flash to verify relevance and write authentic Mongolian journalism."""
+    default_cat = item.get('default_category', 'tech')
+    mongolia_rule = ""
+    if default_cat == 'mongolia':
+        mongolia_rule = (
+            "\nАНХААР («МОНГОЛД» булангийн хатуу шүүлт): Энэ мэдээ ЗӨВХӨН Монгол Улс дотор болж буй "
+            "хиймэл оюун, их хэлний загвар, дата төв, үүлэн технологи эсвэл монгол хөгжүүлэгч, компанийн "
+            "хиймэл оюуны бүтээлийн тухай байвал л is_relevant=true болгоно. Хэрэв Солонгос (Сөүл), Европ, "
+            "АНУ зэрэг гадаад улсад болж байгаа үйл явдал, эсвэл АИ-92 шатахуун, түлшний импорт, уул уурхай, "
+            "ерөнхий улс төрийн мэдээ байвал ЗААВАЛ is_relevant=false гэж буцаа!"
+        )
 
-ХАТУУ ШААРДЛАГУУД:
+    system_prompt = f"""Чи бол 'AI Mongolia' цахим сэтгүүлийн тэргүүлэх шинжээч сэтгүүлч.
+Өгөгдсөн мэдээг эхлээд сэдвийн шалгуураар нягтлаад, тохирох бол чанартай монгол нийтлэл болгож JSON форматаар буцаа.
+
+СЭДВИЙН ШҮҮЛТ (is_relevant):
+- is_relevant: boolean. Мэдээ нь хиймэл оюун (AI), их хэлний загвар, робот, дата төв, AI бодлого эсвэл технологийн бүтээлтэй ЖИНХЭНЭЭРЭЭ холбоотой бол true. Хэрэв АИ-92/АИ-95 автобензин, түлшний импорт, уул уурхай, ан агнуур, ерөнхий улс төр зэрэг AI-тай хамаагүй мэдээ бол false болго.
+- reject_reason: string (хэрэв is_relevant=false бол товч шалтгаан, true бол хоосон "").{mongolia_rule}
+
+ХАТУУ ШААРДЛАГУУД (is_relevant=true үед):
 1. title: 4-9 үг (дээд тал нь 70 тэмдэгт). Хэт олон сэдвийг таслалаар холбохгүй, гол үйл явдлыг оновчтой гаргасан амьд гарчиг.
 2. subtitle: Яг 1 богино өгүүлбэр (дээд тал нь 130 тэмдэгт).
 3. summary: 2-3 өгүүлбэртэй, гол агуулгыг товч бөгөөд тодорхой хураангуйлсан догол мөр.
@@ -439,28 +498,44 @@ def run_pipeline():
     print(f"Loaded {len(articles)} existing articles.", flush=True)
     existing_ids = {a.get('id', '') for a in articles if a.get('id')}
     existing_slugs = {a.get('slug', '') for a in articles if a.get('slug')}
+    existing_urls = {a.get('primarySourceUrl', '').strip() for a in articles if a.get('primarySourceUrl')}
     existing_titles = {a.get('title', '').strip().lower() for a in articles if a.get('title')}
 
     feed_data = fetch_feed_items()
 
     selected_candidates = []
+    seen_candidate_slugs = set()
     priority_order = [f['name'] for f in FEEDS]
 
     for feed_name in priority_order:
         items = feed_data.get(feed_name, [])
+        added_for_feed = 0
         for it in items:
             slug = create_slug(it['clean_title'])
-            if slug not in existing_slugs and it not in selected_candidates:
-                selected_candidates.append(it)
+            link = it.get('link', '').strip()
+            if slug in existing_slugs or slug in seen_candidate_slugs or link in existing_urls:
+                continue
+            skip, reason = is_candidate_pre_filtered(it)
+            if skip:
+                print(f"Pre-filtered [{feed_name}] {it['clean_title']}: {reason}", flush=True)
+                continue
+            seen_candidate_slugs.add(slug)
+            selected_candidates.append(it)
+            added_for_feed += 1
+            if added_for_feed >= 2:
                 break
 
-    print(f"Selected {len(selected_candidates)} priority candidates for ingestion.", flush=True)
+    print(f"Selected {len(selected_candidates)} filtered candidates for ingestion.", flush=True)
 
     new_articles = []
+    mongolia_added = 0
     # Ingest up to 4 high-impact articles per scheduled run across categories
     for item in selected_candidates:
         if len(new_articles) >= 4:
             break
+
+        if item.get('default_category') == 'mongolia' and mongolia_added >= 1:
+            continue
 
         en_title = item['clean_title']
         slug = create_slug(en_title)
@@ -475,11 +550,17 @@ def run_pipeline():
             print(f"Failed to generate article with Gemini: {e}", flush=True)
             continue
 
+        if not art_data.get('is_relevant', True):
+            print(f"Rejected off-topic story: {en_title} | reason={art_data.get('reject_reason', '')}", flush=True)
+            continue
+
         # Sanitize language
         mn_title = sanitize_mongolian_text(art_data.get('title', '').strip())
         mn_subtitle = sanitize_mongolian_text(art_data.get('subtitle', '').strip())
         summary = sanitize_mongolian_text(art_data.get('summary', '').strip())
         content = sanitize_mongolian_text(art_data.get('content', '').strip())
+        if not mn_title or not summary or not content:
+            continue
 
         # Check guard constraints
         title_words = len(mn_title.split())
@@ -498,6 +579,9 @@ def run_pipeline():
 
         if mn_title.lower() in existing_titles:
             continue
+
+        if item.get('default_category') == 'mongolia':
+            mongolia_added += 1
 
         # Run mn-spell check
         if mn_spell_key:
