@@ -33,3 +33,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 scripts/audit_report.json
+
+# Python byte-compiled
+__pycache__/
+*.py[cod]
