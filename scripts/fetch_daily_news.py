@@ -670,7 +670,7 @@ def run_pipeline():
             art_id = f"art-{now_ub.strftime('%Y%m%d')}-{(int(time.time()) + seq) % 10000:04d}"
 
         cat_id = item.get('default_category') or art_data.get('category', 'tech')
-        if cat_id not in ['mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'people', 'opinion']:
+        if cat_id not in ['mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion']:
             cat_id = 'tech'
 
         cat_names = {
@@ -680,7 +680,6 @@ def run_pipeline():
             'law': 'ХУУЛЬ & БОДЛОГО',
             'industry': 'САЛБАР & БИЗНЕС',
             'interview': 'ЯРИЛЦЛАГА',
-            'people': 'НАМТАР БА ХҮМҮҮС',
             'opinion': 'СУРВАЛЖЛАГА'
         }
         cat_name = cat_names.get(cat_id, 'AI ТЕХНОЛОГИ')
