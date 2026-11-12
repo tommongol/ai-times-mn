@@ -81,15 +81,7 @@ FEEDS = [
     }
 ]
 
-EDITORIAL_FALLBACK_IMAGES = {
-    'mongolia': '/images/articles/daily-20261106-industry-2.jpg',
-    'tech': '/images/articles/art-20261018-01.jpg',
-    'robotics': '/images/articles/ihg-aa-robotics-arm.jpg',
-    'law': '/images/articles/art-aitimes-copyright-fairuse-battle.jpg',
-    'industry': '/images/articles/daily-20261106-industry-2.jpg',
-    'interview': '/images/articles/art-aitimes-gemini-4-hassabis.jpg',
-    'opinion': '/images/articles/daily-20261106-opinion-2.jpg',
-}
+# Clean unique-photo policy: no shared fallback image copies (guard.mjs blocks duplicate hashes).
 
 
 def load_api_keys():
@@ -320,22 +312,40 @@ def check_spelling_remote(mn_spell_key, text):
 
 
 def sanitize_mongolian_text(text):
-    """Auto-correct common disallowed words."""
+    """Auto-correct common disallowed words with vowel-harmony inflections."""
+    if not isinstance(text, str):
+        return text
     replacements = [
-        (r'\bашиглах\b', 'хэрэглэх'),
-        (r'\bашиглан\b', 'хэрэглэн'),
-        (r'\bашиглаж\b', 'хэрэглэж'),
-        (r'\bашигладаг\b', 'хэрэглэдэг'),
-        (r'\bашигласнаар\b', 'хэрэглэснээр'),
-        (r'\bашиглалт\b', 'хэрэглээ'),
-        (r'\bашиглалтад\b', 'хэрэглээнд'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0433\u0434\u0430\u0445\u0442\u0430\u0439\b', 'хэрэглэгдэхтэй'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u043b\u0433\u04af\u0439\u0433\u044d\u044d\u0440\b', 'хэрэглэлгүйгээр'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0441\u043d\u0430\u0430\u0440\b', 'хэрэглэснээр'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0433\u0434\u0430\u0436\b', 'хэрэглэгдэж'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0433\u0434\u0430\u0445\b', 'хэрэглэгдэх'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u043b\u0442\u0430\u0434\b', 'хэрэглээнд'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u043b\u0442\u044b\u0433\b', 'хэрэглээг'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u043b\u0442\u044b\u043d\b', 'хэрэглээний'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0445\u0434\u0430\u0430\b', 'хэрэглэхдээ'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0436\u044d\u044d\b', 'хэрэглэжээ'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0434\u0430\u0433\b', 'хэрэглэдэг'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0441\u0430\u043d\b', 'хэрэглэсэн'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0445\u0430\u0430\b', 'хэрэглэхээ'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0445\u0430\u0434\b', 'хэрэглэхэд'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0445\u044b\u0433\b', 'хэрэглэхийг'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0445\u044b\u043d\b', 'хэрэглэхийн'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u043b\u0442\b', 'хэрэглээ'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0436\b', 'хэрэглэж'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u043d\b', 'хэрэглэн'),
+        (r'\b\u0430\u0448\u0438\u0433\u043b\u0430\u0445\b', 'хэрэглэх'),
         (r'\bвэб\b', 'веб'),
         (r'\bгариг\b', 'гараг'),
         (r'\bбүрт\b', 'бүрд'),
         (r'\bтаслаж\b', 'тасалж'),
     ]
     for pattern, rep in replacements:
-        text = re.sub(pattern, rep, text, flags=re.IGNORECASE)
+        def _keep_case(m, r=rep):
+            w = m.group(0)
+            return r.capitalize() if w and w[0].isupper() else r
+        text = re.sub(pattern, _keep_case, text, flags=re.IGNORECASE)
     return text
 
 
@@ -431,23 +441,85 @@ def generate_bfl_flux_photo(bfl_key, prompt, abs_target_path):
     return False
 
 
+def is_clean_editorial_photo(img_path, max_white_border=0.45):
+    """Reject white-background product cutouts, flat logos, tiny or portrait images."""
+    if not os.path.exists(img_path) or os.path.getsize(img_path) <= 15000:
+        return False, "file missing or <15KB"
+    raw = None
+    try:
+        from PIL import Image
+        with Image.open(img_path) as im:
+            w, h = im.size
+            if w < 600 or h > w:
+                return False, f"invalid dimensions {w}x{h}"
+            sm = im.convert("RGB").resize((32, 18), Image.Resampling.BILINEAR)
+            raw = sm.tobytes()
+    except ImportError:
+        if shutil.which("ffprobe") and shutil.which("ffmpeg"):
+            p = subprocess.run(
+                ["ffprobe", "-v", "error", "-select_streams", "v:0",
+                 "-show_entries", "stream=width,height", "-of", "csv=p=0", img_path],
+                capture_output=True, text=True
+            )
+            wh = p.stdout.strip()
+            if wh and "," in wh:
+                w, h = map(int, wh.split(",")[:2])
+                if w < 600 or h > w:
+                    return False, f"invalid dimensions {w}x{h}"
+            r = subprocess.run(
+                ["ffmpeg", "-v", "error", "-i", img_path, "-vf", "scale=32:18",
+                 "-f", "rawvideo", "-pix_fmt", "rgb24", "pipe:1"],
+                capture_output=True
+            )
+            if len(r.stdout) == 32 * 18 * 3:
+                raw = r.stdout
+    except Exception as e:
+        return False, f"unreadable image: {e}"
+
+    if raw and len(raw) == 32 * 18 * 3:
+        border_pts = [
+            (x, y) for y in range(18) for x in range(32)
+            if y in (0, 1, 16, 17) or x in (0, 1, 30, 31)
+        ]
+        white_cnt = 0
+        for x, y in border_pts:
+            idx = (y * 32 + x) * 3
+            if raw[idx] > 235 and raw[idx + 1] > 235 and raw[idx + 2] > 235:
+                white_cnt += 1
+        ratio = white_cnt / len(border_pts)
+        if ratio > max_white_border:
+            return False, f"white-background border ratio={ratio:.0%} > {max_white_border:.0%}"
+    return True, "ok"
+
+
 def ensure_editorial_photo(bfl_key, art_id, cat_id, image_prompt, source_url):
-    """Create or retrieve a genuine documentary photo for the article."""
+    """Create or retrieve a genuine, non-white-background documentary photo."""
     os.makedirs(IMAGES_DIR, exist_ok=True)
     rel_path = f"/images/articles/{art_id}.jpg"
     abs_path = os.path.join(IMAGES_DIR, f"{art_id}.jpg")
 
-    if os.path.exists(abs_path) and os.path.getsize(abs_path) > 15000:
-        return rel_path
+    if os.path.exists(abs_path):
+        ok, _ = is_clean_editorial_photo(abs_path)
+        if ok:
+            return rel_path
+        os.remove(abs_path)
 
-    # Step 1: Generate authentic 16:9 photo via BFL FLUX
+    # Step 1: Generate authentic 16:9 photo via BFL FLUX (retry once with dark moody scene if white border)
     if bfl_key and image_prompt:
         print(f"Generating BFL FLUX editorial photo for {art_id}...", flush=True)
-        ok = generate_bfl_flux_photo(bfl_key, image_prompt, abs_path)
-        if ok and os.path.exists(abs_path) and os.path.getsize(abs_path) > 15000:
-            return rel_path
+        for attempt in range(2):
+            prompt = image_prompt if attempt == 0 else (
+                f"{image_prompt}, dark moody cinematic studio lighting, full-bleed realistic background, no white background"
+            )
+            ok = generate_bfl_flux_photo(bfl_key, prompt, abs_path)
+            clean, reason = is_clean_editorial_photo(abs_path) if ok else (False, "bfl failed")
+            if clean:
+                return rel_path
+            print(f"Rejected BFL photo attempt {attempt + 1} for {art_id}: {reason}", flush=True)
+            if os.path.exists(abs_path):
+                os.remove(abs_path)
 
-    # Step 2: Try extracting source og:image if genuine high-res photo
+    # Step 2: Try extracting source og:image ONLY if it passes white-border & landscape validation
     if source_url and source_url.startswith("http") and "news.google.com" not in source_url:
         try:
             req = urllib.request.Request(source_url, headers={"User-Agent": "Mozilla/5.0"})
@@ -462,19 +534,17 @@ def ensure_editorial_photo(bfl_key, art_id, cat_id, image_prompt, source_url):
                     resize_and_optimize_image(raw_tmp, abs_path)
                     if os.path.exists(raw_tmp):
                         os.remove(raw_tmp)
-                    if os.path.exists(abs_path) and os.path.getsize(abs_path) > 15000:
+                    clean, reason = is_clean_editorial_photo(abs_path)
+                    if clean:
                         return rel_path
+                    print(f"Rejected source og:image for {art_id}: {reason}", flush=True)
+                    if os.path.exists(abs_path):
+                        os.remove(abs_path)
         except Exception:
             pass
 
-    # Step 3: High-quality editorial photo fallback (never a PIL card!)
-    fallback_rel = EDITORIAL_FALLBACK_IMAGES.get(cat_id, EDITORIAL_FALLBACK_IMAGES['tech'])
-    fallback_abs = os.path.join(PROJECT_DIR, 'public', fallback_rel.lstrip('/'))
-    if os.path.exists(fallback_abs):
-        shutil.copy(fallback_abs, abs_path)
-        return rel_path
-
-    return fallback_rel
+    # Never duplicate an existing fallback image onto a new article
+    return None
 
 
 def run_pipeline():
@@ -616,6 +686,19 @@ def run_pipeline():
 
         image_prompt = art_data.get('image_prompt', '')
         cover_img = ensure_editorial_photo(bfl_key, art_id, cat_id, image_prompt, item.get('link', ''))
+        if not cover_img:
+            print(f"Skipping [{item['source']}] {mn_title}: no clean unique editorial photo available", flush=True)
+            continue
+
+        mn_caption = sanitize_mongolian_text(art_data.get('image_caption', f"{item['source']} - {mn_title}").strip())
+        if cat_id == 'mongolia':
+            check_mn = f"{mn_title} {mn_subtitle}".lower()
+            if any(k in check_mn for k in ('шатахуун', 'түлш', 'бензин', 'дизель', 'аи-92', 'аи-95')):
+                print(f"Skipping off-topic mongolia story: {mn_title}", flush=True)
+                continue
+            if not any(k in check_mn for k in ('монгол', 'улаанбаатар', 'цхххя', 'чимэгэ', 'эгүнэ')):
+                print(f"Skipping non-domestic mongolia story: {mn_title}", flush=True)
+                continue
 
         art_obj = {
             'id': art_id,
@@ -634,7 +717,7 @@ def run_pipeline():
             'rank': len(new_articles) + 1,
             'coverImage': cover_img,
             'imageUrl': cover_img,
-            'imageCaption': art_data.get('image_caption', f"{item['source']} - {mn_title}"),
+            'imageCaption': mn_caption,
             'isMainLead': False,
             'isFeatured': False,
             'isHot': (len(new_articles) == 0),
