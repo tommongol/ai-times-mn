@@ -175,7 +175,7 @@ export const NewspaperHeader: React.FC<Props> = ({
                         : 'text-neutral-300 hover:text-[#00FF66] hover:bg-neutral-900'
                     }`}
                   >
-                    <span className="text-xs opacity-60">0{idx + 1}</span>
+                    <span className="text-xs opacity-60">{String(idx + 1).padStart(2, '0')}</span>
                     <span>{sec.name}</span>
                   </button>
                 </li>

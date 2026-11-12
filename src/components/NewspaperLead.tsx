@@ -56,7 +56,7 @@ export const NewspaperLead: React.FC<Props> = ({
                   className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
                 />
                 <span className="absolute top-2 left-2 bg-black text-[#00FF66] font-mono text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider border border-neutral-700">
-                  ТЭРГҮҮН СУДАЛГАА
+                  ГОЛ НИЙТЛЭЛ
                 </span>
               </div>
 

@@ -16,7 +16,7 @@ export const NewspaperFooter: React.FC = () => {
                 key={sec.id}
                 className="hover:text-[#00FF66] cursor-pointer transition-colors"
               >
-                0{idx + 1} // {sec.name}
+                {String(idx + 1).padStart(2, '0')} // {sec.name}
               </span>
             ))}
           </div>

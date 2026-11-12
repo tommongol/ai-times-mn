@@ -7,6 +7,7 @@ export type ArticleCategory =
   | 'law'
   | 'industry'
   | 'interview'
+  | 'people'
   | 'opinion';
 
 export interface NewsArticle {
@@ -48,6 +49,7 @@ export const NAV_SECTIONS = [
   { id: 'law', name: 'ХУУЛЬ & БОДЛОГО' },
   { id: 'industry', name: 'САЛБАР & БИЗНЕС' },
   { id: 'interview', name: 'ЯРИЛЦЛАГА' },
+  { id: 'people', name: 'НАМТАР БА ХҮМҮҮС' },
   { id: 'opinion', name: 'СУРВАЛЖЛАГА' },
 ] as const;
 

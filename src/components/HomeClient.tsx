@@ -92,6 +92,10 @@ export function HomeClient({ articles }: Props) {
     return remainingArticles.filter((a) => a.category === 'interview');
   }, [remainingArticles]);
 
+  const peopleArticles = useMemo(() => {
+    return remainingArticles.filter((a) => a.category === 'people');
+  }, [remainingArticles]);
+
   const opinionArticles = useMemo(() => {
     return remainingArticles.filter((a) => a.category === 'opinion');
   }, [remainingArticles]);
@@ -272,6 +276,12 @@ export function HomeClient({ articles }: Props) {
                 title="Ярилцлага"
                 articles={interviewArticles}
                 onViewAll={() => setActiveSection('interview')}
+              />
+
+              <SectionBlock
+                title="Намтар ба хүмүүс"
+                articles={peopleArticles}
+                onViewAll={() => setActiveSection('people')}
               />
 
               <SectionBlock

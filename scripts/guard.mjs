@@ -43,7 +43,7 @@ function scan(dir) {
 }
 scan('src');
 
-const VALID_CATEGORIES = new Set(['review', 'mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion', 'models', 'policy', 'companies']);
+const VALID_CATEGORIES = new Set(['review', 'mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'people', 'opinion', 'models', 'policy', 'companies']);
 
 const { createHash } = await import('node:crypto');
 const { spawnSync } = await import('node:child_process');
