@@ -1,5 +1,46 @@
 [
   {
+    "id": "art-20261115-gemini-4-hydrogen-launch",
+    "slug": "google-gemini-4-hydrogen-surpasses-argon-aitimes",
+    "title": "Google «Gemini 4 Hydrogen» загвар гаргаж, Argon-ийг гүйцлээ",
+    "subtitle": "Шинэ хурдан загвар өмнөх Gemini 3.8 Flash-аас 2.5 дахин хурдсаж, Artificial Analysis үнэлгээгээр илүү том загвар болох Gemini 4 Argon-ийг давсан бол Google Antigravity-д автоматаар загвар хослуулагч Orchestrator нэвтэрлээ.",
+    "summary": "Google DeepMind өдөр тутмын кодчилол, хурдан агент урсгал болон хайлтын туслах хэрэглээнд зориулсан Gemini 4 Hydrogen загвараа танилцууллаа. Түүний анхдагч High тохиргоо Artificial Analysis дээр 51 оноо (Xhigh-д 54) авч Gemini 4 Argon (50)-ийг гүйцсэн бөгөөд Terminal-Bench 4.1 дээр 57.0%, AutomationBench-AA-д 76.1%, Agents' Last Exam v1.1-д 71.6% оноо үзүүлжээ.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "author": "AI Mongolia Редакц",
+    "primarySource": "AI Times / Google DeepMind",
+    "primarySourceUrl": "https://www.aitimes.com/news/articleView.html?idxno=217352",
+    "publishedAt": "2026-11-15",
+    "publishedTime": "01:35",
+    "readTime": "7 мин",
+    "readCount": 210,
+    "tags": [
+      "Google",
+      "Gemini 4 Hydrogen",
+      "Gemini 4 Argon",
+      "Antigravity",
+      "Orchestrator",
+      "DeepMind"
+    ],
+    "coverImage": "/images/articles/lead-20261115-gemini-4-hydrogen.jpg",
+    "imageUrl": "/images/articles/lead-20261115-gemini-4-hydrogen.jpg",
+    "imageCaption": "Google DeepMind-ийн хурдан боловсруулалт болон агент урсгалд зориулсан Gemini 4 Hydrogen загвар. Эх сурвалж: Google / AI Times",
+    "isMainLead": true,
+    "isHot": true,
+    "rank": 192,
+    "sources": [
+      {
+        "name": "AI Times: 구글, '제미나이 4 하이드로젠' 출시…상위 모델 '아르곤' 성능 추월",
+        "url": "https://www.aitimes.com/news/articleView.html?idxno=217352"
+      },
+      {
+        "name": "Google Blog: Introducing Gemini 4 Hydrogen",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+      }
+    ],
+    "content": "<p><strong>Google DeepMind</strong> боловсруулалтын өндөр хурд болон бие даасан агент даалгаварт зориулсан шинэ <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/\" target=\"_blank\" rel=\"noopener noreferrer\">Gemini 4 Hydrogen</a> загвараа 2026 оны 11 дүгээр сарын 12–13-нд албан ёсоор танилцууллаа (<a href=\"https://www.aitimes.com/news/articleView.html?idxno=217352\" target=\"_blank\" rel=\"noopener noreferrer\">AI Times</a>). Өмнөх хөнгөн ангиллын <em>Gemini 3.8 Flash</em>-ийн шууд залгамжлагч болох энэхүү загвар нь <em>Gemini 4 Carbon</em> суурь бүтцээс уламжилсан бөгөөд хурдаа эрс нэмэгдүүлэхийн зэрэгцээ гадаад цогц үнэлгээнүүдэд илүү том загвар болох <em>Gemini 4 Argon</em>-ийг гүйцсэн онцлогтой.</p>\n\n<h2>Үзүүлэлт ба олон ангиллын чадамж</h2>\n<p><strong>Gemini 4 Hydrogen</strong> нь текст, зураг, аудио болон видео оролтыг хамт хүлээн авч текст үүсгэдэг олон төрөлт загвар бөгөөд нийт <strong>1 сая токены контекст цонх</strong> дэмжинэ. Стандарт гаралтын дээд хязгаар <strong>64,000 токен</strong> хэдий ч урт хугацааны тусгай үүсгэлтийн горимоор <strong>1 сая токен хүртэл</strong> тасралтгүй гаралт өгөх чадвартай. Харин загварын нийт параметр болон дотоод бүтцийн нарийвчилсан тоог компани ил зарлаагүй байна.</p>\n<p>Хэрэглэгчид болон хөгжүүлэгчид даалгаврын хүнд хөнгөний зэргээс хамааран <strong>Low</strong>, <strong>Medium</strong>, <strong>High</strong> (анхдагч) болон шинэ <strong>Xhigh</strong> гэсэн сэтгэх гүний 4 шатлалаас сонгон хурд ба нарийвчлалаа тэнцвэржүүлэх боломжтой.</p>\n\n<figure>\n  <img src=\"/images/articles/lead-20261115-hydrogen-bench.jpg\" alt=\"Gemini 4 Hydrogen, Claude Sonnet 5.5, GPT-6.1 Terra бенчмарк харьцуулалт\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>SWE-sweep, Terminal-Bench 4.1, Agents' Last Exam v1.1, AutomationBench-AA зэрэг гол үнэлгээн дэх Gemini 4 Hydrogen, Claude Sonnet 5.5 ба GPT-6.1 Terra-ийн харьцуулалт. Эх сурвалж: Google DeepMind / AI Times</figcaption>\n</figure>\n\n<h2>Argon-ийг давсан бенчмарк үр дүн</h2>\n<p>Гүйцэтгэлийн хараат бус болон дотоод туршилтуудаар <strong>Gemini 4 Hydrogen</strong> өөрийн ангилалд төдийгүй дээд ангиллын загваруудтай эн зэрэгцэх оноо үзүүллээ:</p>\n<ul>\n  <li><strong>Artificial Analysis Intelligence Index (AAII 5.0.1):</strong> Анхдагч <em>High</em> горимдоо <strong>51 оноо</strong> авч <em>Gemini 4 Argon</em> (50 оноо)-ийг давсан бол дээд <em>Xhigh</em> тохиргоонд <strong>54 оноонд</strong> хүрч, өмнөх 3.8 Flash (High горимд 31 оноо)-аас эрс тасарчээ.</li>\n  <li><strong>Кодчилол ба терминал:</strong> <em>Terminal-Bench 4.1</em> дээр <strong>57.0%</strong> амжилт үзүүлсэн нь 3.8 Flash-ийн 18.2%-аас 3 дахин өндөр үзүүлэлт бөгөөд даалгавар дуусгах хурд <strong>2.5 дахин</strong> нэмэгдэж, зохиомол ташаа мэдээлэл (hallucination) 5 дахин буурчээ (харьцуулахад <em>Claude Sonnet 5.5</em> 63.9%). Мөн <em>SWE-sweep</em> дээр <strong>13.5%</strong> авч <em>Claude Sonnet 5.5</em> (3.1%) ба <em>GPT-6.1 Terra</em> (5.8%)-г илт давлаа.</li>\n  <li><strong>Байгууллагын автоматжуулалт ба мэдлэгийн ажил:</strong> <em>AutomationBench-AA</em> дээр <strong>76.1%</strong> (<em>Claude Sonnet 5.5</em> 71.8%, <em>GPT-6.1 Terra</em> 60.2%), <em>Agents' Last Exam v1.1</em> дээр <strong>71.6%</strong>, <em>Vending-Bench 2</em>-д <strong>$14,549</strong>, харин нарийн сэтгэлгээний <em>HLE-Diamond</em> сорилд <strong>58.8%</strong> авч тэргүүлсэн байна.</li>\n</ul>\n\n<figure>\n  <img src=\"/images/articles/lead-20261115-hydrogen-aa.jpg\" alt=\"Artificial Analysis Index ба даалгавар тутмын зардлын муруй\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>AA Index 5.0.1 үнэлгээ ба нэг даалгаварт ногдох зардлын хамаарал: Low, Med, High, X High шатлалаар Gemini 4 Hydrogen, Claude Sonnet 5.5 болон GPT-6.1 Terra-ийн харьцуулалт. Эх сурвалж: Google DeepMind</figcaption>\n</figure>\n\n<h2>Antigravity Orchestrator ба аюулгүй ажиллагаа</h2>\n<p>Google хөгжүүлэгчдийн <strong>Google Antigravity</strong> орчинд олон загварыг автоматаар хослуулан ажиллуулдаг <strong>Orchestrator</strong> системийг хамтад нь нэвтрүүллээ. Энэ систем бүтэц зохион байгуулалт ба хүнд шийдэл гаргах хэсэгт <em>Gemini 4 Carbon</em>-ийг дуудаж, код бичих, тест ажиллуулах болон шалгах давтамжит алхмуудыг шууд <em>Gemini 4 Hydrogen</em> руу шилжүүлнэ. <em>Terminal-Bench 4.0</em> дээр Orchestrator горим дан Carbon-той дүйцэх амжилт үзүүлэхийн зэрэгцээ токены хэрэглээний квотыг дунджаар <strong>24% хэмнэж</strong>, нийт хугацааг <strong>19% богиносгожээ</strong>.</p>\n<p>Агент аюулгүй байдлын тал дээр <em>3.8 Flash</em>-тай харьцуулахад агент зөвшөөрөгдсөн эрхээс хэтэрсэн үйлдэл хийх магадлал <strong>81% хүртэл буурч</strong>, багаж дуудах ба код бичих явцад даалгавар алгасах буюу зохисгүй алхам хийх нь <strong>12 дахин</strong> багассан байна.</p>\n\n<figure>\n  <img src=\"/images/articles/lead-20261115-hydrogen-search.jpg\" alt=\"Google Search AI Mode дээрх Gemini 3.5 Flash ба Gemini 4 Hydrogen харьцуулалт\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>Google хайлтын AI горимд Gemini 3.5 Flash болон Gemini 4 Hydrogen-ийн хариу, газрын зураг болон хүснэгтийн бүтэцжүүлэлтийн ялгаа. Эх сурвалж: Google</figcaption>\n</figure>\n\n<h2>Бодит хэрэглээ ба API үнийн нөхцөл</h2>\n<p>API тариф нь 1 сая оролтын токен тутамд <strong>$1.50</strong>, гаралтын токен тутамд <strong>$7.50</strong> байхаар тогтоогджээ (1 сая хүртэлх бүх контекст уртад тогтмол үнэ). Энэ нь <em>Gemini 3.8 Flash</em>-ийн одоогийн үнээс ($0.75 / $3.75; 2027 оны 1 дүгээр сараас ижил түвшинд шилжинэ) хоёр дахин өндөр боловч <em>Argon</em> болон <em>Carbon</em>-ийн анхны үнээс ($2 / $10) хямд хэвээр байна.</p>\n<p>Анхны түнш байгууллагуудаас <strong>Box</strong> компанийн гүйцэтгэх захирал Аарон Леви AI агентын ажлын нарийвчлал өмнөх Flash-ийн 74%-аас <strong>79%</strong> болж өсөхийн сацуу хугацаа 2 дахин багассаныг мэдээлсэн бол <strong>Zapier</strong>-ийн хараат бус сорилд <strong>51.1%</strong> амжилт үзүүлэн Argon (51.3%)-той ижил түвшинд хүрч, нэгж зардлыг тал хувиар бууруулжээ.</p>\n<p><strong>Gemini 4 Hydrogen</strong> өнөөдрөөс эхлэн Google AI Studio, Gemini API, байгууллагын Gemini, Google хайлт болон Gemini апп (үнэгүй хэрэглэгчдэд автомат сонголтоор) дээр нээгдсэн бөгөөд Google AI Pro ба Ultra захиалагчид <em>Google Antigravity</em> дотроос шууд хэрэглэх боломжтой.</p>\n"
+  },
+  {
     "id": "art-20261114-weekly-review",
     "slug": "weekly-review-nvidia-transition-claude-5-2-gemini-4-adobe-max",
     "title": "Зурагт тойм: NVIDIA-ийн эргэлт, Claude 5.2 ба Gemini 4",
@@ -901,7 +942,7 @@
     "publishedTime": "11:30",
     "readCount": 3420,
     "readTime": "8 мин",
-    "isMainLead": true,
+    "isMainLead": false,
     "isHot": true,
     "coverImage": "/images/articles/lead-20261110-claude-fable-5-2.jpg",
     "tags": [
