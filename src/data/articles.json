@@ -1,5 +1,46 @@
 [
   {
+    "id": "art-20261119-gemini-4-neon-launch",
+    "slug": "google-gemini-4-neon-world-no-3-cost-cut",
+    "title": "Google зардлыг 32% бууруулсан Gemini 4 Neon загвараа гаргалаа",
+    "subtitle": "Өндөр гүйцэтгэлтэй Gemini 4 Carbon болон хурдан Hydrogen хоёрын дунд байрлах шинэ Gemini 4 Neon загвар Artificial Analysis үнэлгээгээр 61 оноо авч дэлхийд гуравт бичигдсэн бол ажлын зардлыг 32–55% хэмнэнэ.",
+    "summary": "Google DeepMind 2026 оны 11 дүгээр сарын 18-нд Gemini 4 бүлийн дөрөв дэх загвар болох Gemini 4 Neon-ийг танилцууллаа. Шинэ загвар Artificial Analysis дээр xhigh тохиргоонд 61 оноо авч Carbon (60)-ийг давж, Claude Fable 5.2 (65) ба GPT-6.2 Astra (62)-ийн араас дэлхийд гуравт орсон бол High горимд даалгавар тутмын зардлыг Carbon-оос 32% бууруулжээ. Мөн кибер аюулгүй байдлын Gemini 4 Neon for cyber загварыг гаргалаа.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "author": "AI Mongolia Редакц",
+    "primarySource": "Google DeepMind / AI Times",
+    "primarySourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "publishedAt": "2026-11-19",
+    "publishedTime": "22:45",
+    "readTime": "8 мин",
+    "readCount": 195,
+    "tags": [
+      "Google DeepMind",
+      "Gemini 4 Neon",
+      "Gemini 4 Carbon",
+      "Artificial Analysis",
+      "Antigravity",
+      "SEC-bench"
+    ],
+    "coverImage": "/images/articles/lead-20261119-gemini-4-neon.jpg",
+    "imageUrl": "/images/articles/lead-20261119-gemini-4-neon.jpg",
+    "imageCaption": "Google DeepMind-ийн өртөг хэмнэлттэй тэргүүлэгч Gemini 4 Neon загвар. Эх сурвалж: Google DeepMind",
+    "isMainLead": true,
+    "isHot": true,
+    "rank": 234,
+    "sources": [
+      {
+        "name": "AI Times: 구글, 세계 3위 성능 '제미나이 4 네온' 출시…작업 비용 32% 절감",
+        "url": "https://www.aitimes.com/news/articleView.html?idxno=217546"
+      },
+      {
+        "name": "Google DeepMind: Introducing Gemini 4 Neon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      }
+    ],
+    "content": "<p><strong>Google DeepMind</strong> долоон долоо хоногийн дотор гаргасан дөрөв дэх шинэ загвар болох <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/\" target=\"_blank\" rel=\"noopener noreferrer\">Gemini 4 Neon</a>-ийг 2026 оны 11 дүгээр сарын 18-нд албан ёсоор танилцууллаа (<a href=\"https://www.aitimes.com/news/articleView.html?idxno=217546\" target=\"_blank\" rel=\"noopener noreferrer\">AI Times</a>). Урт хугацааны хамгийн хүнд даалгаварт зориулсан <em>Carbon</em> болон өдөр тутмын хурдан гүйцэтгэлд чиглэсэн <em>Hydrogen</em> хоёрын дунд байрлах энэхүү загвар нь өндөр сэтгэлгээ ба зардлын хэмнэлтийг нэгэн зэрэг хангах зорилготой.</p>\n\n<h2>Gemini 4 бүлийн харьцуулалт ба API тариф</h2>\n<p><strong>Gemini 4 Neon</strong> нь <strong>1 сая токены контекст цонх</strong> дотор текст, зураг, аудио, видео, PDF болон хүснэгт өгөгдлийг зэрэг боловсруулж, даалгаврын хүнд хөнгөнд тааруулан <strong>low</strong>, <strong>medium</strong>, <strong>high</strong> (анхдагч) ба <strong>xhigh</strong> гэсэн 4 түвшинд сэтгэх гүнийг тохируулна. Харин загварын параметр болон дотоод бүтцийг компани олон нийтэд зарлаагүй байна.</p>\n<ul>\n  <li><strong>API үнэ:</strong> Сая оролтын токен тутамд <strong>$3.00</strong>, кэшилсэн оролт <strong>$0.15</strong> (95% хямдрал), гаралтын токен тутамд <strong>$15.00</strong>. Энэ нь Carbon-ийн үндсэн үнээс ($4 / $20) 25% хямд хэдий ч 11 дүгээр сарын 30 хүртэл Carbon-д үйлчилж буй урамшууллын үнээс ($2 / $10) токен тутмын тарифаар өндөр юм.</li>\n  <li><strong>Даалгавар тутмын бодит зардал:</strong> Анхдагч <em>High</em> горимд даалгавар гүйцэтгэх нийт зардал Carbon-оос <strong>32% хямд</strong> гарсан бол бусад тэргүүлэгч өрсөлдөгчдийн дээд горимтой харьцуулахад <em>xhigh</em> дээр <strong>36%-аас дээш</strong>, Vals болон Agent Arena-д <strong>50–80% бага зардлаар</strong> ижил түвшний үр дүн үзүүлжээ.</li>\n  <li><strong>Хүртээмж:</strong> Google AI Studio, Gemini API (төлбөртэй), байгууллагын Gemini болон Google Antigravity, Gemini апп дээр Google AI Pro ба Ultra захиалагчдад нээгдэв.</li>\n</ul>\n\n<figure>\n  <img src=\"/images/articles/lead-20261119-neon-family.jpg\" alt=\"Gemini 4 Carbon, Neon ба Hydrogen загваруудын харьцуулсан хүснэгт\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>Gemini 4 Carbon, Neon болон Hydrogen загваруудын зориулалт, чанар, тариф, хурд ба хүртээмжийн харьцуулалт. Эх сурвалж: Google DeepMind</figcaption>\n</figure>\n\n<h2>Дэлхийд гуравт бичигдсэн бенчмарк үзүүлэлтүүд</h2>\n<p>Бие даасан болон дотоод үнэлгээнүүдэд <strong>Gemini 4 Neon</strong> зардлаа бууруулахын зэрэгцээ тэргүүлэх загвар <em>Carbon</em>-оо ардаа орхилоо:</p>\n<ul>\n  <li><strong>Artificial Analysis Intelligence Index v5.0.1:</strong> <em>xhigh</em> тохиргоонд <strong>61 оноо</strong> авч Carbon (60)-ийг гүйцэн <em>Claude Fable 5.2</em> (65) болон <em>GPT-6.2 Astra</em> (62)-ийн дараа дэлхийд <strong>3 дугаарт</strong> жагсав. Мөн <em>Coding Agent Index</em>-т <strong>58.6 оноогоор #1</strong> байр эзэллээ.</li>\n  <li><strong>Байгууллагын автоматжуулалт ба зах зээлийн судалгаа:</strong> Zapier-ийн <em>AutomationBench</em>-т xhigh горимоор <strong>56.3% (#1)</strong> амжилт үзүүлсэн ба анхдагч High горимдоо <strong>54.3%</strong> амжилтаар ердөө <strong>$0.88</strong> зарцуулж, Carbon-ийн дээд үр дүнг (53.9%, $1.94) бага зардлаар (55% хямд) давсан байна. <em>Vals Index v2.2</em> дээр <strong>70.9% (#2)</strong>, <em>Legal Research Bench</em> ба <em>Tax Agent Bench</em>-т <strong>#1</strong>, харин 4,200 гаруй бодит агент даалгавар дээр үнэлдэг <em>Agent Arena Index</em>-т <strong>1,336 оноогоор #2</strong> (заавар дагаж засах буюу steerability-д #2) оржээ.</li>\n  <li><strong>Программ хангамж ба Шинжлэх ухаан:</strong> <em>Terminal-Bench 4.1</em> дээр <strong>65.2%</strong>, <em>CursorBench 4.1</em>-д <strong>65.4%</strong>, <em>Agents' Last Exam v1.1</em>-д <strong>75.8%</strong>, харин <em>SWE-sweep</em> сорилд mini-SWE орчинд 12.8% байснаа <strong>Google Antigravity</strong> орчинд <strong>39.0%</strong> болж гурав дахин өссөн байна. Шинжлэх ухаанд <em>Terminal-Bench-Science 0.1</em> (<strong>70.5%</strong>), <em>RiemannBench</em> (<strong>84.0%</strong>), <em>HLE-Diamond</em> (<strong>71.3%</strong>) ба урт контекстийн <em>GraphWalks</em>-т <strong>95.2%</strong> авч тэргүүллээ.</li>\n</ul>\n\n<figure>\n  <img src=\"/images/articles/lead-20261119-neon-aa-cost.jpg\" alt=\"AA Index v5.0.1 үнэлгээ ба даалгавар тутмын зардлын харьцуулалт\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>AA Index v5.0.1: Gemini 4 Neon (хөх шугам) High болон Xhigh түвшинд Gemini 4 Carbon болон Claude Opus 5.5-аас бага зардлаар илүү оноо авч байгаа нь. Эх сурвалж: Google DeepMind</figcaption>\n</figure>\n\n<figure>\n  <img src=\"/images/articles/lead-20261119-neon-bench.jpg\" alt=\"Gemini 4 Neon-ийн бүх гол бенчмаркийн үр дүнгийн хүснэгт\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>Gemini 4 Neon, Claude Opus 5.5 болон GPT-6.2 Sol загваруудын кодчилол, мэдлэгийн ажил, шинжлэх ухаан ба кибер аюулгүй байдлын үнэлгээний нэгтгэл. Эх сурвалж: Google DeepMind / AI Times</figcaption>\n</figure>\n\n<h2>Antigravity Orchestrator ба урт хугацааны агент</h2>\n<p><strong>Gemini 4 Neon</strong> нь олон файл дамнан код засах, шаардлагагүй дахин уншилтыг багасгах болон урт ярианы контекстийг алдагдалгүй шахах зорилгоор бүтээгдсэн. Ялангуяа <strong>Google Antigravity</strong> дотор Neon удирдагч буюу <em>Orchestrator</em> үүрэг гүйцэтгэж, нарийн ажлыг задалж олон <em>Hydrogen</em> агентыг зэрэг ажиллуулснаар нэг том загвар дангаараа хийхээс хамаагүй хурдан бөгөөд хямд дуусгах боломжийг нээж байна. Загвар танилцуулах туршилтаар Neon нь Blender MCP-ээр 3D лаборатори, Chamonix-ийн уулын бодит өндрийн мэдээллээр WebGL2 цанын симулятор болон 500,000 гаруй томьёотой 100,000 нүдтэй Google Sheet зэргийг бүтээжээ.</p>\n\n<h2>Кибер аюулгүй байдлын «Gemini 4 Neon for cyber»</h2>\n<p>Google ердийн хувилбарын хамт аюулгүй код бичих болон эмзэг байдал илрүүлэх тусгай <strong>Gemini 4 Neon for cyber</strong> хувилбарыг мөн зарлалаа. Уг загвар программ хангамжийн эмзэг байдал илрүүлэх <em>SEC-bench Pro</em> үнэлгээнд <strong>90.5%</strong>, веб нэвтрэлтийн тестийн <em>WebExploitBench v1.2</em>-д <strong>51.26%</strong> амжилт үзүүлж өрсөлдөгч том загваруудаас хоёр дахин бага зардлаар илүү үр дүн гаргасан бол <em>AutoBaxBench</em>-ийн хамгийн хүнд сорилд <strong>76%</strong> оноогоор тэргүүлжээ. Хамгаалалтын байгууллагууд энэ загварыг ойрын өдрүүдэд <strong>Fairwind</strong> хөтөлбөрөөр дамжуулан авч эхэлнэ.</p>\n\n<figure>\n  <img src=\"/images/articles/lead-20261119-neon-secbench.jpg\" alt=\"SEC-bench Pro кибер аюулгүй байдлын бенчмаркийн график\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>SEC-bench Pro (Pass@1): Gemini 4 Neon 90.5% амжилтаар GPT-6.2 Sol (88.3%) ба Gemini 4 Carbon (88.2%)-ийг гүйцэв. Эх сурвалж: Google DeepMind</figcaption>\n</figure>\n"
+  },
+  {
     "id": "art-20261118-openai-gpt-6-2-astra-sol",
     "slug": "openai-gpt-6-2-astra-sol-not-what-you-think",
     "title": "OpenAI зардлыг бууруулсан GPT-6.2 Astra гаргасан ч санал хуваагдлаа",
@@ -24,7 +65,7 @@
     "coverImage": "/images/articles/lead-20261118-gpt-6-2-astra.jpg",
     "imageUrl": "/images/articles/lead-20261118-gpt-6-2-astra.jpg",
     "imageCaption": "OpenAI-ийн албан ёсны GPT-6.2 Astra ба Sol танилцуулгын зураг. Эх сурвалж: OpenAI",
-    "isMainLead": true,
+    "isMainLead": false,
     "isHot": true,
     "rank": 1,
     "sources": [
