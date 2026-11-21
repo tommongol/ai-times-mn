@@ -1,5 +1,120 @@
 [
   {
+    "id": "art-20261121-weekly-review",
+    "slug": "weekly-review-anthropic-ipo-mai-suite-gemini-4-neon-genie-4",
+    "title": "Зурагт тойм: Anthropic IPO, MAI загварууд ба Genie 4",
+    "subtitle": "Anthropic Nasdaq биржид $1.5–$2 их наядын үнэлгээтэй гарч, OpenAI GPT-6.2 Astra, Wallet, Google Gemini 4 Neon, Genie 4, Microsoft MAI цуврал, HeyGen Avatar 6 болон Suno Visuals нэг долоо хоногт зарлагдлаа.",
+    "summary": "2026 оны 11 дүгээр сарын гурав дахь долоо хоног AI салбарын түүхэн дэх хамгийн ширүүн өрсөлдөөнтэй өдрүүд боллоо. Anthropic Nasdaq дээр «ANT» тэмдэглэгээтэйгээр $111.50 ам.доллароор арилжаагаа эхлүүлж IPO-ийн түүхэн дээд амжилт тогтоов. Мөн Microsoft Ignite дээр MAI Code 2, Image 2.7, Realtime 1 загвараа танилцуулсан бол Google Gemini 4 Neon, Mac Computer Use, Stitch Loop болон Genie 4 ертөнц үүсгэгчийг нээлээ. OpenAI ChatGPT Wallet, Live Dictation, Sales багцуудаа гаргаж, HeyGen Avatar 6 болон Suno Visuals видео контентын шинэ шат нээв.",
+    "category": "review",
+    "categoryName": "ЗУРАГТ ТОЙМ",
+    "author": "AI Times Тоймч",
+    "primarySource": "The Verge, OpenAI, Google DeepMind, Microsoft AI, HeyGen, Suno",
+    "primarySourceUrl": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+    "publishedAt": "2026-11-21",
+    "publishedTime": "11:30",
+    "readTime": "16 мин",
+    "readCount": 135,
+    "tags": [
+      "Зурагт тойм",
+      "Anthropic IPO",
+      "OpenAI",
+      "GPT-6.2 Astra",
+      "Gemini 4 Neon",
+      "Microsoft MAI",
+      "Genie 4",
+      "HeyGen Avatar 6"
+    ],
+    "coverImage": "/images/articles/rev-20261121-cover.jpg",
+    "imageUrl": "/images/articles/rev-20261121-cover.jpg",
+    "imageCaption": "Anthropic-ийн гүйцэтгэх захирал Дарио Амодей Nasdaq биржийн тайзнаа анхны арилжааны өмнө. Эх сурвалж: The Verge",
+    "isMainLead": false,
+    "isFeatured": true,
+    "isHot": true,
+    "rank": 247,
+    "previewImages": [
+      "/images/articles/rev-20261121-ms-code2.jpg",
+      "/images/articles/rev-20261121-ms-image27.jpg",
+      "/images/articles/rev-20261121-ms-realtime.jpg",
+      "/images/articles/rev-20261121-heygen6.jpg",
+      "/images/articles/rev-20261121-suno-visuals.jpg",
+      "/images/articles/rev-20261121-genie4.jpg",
+      "/images/articles/rev-20261121-gemini-mac.jpg",
+      "/images/articles/rev-20261121-gemini-notebook.jpg",
+      "/images/articles/rev-20261121-stitch-loop.jpg"
+    ],
+    "sources": [
+      {
+        "name": "The Verge: Anthropic Starts Trading on Nasdaq (ANT)",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq"
+      },
+      {
+        "name": "OpenAI: Introducing GPT-6.2 Astra and Sol",
+        "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+      },
+      {
+        "name": "Google DeepMind: Introducing Gemini 4 Neon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      },
+      {
+        "name": "Microsoft AI: MAI Code 2 & Code 2 Flash",
+        "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+      },
+      {
+        "name": "Microsoft AI: MAI Image 2.7",
+        "url": "https://microsoft.ai/news/introducing-mai-image-2-7/"
+      },
+      {
+        "name": "Microsoft AI: MAI Realtime 1",
+        "url": "https://microsoft.ai/news/introducing-mai-realtime-1/"
+      },
+      {
+        "name": "Google: Gemini Notebook Interactive Sites",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/"
+      },
+      {
+        "name": "HeyGen: Avatar 6 Research",
+        "url": "https://www.heygen.com/research/avatar-6-model"
+      },
+      {
+        "name": "Suno: Introducing Visuals",
+        "url": "https://suno.com/blog/introducing-visuals"
+      },
+      {
+        "name": "Google: Gemini Computer Use on Mac",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
+      },
+      {
+        "name": "Anthropic / Karan Ahuja: Claude Duet Access Expansion (X)",
+        "url": "https://x.com/ahuja_karan/status/2121332990836163033"
+      },
+      {
+        "name": "Claude Developers: Claude Code Custom Themes (X)",
+        "url": "https://x.com/ClaudeDevs/status/2121392666244186327"
+      },
+      {
+        "name": "Google Labs: Introducing Stitch Loop",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/"
+      },
+      {
+        "name": "OpenAI: Introducing ChatGPT Wallet",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+      },
+      {
+        "name": "ChatGPT: Live Dictation (X)",
+        "url": "https://x.com/ChatGPT/status/2123114715257946334"
+      },
+      {
+        "name": "OpenAI: Introducing ChatGPT for Sales",
+        "url": "https://openai.com/index/introducing-chatgpt-for-sales/"
+      },
+      {
+        "name": "Google DeepMind: Genie 4 in Project Genie",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+      }
+    ],
+    "content": "<p class=\"lead\">2026 оны 11 дүгээр сарын 15–21-ний өдрүүд хиймэл оюуны салбарт хөрөнгийн зах зээл, кодчилол, дүрс, аудио болон 3D ертөнцийн технологиуд нэг дор давхацсан шийдвэрлэх долоо хоног боллоо. Албан ёсны үндсэн эх сурвалжуудад тулгуурлан онцлох мэдээллүүдийг зурагт тойм болгон хүргэж байна.</p>\n\n<h3>1. Anthropic Nasdaq-т түүхэн IPO хийж, 2 их наяд долларын босго давлаа</h3>\n<p>Anthropic PBC компани <strong>2026 оны 11 дүгээр сарын 19-нд</strong> Nasdaq биржид <strong>ANT</strong> тэмдэглэгээтэйгээр албан ёсоор <a href=\"https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">арилжаанд гарлаа</a>. Анхны санал болгох үнээ $70–$78-аас <strong>$83.00</strong> болгон өсгөж (~$1.5 их наяд үнэлгээ, үндсэн хувьцаагаар ~$81.3 тэрбум болон хаалттай байршуулалтаар $26 тэрбум татаж түүхэн дээд IPO болов) тогтоосон бол эхний арилжаа <strong>$111.50</strong> дээр нээгдэн зах зээлийн үнэлгээ түр зуур $2 их наядыг давж, өдрийн хаалт $97.17 (~$1.3 их наяд) дээр тогтов. Гүйцэтгэх захирал Дарио Амодей арилжааны өмнөх үгэндээ «бизнес болон улс төрийн дарамтад авталгүй AI аюулгүй байдлыг нэн тэргүүнд барина» хэмээн мэдэгдэж, S-1 тайландаа эхний хагас жилд $16.3 тэрбумын орлого, нягтлан бодох бүртгэлийн үнэлгээнээс үүдэлтэй $80.7 тэрбумын цэвэр алдагдал хүлээснээ дурджээ.</p>\n\n<h3>2. OpenAI: GPT-6.2 Astra &amp; Sol, ChatGPT Wallet, Sales ба Live Dictation</h3>\n<p>OpenAI нэг долоо хоногт дөрвөн чиглэлээр бүтээгдэхүүнээ тэллээ. Юуны өмнө <strong>11 дүгээр сарын 17-нд</strong> <a href=\"https://openai.com/index/introducing-gpt-6-2-astra-sol/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">GPT-6.2 Astra болон Sol</a> загваруудыг гаргаж (Astra $8/$40, кэш $0.40; Artificial Analysis дээр #2 буюу 62 оноо), AI өөрийгөө сайжруулах High босгод хүрснээ зарлав. Түүнчлэн АНУ-ын ChatGPT Pro хэрэглэгчдэд зориулсан <a href=\"https://openai.com/index/introducing-chatgpt-wallet/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">ChatGPT Wallet</a> (American Express, Chase, Mastercard, Visa-тай хамтарсан, Face ID буюу Touch ID баталгаажуулалт ба нэг удаагийн төлбөрийн токеноор агентаар худалдан авалт хийх), CRM ба 30 гаруй түншийн холболттой (Salesforce, HubSpot, Gong, Docusign) <a href=\"https://openai.com/index/introducing-chatgpt-for-sales/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">ChatGPT for Sales</a> болон 10 минутын хязгаарыг авч хаясан <a href=\"https://x.com/ChatGPT/status/2123114715257946334\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Live Dictation</a> шууд дуу бичвэр хөрвүүлэлтийг нэвтрүүлэв.</p>\n\n<h3>3. Google DeepMind: Gemini 4 Neon дэлхийд гуравт орлоо</h3>\n<p>Google <strong>11 дүгээр сарын 18-нд</strong> <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Gemini 4 Neon</a> загварыг танилцуулав. Artificial Analysis үнэлгээнд <em>xhigh</em> тохиргоонд <strong>61 оноо</strong> авч Carbon (60)-ийг давж дэлхийд 3 дугаарт орсон бол API үнэ сая оролтын токенд $3, гаралтын токенд $15 (кэш $0.15) байна. Харин <em>High</em> тохиргоонд сорилын нэг даалгаврын зардал Carbon-оос <strong>32% хямд</strong> гарч, Coding Agent Index (58.6) ба AutomationBench (56.3%)-т 1 дүгээр байр, кибер аюулгүй байдлын <em>Gemini 4 Neon for cyber</em> нь SEC-bench Pro дээр <strong>90.5%</strong> үзүүлжээ.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-ms-code2.jpg\" alt=\"Microsoft MAI Code 2 ба Code 2 Flash\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 1: Байгууллагын өдөр тутмын кодчилолд зориулсан MAI Code 2 болон Code 2 Flash. Эх сурвалж: Microsoft AI</figcaption>\n</figure>\n\n<h3>4. Microsoft Ignite 2026: MAI Code 2, Image 2.7 ба Realtime 1</h3>\n<p>Microsoft AI баг гурван шинэ загвараа дараалан зарлав. Код бичих <a href=\"https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">MAI Code 2</a> нь <em>GPT-6.1 Sol</em>-ийн гүйцэтгэлийн 98%-ийг 40%-ийн зардлаар, <em>Claude Opus 5.5</em>-ын 96%-ийг ердөө 5%-ийн зардлаар гаргаж сохор веб тестийн 64%-д илүүд үзэгдсэн бол хурдан <strong>Code 2 Flash</strong> нь Microsoft 365 болон FabricIQ-д суурилж байна.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-ms-image27.jpg\" alt=\"Microsoft MAI Image 2.7 зураг үүсгэлт ба засварлалт\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 2: Artificial Analysis зураг засварлалтад тэргүүлсэн MAI Image 2.7 ба MAI Labs Canvas. Эх сурвалж: Microsoft AI</figcaption>\n</figure>\n\n<p>Дүрсний <a href=\"https://microsoft.ai/news/introducing-mai-image-2-7/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">MAI Image 2.7</a> нь Artificial Analysis-ийн зураг засварлалтын жагсаалтад GPT Image 2.6 Sunburst-ийг тав дахин бага зардлаар гүйцэж <strong>#1</strong> орсон бөгөөд тунгалаг дэвсгэр, олон шатлалт засварын <em>Canvas</em> орчны хамт 1,000 зураг ~$35 (Flash ~$10) тарифаар Microsoft Foundry-д нээгдлээ.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-ms-realtime.jpg\" alt=\"Microsoft MAI Realtime 1 ярианы загвар\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 3: Минут тутамд $0.01-оос эхлэх шууд ярианы MAI Realtime 1 загвар. Эх сурвалж: Microsoft AI</figcaption>\n</figure>\n\n<p>Харин анхны шууд харилцан ярианы <a href=\"https://microsoft.ai/news/introducing-mai-realtime-1/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">MAI Realtime 1</a> нь аудио минут тутамд <strong>$0.01</strong>-оос эхэлж, OpenAI Realtime API-тай нийцэн Big Bench Audio болон Tau-Voice дээр GPT Realtime 2.1-ийг гүйцсэн ба Dynamics 365 болон Dragon Copilot-т нэвтэрч эхлэв.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-gemini-notebook.jpg\" alt=\"Gemini Notebook интерактив веб хуудас бүтээгч\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 4: Судалгаа ба тэмдэглэлийг шууд интерактив сайт болгон хувиргах Gemini Notebook шинэчлэл. Эх сурвалж: Google</figcaption>\n</figure>\n\n<h3>5. Gemini Notebook сайтууд, Mac Computer Use ба Google Stitch Loop</h3>\n<p>Google экосистем гурван шинэ агент хэрэгслээр өргөжлөө: <a href=\"https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Gemini Notebook</a>-т «make me a site» гэж бичээд эх сурвалжуудаасаа шууд интерактив сургалтын веб хуудас бүтээн хуваалцах боломж нээгдэв.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-gemini-mac.jpg\" alt=\"Mac компьютер дээрх Gemini Computer Use\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 5: Арын тусгаарлагдсан цонхонд Mac программ удирдах Gemini Computer Use. Эх сурвалж: Google</figcaption>\n</figure>\n\n<p>АНУ-ын англи хэл дээрх Mac хэрэглэгчдэд нээгдсэн <a href=\"https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Gemini Computer Use</a> нь хэрэглэгчийн үндсэн хулгана ба дэлгэцийг эзлэлгүйгээр тусгай арын цонхонд локал файл, программ ба вебийг удирдан давтамжит ажлыг гүйцэтгэдэг.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-stitch-loop.jpg\" alt=\"Google Labs Stitch Loop байнгын агент\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 6: Бүтээгдэхүүний код ба метрикийг 24/7 хянаж PR нээдэг Google Labs Stitch Loop. Эх сурвалж: Google Labs</figcaption>\n</figure>\n\n<p>Мөн Google Labs-ийн <a href=\"https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Stitch Loop</a> туршилтын систем GitHub болон 180 гаруй мэдээллийн эх сурвалжтай холбогдон аюулгүй байдал, хурд, хүртээмжийг тасралтгүй хянаж, алдаа засах Pull Request бэлддэг болов.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-heygen6.jpg\" alt=\"HeyGen Avatar 6 хоёр хөтлөгчтэй подкаст жишээ\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 7: Нэг зургаас 2K чанартай, хугацааны хязгааргүй харилцан яриа үүсгэх HeyGen Avatar 6. Эх сурвалж: HeyGen</figcaption>\n</figure>\n\n<h3>6. HeyGen Avatar 6, Suno Visuals ба Claude-ийн шинэчлэл</h3>\n<p><a href=\"https://www.heygen.com/research/avatar-6-model\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">HeyGen Avatar 6</a> нь ганц гэрэл зургаас <strong>2K нягтаршилтай</strong>, хугацааны тогтсон хязгааргүй ярьдаг дүрс болон дохио зангаа (HeyGen MCP-ээр 2 минутын хоёр хөтлөгчтэй подкаст, мөн видеоны зөвхөн зассан үгийг бусад кадрыг эвдэлгүйгээр 48.3 dB PSNR чанартай дахин унших) бүтээж Avatar Arena-д #1 орлоо.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-suno-visuals.jpg\" alt=\"Suno Visuals хөгжмийн клип бүтээгч\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 8: Дууны хэмнэл ба үгтэй ам тааруулан клип бүтээдэг Suno Visuals. Эх сурвалж: Suno</figcaption>\n</figure>\n\n<p>Хөгжмийн платформ Suno дууны үг, хэмнэлтэй уялдан ам ба хөдөлгөөн тааруулдаг 15 секундийн клип (үргэлжлүүлж сунгах боломжтой) ба анхны дүр бүтээх <a href=\"https://suno.com/blog/introducing-visuals\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Suno Visuals</a> хэрэгслийг Web, iOS, Android дээр гаргав. Харин Anthropic АНУ-ын Pro, Max, Ultra хэрэглэгчдэд <a href=\"https://x.com/ahuja_karan/status/2121332990836163033\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Claude Duet</a> хүлээлгийн жагсаалтын урилгыг өргөжүүлж, <a href=\"https://x.com/ClaudeDevs/status/2121392666244186327\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Claude Code</a> терминал болон Desktop дээр загвар, дуу, хөдөлгөөнт дэвсгэр өөрчлөх Custom Themes горим нэмжээ.</p>\n\n<figure class=\"my-8\">\n  <img src=\"/images/articles/rev-20261121-genie4.jpg\" alt=\"Google DeepMind Project Genie 4 ертөнц үүсгэгч\" class=\"w-full rounded-lg border border-zinc-200 shadow-sm\" />\n  <figcaption class=\"mt-2 text-xs text-zinc-500 font-sans\">Зураг 9: Шууд дуу авиа ба бодит цагийн засвартай Project Genie 4 интерактив ертөнцүүд. Эх сурвалж: Google DeepMind</figcaption>\n</figure>\n\n<h3>7. Google DeepMind Genie 4: Шууд дуутай интерактив ертөнц</h3>\n<p>Google DeepMind <a href=\"https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-700 underline underline-offset-2 hover:text-black font-semibold\">Genie 4</a> ертөнц үүсгэгчийг <em>Google AI Ultra</em> хэрэглэгчдэд нээлээ. Шинэ хувилбар нь дотор нь алхаж байх үедээ бичвэрээр цаг агаар өөрчлөх, шинэ дүр нэмэх, орчны дуу ба яриаг <strong>бодит цагийн төрөлх аудио</strong>-той зэрэг үүсгэхээс гадна бусадтай хуваалцаж засварлах нийтийн галерей болон 360 градусын панорама суурьтай <em>Genie 3</em> шинэчлэлийг багтаажээ.</p>\n"
+  },
+  {
     "id": "art-20261119-gemini-4-neon-launch",
     "slug": "google-gemini-4-neon-world-no-3-cost-cut",
     "title": "Google зардлыг 32% бууруулсан Gemini 4 Neon загвараа гаргалаа",
