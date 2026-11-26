@@ -20,7 +20,6 @@ export interface NewsArticle {
   primarySourceUrl: string;
   publishedAt: string;
   publishedTime: string;
-  readCount: number;
   readTime?: string;
   tags?: string[];
   rank?: number;

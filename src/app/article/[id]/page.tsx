@@ -120,15 +120,16 @@ export default async function ArticleDetailPage({
     : ARTICLES;
   const relatedArticles = [...sameCat, ...others].slice(0, 6).map(toArticleCard);
 
-  const trendingArticles = [...ARTICLES]
-    .filter((a) => a.id !== article?.id)
-    .sort((a, b) => (b.readCount || 0) - (a.readCount || 0))
+  // Сайт хандалт тоолдоггүй тул хандалтын жагсаалт гаргахгүй: хамгийн сүүлд нийтлэгдсэн 5-ыг харуулна.
+  const relatedIds = new Set(relatedArticles.map((r) => r.id));
+  const latestArticles = ARTICLES.filter((a) => a.id !== article?.id && !relatedIds.has(a.id))
     .slice(0, 5)
     .map(toArticleCard);
 
   const excludeIds = new Set([
     article?.id,
     ...relatedArticles.map((r) => r.id),
+    ...latestArticles.map((l) => l.id),
   ]);
   const moreStories = ARTICLES.filter((a) => !excludeIds.has(a.id))
     .slice(0, 4)
@@ -189,7 +190,7 @@ export default async function ArticleDetailPage({
         prevArticle={prevArticle}
         nextArticle={nextArticle}
         relatedArticles={relatedArticles}
-        trendingArticles={trendingArticles}
+        latestArticles={latestArticles}
         moreStories={moreStories}
       />
     </>

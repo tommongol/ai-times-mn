@@ -60,6 +60,18 @@ function scan(dir) {
 }
 scan('src');
 
+// «Уншсан» тоо зохиомол байсан тул 2026-11-27-нд хассан (сайт хандалт тоолдоггүй). Кодонд буцааж бүү оруул.
+function scanCode(dir) {
+  for (const name of readdirSync(dir)) {
+    const full = path.join(dir, name);
+    if (statSync(full).isDirectory()) scanCode(full);
+    else if (/\.(ts|tsx|js|mjs)$/.test(name) && /readCount|уншсан/i.test(readFileSync(full, 'utf8'))) {
+      errors.push(`${full}: «уншсан» тоо (readCount) буцаж орсон байна — бодит хандалтын тоо байхгүй тул харуулахгүй`);
+    }
+  }
+}
+scanCode('src');
+
 const VALID_CATEGORIES = new Set(['review', 'mongolia', 'tech', 'robotics', 'law', 'industry', 'interview', 'opinion', 'models', 'policy', 'companies']);
 
 const { createHash } = await import('node:crypto');

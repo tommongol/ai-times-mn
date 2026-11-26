@@ -70,7 +70,6 @@ export function toArticleCard(art: NewsArticle): ArticleCardData {
     primarySourceUrl: art.primarySourceUrl,
     publishedAt: art.publishedAt,
     publishedTime: art.publishedTime,
-    readCount: art.readCount,
     readTime: art.readTime,
     tags: art.tags,
     rank: art.rank,

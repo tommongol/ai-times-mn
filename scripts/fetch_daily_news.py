@@ -711,7 +711,6 @@ def run_pipeline():
             'primarySourceUrl': item['link'],
             'publishedAt': date_str,
             'publishedTime': time_str,
-            'readCount': 1200 + (len(new_articles) * 320),
             'readTime': '5 мин унших',
             'tags': art_data.get('tags', [item['source'], cat_name, 'AI 2026']),
             'rank': len(new_articles) + 1,

@@ -17,7 +17,6 @@ export function GET() {
     tags: a.tags || [],
     publishedAt: a.publishedAt,
     publishedTime: a.publishedTime,
-    readCount: a.readCount || 0,
     coverImage: a.coverImage,
   }));
   return NextResponse.json(

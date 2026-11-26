@@ -14,14 +14,14 @@ const SUGGESTIONS = ['Nvidia', 'OpenAI', 'Deepfake', 'Atlas 3D', 'Vibe-coding', 
 
 type IndexItem = Pick<
   ArticleCardData,
-  'id' | 'title' | 'subtitle' | 'summary' | 'category' | 'categoryName' | 'tags' | 'publishedAt' | 'publishedTime' | 'readCount' | 'coverImage'
+  'id' | 'title' | 'subtitle' | 'summary' | 'category' | 'categoryName' | 'tags' | 'publishedAt' | 'publishedTime' | 'coverImage'
 >;
 
 export function SearchClient() {
   const searchQuery = (useSearchParams().get('q') || '').trim();
   const [items, setItems] = useState<IndexItem[] | null>(null);
   const [failed, setFailed] = useState(false);
-  const [searchSort, setSearchSort] = useState<'latest' | 'views'>('latest');
+  const [searchSort, setSearchSort] = useState<'latest' | 'oldest'>('latest');
 
   useEffect(() => {
     let alive = true;
@@ -50,8 +50,8 @@ export function SearchClient() {
         (art.tags && art.tags.some((t) => t.toLowerCase().includes(query)))
     );
     return matched.sort((a, b) => {
-      if (searchSort === 'views') return b.readCount - a.readCount;
-      return `${b.publishedAt}T${b.publishedTime}`.localeCompare(`${a.publishedAt}T${a.publishedTime}`);
+      const newestFirst = `${b.publishedAt}T${b.publishedTime}`.localeCompare(`${a.publishedAt}T${a.publishedTime}`);
+      return searchSort === 'oldest' ? -newestFirst : newestFirst;
     });
   }, [items, searchQuery, searchSort]);
 
@@ -89,11 +89,11 @@ export function SearchClient() {
                   <span className="font-bold text-black uppercase">ЭРЭМБЭ:</span>
                   <select
                     value={searchSort}
-                    onChange={(e) => setSearchSort(e.target.value as 'latest' | 'views')}
+                    onChange={(e) => setSearchSort(e.target.value as 'latest' | 'oldest')}
                     className="border border-black bg-white px-2 py-1 text-xs text-black font-mono focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
                   >
                     <option value="latest">Сүүлийн үеийнхээр (LATEST)</option>
-                    <option value="views">Хамгийн их уншсанаар (MOST READ)</option>
+                    <option value="oldest">Хуучнаас нь (OLDEST)</option>
                   </select>
                 </label>
 

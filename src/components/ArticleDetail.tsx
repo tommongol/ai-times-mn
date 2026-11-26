@@ -4,7 +4,6 @@ import {
   ArrowLeft,
   ArrowRight,
   Clock,
-  Eye,
   Flame,
   Layers,
 } from 'lucide-react';
@@ -23,7 +22,8 @@ interface Props {
   prevArticle: ArticleCardData | null;
   nextArticle: ArticleCardData | null;
   relatedArticles: ArticleCardData[];
-  trendingArticles: ArticleCardData[];
+  /** Хамгийн сүүлд нийтлэгдсэн 5 мэдээ (хандалт тоолдоггүй тул огноогоор) */
+  latestArticles: ArticleCardData[];
   moreStories: ArticleCardData[];
 }
 
@@ -35,7 +35,7 @@ export function ArticleDetail({
   prevArticle,
   nextArticle,
   relatedArticles,
-  trendingArticles,
+  latestArticles,
   moreStories,
 }: Props) {
   return (
@@ -68,10 +68,6 @@ export function ArticleDetail({
                 <span>{article.readTime}</span>
               </span>
             )}
-            <span className="hidden sm:inline-flex items-center gap-1 text-neutral-400">
-              <Eye className="w-3.5 h-3.5 text-[#00FF66]" />
-              <span>{(article.readCount || 1250).toLocaleString()} уншсан</span>
-            </span>
           </nav>
 
           <ArticleActions />
@@ -259,13 +255,13 @@ export function ArticleDetail({
                 <div className="flex items-center gap-2">
                   <Flame className="w-4 h-4 text-emerald-600" />
                   <h2 className="font-mono text-xs sm:text-sm font-black uppercase tracking-wider">
-                    /// ХАМГИЙН ИХ УНШСАН ТОП 5
+                    /// СҮҮЛД НЭМЭГДСЭН МЭДЭЭ
                   </h2>
                 </div>
               </div>
 
               <div className="divide-y divide-neutral-200">
-                {trendingArticles.map((tr, idx) => (
+                {latestArticles.map((tr, idx) => (
                   <Link
                     key={tr.id}
                     href={`/article/${tr.id}`}
@@ -282,7 +278,7 @@ export function ArticleDetail({
                       <div className="font-mono text-[10px] text-neutral-500 flex items-center gap-2">
                         <span>{tr.categoryName}</span>
                         <span>•</span>
-                        <span>{(tr.readCount || 1200).toLocaleString()} уншсан</span>
+                        <time dateTime={tr.publishedAt}>{tr.publishedAt}</time>
                       </div>
                     </div>
                   </Link>
