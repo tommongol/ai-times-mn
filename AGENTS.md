@@ -53,6 +53,7 @@ Google бүх нийтлэлд холбоосоор хүрдэг байх ёст
 - Шинэ булан нэмбэл `NAV_SECTIONS` (`types.ts`) ба `DETAILS` (`sections.ts`) хоёуланд нь нэм.
 - Нийтлэлийн `id` зөвхөн латин үсэг, тоо, `-`, `_`. `content`-д `<script>`, `<iframe>`, `on…=`, `javascript:` хориотой.
 - Хуудас бүр `alternates: pageAlternates('/зам')` зарлана (canonical + RSS).
+- `scripts/site_check.py` (GitHub Actions `site-check.yml`, 6 цаг тутам) амьд сайт, sitemap, мэдээний шинэчлэлтийг шалгаж, унавал GitHub имэйлээр мэдэгдэнэ.
 - Google Search Console-ийн баталгаажуулах кодыг Vercel-ийн `GOOGLE_SITE_VERIFICATION` хувьсагчид тавина.
 
 ## Ажил эхлэхээс өмнө, байршуулахаас өмнө

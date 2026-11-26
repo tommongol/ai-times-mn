@@ -1,0 +1,29 @@
+name: Site health check
+
+# Амьд сайт (ai.mongol.guru) нээгдэж, sitemap бүтэн, мэдээ шинэчлэгдэж байгааг шалгана.
+# Унавал GitHub энэ workflow-г сүүлд зассан хүнд имэйлээр мэдэгдэнэ. Зөвхөн уншдаг, нууц түлхүүр хэрэггүй.
+
+on:
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: scripts/site_check.py
+          sparse-checkout-cone-mode: false
+      - name: Check live site
+        run: python3 scripts/site_check.py
