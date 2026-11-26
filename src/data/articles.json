@@ -1,5 +1,50 @@
 [
   {
+    "id": "art-20261127-anthropic-claude-ship-beta",
+    "slug": "anthropic-claude-ship-beta-pr-review-fix-approve",
+    "title": "Anthropic код шалгах, засах, батлах «Claude Ship» гаргалаа",
+    "subtitle": "Бета хувилбараар нээгдсэн Claude Ship нь GitHub Pull Request бүрийг автоматаар шалгаж, алдааг засаад, багийн дүрмийн дагуу батлах шийдвэрийг гаргадаг боллоо.",
+    "summary": "Anthropic 2026 оны 11 дүгээр сарын 23-нд AI-ийн бичсэн кодыг шалгахаас эхлээд засах, багийн бодлогын дагуу батлах хүртэлх бүх дамжлагыг автоматжуулах Claude Ship (бета) системийг танилцууллаа. Code Review, PR Steward болон Claude Approvals гэсэн гурван бүрдлээс тогтох уг үйлчилгээ GitHub дээрх Claude Team болон Enterprise байгууллагуудад нээгдэж байна.",
+    "category": "tech",
+    "categoryName": "AI ТЕХНОЛОГИ",
+    "author": "AI Mongolia Редакц",
+    "primarySource": "Anthropic / AI Times",
+    "primarySourceUrl": "https://claude.com/resources/articles/introducing-claude-ship",
+    "publishedAt": "2026-11-27",
+    "publishedTime": "02:55",
+    "readTime": "7 мин",
+    "readCount": 180,
+    "tags": [
+      "Anthropic",
+      "Claude Ship",
+      "PR Steward",
+      "Claude Approvals",
+      "Code Review",
+      "GitHub"
+    ],
+    "coverImage": "/images/articles/lead-20261127-claude-ship.jpg",
+    "imageUrl": "/images/articles/lead-20261127-claude-ship.jpg",
+    "imageCaption": "Anthropic-ийн код шалгах, засах болон батлах Claude Ship (бета) систем. Эх сурвалж: Anthropic / ClaudeDevs",
+    "isMainLead": true,
+    "isHot": true,
+    "rank": 292,
+    "sources": [
+      {
+        "name": "Anthropic / Claude: Introducing Claude Ship",
+        "url": "https://claude.com/resources/articles/introducing-claude-ship"
+      },
+      {
+        "name": "ClaudeDevs (@ClaudeDevs): Introducing Claude Ship (beta) on X",
+        "url": "https://x.com/ClaudeDevs/status/2124959436640858475"
+      },
+      {
+        "name": "AI Times: 앤트로픽, ‘클로드 십’ 출시…코드 검토부터 수정·승인까지 자동화",
+        "url": "https://www.aitimes.com/news/articleView.html?idxno=217729"
+      }
+    ],
+    "content": "<p><strong>Anthropic</strong> компани хиймэл оюуны бичсэн кодыг зөвхөн шалгаад зогсохгүй алдааг нь засварлаж, багийн тогтоосон дүрмээр батлах эсэхийг шийдвэрлэдэг <a href=\"https://claude.com/resources/articles/introducing-claude-ship\" target=\"_blank\" rel=\"noopener noreferrer\">Claude Ship (бета)</a> автоматжуулалтын системээ 2026 оны 11 дүгээр сарын 23-нд танилцууллаа (<a href=\"https://www.aitimes.com/news/articleView.html?idxno=217729\" target=\"_blank\" rel=\"noopener noreferrer\">AI Times</a>). Компанийн мэдээлснээр Claude Code багийн кодын ихэнхийг Claude өөрөө бичдэг тул Pull Request (PR) нээгдсэний дараах шат дамжлага ч мөн адил хурдаар явагдах шаардлагатай болжээ.</p>\n\n<blockquote>«Claude Ship (бета): Таны Pull Request-ийг шалгаж, засвар хийж, багийн бодлогын хүрээнд батлах боломжтой. Зорилго нь код бичдэг шигээ хурдан нийлүүлэхэд оршино.» — <a href=\"https://x.com/ClaudeDevs/status/2124959436640858475\" target=\"_blank\" rel=\"noopener noreferrer\">ClaudeDevs (@ClaudeDevs), 2026 оны 11 дүгээр сарын 23</a></blockquote>\n\n<h2>Гурван үе шаттай автоматжуулалт</h2>\n<p><strong>Claude Ship</strong> нь аль хэдийн албан ёсоор нэвтэрсэн <strong>Code Review</strong> болон бета шатанд орсон шинэ хоёр агент болох <strong>PR Steward</strong>, <strong>Claude Approvals</strong>-ийг нэг дор холбосон бүтэцтэй:</p>\n<ul>\n  <li><strong>Code Review:</strong> Өөрчлөгдсөн болон зэргэлдээх кодыг олон өнцгөөс шинжилж, алдааг давхар баталгаажуулаад PR дээр тодорхой тайлбар үлдээнэ. Quick, Standard, Deep гэсэн 3 түвшин сонгох боломжтой. Claude Code багийн дотоод хэрэглээгээр зургаагаас есдүгээр сарын хооронд нэгтгэгдсэн PR-ын тоо хоёр дахин өсөж, буцаагдсан өөрчлөлтийн хувь <strong>40%-иас илүү буурчээ</strong>.</li>\n  <li><strong>PR Steward:</strong> Автомат тест (CI) унах, код мөргөлдөх болон хүн буюу шалгагч хэрэгслийн засварын шаардлагыг дагаж кодыг шууд засна. Засвар бүрийн дараа юу өөрчилсөн болон хэрхэн буцаахыг тайлбарлах ба хөгжүүлэгч <code>@claude</code> гэж чиглүүлэх эсвэл <code>@claude stop</code> гэж зогсоох эрхтэй. Гэхдээ PR Steward нь PR-ийг өөрөө батлах буюу нэгтгэх (merge) эрхгүй загварчлагджээ.</li>\n  <li><strong>Claude Approvals:</strong> Сан доторх бодлогын файлын дагуу энгийн өөрчлөлтийг Claude өөрөө баталж, нарийн өөрчлөлтөд хүний зөвшөөрөл шаардах уян хатан дүрэм хэрэгжүүлнэ.</li>\n</ul>\n\n<figure>\n  <img src=\"/images/articles/lead-20261127-claude-ship-review.jpg\" alt=\"Claude Ship Code Review алдаа илрүүлэх цонх\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>Code Review хэсэг баталгаажсан алдааг илрүүлэн засвар санал болгож буй байдал. Эх сурвалж: Anthropic / ClaudeDevs</figcaption>\n</figure>\n\n<h2>Бодлогын файл, «/ship» команд ба хяналт</h2>\n<p>Хөгжүүлэгчид Claude Code дотор шинэ <code>/ship</code> команд бичээд өөрчлөлтөө илгээхэд Claude PR нээж, шалгаж, засварыг нь хийж өгнө. Харин удирдлагын зүгээс сан бүхэлд нь идэвхжүүлбэл багийн бүх PR дээр автоматаар ажилладаг. Бодит нэгтгэл нь GitHub-ийн салбар хамгаалалтын дүрмээс хамаарах бөгөөд хүний зөвшөөрөл шаардахгүй бодлогыг GitHub-ийн авто-нэгтгэлтэй хослуулбал хүний оролцоогүйгээр шууд нийлүүлэх ч боломжтой.</p>\n\n<figure>\n  <img src=\"/images/articles/lead-20261127-claude-approvals-yml.jpg\" alt=\".claude/approvals.yml бодлогын файлын бүтэц\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>Санг удирдах .claude/approvals.yml файлын жишээ: баримт бичгийг Claude дангаараа баталж, төлбөрийн кодод хүний хяналт шаарджээ. Эх сурвалж: Anthropic</figcaption>\n</figure>\n\n<p>Anthropic эхний ээлжид зөвхөн шийдвэрийн үр дүнг шалгах <strong>ажиглалтын горим (observe-only mode)</strong>-оор туршихыг зөвлөж байна. Админууд ямар санд, ямар гүнд шалгах, сарын зардлын дээд хязгаар зэргийг нарийн тохируулна.</p>\n\n<figure>\n  <img src=\"/images/articles/lead-20261127-claude-approvals-pr.jpg\" alt=\"GitHub PR дээр Claude Approvals баталсан харагдац\" loading=\"lazy\" decoding=\"async\" />\n  <figcaption>GitHub PR #482 дээр Claude Approvals шалгалт амжилттай давж баталгаажуулсан харагдац. Эх сурвалж: Anthropic</figcaption>\n</figure>\n\n<h2>Төлбөр ба хязгаарлалт</h2>\n<p><strong>Claude Ship</strong> нь GitHub сан хэрэглэдэг <em>Claude Team</em> болон <em>Enterprise</em> байгууллагуудад зориулагдсан. Агент ажиллах бүрд захиалгын энгийн эрхээс тусад нь <strong>токены хэрэглээгээр тооцогдох</strong> нэмэлт зардал гарна (ажиглалтын горимд ч Code Review дуудвал токен тооцогдоно; харин <code>/ship</code> команд нь энгийн Claude Code хэрэглээнд орно). Түүнчлэн өгөгдөл тэг хадгалалт (ZDR), HIPAA тохиргоо буюу хэрэглэгчийн удирдлагатай шифрлэлтийн түлхүүртэй байгууллагуудад одоогоор нээгдээгүй байна.</p>\n"
+  },
+  {
     "id": "art-20261121-weekly-review",
     "slug": "weekly-review-anthropic-ipo-mai-suite-gemini-4-neon-genie-4",
     "title": "Зурагт тойм: Anthropic IPO, MAI загварууд ба Genie 4",
@@ -1696,7 +1741,7 @@
     "coverImage": "/images/articles/lead-20261119-gemini-4-neon.jpg",
     "imageUrl": "/images/articles/lead-20261119-gemini-4-neon.jpg",
     "imageCaption": "Google DeepMind-ийн өртөг хэмнэлттэй тэргүүлэгч Gemini 4 Neon загвар. Эх сурвалж: Google DeepMind",
-    "isMainLead": true,
+    "isMainLead": false,
     "isHot": true,
     "rank": 46,
     "sources": [
