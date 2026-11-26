@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { ArticleCardData } from '@/data/types';
@@ -7,7 +5,6 @@ import { ArticleCardData } from '@/data/types';
 interface Props {
   mainLead: ArticleCardData;
   reviewLead?: ArticleCardData | null;
-  onSelect?: (art: ArticleCardData) => void;
 }
 
 export const NewspaperLead: React.FC<Props> = ({
@@ -42,9 +39,9 @@ export const NewspaperLead: React.FC<Props> = ({
               </div>
 
               {/* Headline */}
-              <h1 className="font-black text-2xl sm:text-3xl lg:text-[32px] leading-[1.2] text-black group-hover:text-emerald-700 transition-colors mb-4 tracking-tight">
+              <h2 className="font-black text-2xl sm:text-3xl lg:text-[32px] leading-[1.2] text-black group-hover:text-emerald-700 transition-colors mb-4 tracking-tight">
                 {mainLead.title}
-              </h1>
+              </h2>
 
               {/* Photo */}
               <div className="relative overflow-hidden bg-neutral-100 mb-4 border border-black aspect-[16/10] sm:aspect-[16/9] w-full">
@@ -145,7 +142,7 @@ export const NewspaperLead: React.FC<Props> = ({
                     >
                       <img
                         src={thumb}
-                        alt={`Тоймын зураг ${idx + 1}`}
+                        alt=""
                         loading="lazy"
                         decoding="async"
                         className="w-full h-full object-cover"

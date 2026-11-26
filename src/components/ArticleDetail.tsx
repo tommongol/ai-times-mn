@@ -1,13 +1,8 @@
-'use client';
-
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
   ArrowLeft,
   ArrowRight,
-  Printer,
-  Share2,
   Clock,
   Eye,
   Flame,
@@ -15,10 +10,16 @@ import {
 } from 'lucide-react';
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
+import { ArticleActions } from '@/components/ArticleActions';
 import { NewsArticle, ArticleCardData, NAV_SECTIONS } from '@/data/types';
+import { sectionPath, searchPath } from '@/data/sections';
 
 interface Props {
-  article: NewsArticle | null;
+  article: NewsArticle;
+  /** Зургийн хэмжээ нэмсэн нийтлэлийн бие (серверт бэлтгэнэ) */
+  contentHtml: string;
+  coverSize: { width: number; height: number } | null;
+  publishedIso?: string;
   prevArticle: ArticleCardData | null;
   nextArticle: ArticleCardData | null;
   relatedArticles: ArticleCardData[];
@@ -26,70 +27,24 @@ interface Props {
   moreStories: ArticleCardData[];
 }
 
-export function ArticleDetailClient({
+export function ArticleDetail({
   article,
+  contentHtml,
+  coverSize,
+  publishedIso,
   prevArticle,
   nextArticle,
   relatedArticles,
   trendingArticles,
   moreStories,
 }: Props) {
-  const router = useRouter();
-
-  const handleShare = () => {
-    if (typeof window !== 'undefined' && navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href);
-      alert('Мэдээний холбоосыг хууллаа.');
-    }
-  };
-
-  if (!article) {
-    return (
-      <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-black font-sans">
-        <NewspaperHeader
-          activeSection="all"
-          onSelectSection={(sec) => router.push(`/?section=${sec}`)}
-          searchQuery=""
-          onSearchChange={(q) => {
-            if (q) router.push(`/?q=${encodeURIComponent(q)}`);
-          }}
-        />
-        <main className="flex-1 max-w-4xl mx-auto px-4 py-16 text-center">
-          <div className="bg-white border-2 border-black p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-            <h1 className="font-mono text-2xl font-black mb-3 uppercase">
-              [404] МЭДЭЭ ОЛДСОНГҮЙ
-            </h1>
-            <p className="text-neutral-600 mb-6">
-              Таны хайсан нийтлэл устгагдсан эсвэл хаяг нь өөрчлөгдсөн байна.
-            </p>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 bg-black text-[#00FF66] font-mono text-xs font-bold px-5 py-3 uppercase tracking-wider hover:bg-neutral-800 transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>НҮҮР ХУУДАС РУУ БУЦАХ</span>
-            </Link>
-          </div>
-        </main>
-        <NewspaperFooter />
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-black font-sans selection:bg-[#00FF66] selection:text-black">
-      <NewspaperHeader
-        activeSection={article.category}
-        onSelectSection={(sec) => router.push(`/?section=${sec}`)}
-        searchQuery=""
-        onSearchChange={(q) => {
-          if (q) router.push(`/?q=${encodeURIComponent(q)}`);
-        }}
-      />
+      <NewspaperHeader activeSection={article.category} />
 
       <div className="bg-neutral-900 text-white border-b-2 border-black">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
-          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+          <nav aria-label="Байршил" className="flex items-center gap-2 sm:gap-3 flex-wrap">
             <Link
               href="/"
               className="inline-flex items-center gap-1.5 bg-neutral-800 hover:bg-[#00FF66] hover:text-black text-white font-bold px-3 py-1.5 border border-neutral-700 transition-colors uppercase"
@@ -99,14 +54,14 @@ export function ArticleDetailClient({
             </Link>
             <span className="text-neutral-600">/</span>
             <Link
-              href={`/?section=${article.category}`}
+              href={sectionPath(article.category)}
               className="bg-[#00FF66] text-black font-black px-2.5 py-1 uppercase tracking-wider hover:bg-white transition-colors"
             >
               {article.categoryName}
             </Link>
-            <span className="text-neutral-400">
+            <time dateTime={publishedIso || article.publishedAt} className="text-neutral-400">
               {article.publishedAt} • {article.publishedTime}
-            </span>
+            </time>
             {article.readTime && (
               <span className="inline-flex items-center gap-1 bg-neutral-800 text-[#00FF66] font-bold px-2.5 py-1 border border-neutral-700">
                 <Clock className="w-3.5 h-3.5" />
@@ -117,26 +72,9 @@ export function ArticleDetailClient({
               <Eye className="w-3.5 h-3.5 text-[#00FF66]" />
               <span>{(article.readCount || 1250).toLocaleString()} уншсан</span>
             </span>
-          </div>
+          </nav>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => window.print()}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-800 hover:bg-white hover:text-black text-neutral-200 border border-neutral-700 transition-colors cursor-pointer uppercase font-bold"
-              title="Хэвлэх"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">ХЭВЛЭХ</span>
-            </button>
-            <button
-              onClick={handleShare}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-800 hover:bg-[#00FF66] hover:text-black text-neutral-200 border border-neutral-700 transition-colors cursor-pointer uppercase font-bold"
-              title="Холбоос хуулах"
-            >
-              <Share2 className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">ХУВААЛЦАХ</span>
-            </button>
-          </div>
+          <ArticleActions />
         </div>
       </div>
 
@@ -170,7 +108,9 @@ export function ArticleDetailClient({
                   {article.tags.map((tag) => (
                     <Link
                       key={tag}
-                      href={`/?q=${encodeURIComponent(tag)}`}
+                      href={searchPath(tag)}
+                      prefetch={false}
+                      rel="nofollow"
                       className="px-2.5 py-1 bg-neutral-100 border border-neutral-300 hover:border-black hover:bg-black hover:text-[#00FF66] text-black font-semibold transition-colors"
                     >
                       #{tag}
@@ -185,6 +125,8 @@ export function ArticleDetailClient({
                 <img
                   src={article.coverImage}
                   alt={article.title}
+                  width={coverSize?.width}
+                  height={coverSize?.height}
                   fetchPriority="high"
                   decoding="async"
                   className="max-h-[540px] max-w-full w-auto h-auto object-contain mx-auto"
@@ -203,7 +145,7 @@ export function ArticleDetailClient({
 
             <div
               className="article-body"
-              dangerouslySetInnerHTML={{ __html: article.content }}
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
 
             {article.sources && article.sources.length > 0 && (
@@ -303,9 +245,9 @@ export function ArticleDetailClient({
                       <h3 className="text-xs sm:text-sm font-black text-black group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug">
                         {rel.title}
                       </h3>
-                      <span className="font-mono text-[10px] text-neutral-500 mt-1 block">
+                      <time dateTime={rel.publishedAt} className="font-mono text-[10px] text-neutral-600 mt-1 block">
                         {rel.publishedAt}
-                      </span>
+                      </time>
                     </div>
                   </Link>
                 ))}
@@ -359,7 +301,8 @@ export function ArticleDetailClient({
                 {NAV_SECTIONS.map((sec) => (
                   <Link
                     key={sec.id}
-                    href={`/?section=${sec.id}`}
+                    href={sectionPath(sec.id)}
+                    prefetch={false}
                     className={`px-3 py-1.5 border border-black font-bold uppercase transition-colors ${
                       article.category === sec.id
                         ? 'bg-black text-[#00FF66]'

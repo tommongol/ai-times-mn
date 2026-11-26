@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { rpc, dbSecret, sendBatch, confirmEmail } from '@/lib/newsletter';
+import { allowRequest, clientIp, isForeignOrigin } from '@/lib/rateLimit';
 
 // Зөвхөн POST: бүртгэлийг Supabase-ийн aitimes_subscribe функцээр нэмж, баталгаажуулах имэйл явуулна.
 // Хүснэгтэд гаднаас шууд эрх байхгүй. Хариу нь үргэлж ижил — хэн бүртгэлтэй болохыг задлахгүй.
@@ -19,13 +20,31 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Бүртгэл түр ажиллахгүй байна.' }, { status: 503 });
   }
 
+  // Өөр сайтаас хөтчөөр илгээсэн хүсэлтийг хүлээж авахгүй
+  if (isForeignOrigin(req)) {
+    return NextResponse.json({ error: 'Буруу хүсэлт.' }, { status: 403 });
+  }
+  // Нэг IP-аас 10 минутад 5 хүртэл бүртгэл: баталгаажуулах имэйлээр бусдыг залхаахаас сэргийлнэ
+  if (!allowRequest(`subscribe:${clientIp(req)}`, 5, 10 * 60 * 1000)) {
+    return NextResponse.json(
+      { error: 'Хэт олон хүсэлт илгээлээ. Хэдэн минутын дараа дахин оролдоно уу.' },
+      { status: 429, headers: { 'Retry-After': '600' } }
+    );
+  }
+
   if (Number(req.headers.get('content-length') || 0) > 4096) {
     return NextResponse.json({ error: 'Хүсэлт хэт том байна.' }, { status: 413 });
   }
 
   let body: Record<string, unknown>;
   try {
-    body = await req.json();
+    const raw = await req.text();
+    if (raw.length > 4096) {
+      return NextResponse.json({ error: 'Хүсэлт хэт том байна.' }, { status: 413 });
+    }
+    const parsed: unknown = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('not an object');
+    body = parsed as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: 'Буруу хүсэлт.' }, { status: 400 });
   }

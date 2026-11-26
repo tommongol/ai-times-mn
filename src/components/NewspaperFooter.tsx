@@ -1,8 +1,8 @@
-'use client';
-
 import React from 'react';
+import Link from 'next/link';
 import { NAV_SECTIONS } from '@/data/types';
-import { ShieldCheck, Mail, ArrowUpRight } from 'lucide-react';
+import { sectionPath } from '@/data/sections';
+import { ShieldCheck, Mail } from 'lucide-react';
 
 export const NewspaperFooter: React.FC = () => {
   return (
@@ -10,17 +10,19 @@ export const NewspaperFooter: React.FC = () => {
       {/* Category Directory Bar */}
       <div className="border-b border-neutral-800 bg-neutral-950 py-5 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-6 text-xs uppercase tracking-wider font-bold">
+          <nav aria-label="Булангууд (хөл)" className="flex flex-wrap items-center gap-6 text-xs uppercase tracking-wider font-bold">
             {NAV_SECTIONS.map((sec, idx) => (
-              <span
+              <Link
                 key={sec.id}
+                href={sectionPath(sec.id)}
+                prefetch={false}
                 className="hover:text-[#00FF66] cursor-pointer transition-colors"
               >
                 {String(idx + 1).padStart(2, '0')} // {sec.name}
-              </span>
+              </Link>
             ))}
-          </div>
-          <div className="text-neutral-500 text-[11px]">
+          </nav>
+          <div className="text-neutral-400 text-[11px]">
             THE AI & DEEP TECH JOURNAL // 24/7 EDITION
           </div>
         </div>
@@ -61,15 +63,15 @@ export const NewspaperFooter: React.FC = () => {
               <p>
                 <strong>Хаяг:</strong> Улаанбаатар хот, Сүхбаатар дүүрэг, Мэдээлэл технологийн үндэсний төв 213 тоот
               </p>
-              <p className="text-neutral-500 pt-2">
-                © 2026 AI Mongolia. Нийтлэлийг иш татан ашиглахдаа холбоосыг дурдана уу.
+              <p className="text-neutral-400 pt-2">
+                © 2026 AI Mongolia. Нийтлэлээс иш татахдаа холбоосыг дурдана уу.
               </p>
             </div>
           </div>
 
           {/* Right: Quick Links & Contact */}
           <div className="md:col-span-4 flex flex-col justify-between border-t md:border-t-0 md:border-l border-neutral-800 md:pl-8 pt-6 md:pt-0 text-[11px]">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
                 <div className="text-white font-bold mb-3 uppercase tracking-wider text-xs flex items-center gap-1.5">
                   <Mail className="w-3.5 h-3.5 text-[#00FF66]" />
@@ -84,9 +86,29 @@ export const NewspaperFooter: React.FC = () => {
                   </li>
                 </ul>
               </div>
+
+              <nav aria-label="Сайтын холбоос">
+                <div className="text-white font-bold mb-3 uppercase tracking-wider text-xs">
+                  ХОЛБООС
+                </div>
+                <ul className="space-y-2 text-neutral-400">
+                  <li>
+                    • <Link href="/tuhai" prefetch={false} className="hover:text-white underline">Бидний тухай</Link>
+                  </li>
+                  <li>
+                    • <Link href="/tovhimol" prefetch={false} className="hover:text-white underline">Товхимол захиалах</Link>
+                  </li>
+                  <li>
+                    • <a href="/rss.xml" className="hover:text-white underline">RSS</a>
+                  </li>
+                  <li>
+                    • <Link href="/nuutslal" prefetch={false} className="hover:text-white underline">Нууцлалын бодлого</Link>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
-            <div className="pt-6 text-[10px] text-neutral-500 font-mono">
+            <div className="pt-6 text-[10px] text-neutral-400 font-mono">
               ENGINEERED FOR DEEP TECH INTELLIGENCE MONGOLIA
             </div>
           </div>

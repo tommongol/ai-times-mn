@@ -21,6 +21,21 @@ for (const p of FORBIDDEN_PATHS) {
   if (existsSync(p)) errors.push(`${p} хасагдсан хэсэг буцаж орсон байна`);
 }
 
+// Хайлтын системд хэрэгтэй хуудсууд: устгавал Google-ээс нийтлэлүүд рүү хүрэх зам тасарна.
+const REQUIRED_PATHS = [
+  'src/app/bulan/[section]/page.tsx',
+  'src/app/bulan/[section]/[page]/page.tsx',
+  'src/app/hailt/page.tsx',
+  'src/app/sitemap.ts',
+  'src/app/robots.ts',
+  'src/app/rss.xml/route.ts',
+  'src/app/news-sitemap.xml/route.ts',
+  'src/app/not-found.tsx',
+];
+for (const p of REQUIRED_PATHS) {
+  if (!existsSync(p)) errors.push(`${p} байхгүй байна — хайлтын системд хэрэгтэй хуудас устсан`);
+}
+
 const FORBIDDEN_TEXT = [
   'aimedee2026',
   'admin2026',
@@ -141,6 +156,18 @@ try {
       if (typeof val === 'string' && bannedStemRe.test(val)) {
         errors.push(`articles.json [${a.id}] (${field}): Хориотой үгийн язгуур илэрлээ («хэрэглэ-» гэж засна уу)`);
       }
+    }
+
+    // Нийтлэлийн бие хуудсанд HTML-ээр шууд ордог тул ажилладаг код (script, iframe, on*=, javascript:) хориотой
+    for (const field of ['content', 'summary', 'subtitle', 'title', 'imageCaption']) {
+      const val = a[field];
+      if (typeof val === 'string' && /<\s*(script|iframe|object|embed|style|link|meta|form)\b|\son[a-z]+\s*=|javascript\s*:/i.test(val)) {
+        errors.push(`articles.json [${a.id}] (${field}): Аюултай HTML (script/iframe/on*=/javascript:) илэрлээ`);
+      }
+    }
+    // Хаяг (/article/<id>) эвдрэхгүйн тулд id-д зөвхөн латин үсэг, тоо, зураас
+    if (a.id && !/^[A-Za-z0-9_-]+$/.test(a.id)) {
+      errors.push(`articles.json [${a.id}]: id-д зөвхөн латин үсэг, тоо, «-», «_» байж болно`);
     }
 
     if (a.publishedAt >= '2026-11-01' && typeof a.content === 'string' && a.coverImage && a.content.includes(a.coverImage)) {

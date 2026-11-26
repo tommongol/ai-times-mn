@@ -1,8 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { ARTICLES, toArticleCard, type NewsArticle } from '@/data/news';
-import { ArticleDetailClient } from '@/components/ArticleDetailClient';
+import { ArticleDetail } from '@/components/ArticleDetail';
 import {
   JsonLd,
   PUBLISHER,
@@ -10,8 +10,13 @@ import {
   SITE_URL,
   DEFAULT_OG_IMAGE,
   absoluteUrl,
+  breadcrumbJsonLd,
+  isoDateUB,
+  pageAlternates,
 } from '@/lib/seo';
 import { publicImageSize } from '@/lib/imageSize';
+import { enhanceArticleHtml } from '@/lib/articleHtml';
+import { getSection, sectionPath } from '@/data/sections';
 
 function findArticle(rawId: string): NewsArticle | null {
   const articleId = decodeURIComponent(rawId || '');
@@ -28,9 +33,7 @@ function articleDescription(art: NewsArticle): string {
 }
 
 function articleIsoDate(art: NewsArticle): string | undefined {
-  if (!art.publishedAt) return undefined;
-  const time = art.publishedTime && /^\d{1,2}:\d{2}$/.test(art.publishedTime) ? art.publishedTime.padStart(5, '0') : '09:00';
-  return `${art.publishedAt}T${time}:00+08:00`;
+  return isoDateUB(art.publishedAt, art.publishedTime);
 }
 
 export async function generateMetadata({
@@ -56,7 +59,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: pageAlternates(url),
     openGraph: {
       type: 'article',
       url,
@@ -66,6 +69,7 @@ export async function generateMetadata({
       locale: 'mn_MN',
       images: [image],
       publishedTime: published,
+      modifiedTime: published,
       section: article.categoryName,
       tags: article.tags,
       authors: author ? [author] : undefined,
@@ -99,6 +103,8 @@ export default async function ArticleDetailPage({
 
   const article = currentIndex >= 0 ? ARTICLES[currentIndex] : null;
   if (!article) notFound();
+  // Slug-аар орсон хаяг нэг л хаягт нэгдэнэ: /article/<id>
+  if (article.id !== articleId) permanentRedirect(articlePath(article));
   const prevArticle =
     currentIndex > 0 ? toArticleCard(ARTICLES[currentIndex - 1]) : null;
   const nextArticle =
@@ -130,36 +136,62 @@ export default async function ArticleDetailPage({
 
   const author = (article as NewsArticle & { author?: string }).author;
   const published = articleIsoDate(article);
+  const url = `${SITE_URL}${articlePath(article)}`;
+  const coverSize = article.coverImage ? publicImageSize(article.coverImage) : null;
+  const section = getSection(article.category);
+  const wordCount = article.content.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'NewsArticle',
-    headline: article.title.slice(0, 110),
-    description: articleDescription(article),
-    image: [article.coverImage ? absoluteUrl(article.coverImage) : DEFAULT_OG_IMAGE.url],
-    datePublished: published,
-    dateModified: published,
-    inLanguage: 'mn',
-    articleSection: article.categoryName,
-    keywords: article.tags?.join(', '),
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${articlePath(article)}` },
-    url: `${SITE_URL}${articlePath(article)}`,
-    author: author
-      ? { '@type': /AI Mongolia|Баг/i.test(author) ? 'Organization' : 'Person', name: author }
-      : { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
-    publisher: PUBLISHER,
+    '@graph': [
+      {
+        '@type': 'NewsArticle',
+        '@id': `${url}#article`,
+        headline: article.title.slice(0, 110),
+        description: articleDescription(article),
+        image: article.coverImage
+          ? [
+              coverSize
+                ? { '@type': 'ImageObject', url: absoluteUrl(article.coverImage), ...coverSize }
+                : absoluteUrl(article.coverImage),
+            ]
+          : [DEFAULT_OG_IMAGE.url],
+        datePublished: published,
+        dateModified: published,
+        inLanguage: 'mn',
+        articleSection: article.categoryName,
+        keywords: article.tags?.join(', '),
+        wordCount,
+        isAccessibleForFree: true,
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        url,
+        author: author
+          ? { '@type': /AI Mongolia|Баг/i.test(author) ? 'Organization' : 'Person', name: author }
+          : { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+        publisher: PUBLISHER,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+      },
+      breadcrumbJsonLd([
+        { name: 'Нүүр', path: '/' },
+        ...(section ? [{ name: section.label, path: sectionPath(section.id) }] : []),
+        { name: article.title },
+      ]),
+    ],
   };
 
   return (
     <>
-    <JsonLd data={articleJsonLd} />
-    <ArticleDetailClient
-      article={article}
-      prevArticle={prevArticle}
-      nextArticle={nextArticle}
-      relatedArticles={relatedArticles}
-      trendingArticles={trendingArticles}
-      moreStories={moreStories}
-    />
+      <JsonLd data={articleJsonLd} />
+      <ArticleDetail
+        article={article}
+        contentHtml={enhanceArticleHtml(article.content)}
+        coverSize={coverSize}
+        publishedIso={published}
+        prevArticle={prevArticle}
+        nextArticle={nextArticle}
+        relatedArticles={relatedArticles}
+        trendingArticles={trendingArticles}
+        moreStories={moreStories}
+      />
     </>
   );
 }

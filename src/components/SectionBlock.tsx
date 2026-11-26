@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { ArticleCardData } from '@/data/types';
@@ -8,14 +6,14 @@ import { ArrowUpRight } from 'lucide-react';
 interface Props {
   title: string;
   articles: ArticleCardData[];
-  onSelect?: (art: ArticleCardData) => void;
-  onViewAll?: () => void;
+  /** Булангийн бүх нийтлэлийн хуудас */
+  href?: string;
 }
 
 export const SectionBlock: React.FC<Props> = ({
   title,
   articles,
-  onViewAll,
+  href,
 }) => {
   if (!articles.length) return null;
 
@@ -29,14 +27,15 @@ export const SectionBlock: React.FC<Props> = ({
             /// {title}
           </h2>
         </div>
-        {onViewAll && (
-          <button
-            onClick={onViewAll}
+        {href && (
+          <Link
+            href={href}
+            aria-label={`${title} булангийн бүх нийтлэл`}
             className="font-mono text-xs font-bold text-black hover:text-[#00FF66] hover:bg-black px-2.5 py-1 border border-black flex items-center gap-1 transition-colors cursor-pointer uppercase tracking-wider"
           >
             <span>EXPLORE</span>
             <ArrowUpRight className="w-3 h-3" />
-          </button>
+          </Link>
         )}
       </div>
 
@@ -78,7 +77,7 @@ export const SectionBlock: React.FC<Props> = ({
               </div>
 
               <div className="flex items-center justify-between font-mono text-xs text-neutral-500 pt-3 mt-4 border-t border-neutral-200">
-                <span>{art.publishedAt}</span>
+                <time dateTime={art.publishedAt}>{art.publishedAt}</time>
                 <span className="text-black group-hover:text-emerald-700 font-bold transition-colors">
                   УНШИХ →
                 </span>

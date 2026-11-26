@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { Mail, CheckCircle2, Send, ArrowLeft } from 'lucide-react';
 import { NewspaperHeader } from '@/components/NewspaperHeader';
 import { NewspaperFooter } from '@/components/NewspaperFooter';
@@ -19,7 +18,6 @@ const inputClass =
 const labelClass = 'block font-mono text-xs font-bold text-black uppercase mb-1';
 
 export function NewsletterPageClient() {
-  const router = useRouter();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [workplace, setWorkplace] = useState('');
@@ -52,14 +50,7 @@ export function NewsletterPageClient() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAF7] text-black font-sans">
-      <NewspaperHeader
-        activeSection=""
-        onSelectSection={(sec) => router.push(`/?section=${sec}`)}
-        searchQuery=""
-        onSearchChange={(q) => {
-          if (q) router.push(`/?q=${encodeURIComponent(q)}`);
-        }}
-      />
+      <NewspaperHeader />
 
       <main className="flex-1 w-full max-w-xl mx-auto px-4 py-10">
         <div className="bg-white border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,255,102,1)]">
