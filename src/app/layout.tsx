@@ -1,25 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION, DEFAULT_OG_IMAGE, RSS_PATH } from '@/lib/seo';
 
+// Зөвхөн Inter: font-mono, font-serif анги системийн фонтоор гардаг тул өөр фонт татах шаардлагагүй.
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-sans',
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['600', '700', '800', '900'],
-  variable: '--font-serif',
-  display: 'swap',
-});
-
-const mono = JetBrains_Mono({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '700', '800'],
-  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -94,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="mn" className={`${inter.variable} ${playfair.variable} ${mono.variable}`}>
+    <html lang="mn" className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-[#FAFAF7] text-neutral-900 font-sans antialiased">
         {children}
       </body>
