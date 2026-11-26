@@ -54,7 +54,7 @@ Google бүх нийтлэлд холбоосоор хүрдэг байх ёст
 - Нийтлэлийн `id` зөвхөн латин үсэг, тоо, `-`, `_`. `content`-д `<script>`, `<iframe>`, `on…=`, `javascript:` хориотой.
 - Хуудас бүр `alternates: pageAlternates('/зам')` зарлана (canonical + RSS).
 - `scripts/site_check.py` (GitHub Actions `site-check.yml`, 6 цаг тутам) амьд сайт, sitemap, мэдээний шинэчлэлтийг шалгаж, унавал GitHub имэйлээр мэдэгдэнэ.
-- Google Search Console-ийн баталгаажуулах кодыг Vercel-ийн `GOOGLE_SITE_VERIFICATION` хувьсагчид тавина.
+- Google Search Console-д `https://ai.mongol.guru/` бүртгэлтэй (2026-11-27), `sitemap.xml`, `news-sitemap.xml` мэдүүлсэн. Эзэмшлийг `public/google82a0dd98371876f4.html` файл болон Vercel-ийн `GOOGLE_SITE_VERIFICATION` хувьсагчийн meta tag баталгаажуулдаг: хоёуланг нь бүү устга.
 
 ## Ажил эхлэхээс өмнө, байршуулахаас өмнө
 

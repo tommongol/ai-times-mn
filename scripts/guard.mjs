@@ -31,6 +31,8 @@ const REQUIRED_PATHS = [
   'src/app/rss.xml/route.ts',
   'src/app/news-sitemap.xml/route.ts',
   'src/app/not-found.tsx',
+  // Google Search Console-ийн эзэмшлийн файл: устгавал баталгаажуулалт унана
+  'public/google82a0dd98371876f4.html',
 ];
 for (const p of REQUIRED_PATHS) {
   if (!existsSync(p)) errors.push(`${p} байхгүй байна — хайлтын системд хэрэгтэй хуудас устсан`);
